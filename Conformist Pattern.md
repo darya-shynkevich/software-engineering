@@ -1,0 +1,5 @@
+Central to Domain-Driven Design’s strategic design is the `Conformist pattern`. Especially in situations where one team is upstream and the other downstream, the downstream team can sometimes find themselves at the mercy of the upstream team. This dynamic is highlighted when the upstream has no particular motivation to cater to the downstream’s needs.
+
+Team A is upstream and Team B is downstream. If Team A has no incentive to adapt their interface or service for Team B’s needs, Team B might end up having to ‘conform’, thereby adopting the `Conformist pattern`. The downstream team may have to make do with whatever interface or features are provided, even if they’re not optimal for their requirements.
+
+In a modular monolith, ***internal negotiations and architecture reviews can be facilitated to address these dynamics, ensuring that teams work cohesively and don’t end up unintentionally enforcing the Conformist pattern***, leading to sub-optimal solutions.

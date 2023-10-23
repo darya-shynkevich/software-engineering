@@ -1,0 +1,105 @@
+Suppose you’re a webserver. Every time you accept a connection with the `accept` system call ([here’s the man page](http://man7.org/linux/man-pages/man2/accept.2.html)), you get a new file descriptor representing that connection.
+
+If you’re a web server, you might have thousands of connections open at the same time. You need to know when people send you new data on those connections, so you can process and respond to them.
+
+You could have a loop that basically does:
+
+```Python
+for x in open_connections:
+    if has_new_input(x):
+        process_input(x)
+```
+
+The problem with this is that it can waste a lot of CPU time. Instead of spending all CPU time to ask “are there updates now? how about now? how about now? how about now?“, instead we’d rather just ask the Linux kernel “hey, here are 100 file descriptors. Tell me when one of them is updated!“.
+
+The 3 system calls that let you ask Linux to monitor lots of file descriptors are `poll`, `epoll` and `select`. Let’s start with poll and select because that’s where the chapter started.
+
+## Blocking I/O model
+
+- Listening port to accept a new connection to come in.
+- When a new connection comes, handle it until done.
+- Then listening to accept a new connection again.
+
+*This is a traditional blocking I/O model and which is fine in the “hello world” sample however not usable in production: **multiple connections will cause queuing**.*
+
+So very fast you may come out with a ***multi-threaded version*** of the above design, think of ***using a new thread to handle the input***.
+
+![[Pasted image 20231015201533.png]]
+
+in this way, every port is a process, and every new connection means a thread, and as the growing connections. The app will reach the [c10k problem](https://en.wikipedia.org/wiki/C10k_problem#:~:text=The%20C10k%20problem%20is%20the,concurrently%20handling%20ten%20thousand%20connections) meaning out of resources will happen when too many connections.
+
+# First way: select & poll
+
+This are non-blocking I/O models. However they are not efficient enough.
+
+Here’s basically how they work:
+1. Give them a list of file descriptors to get information about
+2. They tell you which ones have data available to read/write to
+
+It is interesting that **poll and select fundamentally use the same code**: 
+1. here’s the [definition of the select syscall](https://github.com/torvalds/linux/blob/v4.10/fs/select.c#L634-L656) and [do_select](https://github.com/torvalds/linux/blob/v4.10/fs/select.c#L404-L542)
+2. and the [definition of the poll syscall](https://github.com/torvalds/linux/blob/v4.10/fs/select.c#L1005-L1055) and [do_poll](https://github.com/torvalds/linux/blob/v4.10/fs/select.c#L795-L879)
+
+They both call a lot of the same functions. One thing that the book mentioned in particular is that `poll` returns a larger set of possible results for file descriptors like `POLLRDNORM | POLLRDBAND | POLLIN | POLLHUP | POLLERR` while `select` just tells you “there’s input / there’s output / there’s an error”.
+
+`select` translates from `poll`’s more detailed results (like `POLLWRBAND`) into a general “you can write”. You can see the code where it does this in Linux 4.10 [here](https://github.com/torvalds/linux/blob/v4.10/fs/select.c#L468-L482).
+
+With `poll`, you tell it “here are the file descriptors I want to monitor: 1, 3, 8, 19, etc” (that’s the `pollfd` argument. With `select`, you tell it “I want to monitor 19 file descriptors. Here are 3 bitsets with which ones to monitor for reads / writes / exceptions.” So when it runs, it [loops from 0 to 19 file descriptors](https://github.com/torvalds/linux/blob/v4.10/fs/select.c#L440), even if you were actually only interested in 4 of them.
+
+## How does it work internally?
+
+![[Pasted image 20231015201744.png]]
+
+- When the `socket` server started, It sends a list of a copy of [File descriptor](https://en.wikipedia.org/wiki/File_descriptor) to the `Kernel` and said “Let me know when new data coming in for these `sockets`”, I sleep now.
+- When new data comes in, `network hardware` [DMA](https://en.wikipedia.org/wiki/Direct_memory_access) the `network data` and triggers a `CPU interruption` to notify data has been saved.
+- Then the `CPU` wakes up the sleeping process: “Wake up, here is your data, passed you a copy of the `File descriptor list`, find out yourself”.
+- The process now wakes up and finds out (an `O(N)` search) which `socket` this file descriptor belongs to.
+
+## Summary
+
+So compare with Blocking I/O + multi-threading way, ***this solution solved the c10k issue***. ***Multiple socket ports are served by a single process***. ***We don’t have to keep opening threads for new connections.***
+
+***==However:==*** On each call to `select()` or `poll()`, the kernel must check all of the specified file descriptors to see if they are ready. When monitoring a large number of file descriptors that are in a densely packed range, the timed required for this operation greatly outweighs the rest of the stuff they have to do.
+
+Basically: every time you call `select` or `poll`, the kernel needs to check from scratch whether your file descriptors are available for writing. The kernel doesn’t remember the list of file descriptors it’s supposed to be monitoring!
+
+# Signal-driven I/O (is this a thing people use?)
+
+The book actually describes 2 ways to ask the kernel to remember the list of file descriptors it’s supposed to be monitoring: signal-drive I/O and `epoll`. Signal-driven I/O is a way to get the kernel to send you a signal when a file descriptor is updated by calling `fcntl`. I’ve never heard of anyone using this and the book makes it sound like `epoll` is just better so we’re going to ignore it for now and talk about epoll.
+
+# level-triggered vs edge-triggered
+
+Before we talk about epoll, we need to talk about “`level-triggered`” vs “`edge-triggered`” notifications about file descriptors. I’d never heard this terminology before (I think it comes from electrical engineering maybe?). Basically there are 2 ways to get notifications
+- get a list of every file descriptor you’re interested in that is readable (“`level-triggered`”)
+- get notifications every time a file descriptor becomes readable (“`edge-triggered`”)
+
+# Epoll
+
+The `Epoll I/O model` is a scalable event notification mechanism used in Linux systems to efficiently handle large numbers of file descriptors, such as network connections.
+
+The `epoll` group of system calls (`epoll_create`, `epoll_ctl`, `epoll_wait`) give the Linux kernel a list of file descriptors to track and ask for updates about activity on those file descriptors.
+
+Here are the steps to using epoll:
+1. Call `epoll_create` to tell the kernel you’re gong to be epolling! It gives you an id back
+2. Call `epoll_ctl` to tell the kernel file descriptors you’re interested in updates about. Interestingly, you can give it lots of different kinds of file descriptors (pipes, FIFOs, sockets, POSIX message queues, inotify instances, devices, & more), but **not regular files**. I think this makes sense – pipes & sockets have a pretty simple API (one process writes to the pipe, and another process reads!), so it makes sense to say “this pipe has new data for reading”. But files are weird! You can write to the middle of a file! So it doesn’t really make sense to say “there’s new data available for reading in this file”.
+3. Call `epoll_wait` to wait for updates about the list of files you’re interested in.
+
+### How does it work internally?
+
+![[Pasted image 20231015202550.png]]
+1. OS created the `Epoll Red-Black tree` and also a `waitlist queue`. **Both structures are stored in kernel space** (**no copying is needed**)
+2. The user process adds one or more `socket file descriptors` into the `R-B tree` by calling `epoll APIs`. Then listen to the `waitlist queue` for new data coming.
+3. When new `data` comes from the network driver. It finds the `file descriptor` based on the `socket port` and put the `File descriptor` into the `waitlist queue`.
+4. The user process got the `data` with `FileDescritor` info from the waitlist queue.
+
+**Key differences:**
+- **No more data copy between user space and kernel space** => increase performance.
+- `Kernel` now maintains a `waitlist` that stores the `active connections` as an output from `R-B Tree`
+- Using the `R-B tree` structure makes all operations done in `O(LogN)`
+
+### **Example:**
+*Imagine you are a receptionist at a hotel with hundreds of rooms. In the select or poll model, you would need to constantly visit each room to check if any guest needs assistance. This can be time-consuming and inefficient. 
+However, with the `epoll model`, you have a centralized system that notifies you whenever a guest in any room requires your attention. This allows you to focus on other tasks until an event occurs, making your job more efficient*
+# References:
+
+1. [Async IO on Linux: select, poll, and epoll](https://jvns.ca/blog/2017/06/03/async-io-on-linux--select--poll--and-epoll/)
