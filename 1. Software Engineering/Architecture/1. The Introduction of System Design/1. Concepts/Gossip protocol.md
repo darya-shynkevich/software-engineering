@@ -1,0 +1,1 @@
+peer-to-peer communication technique used by nodes to periodically exchange state information

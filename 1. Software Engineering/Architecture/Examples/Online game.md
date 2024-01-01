@@ -1,0 +1,22 @@
+
+# References:
+
+1. [Online games system design](https://www.youtube.com/watch?v=EU81tjgoKoI&list=PLkQkbY7JNJuCoOw3epgKcNIU6rFri4iQk) (videos)
+2. [Multi-player System Game Design - Pros & Cons of Proposed Designs & System Design Interviews Advice](https://www.youtube.com/watch?v=vJ5cOfiJRgM&list=PLQnljOFTspQXSevtRqvMNycWfHM7cXc3d&index=2) (video)
+3. [Building a Multi-player Game with WebSockets](https://www.youtube.com/watch?v=cXxEiWudIUY&list=PLQnljOFTspQXSevtRqvMNycWfHM7cXc3d&index=5) (video)
+4. [Leaderboard System Design](https://levelup.gitconnected.com/leaderboard-system-design-f168e67eba6c)
+5. [How we built a Distributed Leaderboard System in a Week](https://engg.glance.com/how-we-built-a-distributed-leaderboard-system-in-a-week-c8b1a63083ed)
+6. [Владимир Иванов, Август Вилакия: System Design Doodle](https://www.youtube.com/watch?v=gMD_kUdVXp0) (video)
+7. [How to Create an Asynchronous Multiplayer Game](http://www.indieflashblog.com/how-to-create-an-asynchronous-multiplayer-game.html)
+    1. [How to Create an Asynchronous Multiplayer Game Part 2: Saving the Game State to Online Database](http://www.indieflashblog.com/how-to-create-async-part2.html)
+    2. [How to Create an Asynchronous Multiplayer Game Part 3: Loading Games from the Database](http://www.indieflashblog.com/how-to-create-async-part3.html)
+    3. [How to Create an Asynchronous Multiplayer Game Part 4: Matchmaking](http://www.indieflashblog.com/how-to-create-async-part4-html.html#comment-4447)
+8. [Making a multiplayer web game with websocket that can be scalable to millions of users](https://medium.com/@dragonblade9x/making-a-multiplayer-web-game-with-websocket-that-can-be-scalable-to-millions-of-users-923cc8bd4d3b)
+9. [How to design multi-region & multiplayer online game!](https://medium.com/@surfd1001/how-to-design-a-multiplayer-online-game-753e21c9918f)
+10. [API Platform at Riot Games](https://engineering.riotgames.com/news/riot-games-api-deep-dive)
+11. [Games Platform at The New York Times](https://open.nytimes.com/play-by-play-moving-the-nyt-games-platform-to-gcp-with-zero-downtime-cf425898d569)
+12. [Architecture of League of Legends Client Update](https://technology.riotgames.com/news/architecture-league-client-update)
+13. [How League Of Legends Scaled Chat To 70 Million Players - It Takes Lots Of Minions](http://highscalability.com/blog/2014/10/13/how-league-of-legends-scaled-chat-to-70-million-players-it-t.html)
+14. [Determinism (4 parts) in League of Legends Server](https://engineering.riotgames.com/news/determinism-league-legends-fixing-divergences)
+15. [Real Time Multiplayer in HTML5](http://buildnewgames.com/real-time-multiplayer/)
+16. [64 Network DO’s And DON’Ts For Game Engines. Part IIIa: Server-Side](http://highscalability.com/blog/2015/7/15/64-network-dos-and-donts-for-game-engines-part-iiia-server-s.html)

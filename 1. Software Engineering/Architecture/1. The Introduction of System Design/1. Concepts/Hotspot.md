@@ -1,0 +1,1 @@
+A performance-degraded node in a distributed system due to a large share of data storage and a high volume of retrieval or storage requests

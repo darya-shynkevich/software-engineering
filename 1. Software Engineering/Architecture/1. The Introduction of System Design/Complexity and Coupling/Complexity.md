@@ -1,0 +1,16 @@
+- We should aim for simplicity because simplicity is a prerequisite for reliability.
+- Simple is often erroneously mistaken for easy. "Easy" means "to be at hand", "to be approachable". "Simple" is the opposite of "complex" which means "being intertwined", "being tied together". Simple != easy.
+- What matters in software is: does the software do what is supposed to do? Is it of high quality? Can we rely on it? Can problems be fixed along the way? Can requirements change over time? The answers to these questions is what matters in writing software not the look and feel of the experience writing the code or the cultural implications of it.
+- The benefits of simplicity are: ease of understanding, ease of change, ease of debugging, flexibility.
+- Complex constructs: State, Object, Methods, Syntax, Inheritance, Switch/matching, Vars, Imperative loops, Actors, ORM, Conditionals.
+- Simple constructs: Values, Functions, Namespaces, Data, Polymorphism, Managed refs, Set functions, Queues, Declarative data manipulation, Rules, Consistency.
+- Build simple systems by: 
+    - Abstracting - design by answering questions related to what, who, when, where, why, and how.
+    - Choosing constructs that generate simple artifacts.
+    - Simplify by encapsulation.
+
+### References:
+
+1. https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.93.8928 TBD
+2. https://www.infoq.com/presentations/Simple-Made-Easy/
+3. [Why Static Languages Suffer From Complexity](https://hirrolot.github.io/posts/why-static-languages-suffer-from-complexity.html#)

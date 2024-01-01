@@ -1,0 +1,40 @@
+
+# [[Monitoring]]
+
+# [[Alerting]]
+
+# References:
+
+1. [**Distributed Monitoring and Alerting**](https://www.oreilly.com/ideas/monitoring-distributed-systems)
+2. [Anomaly Detection: Algorithms, Explanations, Applications](https://www.youtube.com/watch?v=12Xq9OLdQwQ) (video)
+3. [Smart alerts in ThirdEye, LinkedIn’s real-time monitoring platform](https://engineering.linkedin.com/blog/2019/06/smart-alerts-in-thirdeye--linkedins-real-time-monitoring-platfor)
+4. **[Detecting and preventing abuse on LinkedIn using isolation forests](https://engineering.linkedin.com/blog/2019/isolation-forest)**
+5. [Собственная система уведомлений о нештатных ситуациях](https://www.youtube.com/watch?v=U4u4Bd0FtrY&list=PLH-XmS0lSi_wMtn1TsBc2_vv7tBDAf7Qg&index=16) (video)*
+6. [Open sourcing Singer, Pinterest’s performant and reliable logging agent](https://medium.com/pinterest-engineering/open-sourcing-singer-pinterests-performant-and-reliable-logging-agent-610fecf35566)
+7. [Scale Your Metrics with Elasticsearch](https://www.youtube.com/watch?v=pZJLlOCuPpg&list=PLH-XmS0lSi_wRIh4RJjnTGMKaTiQoaGTc&index=52) (video)
+8. [Metrics! Metrics! Metrics!](https://www.youtube.com/watch?v=bsr4Z5tLMpw&list=PLH-XmS0lSi_wRIh4RJjnTGMKaTiQoaGTc&index=39) (video)
+9. [USE, RED и Golden Signals для анализа производительности и оптимизации](https://www.youtube.com/watch?v=0eAdIxzR7G0&list=PLH-XmS0lSi_wRIh4RJjnTGMKaTiQoaGTc&index=44) (video)
+10. [Мониторинг — разработчикам! Технологии — сообществу! Профит — всем!](https://www.youtube.com/watch?v=VSM7BAzlNsY&list=PLH-XmS0lSi_wRIh4RJjnTGMKaTiQoaGTc&index=103) (video)
+11. [USE, RED и Golden Signals для анализа производительности и оптимизации](https://www.youtube.com/watch?v=0eAdIxzR7G0&list=PLH-XmS0lSi_wRIh4RJjnTGMKaTiQoaGTc&index=44) (video)
+12. [Distributed Tracing — we’ve been doing it wrong](https://medium.com/@copyconstruct/distributed-tracing-weve-been-doing-it-wrong-39fc92a857df)
+13. [Unicorn: Remediation System at eBay](https://www.ebayinc.com/stories/blogs/tech/unicorn-rheos-remediation-center/)
+14. [M3: Metrics and Monitoring Platform at Uber](https://eng.uber.com/optimizing-m3/)
+15. [Athena: Automated Build Health Management System at Dropbox](https://blogs.dropbox.com/tech/2019/05/athena-our-automated-build-health-management-system/)
+16. [Vortex: Monitoring Server Applications at Dropbox](https://blogs.dropbox.com/tech/2019/11/monitoring-server-applications-with-vortex/)
+17. [Nuage: Cloud Management Service at LinkedIn](https://engineering.linkedin.com/blog/2019/solving-manageability-challenges-with-nuage)
+18. [Telltale: Application Monitoring at Netflix](https://netflixtechblog.com/telltale-netflix-application-monitoring-simplified-5c08bfa780ba)
+19. [ThirdEye: Monitoring Platform at LinkedIn](https://engineering.linkedin.com/blog/2019/06/smart-alerts-in-thirdeye--linkedins-real-time-monitoring-platfor)
+20. [Periskop: Exception Monitoring Service at SoundCloud](https://developers.soundcloud.com/blog/periskop-exception-monitoring-service)
+21. [Securitybot: Distributed Alerting Bot at Dropbox](https://blogs.dropbox.com/tech/2017/02/meet-securitybot-open-sourcing-automated-security-at-scale/)
+22. [Monitoring System at Alibaba](https://www.usenix.org/conference/srecon18asia/presentation/xinchi)
+23. [Real User Monitoring at Dailymotion](https://medium.com/dailymotion/real-user-monitoring-1948375f8be5)
+24. [Alerting Ecosystem at Uber](https://eng.uber.com/observability-at-scale/)
+25. [Alerting Framework at Airbnb](https://medium.com/airbnb-engineering/alerting-framework-at-airbnb-35ba48df894f)
+26. [Alerting on Service-Level Objectives (SLOs) at SoundCloud](https://developers.soundcloud.com/blog/alerting-on-slos)
+27. [Job-based Forecasting Workflow for Observability Anomaly Detection at Uber](https://eng.uber.com/observability-anomaly-detection/)
+28. [Monitoring and Alert System using Graphite and Cabot at HackerEarth](http://engineering.hackerearth.com/2017/03/21/monitoring-and-alert-system-using-graphite-and-cabot/)
+29. [Observability (2 parts) at Twitter](https://blog.twitter.com/engineering/en_us/a/2016/observability-at-twitter-technical-overview-part-ii.html)
+30. [Distributed Security Alerting at Slack](https://slack.engineering/distributed-security-alerting-c89414c992d6)
+31. [Real-Time News Alerting at Bloomberg](https://www.infoq.com/presentations/news-alerting-bloomberg)
+32. [Data Pipeline Monitoring System at LinkedIn](https://engineering.linkedin.com/blog/2019/an-inside-look-at-linkedins-data-pipeline-monitoring-system-)
+33. [Monitoring and Observability at Picnic](https://blog.picnic.nl/monitoring-and-observability-at-picnic-684cefd845c4)

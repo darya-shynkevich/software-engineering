@@ -1,0 +1,5 @@
+[Leases](https://dl.acm.org/doi/10.1145/74851.74870) are a kind of time-based lock widely used in distributed systems. In most systems, a lease is replacing a number of coordination steps.
+
+One component takes a lease, and then uses that lease as a license to multiple things without worrying that other components are doing conflicting things, or may disagree, or whatever. Freed from the worry about conflicts, the lease-holding component can avoid coordinating and go ahead at full speed.
+
+Leases are an interesting blend of pessimism (_I’m assuming other things are going to conflict with my work, so I’m going to stop them in their tracks_) and optimism (_I’m assuming I can go ahead without coordination for the next bounded period of time_). If the pessimism is wrong, all the heartbeating and updating and storing of leases is wasted work. As is the time other components could have spent doing work which they wasted while waiting for the lease.
