@@ -49,7 +49,7 @@ In Python, however, lists are [dynamic arrays](https://docs.python.org/3.7/faq/
 
 *When items are appended or inserted, the array of references is resized. Some cleverness is applied to improve the performance of appending items repeatedly; when the array must be grown, some extra space is allocated so the next few times don’t require an actual resize.*
 
-Python’s [[Implementation Of Dynamic Arrays]]
+Python’s  [Implementation Of Dynamic Arrays](1.%20Software%20Engineering/Python/Implementation%20Of%20Dynamic%20Arrays.md)
 
 ![[Pasted image 20230604191340.png]]
 
@@ -259,3 +259,9 @@ References:
 4. [_Core Linked Lists Vs Arrays (video)_](https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/rjBs9/core-linked-lists-vs-arrays)
 5. [_In The Real World Linked Lists Vs Arrays (video)_](https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/QUaUd/in-the-real-world-lists-vs-arrays)
 6. [_why you should avoid linked lists (video)_](https://www.youtube.com/watch?v=YQs6IC-vgmo) *Bjarne Stroustrup, the creator of C++, explains in a video that vectors are better than linked lists for frequent insertions and deletions due to the linear search needed for finding insertion points in linked lists, which can be much slower than with vectors. The extra space needed for linked lists and their unpredictable usage patterns also make them less efficient. Stroustrup emphasizes the significance of data structure selection on performance and recommends using compact data structures on the free store to optimize performance.*
+
+
+![](_Attachments/Pasted%20image%2020240101224313.png)
+
+[Stack](1.%20Software%20Engineering/Algorithms/Data%20Structures/Stack.md)
+
