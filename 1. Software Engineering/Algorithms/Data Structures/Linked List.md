@@ -260,8 +260,7 @@ References:
 5. [_In The Real World Linked Lists Vs Arrays (video)_](https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/QUaUd/in-the-real-world-lists-vs-arrays)
 6. [_why you should avoid linked lists (video)_](https://www.youtube.com/watch?v=YQs6IC-vgmo) *Bjarne Stroustrup, the creator of C++, explains in a video that vectors are better than linked lists for frequent insertions and deletions due to the linear search needed for finding insertion points in linked lists, which can be much slower than with vectors. The extra space needed for linked lists and their unpredictable usage patterns also make them less efficient. Stroustrup emphasizes the significance of data structure selection on performance and recommends using compact data structures on the free store to optimize performance.*
 
+[Stack](Stack.md)
 
-![](_Attachments/Pasted%20image%2020240101224313.png)
-
-[Stack](1.%20Software%20Engineering/Algorithms/Data%20Structures/Stack.md)
+![](../../../_Attachments/Pasted%20image%2020240101225238.png)
 
