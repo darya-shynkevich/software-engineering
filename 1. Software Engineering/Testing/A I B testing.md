@@ -24,7 +24,7 @@ Feature flagging is used to enable or disable a feature for a given user. And we
 
 Instead of simply rolling the dice using `Math.random()` , we hash the combination of the experiment identifier and the user identifier using something like MD5, which effectively creates a consistent random number for the experiment/user combination.
 
-![[Pasted image 20231014140337.png]]
+![Pasted image 20231014140337](../../_Attachments/Pasted%20image%2020231014140337.png)
 
 After you’ve computed the variant, you log the result, but instead of writing to a transactional database, which is blocking, you write the result to a data firehose (such as [AWS Kinesis](https://aws.amazon.com/pm/kinesis/)) in a non-blocking way. Eventually the data makes its way into a table in your data lake/warehouse for analysis (often called the “assignments” table).
 
@@ -35,7 +35,7 @@ After you’ve computed the variant, you log the result, but instead of writing 
 
 2. **There’s no good way to opt users in to a specific variant**. This is often necessary for testing or rollout purposes (e.g., someone should be able to test each variant). The reason for this is that with only hashing, the variant is fully determined by the experiment/user combination.
 
-#### **The answer to randomisation: [[Feature flagging]]**
+#### **The answer to randomisation: [Feature flagging](Feature%20flagging)**
 
 Modern feature flagging is essentially a [JSON delivery service](https://www.geteppo.com/blog/introduction-to-feature-flagging-and-randomization). The server maintains a file describing the feature flags and the rules that govern assignment; it's up to the _client_ to download the file and decide which group it belongs to.
 
@@ -47,7 +47,7 @@ As with most things in engineering, architecture represents tradeoffs. A "smart 
 
 => Use cache (Google Cloud CDN)
 
-![[Pasted image 20231014143431.png]]
+![Pasted image 20231014143431](../../_Attachments/Pasted%20image%2020231014143431.png)
 **Update** latency (taken together, the average update latency comes out to about 4 minutes.):
 1. **Polling frequency** refers to how often the client SDK requests an update from the servers. This number can be controlled by the customer, and is set to 5 minutes by default (with some jitter added to prevent an accidental DDoS).
 2. **Cache time-to-live** **(TTL)** refers to how long the cached file is considered valid. This number is set to 3 minutes, and is not (currently) configurable by the customer.

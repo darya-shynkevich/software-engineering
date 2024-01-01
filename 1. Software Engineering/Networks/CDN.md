@@ -1,5 +1,5 @@
 
-![[Pasted image 20230826020851.png]]
+![Pasted image 20230826020851](../../_Attachments/Pasted%20image%2020230826020851.png)
 
 *==It is a distributed network of servers that caches content close to end users.==* CDNs are designed to quickly transfer assets needed for loading web content, such as HTML pages, JavaScript files, stylesheets, images, and videos. CDNs improve website performance and reduce latency by storing cached static content in multiple locations worldwide. When a user requests a webpage, the CDN server closest to the user’s geographical location serves up the content. CDNs can also enhance security and reliability by providing redundancy in case of outages or cyberattacks.
 

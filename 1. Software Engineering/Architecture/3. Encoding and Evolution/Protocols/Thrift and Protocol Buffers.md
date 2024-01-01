@@ -33,16 +33,16 @@ message Person {
 Thrift and Protocol Buffers each come with a code generation tool that takes a schema definition like the ones shown here, *and produces classes that implement the schema in various programming languages*. Your application code can call this generated code to encode or decode records of the schema.
 
 Thrift has two different binary encoding formats, called ***BinaryProtocol*** and ***CompactProtocol***.
-![[Pasted image 20230604145548.png]]
+![Pasted image 20230604145548](../../../../_Attachments/Pasted%20image%2020230604145548.png)
 
 Each field has a type annotation (to indicate whether it is a string, integer, list, etc.) and, where required, a length indication (length of a string, number of items in a list). The strings that appear in the data (“Martin”, “daydreaming”, “hacking”) are also encoded as ASCII (or rather, UTF-8), similar to before. Also there no field names, instead, the encoded data contains field tags, which are numbers (1, 2, and 3). Those are the numbers that appear in the schema definition. Field tags are like aliases for fields — they are a compact way of saying what field we’re talking about, without having to spell out the field name.
 
 The ***Thrift CompactProtocol*** encoding is semantically equivalent to BinaryProtocol, but it packs the same information into only 34 bytes. It does this by packing the field type and tag number into a single byte, and by using variable-length integers. Rather than using a full eight bytes for the number 1337, it is encoded in two bytes, with the top bit of each byte used to indicate whether there are still more bytes to come. This means numbers between –64 and 63 are encoded in one byte, numbers between –8192 and 8191 are encoded in two bytes, etc. Bigger numbers use more bytes.
 
-![[Pasted image 20230604150115.png]]
+![Pasted image 20230604150115](../../../../_Attachments/Pasted%20image%2020230604150115.png)
 
 ***Protocol Buffers*** (which has only one binary encoding format) packing slightly differently, but is otherwise very similar to Thrift’s CompactProtocol. Protocol Buffers fits the same record in 33 bytes.
-![[Pasted image 20230604150254.png]]
+![Pasted image 20230604150254](../../../../_Attachments/Pasted%20image%2020230604150254.png)
 
 #### Field tags and schema evolution
 

@@ -9,7 +9,7 @@ Table A    Table B
 
 **CARTESIAN JOIN**: returns the Cartesian product of the sets of records from the two or more joined tables.
 
-![[Pasted image 20231202194900.png]]
+![Pasted image 20231202194900](../../../_Attachments/Pasted%20image%2020231202194900.png)
 
 This does not have an `ON` clause and simply returns every combination of rows from the two tables.
 
@@ -17,7 +17,7 @@ This does not have an `ON` clause and simply returns every combination of rows
 SELECT A.Colour, B.Colour FROM A CROSS JOIN B
 ```
 
-![[Pasted image 20231202194930.png]]
+![Pasted image 20231202194930](../../../_Attachments/Pasted%20image%2020231202194930.png)
 
 
 **INNER JOIN**: returns rows when there is a match in both tables.

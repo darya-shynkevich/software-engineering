@@ -6,7 +6,7 @@ _**[Awesome FastAPI](https://github.com/mjhea0/awesome-fastapi)**_
 
 ****[_Build a URL Shortener With FastAPI and Python_](https://realpython.com/build-a-python-url-shortener-with-fastapi/)****
 
-[[FatAPI technical points]]
+[FatAPI technical points](FatAPI%20technical%20points.md)
 
 
 ### Resources

@@ -1,10 +1,10 @@
 #### **Indexing a JSON Value with B-trees:**
 
-![[Pasted image 20231130235521.png]]
+![Pasted image 20231130235521](../../../_Attachments/Pasted%20image%2020231130235521.png)
 
 #### How to add GIN in Django:
 
-![[Pasted image 20231130235748.png]]
+![Pasted image 20231130235748](../../../_Attachments/Pasted%20image%2020231130235748.png)
 Then the query below is superfast *(The @> operator checks if a jsonb column contains the given JSON path or values)*
 
 ```SQL

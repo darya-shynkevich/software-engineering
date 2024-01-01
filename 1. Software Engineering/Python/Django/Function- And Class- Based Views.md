@@ -7,7 +7,7 @@ When it comes down to it, every Django view is a function. This function takes a
 
 Django’s CBVs appear to be very different than FBVs. However, the `View.as_view()` classmethod called in URLConfs is actually returning a callable instance of the view. In other words, a callback function that handles the request/response cycle in exactly the same manner as a function-based view!
 
-![[Pasted image 20231126234230.png]]
+![Pasted image 20231126234230](../../../_Attachments/Pasted%20image%2020231126234230.png)
 
 # Best Practices for Function-Based Views
 
@@ -37,7 +37,7 @@ When using mixins to compose our own view classes, we recommend these rules of i
 
 Django CBV Usage Table
 
-![[Pasted image 20231126235524.png]]
+![Pasted image 20231126235524](../../../_Attachments/Pasted%20image%2020231126235524.png)
 
 
 # Reference:

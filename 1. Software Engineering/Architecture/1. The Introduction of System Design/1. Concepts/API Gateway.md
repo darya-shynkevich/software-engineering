@@ -11,7 +11,7 @@ Key features of an API Gateway:
 
 Examples of API Gateway solutions include those provided by Microsoft Azure API Management, Amazon API Gateway, Google Apigee, and more. These services enable developers to publish, maintain, monitor, secure, and operate APIs efficiently at any scale.
 
-![[Pasted image 20230826020815.png]]
+![Pasted image 20230826020815](../../../../_Attachments/Pasted%20image%2020230826020815.png)
 
 # References:
 

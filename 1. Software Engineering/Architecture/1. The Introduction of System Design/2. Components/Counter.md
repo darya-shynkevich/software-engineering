@@ -10,7 +10,7 @@ The challenge is that writing takes more time than reading, and **concurrent**�
 
 A write request is forwarded to the specified **tweet counter** when the user likes that tweet. Then, the system chooses an available shard of the specified tweet counter to increment the like count.
 
-![[Pasted image 20231113144731.png]]
+![Pasted image 20231113144731](../../../../_Attachments/Pasted%20image%2020231113144731.png)
 The **number of shards** is critical for good performance. 
 If the shard count is small for a specific write workload => high write contention, which results in slow writes.
 If the shard count is too high for a particular write profile, we encounter a higher overhead on the read operation.

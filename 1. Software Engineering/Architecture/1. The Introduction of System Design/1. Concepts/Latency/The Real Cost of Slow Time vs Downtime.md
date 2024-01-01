@@ -1,4 +1,4 @@
-![[Pasted image 20230818104205.png]]
+![Pasted image 20230818104205](../../../../../_Attachments/Pasted%20image%2020230818104205.png)
 
 Performance affects many businesses KPIs every day:
 	1. revenue
@@ -15,7 +15,7 @@ Performance affects many businesses KPIs every day:
 			- 66% say website performance influences their impression of the firm
 			- 33% have possessed a negative impact on a firm with a poor performing website
 
-![[Pasted image 20230818104253.png]]
+![Pasted image 20230818104253](../../../../../_Attachments/Pasted%20image%2020230818104253.png)
 
 1. Amazon has found that each delay of page loading by 0.1 second reduces sales by 1% [3]
 2. Yahoo has seen a 9% increase in traffic for every 0.4 second improvement in page load speed [3]
@@ -36,15 +36,15 @@ Performance affects many businesses KPIs every day:
 17. 40% of consumers will leave a page that takes longer than three seconds to load. [3]
 18. 1 out of 5 online shoppers will abandon their cart because the transaction process was too slow [5]
 
-![[Pasted image 20230818105156.png]]
-![[Pasted image 20230818105344.png]]
+![Pasted image 20230818105156](../../../../../_Attachments/Pasted%20image%2020230818105156.png)
+![Pasted image 20230818105344](../../../../../_Attachments/Pasted%20image%2020230818105344.png)
 
 Average revenue loss per hour of downtime - 21 000$
 Average revenue loss due to one hour of performance slowdown (slower than 4.4s): 4 100$ (which occur 10 times more frequently than outages)
 
 4.4 seconds = average delay in response time when business performance starts to decline (TRAC)
 
-![[Pasted image 20230818105929.png]]
+![Pasted image 20230818105929](../../../../../_Attachments/Pasted%20image%2020230818105929.png)
 
 
 ## References:

@@ -1,6 +1,6 @@
 When we work in multi-threading code, to ensure thread safety(automatic operation), we use locks or synchronized keywords. under the hood, it uses semaphore or mutex.
 
-![[Pasted image 20231014200638.png]]
+![Pasted image 20231014200638](../../_Attachments/Pasted%20image%2020231014200638.png)
 
 So at the CPU level, there are multi-level caches. L1 and L2 are within “each CPU world”. they have a shared L3 cache, and yes, Memory is hit when the cache is missed in all 3 levels.
 
@@ -11,7 +11,7 @@ So we already know that the lock can make it work. but it is not cheap, what if 
 
 # How volatile exactly works
 
-![[Pasted image 20231014200845.png]]
+![Pasted image 20231014200845](../../_Attachments/Pasted%20image%2020231014200845.png)
 
 The above picture has a couple of steps but just 3 key points.
 

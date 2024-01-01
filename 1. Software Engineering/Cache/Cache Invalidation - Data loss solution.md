@@ -1,6 +1,6 @@
 Why simply deleting cache would not solve the problem:
 
-![[Pasted image 20231014202410.png]]
+![Pasted image 20231014202410](../../_Attachments/Pasted%20image%2020231014202410.png)
 
 ## Solutions:
 #### A dirty patch
@@ -8,7 +8,7 @@ Whenever we delete the cache, make sure it is not outdated by another racing thr
 1. we delete it again after X minutes (archive eventually consistency).
 2. X = the max out-of-sync minutes that can be tolerated.
 
-![[Pasted image 20231014202424.png]]
+![Pasted image 20231014202424](../../_Attachments/Pasted%20image%2020231014202424.png)
 #### Strong consistency
 
 Sure then we have to sacrifice a bit of performance. using the distributed lock. you can either choose a database table or Redis (cluster) to do that.
@@ -33,6 +33,6 @@ If you really need to make sure 100% and want a bit more throughput. maybe can c
 
 What if my cache is distributed? and when I delete one cache then need to notify other nodes the cache is invalid.
 
-Remember how [[CPU level cache]] “tells” other “CPUs” that its cache is outdated? just use the same idea. At the CPU level, it uses bus snooping with MESI protocol, at the system level we can ***use a message queue(or subscribe to Mysql binlog) to do pub/sub.***
+Remember how [CPU level cache](CPU%20level%20cache.md) “tells” other “CPUs” that its cache is outdated? just use the same idea. At the CPU level, it uses bus snooping with MESI protocol, at the system level we can ***use a message queue(or subscribe to Mysql binlog) to do pub/sub.***
 
 What if delete failed, Let’s say some nodes never ack the message. retry.

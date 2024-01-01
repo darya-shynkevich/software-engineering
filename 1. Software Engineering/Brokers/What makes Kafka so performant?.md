@@ -9,7 +9,7 @@ Although Kafka stores data on Disk it provides high throughput at low latency du
 > Sequential Access in disk is faster than Random Access in memory.
 
 Kafka uses an **append-only log** as its primary data structure. It adds new data to the end of the file thus making writes sequential.
-![[Pasted image 20231019233113.png]]
+![Pasted image 20231019233113](../../_Attachments/Pasted%20image%2020231019233113.png)
 
 **Drawbacks:**
 1. ***Lack of Random Access => Slow Retrieval of Specific Data***: One major drawback is the inability to directly access specific data points within a sequence

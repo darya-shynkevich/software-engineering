@@ -13,7 +13,7 @@ Load balancers are responsible for ***how that load is distributed across the po
 
 
 #### OSI layers
-![[Pasted image 20230605111431.png]]
+![Pasted image 20230605111431](../../_Attachments/Pasted%20image%2020230605111431.png)
 Load balancers (LB) are divided into two groups **Layer 4** or **Layer 7.** 
 
 ***Layer 4 LBs*** *can only act on data found in the transport and network layers like IP and TCP.* 

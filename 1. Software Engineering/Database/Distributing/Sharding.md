@@ -1,13 +1,13 @@
-![[Pasted image 20230605121444.png]]
+![Pasted image 20230605121444](../../../_Attachments/Pasted%20image%2020230605121444.png)
 
 Sharding is a process of segmenting the data into partitions that are spread on multiple DB instances => *==it is a method for distributing data across multiple machines==*. It becomes especially handy when no single machine can handle the expected workload.
 
 *Sharding is an example of horizontal scaling, while vertical scaling is an example of just getting larger and larger machines to support the new workload.*
-![[Pasted image 20230605121659.png]]
+![Pasted image 20230605121659](../../../_Attachments/Pasted%20image%2020230605121659.png)
 *==A sharded database may be the best way to go if your application database manages a lot of data, needs a lot of reads and writes, and/or needs to be available at all times.==*
 
 *==**Sharding allows for significant scalability, but comes with increased complexity, overhead, and infrastructure costs.***==
-## [[What are my options before?]]
+## [What are my options before?](What%20are%20my%20options%20before?.md)
 
 ## Pros of Sharding
 
@@ -25,18 +25,18 @@ Sharding is a process of segmenting the data into partitions that are spread on 
 (-) Schema changes are hard
 (-) JOINS across DBs
 (-) Has to be something you know in the query
-## [[Consistent Hashing]]
+## [Consistent Hashing](../../Architecture/1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Consistent%20Hashing.md)
 
 ## How does it work?
 
-1. How do we distribute the data across shards? Are there potential [[Hotspot]]s if data isn't distributed evenly?
+1. How do we distribute the data across shards? Are there potential [Hotspot](../../Architecture/1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Hotspot.md)s if data isn't distributed evenly?
 2. What queries do we run and how do the tables interact?
 3. How will data grow? How will it need to be redistributed later?
 
 **Shard Key** is a piece of the **primary key** that tells how the data should be distributed. With a shard key, you can quickly find and change data by routing operations to the correct database.
 
 The same node houses entries that have the same shard key. A group of data that shares the same shard key is referred to as a **logical shard**. Multiple logical shards are included in a database node, also known as a **physical shard**.
-## [[Cross Shard Transactions]]
+## [Cross Shard Transactions](Cross%20Shard%20Transactions.md)
 
 # References:
 

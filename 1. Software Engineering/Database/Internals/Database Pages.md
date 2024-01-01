@@ -2,7 +2,7 @@ Databases often use fixed-size pages to store data. Tables, collections, rows, c
 
 Here is an example of SQL Server page layout.
 
-![[Pasted image 20231014192657.png]]
+![Pasted image 20231014192657](../../../_Attachments/Pasted%20image%2020231014192657.png)
 
 # A Pool of Pages
 
@@ -52,7 +52,7 @@ But that is just one way, the beauty of databases is every database implementati
 
 In Postgres the default page size is 8KB, and here is how it looks like.
 
-![[Pasted image 20231014193610.png]]
+![Pasted image 20231014193610](../../../_Attachments/Pasted%20image%2020231014193610.png)
 
 ## Page header — 24 bytes
 
@@ -74,8 +74,8 @@ This is where the items themselves live in the page one after the other.
 
 ## Special — variable length
 
-This section is only applicable to B+Tree [[1. Software Engineering/Database/Indexes/Base]] leaf pages where each page links to the previous and forward. Information about page pointers are stored here.
+This section is only applicable to B+Tree [Base](../Indexes/Base.md) leaf pages where each page links to the previous and forward. Information about page pointers are stored here.
 
 Here is an example of how tuples are referenced.
 
-![[Pasted image 20231014194051.png]]
+![Pasted image 20231014194051](../../../_Attachments/Pasted%20image%2020231014194051.png)

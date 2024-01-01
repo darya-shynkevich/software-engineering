@@ -40,7 +40,7 @@ Reporter.objects.all().update(stories_filed=F('stories_filed') + 1)
 ```
 
 This will be translated to a query like:
-![[Pasted image 20231203013220.png]]
+![Pasted image 20231203013220](../../../_Attachments/Pasted%20image%2020231203013220.png)
 
 `F()` therefore can offer performance advantages by:
 - getting the database, rather than Python, to do work

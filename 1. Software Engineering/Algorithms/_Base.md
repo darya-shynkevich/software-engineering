@@ -1,6 +1,6 @@
 1. Sliding Window
 2. Islands (Matrix Traversal)
-3. [[Two Pointers]]
+3. [Two Pointers](Two%20Pointers.md)
 4. Fast & Slow Pointers
 5. Merge Intervals
 6. Cyclic Sort

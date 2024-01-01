@@ -8,7 +8,7 @@ Each element of a linked list is called a **node**, and every node has two diff
 
 A `linked list` is a collection of nodes. The first node is called the `head`, and it’s used as the starting point for any iteration through the list. The last node must have its `next` reference pointing to [`None`](https://realpython.com/null-in-python/) to determine the end of the list.
 
-![[Pasted image 20230604195242.png]]
+![Pasted image 20230604195242](../../../_Attachments/Pasted%20image%2020230604195242.png)
 
 #### Practical Applications
 
@@ -18,7 +18,7 @@ They can be used to implement queues or [stacks](https://realpython.com/how-to-
 2. Stack: **Last-In/Fist-Out** (LIFO)
 3. Graphs: **adjacency list**. An adjacency list is, in essence, a list of linked lists where each vertex of the graph is stored alongside a collection of connected vertices
 
-![[Pasted image 20230604190411.png]]
+![Pasted image 20230604190411](../../../_Attachments/Pasted%20image%2020230604190411.png)
 
 ```
 graph = {
@@ -37,9 +37,9 @@ graph = {
 
 In most programming languages, there are clear differences in the way linked lists and arrays are stored in memory. 
 
-![[Pasted image 20230604195502.png]]
+![Pasted image 20230604195502](../../../_Attachments/Pasted%20image%2020230604195502.png)
 
-![[Pasted image 20230604223826.png]]
+![Pasted image 20230604223826](../../../_Attachments/Pasted%20image%2020230604223826.png)
 
 In Python, however, lists are [dynamic arrays](https://docs.python.org/3.7/faq/design.html#how-are-lists-implemented-in-cpython). That means that the memory usage of both lists and linked lists is very similar.
 
@@ -51,7 +51,7 @@ In Python, however, lists are [dynamic arrays](https://docs.python.org/3.7/faq/
 
 Python’s  [Implementation Of Dynamic Arrays](1.%20Software%20Engineering/Python/Implementation%20Of%20Dynamic%20Arrays.md)
 
-![[Pasted image 20230604191340.png]]
+![Pasted image 20230604191340](../../../_Attachments/Pasted%20image%2020230604191340.png)
 
 
 ###### Insertion and Deletion of Elements
@@ -228,7 +228,7 @@ Doubly linked lists are different from singly linked lists in that they have two
 
 *For example, if we wanted to be able to hop between one node and the node previous without having to go back to the _very beginning of the list_, a doubly linked list would be a better data structure than a singly linked list. However, everything requires space and memory, so if our node had to store two reference pointers instead of just one, that would be another thing to consider.*
 
-![[Pasted image 20230604194012.png]]
+![Pasted image 20230604194012](../../../_Attachments/Pasted%20image%2020230604194012.png)
 
 ```
 class Node:
@@ -247,7 +247,7 @@ class Node:
 - Managing the application life cycle of a given operating system
 - Implementing a [Fibonacci heap](https://en.wikipedia.org/wiki/Fibonacci_heap)
 
-![[Pasted image 20230604194152.png]]
+![Pasted image 20230604194152](../../../_Attachments/Pasted%20image%2020230604194152.png)
 
 One of the advantages of circular linked lists is that you can traverse the whole list starting at any node.
 

@@ -4,13 +4,13 @@
 e of the database.*
 
 
-![[Pasted image 20230605134357.png]]
+![Pasted image 20230605134357](../../../_Attachments/Pasted%20image%2020230605134357.png)
 
 # 2. **Phantom Reads**
 
 *Phantom reads are another committed read phenomena, which occurs when you are most commonly dealing with aggregates. For example, you ask for the number of customers in a specific transaction. Between the two subsequent reads, another customer signs up or deletes their account (committed), which results in you getting two different values if your database doesn't support range locks for these transactions.*
 
-![[Pasted image 20231210223824.png]]
+![Pasted image 20231210223824](../../../_Attachments/Pasted%20image%2020231210223824.png)
 Example:
 1. T1: Select all `QNT * PRICE` (sum = 130)
 2. T2: `INSERT` `Product 3`
@@ -20,7 +20,7 @@ Example:
 
 *Non-repeatable reads occur if you cannot get a consistent view of the data between two subsequent reads during your transaction. In specific modes, concurrent database modification is possible, and there can be scenarios where the value you just read can be modified, resulting in a non-repeatable read.*
 
-![[Pasted image 20231210223424.png]]
+![Pasted image 20231210223424](../../../_Attachments/Pasted%20image%2020231210223424.png)
 Example:
 1. T1: Select all `QNT * PRICE` (sum = 130)
 2. T2: Update `Product 1` `QNT = 15`

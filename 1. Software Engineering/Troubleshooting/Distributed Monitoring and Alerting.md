@@ -1,7 +1,7 @@
 
-# [[Monitoring]]
+# [Monitoring](Monitoring.md)
 
-# [[Alerting]]
+# [Alerting](Alerting.md)
 
 # References:
 

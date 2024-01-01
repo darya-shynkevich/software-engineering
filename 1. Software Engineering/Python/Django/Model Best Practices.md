@@ -2,7 +2,7 @@
 
 Model inheritance in Django is a tricky subject. Django provides three ways to do model inheritance: **abstract base classes**, **multi-table inheritance**, and **proxy models**.
 
-![[Pasted image 20231126212135.png]]
+![Pasted image 20231126212135](../../../_Attachments/Pasted%20image%2020231126212135.png)
 
 - If the overlap between models is minimal (e.g. you only have a couple of models that share one or two identically named fields), there might not be a need for model inheritance. Just add the fields to both models.
 - If there is enough overlap between models that maintenance of models’ repeated fields cause confusion and inadvertent mistakes, then in most cases the code should be refactored so that the common fields are in an abstract base model.
@@ -74,7 +74,7 @@ migrations.RunPython(add_cones, migrations.RunPython.noop)
 It’s a tricky process that risks adding complexity to your project and dramatically raises the risk of losing data.
 ### 4. When to Use Null and Blank
 
-![[Pasted image 20231126213907.png]]
+![Pasted image 20231126213907](../../../_Attachments/Pasted%20image%2020231126213907.png)
 
 ### 5. When to Use BinaryField
 

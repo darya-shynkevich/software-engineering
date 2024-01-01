@@ -1,5 +1,5 @@
 
-[[1. Software Engineering/Networks/CDN|CDN]]
+[CDN](../../Networks/CDN.md)
 
 # References:
 

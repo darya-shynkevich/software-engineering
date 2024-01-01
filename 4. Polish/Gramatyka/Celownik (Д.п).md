@@ -1,2 +1,2 @@
-![[telegram-cloud-photo-size-2-5471889804162618155-y.jpg]]
-![[telegram-cloud-photo-size-2-5471889804162618165-y.jpg]]
+![telegram-cloud-photo-size-2-5471889804162618155-y](../../_Attachments/telegram-cloud-photo-size-2-5471889804162618155-y.jpg)
+![telegram-cloud-photo-size-2-5471889804162618165-y](../../_Attachments/telegram-cloud-photo-size-2-5471889804162618165-y.jpg)

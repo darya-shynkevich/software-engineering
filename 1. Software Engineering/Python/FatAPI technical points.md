@@ -696,7 +696,7 @@ async def read_elements():
     return [{"item_id": "Foo"}]
 ```
 
-![[Pasted image 20230930140616.png]]
+![Pasted image 20230930140616](../../_Attachments/Pasted%20image%2020230930140616.png)
 
 ## JSON Compatible Encoder
 
@@ -800,7 +800,7 @@ For example, let's say you have 4 API endpoints (_path operations_):
 - `/items/pro/`
 
 then you could add different permission requirements for each of them just with dependencies and sub-dependencies:
-![[Pasted image 20230930142941.png]]
+![Pasted image 20230930142941](../../_Attachments/Pasted%20image%2020230930142941.png)
 #### Share `Annotated` dependencies
 
 ```Python

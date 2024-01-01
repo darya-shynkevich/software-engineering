@@ -5,7 +5,7 @@ With multiple copies of the same data, we are faced with options on how to synch
 After a write, reads may or may not see it. A best effort approach is taken.
 This approach is seen in systems such as memcached. Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games. For example, if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.
 
-### 2. **[[Eventual Consistency]]**
+### 2. **[Eventual Consistency](Eventual%20Consistency)**
 
 After a write, reads will eventually see it (typically within milliseconds). Data is replicated asynchronously.
 This approach is seen in systems such as DNS and email. Eventual consistency works well in highly available systems.
@@ -17,11 +17,11 @@ This approach is seen in file systems and RDBMSes. Strong consistency works well
 
 # Important topics:
 
-### 1. [[Consistent Hashing]]
+### 1. [Consistent Hashing](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Consistent%20Hashing.md)
 
-### 2. [[Distributed Locks]]
+### 2. [Distributed Locks](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Distributed%20Locks.md)
 
-### 3. [[Distributed Transactions]]
+### 3. [Distributed Transactions](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Distributed%20Transactions.md)
 
 # References:
 

@@ -1,6 +1,6 @@
 Decision to store all user's messages forever
 
-Arguably, one of the **best databases for iterating quickly is [[MongoDB]]** => but they planned everything for easy migration to a new DB (they knew they were not going to use [[MongoDB]] `sharding` because *it is complicated to use and not known for stability*
+Arguably, one of the **best databases for iterating quickly is [MongoDB](MongoDB)** => but they planned everything for easy migration to a new DB (they knew they were not going to use [MongoDB](MongoDB) `sharding` because *it is complicated to use and not known for stability*
 
 Up to 2015, the messages were stored in a ***MongoDB collection with a single compound index on `channel_id` and `created_at`***, but when they reached 100 million stored messages that approach stop working.
 
@@ -28,11 +28,11 @@ WHY?
 - **Not a blob store —** Writing thousands of messages per second would not work great if they had to constantly deserialize blobs and append to them.
 - **Open source —** They believe in controlling their own destiny and don’t want to depend on a third-party company.
 
-=> [[Cassandra]]
+=> [Cassandra](Cassandra)
 
 # Data Modeling
 
-The Cassandra is a [[Key Key Value Storage]] (like Dynamo DB). The two keys are `primary key`. The first K is the `partition ke`y and is used to determine which node the data lives on and where it is found on the disk.
+The Cassandra is a [Key Key Value Storage](Key%20Key%20Value%20Storage) (like Dynamo DB). The two keys are `primary key`. The first K is the `partition ke`y and is used to determine which node the data lives on and where it is found on the disk.
 
 The `partition` contains multiple rows within it and a row within a `partition` is identified by the second K, which is the `clustering key`. The `clustering key` acts as both a `primary key` within the `partition` and how the rows are sorted.
 

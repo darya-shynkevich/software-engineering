@@ -29,10 +29,10 @@ _Percentiles are computed from a population of data, and have to be recalculated
 - Databases sampling from populations to give fast approximate answers.
 - Solutions bounded in time, space, or both.
 
-![[Pasted image 20230813141510.png]]
+![Pasted image 20230813141510](../../_Attachments/Pasted%20image%2020230813141510.png)
 _Source: Catchpoint.com, data from Oct. 15, 2013 to Nov. 25, 2013 for 30KB
 
-There are tons of ways to compute and store approximate distributions, but histograms are popular because of their relative simplicity. Some monitoring solutions actually support histograms. [[Circonus]] is one, for example.
+There are tons of ways to compute and store approximate distributions, but histograms are popular because of their relative simplicity. Some monitoring solutions actually support histograms. [Circonus](Circonus.md) is one, for example.
 
 ## **Percentiles Done Better in Time Series Databases**
 
@@ -44,9 +44,9 @@ A better way to compute percentiles with a time series database is to collect ba
 
 ## **Beyond Percentiles: Heatmaps**
 
-[[Circonus]] provides an excellent example of [heatmap](https://www.circonus.com/understanding-data-with-histograms/) visualizations
+[Circonus](Circonus.md) provides an excellent example of [heatmap](https://www.circonus.com/understanding-data-with-histograms/) visualizations
 
-![[Pasted image 20230813142423.png]]
+![Pasted image 20230813142423](../../_Attachments/Pasted%20image%2020230813142423.png)
 
 
 ## References:

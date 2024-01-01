@@ -39,7 +39,7 @@ A deadlock happens when two concurrent transactions cannot make progress because
 Because both transactions are in the lock acquisition phase, neither one releases a lock prior to acquiring the next one.
 
 Если блокировка не снимается за какое-то определенное время => взаимная блокировка.
-![[Pasted image 20231218215650.png]]
+![Pasted image 20231218215650](../../../_Attachments/Pasted%20image%2020231218215650.png)
 ##### Deadlock priority
 
 Диспетчер транзакций выбирает какую транзакцию отменить:

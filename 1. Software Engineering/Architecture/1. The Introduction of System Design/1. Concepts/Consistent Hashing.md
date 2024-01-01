@@ -13,30 +13,30 @@ This looks good, but the problem is when servers are added and removed from the 
 Let’s suppose , due to increase in load, we added a new server and now we have 5 servers to serve the traffic. Now, the issue is when user A will make a request, it will be handled by completely different server because our servers increased and so does our hash function output, because before it was calculating the value considering 4 servers but now we have 5. so This is where the whole issue lies.
 
 **Consistent hashing** is a hashing technique that allows nodes to be added or removed from a hash table (also called a distributed hash table or **DHT**) without significantly altering the mapping of keys to nodes.
-	Consistent hashing is used in distributed systems design such as the [[URL shortener 1]] and [[Pastebin]].
+	Consistent hashing is used in distributed systems design such as the [URL shortener 1](URL%20shortener%201) and [Pastebin](../../Examples/Pastebin.md).
 	***Consistent hashing minimises the number of keys to be remapped when the total number of nodes changes***
 
 *In consistent hashing, the set of all possible keys is called the “hash space.” The hash space is typically represented as a circle, with the keys distributed evenly around the circle. This representation is called a “hash ring.”*
 
 Hash ring with representation of hash space:
-![[Pasted image 20231217173438.png]]
+![Pasted image 20231217173438](../../../../_Attachments/Pasted%20image%2020231217173438.png)
 
 Each node in the distributed system is also assigned a position on the hash ring, and is responsible for storing the keys that fall within a certain range of the hash ring. The range of keys that a node is responsible for is called its “zone.”
 
 Using a hash function, we can map servers onto the ring:
-![[Pasted image 20231217173524.png]]
+![Pasted image 20231217173524](../../../../_Attachments/Pasted%20image%2020231217173524.png)
 
 Now, we have our server mapped on to the ring, let’s understand how the requests will be handled by these servers.
 
 We have three requests that mapped on to the hash space using the hash function
-![[Pasted image 20231217173556.png]]
+![Pasted image 20231217173556](../../../../_Attachments/Pasted%20image%2020231217173556.png)
 Each request will be handled by the first server it encounter by moving to the clockwise direction. *In simple words, the first node with a position value greater than the position of the key stores the data object*
 Based on the hash function, `r1` is places on the ring between **s4** and **s1**, so `r1` will be handled by the server **s1**. `r2` is places on the ring between **s2** and **s1**, so `r2` will be handled by the server **s2**. `r3` is places on the ring between **s4** and **s3**, so `r3` will be handled by the server **s4**.
 
 ## Adding a New Server
 
 Let’s suppose we added a new server and based on the hash function , it is placed on the ring between s3 and s4.
-![[Pasted image 20231217173731.png]]
+![Pasted image 20231217173731](../../../../_Attachments/Pasted%20image%2020231217173731.png)
 ***Consistent hashing aid cloud computing by minimizing the movement of data when the total number of nodes changes due to dynamic load***
 
 Average number of keys stored on a `node = k/N` where _k_ is the total number of keys (data objects) and _N_ is the number of nodes.
@@ -44,7 +44,7 @@ Average number of keys stored on a `node = k/N` where _k_ is the total number o
 ## Removing a Server
 
 Removing a server from the ring will require only redistribution of few keys as well.
-![[Pasted image 20231217173827.png]]
+![Pasted image 20231217173827](../../../../_Attachments/Pasted%20image%2020231217173827.png)
 Let’s suppose **s1** goes down, then the only request that need to redistributed is `r1` . Based on the clockwise approach, `r1` will be handled by the server **s2.**
 
 ## Issues With Consistent Hashing
@@ -57,13 +57,13 @@ It is possible that the size of the hash space on the ring assigned to each serv
 
 ### 2. Non uniform request distribution
 
-There is a chance that nodes are not uniformly distributed on the consistent hash ring. The nodes that receive a huge amount of traffic become [[Hotspot]]s resulting in [cascading failure](https://en.wikipedia.org/wiki/Cascading_failure) of the nodes.
+There is a chance that nodes are not uniformly distributed on the consistent hash ring. The nodes that receive a huge amount of traffic become [Hotspot](Hotspot.md)s resulting in [cascading failure](https://en.wikipedia.org/wiki/Cascading_failure) of the nodes.
 
 ## Solution to the issues => Virtual nodes
 
 Virtual nodes refers to real nodes. Each server we have on the ring has multiple virtual nodes. Let’s try to understand it with an example
 Server 1 with 3 virtual nodes `vn 1_1`, `vn 1_2`, `vn 1_3`:
-![[Pasted image 20231217174154.png]]
+![Pasted image 20231217174154](../../../../_Attachments/Pasted%20image%2020231217174154.png)
 In above diagram, we have 3 virtual nodes for server 1 that points to server 1, it means any request handled by the virtual nodes will be redirected to s1.
 
 The technique of assigning multiple positions to a node is known as a **virtual node**. The virtual nodes improve the load balancing of the system and prevent hotspots. The number of positions for a node is decided by the heterogeneity of the node. In other words, ***the nodes with a higher capacity are assigned more positions on the hash ring***
@@ -74,21 +74,21 @@ The data objects can be replicated on adjacent nodes to minimize the data moveme
 
 # Consistent hashing implementation
 
-![[Pasted image 20231217180410.png]]
+![Pasted image 20231217180410](../../../../_Attachments/Pasted%20image%2020231217180410.png)
 
-The self-balancing [[BST]] data structure is used to store the positions of the nodes on the hash ring. The BST offers logarithmic O(log n) time complexity for search, insert, and delete operations. The keys of the BST contain the positions of the nodes on the hash ring.
+The self-balancing [BST](BST) data structure is used to store the positions of the nodes on the hash ring. The BST offers logarithmic O(log n) time complexity for search, insert, and delete operations. The keys of the BST contain the positions of the nodes on the hash ring.
 
 The BST data structure is stored on a centralised highly available service. As an alternative, the BST data structure is stored on each node, and the state information between the nodes is synchronised through the gossip protocol
 ### Insertion of a data object (key)
 
-![[Pasted image 20231217180522.png]]
+![Pasted image 20231217180522](../../../../_Attachments/Pasted%20image%2020231217180522.png)
 
 In the diagram, suppose the hash of an arbitrary key ‘_xyz’_ yields the hash code output _5_. The successor BST node is _6_ and the data object with the key ‘_xyz_’ is stored on the node that is at position _6_. In general, the following operations are executed to insert a key (data object):
 1. Hash the key of the data object
 2. Search the BST in logarithmic time to find the BST node immediately greater than the hashed output
 3. Store the data object in the successor node
 ### Insertion of a node
-![[Pasted image 20231217180652.png]]
+![Pasted image 20231217180652](../../../../_Attachments/Pasted%20image%2020231217180652.png)
 
 
 The insertion of a new node results in the movement of data objects that fall within the range of the new node from the successor node. Each node might store an internal or an external BST to track the keys allocated in the node. The following operations are executed to insert a node on the hash ring:
@@ -96,7 +96,7 @@ The insertion of a new node results in the movement of data objects that fall wi
 2. Identify the keys that fall within the subrange of the new node from the successor node on BST
 3. Move the keys to the new node
 ### Deletion of a node
-![[Pasted image 20231217180747.png]]
+![Pasted image 20231217180747](../../../../_Attachments/Pasted%20image%2020231217180747.png)
 
 The deletion of a node results in the movement of data objects that fall within the range of the decommissioned node to the successor node. ***An additional external BST can be used to track the keys allocated in the node.*** The following operations are executed to delete a node on the hash ring:
 1. Delete the hash of the decommissioned node ID in BST in logarithmic time
@@ -105,11 +105,11 @@ The deletion of a node results in the movement of data objects that fall within 
 
 # What is the asymptotic complexity of consistent hashing?
 
-![[Pasted image 20231217180918.png]]
+![Pasted image 20231217180918](../../../../_Attachments/Pasted%20image%2020231217180918.png)
 
 # How to handle concurrency in consistent hashing?
 
-The BST that stores the positions of the nodes is a mutable data structure that must be synchronized when multiple nodes are added or removed at the same time on the hash ring. The [readers-writer lock](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock) is used to synchronise [[BST]] at the expense of a slight increase in latency.
+The BST that stores the positions of the nodes is a mutable data structure that must be synchronized when multiple nodes are added or removed at the same time on the hash ring. The [readers-writer lock](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock) is used to synchronise [BST](BST) at the expense of a slight increase in latency.
 
 # What hash functions are used in consistent hashing?
 
@@ -141,10 +141,10 @@ The following are the disadvantages of virtual nodes:
 
 # What are the consistent hashing examples?
 
-1. The [[Discord]] server (discord space or chat room) is hosted on a set of nodes. The client of the discord chat application identifies the set of nodes that hosts a specific discord server using consistent hashing
-2. The distributed NoSQL data stores such as [[Amazon DynamoDB]], Apache [[Cassandra]], and [[Riak]] use consistent hashing to dynamically partition the data set across the set of nodes. The data is partitioned for incremental scalability
-3. The video storage and streaming service [[Vimeo]] uses consistent hashing for load balancing the traffic to stream videos
-4. The video streaming service [[Netflix]] uses consistent hashing to distribute the uploaded video content across the content delivery network (**CDN**)
+1. The [Discord](../../Examples/Discord.md) server (discord space or chat room) is hosted on a set of nodes. The client of the discord chat application identifies the set of nodes that hosts a specific discord server using consistent hashing
+2. The distributed NoSQL data stores such as [Amazon DynamoDB](Amazon%20DynamoDB), Apache [Cassandra](Cassandra), and [Riak](Riak) use consistent hashing to dynamically partition the data set across the set of nodes. The data is partitioned for incremental scalability
+3. The video storage and streaming service [Vimeo](Vimeo) uses consistent hashing for load balancing the traffic to stream videos
+4. The video streaming service [Netflix](Netflix) uses consistent hashing to distribute the uploaded video content across the content delivery network (**CDN**)
 
 # Consistent hashing optimization
 

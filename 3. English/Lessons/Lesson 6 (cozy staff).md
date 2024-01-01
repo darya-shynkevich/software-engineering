@@ -32,7 +32,7 @@ Yes, I am a little bit familiar with this term. As someone, who appreciate intim
 
 **What would you change in this room. Answer in a voicemail, use some of the words on the sticker and your own ideas.**
 
-![[Pasted image 20231216231644.png]]
+![Pasted image 20231216231644](../../_Attachments/Pasted%20image%2020231216231644.png)
 
 1. top sheet
 2. fitted sheet

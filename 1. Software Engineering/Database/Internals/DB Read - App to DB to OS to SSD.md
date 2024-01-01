@@ -1,4 +1,4 @@
-When you create a table in a database, a file is created on disk and the data are layout out into a [[Database Pages]]. How the data is laid out in the page depends on whether the engine is row-store or column-store. Think of a page as a structure which has a header and data, the data portion is where the rows live.
+When you create a table in a database, a file is created on disk and the data are layout out into a [Database Pages](Database%20Pages.md). How the data is laid out in the page depends on whether the engine is row-store or column-store. Think of a page as a structure which has a header and data, the data portion is where the rows live.
 
 A database page can be 8KB (Postgres) or 16KB (e.g. MySQL innodb) or more. The table is stored as an array of pages in the file, where page index + size tells the database exactly which offset to seek to and how much to read. For example, assume database page size is 8KB to read page 7 on disk, you need to seek to the offset 7*8192 + 1 and you would read a length of 8192 bytes.
 
@@ -6,7 +6,7 @@ The row and all its column are stored in the page one after the other. If a row 
 
 ==When a page is read from disk and placed into the buffer pool, we get any rows (and columns) that are in that page essentially for free. Believe it or not this might be the single most important realization to database optimization and data modeling.==
 
-![[Pasted image 20231014192446.png]]
+![Pasted image 20231014192446](../../../_Attachments/Pasted%20image%2020231014192446.png)
 **Example:**
 
 Table `STUDENTS`, with an `ID` field of type` serial (monotonically increasing)`. The table has 20k rows, spread across 20 pages. The row we want 1008 lives in page 1 (second page).
@@ -30,7 +30,7 @@ Reading page 1 will set the seek position on the file is 1 * 8192 and we are rea
 The File system reads and writes data from disk in units called `blocks` or `logical blocks`. These units could range from 512 bytes to 4KB being the most common.
 
 The operating system receives the request to issue a read for the file on offset 0 reading 8192 bytes and maps the requested bytes to file system blocks using the *file system index node* or `inode` which contains metadata about the file. Each logical file system block address (LBA) maps to specific physical block in storage device as we will learn later. If you read a single byte you actually reading an entire block from disk.
-![[Pasted image 20231014195004.png]]
+![Pasted image 20231014195004](../../../_Attachments/Pasted%20image%2020231014195004.png)
 When the request to read from offset 0 — 8192 bytes, the OS does checks the following things:
 
 1. What are the blocks between offset 0 and byte 8192 on the file?
@@ -43,7 +43,7 @@ When the request to read from offset 0 — 8192 bytes, the OS does checks the fo
 
 > Note the index node contain other metadata about the file such as permissions.
 
-![[Pasted image 20231014195210.png]]
+![Pasted image 20231014195210](../../../_Attachments/Pasted%20image%2020231014195210.png)
 
 ## Storage
 
@@ -59,7 +59,7 @@ Now our NVMe logical block address maps to an offset within this page we speak o
 
 The SSD doesn’t really work with logical block addresses, it only knows the physical location of pages. So there must be a translation that needs to happen from logical block address to the offset in physical page. Because SSD page can be larger than block multiple blocks can map to the same page in different offsets.
 
-![[Pasted image 20231014195454.png]]
+![Pasted image 20231014195454](../../../_Attachments/Pasted%20image%2020231014195454.png)
 The NVMe controller receives the command to read LBA 100 and LBA 101, the thing about NVMe drives are those logical block addresses, those two blocks are translated to physical page and offset say page 99 and offset 0x0001 and 0x1002 repsectively. Next the NVMe controller checks the local SSD DRAM cache to see if page 99 is in the cache. And yes there is an SSD cache. If page 99 isn’t in the cache, it is fetched entirely to the cache (the whole 16KB) and placed in the cache.
 
 Once the page is in the cache the respective blocks are extracted from the page and returned to the OS host. In this case only the first 8KB is returned.

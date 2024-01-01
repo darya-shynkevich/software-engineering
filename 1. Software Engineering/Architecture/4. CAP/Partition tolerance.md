@@ -11,9 +11,9 @@ Another way to look at performance vs scalability:
     1. [A word on scalability](http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html)
     2. [Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
 
-## **[[Latency]] vs throughput:**
+## **[Latency](Latency) vs throughput:**
 
-1. **[[Latency]]** is the time to perform some action or to produce some result.
+1. **[Latency](Latency)** is the time to perform some action or to produce some result.
 2. **Throughput** is the number of such actions or results per unit of time.
 3. Generally, you should aim for **maximal throughput** with **acceptable latency**.
     1. [Understanding latency vs throughput](https://community.cadence.com/cadence_blogs_8/b/fv/posts/understanding-latency-vs-throughput)

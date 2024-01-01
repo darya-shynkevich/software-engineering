@@ -1,10 +1,10 @@
-Transaction concurrency problems can be solved by [[Transaction Loks]].
+Transaction concurrency problems can be solved by [Transaction Loks](Transaction%20Loks.md).
 
 BUT we forget about one very important thing in the database — performance.
 
-# [[Transaction Loks]]
+# [Transaction Loks](Transaction%20Loks.md)
 
-# Версионирование данных [[MVCC]]
+# Версионирование данных [MVCC](MVCC.md)
 
 1. контроль целостности данных без блокировок
 2. нет ожидания когда вовлеченные в конфликт транзакции отменяются и перезапускаются
@@ -16,7 +16,7 @@ BUT we forget about one very important thing in the database — performance.
 	1. системные часы
 	2. счетчик
 
-[[MVCC]] is a lock-free solution to track multiple versions (snapshots) of records to achieve high performance and concurrency safety.
+[MVCC](MVCC.md) is a lock-free solution to track multiple versions (snapshots) of records to achieve high performance and concurrency safety.
 
 
 

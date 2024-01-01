@@ -12,13 +12,13 @@
 (+) Ease of development and testing of the Microservices.
 (+) Increased team agility
 
-(-) [[Complexity of distributed systems]]
+(-) [Complexity of distributed systems](../Complexity%20and%20Coupling/Complexity%20of%20distributed%20systems.md)
 (-) Deployment complexity for multiple systems
 (-) Operational complexity of the overall system.
 
-**Also should consider [[Advantages of Modular Monolith]]**
+**Also should consider [Advantages of Modular Monolith](Advantages%20of%20Modular%20Monolith.md)**
 
-# [[Migrating from a Monolith to Microservices]]
+# [Migrating from a Monolith to Microservices](Migrating%20from%20a%20Monolith%20to%20Microservices.md)
 
 # References: 
 1. 

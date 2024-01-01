@@ -1,8 +1,8 @@
 
 ##### Utils:
-1. [[Essay cheks]]
-2. [[Linking words]]
-3. [[Synonyms]]
+1. [Essay cheks](Utils/Essay%20cheks.md)
+2. [Linking words](Utils/Linking%20words.md)
+3. [Synonyms](Utils/Synonyms.md)
 ##### Courses:
 1. [*IELTS Writing](https://www.youtube.com/playlist?list=PLGHMg8AQ02x3xXAn2KXJfFNib7eNP4qWG) (video, course)*
 2. [*IELTS Writing](https://www.youtube.com/playlist?list=PLdawRnR9ilZDbeQ7SnUmbYJ0UojhGpAMx) (video, course)*

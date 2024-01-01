@@ -8,9 +8,9 @@ Under this scheme, ***data is written into the cache and the corresponding datab
 
 **Example:** An e-commerce website updates its product inventory in real-time. Whenever a product's stock changes, the cache is also updated to reflect the new inventory count.
 
-However the data loss can occur: [[Cache Invalidation - Data loss solution]]
+However the data loss can occur: [Cache Invalidation - Data loss solution](Cache%20Invalidation%20-%20Data%20loss%20solution.md)
 
-![[Pasted image 20231014201619.png]]
+![Pasted image 20231014201619](../../_Attachments/Pasted%20image%2020231014201619.png)
 
 ## Write-around cache
 
@@ -20,9 +20,9 @@ Update cache in the background???
 
 **Example:** An application updates user profile information, which is infrequently accessed. The application writes the new data directly to the data store, avoiding unnecessary cache updates.
 
-However the data loss can occur: [[Cache Invalidation - Data loss solution]]
+However the data loss can occur: [Cache Invalidation - Data loss solution](Cache%20Invalidation%20-%20Data%20loss%20solution.md)
 
-![[Pasted image 20231014201715.png]]
+![Pasted image 20231014201715](../../_Attachments/Pasted%20image%2020231014201715.png)
 
 ## Write-back cache (or lazy-write)
 
@@ -36,7 +36,7 @@ It is quite similar to write-back cache. In this scheme, data is written to the 
 
 **Example:** A document editor application temporarily saves changes to the cache while the user is editing. Periodically, the changes are written back to the data store to minimize the number of write operations. (Google Documents)
 
-![[Pasted image 20231014172227.png]]
+![Pasted image 20231014172227](../../_Attachments/Pasted%20image%2020231014172227.png)
 
 
 

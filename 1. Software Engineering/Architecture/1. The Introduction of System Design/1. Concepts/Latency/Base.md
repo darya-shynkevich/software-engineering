@@ -1,10 +1,10 @@
-References why it is important: [[The Real Cost of Slow Time vs Downtime]]
+References why it is important: [The Real Cost of Slow Time vs Downtime](The%20Real%20Cost%20of%20Slow%20Time%20vs%20Downtime.md)
 
 Latency is defined as **the time it took one operation to happen.** This means every operation has its own latency—with one million operations there are one million latencies. As a result, latency _cannot_ be measured as _work units / time_. What we’re interested in is how latency _behaves_. To do this meaningfully, we must describe the complete distribution of latencies. Latency almost _never_ follows a normal, Gaussian, or Poisson distribution, so looking at averages, medians, and even standard deviations is useless.
 
 Latency tends to be heavily multi-modal, and part of this is attributed to “hiccups” in response time. Hiccups resemble periodic freezes and can be due to any number of reasons—GC pauses, hypervisor pauses, context switches, interrupts, database reindexing, cache buffer flushes to disk, etc. These hiccups never resemble normal distributions and the shift between modes is often rapid and eclectic.
 
-![[Pasted image 20230825104528.png]]
+![Pasted image 20230825104528](../../../../../_Attachments/Pasted%20image%2020230825104528.png)
 *With the exception of google.com, every page has a probability of 50% or higher of seeing the 99th percentile.*
 
 Most of the tools that capture the response times, report 99 percentile latency of every 30 sec duration. For example prometheus metrics are scraped every one minute. **==But the real thing to look at is the Max response time.==** 

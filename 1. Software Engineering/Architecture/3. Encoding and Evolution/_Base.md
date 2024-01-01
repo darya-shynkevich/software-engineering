@@ -1,9 +1,9 @@
-![[Pasted image 20230604134520.png]]
+![Pasted image 20230604134520](../../../_Attachments/Pasted%20image%2020230604134520.png)
 
 1. ***Backward compatibility*** - Newer code can read data that was written by older code.
 2. ***Forward compatibility*** - Older code can read data that was written by newer code.
 #### Schema evolution
- ![[Pasted image 20230818172911.png]]
+ ![Pasted image 20230818172911](../../../_Attachments/Pasted%20image%2020230818172911.png)
 
 The translation from the in-memory representation to a byte sequence is called ***encoding*** (also known as serialization or marshalling), and the reverse is called ***decoding*** (parsing, deserialization, unmarshalling)
 
@@ -29,10 +29,10 @@ JSON, XML, and CSV are textual formats, and thus somewhat human-readable (althou
 
 Binary formats like MessagePack and WBXML were developed to reduce the space used by JSON and XML, but they are not as popular as the textual versions. Because it’s not clear whether such a small space reduction (and perhaps a speedup in parsing) is worth the loss of human-readability.
 
-![[Pasted image 20230604145016.png]]
+![Pasted image 20230604145016](../../../_Attachments/Pasted%20image%2020230604145016.png)
 
-1. [[Thrift and Protocol Buffers]]
-2. [[Avro]]
+1. [Thrift and Protocol Buffers](Protocols/Thrift%20and%20Protocol%20Buffers.md)
+2. [Avro](Protocols/Avro.md)
 
 
 #### Benefits of the binary encoding
@@ -46,9 +46,9 @@ Binary formats like MessagePack and WBXML were developed to reduce the space use
 
 Compatibility is a relationship between one process that encodes the data, and another process that decodes it.
 
-- Via databases (“[[Dataflow Through Databases]]”)
-- Via service calls (“[[Dataflow Through Services. REST and RPC]]”)
-- Via asynchronous message passing (“[[Message-Passing Dataflow]]”)
+- Via databases (“[Dataflow Through Databases](Dataflow%20Through%20Databases.md)”)
+- Via service calls (“[Dataflow Through Services. REST and RPC](Dataflow%20Through%20Services.%20REST%20and%20RPC.md)”)
+- Via asynchronous message passing (“[Message-Passing Dataflow](Message-Passing%20Dataflow.md)”)
 
 # References:
 

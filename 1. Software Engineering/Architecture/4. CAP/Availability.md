@@ -1,20 +1,20 @@
 [**Availability in numbers](https://github.com/donnemartin/system-design-primer#availability-in-numbers)** Availability is often quantified by uptime (or downtime) as a percentage of time the service is available. Availability is generally measured in number of 9s--a service with 99.99% availability is described as having four 9s.
 
-There are two complementary patterns to support high availability: **[[Failover]]** and **replication**.
+There are two complementary patterns to support high availability: **[Failover](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Failover.md)** and **replication**.
 
 # Important topics:
 
-### 1. [[Monitoring]]
+### 1. [Monitoring](../../Troubleshooting/Monitoring.md)
 
-### 2. [[Circuit Breaker]]
+### 2. [Circuit Breaker](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Circuit%20Breaker.md)
 
-### 3.  Latency: [[1. Software Engineering/Architecture/1. The Introduction of System Design/1. Concepts/Latency/Base|Base]]
+### 3.  Latency: [Base](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Latency/Base.md)
 
-### 4. [[Failover]]
+### 4. [Failover](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Failover.md)
 
-### 5. [[Load Balancing]]
+### 5. [Load Balancing](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Load%20Balancing.md)
 
-### 6. [[Autoscaling]]
+### 6. [Autoscaling](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Autoscaling.md)
 
 # References:
 

@@ -30,7 +30,7 @@
    
    Integration testing a distributed setup is a nearly-impossible problem, so we pretty much gave up on that and replaced it with another one - `Observability`. Just like “microservices” are the new “distributed systems”, “observability” is the new “debugging in production”.
    
-![[Pasted image 20231019142917.png]]
+![Pasted image 20231019142917](../../../../_Attachments/Pasted%20image%2020231019142917.png)
 
 
 

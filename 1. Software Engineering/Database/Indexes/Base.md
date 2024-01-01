@@ -1,12 +1,12 @@
 ##### ==*Scale of data often works against you, and balanced trees are the first tool in your arsenal against it.*==
 
-A Database [[1. Software Engineering/Database/Indexes/Base]] is Like a Book Index: *When you want to look something up in a book, you don’t have to start at page one and read every page until you find the thing you’re looking for. Instead, you look in the index, which directs you to a page in the book. Then you flip to that page and voila, you find the thing.*
+A Database [Base](.md) is Like a Book Index: *When you want to look something up in a book, you don’t have to start at page one and read every page until you find the thing you’re looking for. Instead, you look in the index, which directs you to a page in the book. Then you flip to that page and voila, you find the thing.*
 
 *There is one big difference between book indexes and database indexes: you’re probably updating the contents of the database constantly, while a book is indexed only when a new version is published.*
 
 *So unlike a book, the database needs to keep its index (really, it’s indexes — there are often many) up to date automatically and frequently.*
 
-**[[B-tree Index]]** speeds up searching by maintaining a tree whose [[Leaf Nodes]] are pointers to the disk locations of table records.
+**[B-tree Index](B-tree%20Index.md)** speeds up searching by maintaining a tree whose [Leaf Nodes](../Internals/Leaf%20Nodes.md) are pointers to the disk locations of table records.
 
 > Formal definition: *A database index functions as a specialized structure designed to accelerate the speed and efficiency of query operations within a database. Read performance increases as you index the data, but that comes at the cost of write performance since you need to keep index up to date.*
 
@@ -14,24 +14,24 @@ A Database [[1. Software Engineering/Database/Indexes/Base]] is Like a Book Inde
 2. поддерживается всеми СУБД для всех типов данных
 3. оптимален для множеств с хорошим распределением значений и высокой мощностью (кол-во уникальных значений)
 
-![[Pasted image 20230605131446.png]]
+![Pasted image 20230605131446](../../../_Attachments/Pasted%20image%2020230605131446.png)
 
-# [[LSM Trees and SSTables]]
+# [LSM Trees and SSTables](LSM%20Trees%20and%20SSTables.md)
 
 # Other Index Types
 
-### 1. [[GIN indexes]] for JSON data in PostgreSQL
+### 1. [GIN indexes](../../Python/Django/GIN%20indexes.md) for JSON data in PostgreSQL
 
 > PostgreSQL offers two JSON field types: json and jsonb . Django’s JSONField uses the jsonb column type, so any references to JSON data in a PostgreSQL database in this section refer to the jsonb column type.
 
 GIN stands for Generalized Inverted Index. It is an index type that works particularly well with "contains" logic for JSON data and full-text search.
 
 *MySQL and SQLite both have some support for working with JSON data, but neither offers a specialized index type like the GIN index suitable for indexing JSON directly. However, with MySQL you can index a column generated from JSON data*
-### 2. [[GiST indexes]] for spatial data in PostgreSQL
+### 2. [GiST indexes](GiST%20indexes) for spatial data in PostgreSQL
 
-### 3. [[BRIN indexes]] for very large tables in PostgreSQL
+### 3. [BRIN indexes](BRIN%20indexes) for very large tables in PostgreSQL
 
-### 4. [[Hash indexes]] for in-memory tables in MySQL
+### 4. [Hash indexes](Hash%20indexes) for in-memory tables in MySQL
 
 Hash indexes store a 32-bit hash code derived from the value of the indexed column. Hence, such indexes can only handle simple equality comparisons. The query planner will consider using a hash index whenever an indexed column is involved in a comparison using the equal operator:
 
@@ -42,7 +42,7 @@ Hash indexes store a 32-bit hash code derived from the value of the indexed colu
 (-) невозможны операции >, <,  is null и тп
 (-) проблема коллизий
 
-### 5. [[R-tree indexes]] for spatial data in MySQL
+### 5. [R-tree indexes](R-tree%20indexes.md) for spatial data in MySQL
 
 
 PostgreSQL: point, line, polygon, box, path, circle
@@ -56,7 +56,7 @@ For example, if you search for "What is a covering index?", Google presents an a
 
 A database can do the same thing if your query only references columns that are stored in the index. Let’s take a look at an example using Postgres. 
 
-![[Pasted image 20231201001549.png]]
+![Pasted image 20231201001549](../../../_Attachments/Pasted%20image%2020231201001549.png)
 
 1. Create multi-column index on (name, id)
 2. Now we get an Index Only Scan.
@@ -64,7 +64,7 @@ A database can do the same thing if your query only references columns that are 
 > The order of columns given to `CREATE INDEX` matters. That is, an index on `(id, name)` is not the same as an index on `(name, id)` . In the case of our query, PostgreSQL would not even use an index on `(id, name)` because a simple table scan would be faster. This is because trying to use an index on `(id, name)` for a query that filters on name but not id would involve scanning the entire index. However, an index on `(name, id)` can be used because the index is organized around name and name is used in a WHERE clause. Dwell on these mysteries in silence for a moment.
 
 We can do it better with Postgres using `INCLUDE`:
-![[Pasted image 20231201002047.png]]
+![Pasted image 20231201002047](../../../_Attachments/Pasted%20image%2020231201002047.png)
 The `INCLUDE` version of the index is 21 milliseconds faster, so in this case, the difference is not huge. Still, it’s an optimization worth exploring with your data and queries.
 
 It's wise to be conservative about adding non-key columns to an index, especially wide columns. ***If an index tuple exceeds the maximum size allowed for the index type, data insertion will fail.*** In any case, non-key columns duplicate data from the index's table and bloat the size of the index, thus potentially ***slowing searches***. Furthermore, B-tree deduplication is never used with indexes that have a non-key column.
@@ -75,15 +75,15 @@ It's wise to be conservative about adding non-key columns to an index, especiall
 A multiple column index is created by specifying more than one column in the index definition. It allows for efficient retrieval of data ***based on the combination of values in multiple columns***. The index stores the values of all the indexed columns in a specific order, allowing for quick access to matching rows. This type of index is useful when queries involve equality or range conditions on multiple columns.
 
 
-### 8. [[Partial Indexes]]
+### 8. [Partial Indexes](Partial%20Indexes)
 
 A partial index is an index with a `WHERE` clause that limits which rows in the table get added to the index.
 
 Partial indexes can speed up queries on specific and repeatedly used subsets of data in a table, such as rows with a "created" time between two timestamps, or a specific column value like "user.viewed".
 
-![[Pasted image 20231201002824.png]]
+![Pasted image 20231201002824](../../../_Attachments/Pasted%20image%2020231201002824.png)
 
-### 9. [[Clustering]]
+### 9. [Clustering](Clustering)
 
 If the table changes infrequently and most of your queries filter on the same set of columns, you have another option: clustering.
 
@@ -95,7 +95,7 @@ For example, if we have an index on the name field in an analytics_event table c
 
 After clustering, a query for a value of `name` should be faster without us needing to create a partial index just for that value, as shown in the next example.
 
-![[Pasted image 20231201003206.png]]
+![Pasted image 20231201003206](../../../_Attachments/Pasted%20image%2020231201003206.png)
 
 ***Clustering is a one-time operation***. PostgreSQL does not maintain the structure of the table, so subsequent writes may place data in non-contiguous physical locations on disk. Setting the table’s `FILLFACTOR` setting to below 100% will allow updates to stay on the same page if space is left, but sooner or later, you will need to `CLUSTER` again.
 

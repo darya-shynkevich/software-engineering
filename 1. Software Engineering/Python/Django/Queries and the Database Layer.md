@@ -10,15 +10,15 @@
 
 `ObjectDoesNotExist` can be applied to any model object, whereas `DoesNotExist` is for a specific model.
 
-![[Pasted image 20231126221839.png]]
+![Pasted image 20231126221839](../../../_Attachments/Pasted%20image%2020231126221839.png)
 
 #### 2. When You Just Want One Object but Get Three Back
 
 If it’s possible that your query may return more than one object, check for a `MultipleObjectsReturned` exception. Then in the except clause, you can do whatever makes sense, e.g. raise a special exception or log the error.
 
-![[Pasted image 20231126221931.png]]
+![Pasted image 20231126221931](../../../_Attachments/Pasted%20image%2020231126221931.png)
 
-# [[Query Expressions]]
+# [Query Expressions](Query%20Expressions.md)
 
 # Add Indexes as Needed
 
@@ -39,7 +39,7 @@ Django provides the `django.db.models.indexes` module, the `Index` class, and th
 
 The default behaviour of the ORM is to autocommit every query when it is called. In the case of data modification, this means that every time a `.create()` or `.update()` is called, it immediately modifies data in the SQL database.
 
-The way to resolve the risk of database corruption (if we need to execute two operations together) is through the use of database transactions. ***A database transaction is where two or more database updates are contained in a single unit of work.*** If a single update fails, all the updates in the transaction are rolled back. To make this work, a database transaction, by definition, must be atomic, consistent, isolated and durable. Database practitioners often refer to these properties of database transactions using the acronym [[ACID]].
+The way to resolve the risk of database corruption (if we need to execute two operations together) is through the use of database transactions. ***A database transaction is where two or more database updates are contained in a single unit of work.*** If a single update fails, all the updates in the transaction are rolled back. To make this work, a database transaction, by definition, must be atomic, consistent, isolated and durable. Database practitioners often refer to these properties of database transactions using the acronym [ACID](ACID).
 
 #### Wrapping Each HTTP Request in a Transaction
 
@@ -68,7 +68,7 @@ Explicit transaction declaration is one way to ***increase site performance***. 
 2. Database operations that modify the database should be wrapped in a transaction.
 3. Special cases including database modifications that require database reads and performance considerations can affect the previous two guidelines.
 
-![[Pasted image 20231126231315.png]]
+![Pasted image 20231126231315](../../../_Attachments/Pasted%20image%2020231126231315.png)
 
 > **TIP: Never Wrap Individual ORM Method Calls**: Django’s ORM actually relies on transactions internally to ensure consistency of data. For instance, if an update affects multiple tables because of concrete inheritance, Django has that wrapped up in transactions. Therefore, it is never useful to wrap an individual ORM method [.create(), .update(), .delete()] call in a transaction. Instead, use explicit transactions when you are calling several ORM methods in a view, function, or method.
 

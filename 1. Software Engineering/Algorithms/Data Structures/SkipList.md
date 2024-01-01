@@ -22,7 +22,7 @@ Attributes of skip list:
 2. O(log n) levels
 3. each higher level contains 1/2 the elements of the level below
 
-![[Pasted image 20231019131557.png]]
+![Pasted image 20231019131557](../../../_Attachments/Pasted%20image%2020231019131557.png)
 
 Here's a step-by-step explanation of how `SkipList` works:
 1. The `SkipList` consists of nodes, each containing a value and a set of forward `pointers`. The number of forward `pointers` in each node is determined probabilistically, usually through a coin flip.
@@ -38,7 +38,7 @@ Average: O(logN)
 Worst case: O(N)
 
 
-![[Pasted image 20231019132106.png]]
+![Pasted image 20231019132106](../../../_Attachments/Pasted%20image%2020231019132106.png)
 
 Max visit log(N) levels then find the value : when value < current, go next level; otherwise check next node.
 
@@ -49,9 +49,9 @@ Average: O(logN)
 Worst case: O(N)
 
 1. Locate the index to insert
-![[Pasted image 20231019132304.png]]
+![Pasted image 20231019132304](../../../_Attachments/Pasted%20image%2020231019132304.png)
 2. Build the link for each level (adjustment) after insert/delete (and rebuild links):
-   ![[Pasted image 20231019132504.png]]
+   ![Pasted image 20231019132504](../../../_Attachments/Pasted%20image%2020231019132504.png)
 
 # Use cases:
 1. [MemSQL](https://en.wikipedia.org/wiki/MemSQL) [Lucene](https://en.wikipedia.org/wiki/Lucene)

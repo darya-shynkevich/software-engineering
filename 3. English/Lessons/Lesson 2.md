@@ -2,7 +2,7 @@ congested
 sprawling
 opluence
 
-![[Pasted image 20231028234554.png]]
+![Pasted image 20231028234554](../../_Attachments/Pasted%20image%2020231028234554.png)
 
 1. affluent neighbourhood
 2. chaotic situation
@@ -13,7 +13,7 @@ opluence
 7. secure parking
 8. compact car
 
-![[Pasted image 20231028234609.png]]
+![Pasted image 20231028234609](../../_Attachments/Pasted%20image%2020231028234609.png)
 
 1. congested
 2. spotless

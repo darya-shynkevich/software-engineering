@@ -14,11 +14,11 @@ It might be okay to use signals when:
 
 #### 1. Using Custom Model Manager Methods Instead of Signals
 
-![[Pasted image 20231203222741.png]]
+![Pasted image 20231203222741](../../../_Attachments/Pasted%20image%2020231203222741.png)
 
 Then use it like this:
 
-![[Pasted image 20231203222758.png]]
+![Pasted image 20231203222758](../../../_Attachments/Pasted%20image%2020231203222758.png)
 
 #### 2. Validate Your Model Elsewhere
 

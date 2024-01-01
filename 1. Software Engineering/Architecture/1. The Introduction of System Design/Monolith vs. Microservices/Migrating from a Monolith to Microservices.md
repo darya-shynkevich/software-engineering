@@ -5,7 +5,7 @@ Moving from a monolith architecture to microservices is complex, but sometimes w
 3. Is the business/technical requirements of the new service separate from the original service?
 
 
-![[Pasted image 20231019143429.png]]
+![Pasted image 20231019143429](../../../../_Attachments/Pasted%20image%2020231019143429.png)
 
 # Monoliths advantages
 
@@ -31,9 +31,9 @@ Route some of our users (let’s say 20%) to our new architecture. If it works f
 
 #### 2. Do monolith modularisation
 
-**[[Modular Monolith]]:** It’s essentially a ***monolithic architecture where the application is divided into loosely coupled modules***. Each module focuses on a distinct concern, ensuring separation of concerns. 
+**[Modular Monolith](Modular%20Monolith):** It’s essentially a ***monolithic architecture where the application is divided into loosely coupled modules***. Each module focuses on a distinct concern, ensuring separation of concerns. 
 
-[[Modular Monolith vs. Microservices]]
+[Modular Monolith vs. Microservices](Modular%20Monolith%20vs.%20Microservices.md)
 
 Whenever we want to add a new module to our application, instead of adding it to the monolith we can make it a single service. 
 

@@ -1,8 +1,8 @@
 _In a distributed computer system, you can only support two of the following guarantees:_
 
-- _**[[Consistency]]** - Every read receives the most recent write or an error_
-- _**[[Availability]]** - Every request receives a response, without guarantee that it contains the most recent version of the information_
-- _**[[Partition Tolerance]]** - The system continues to operate despite arbitrary partitioning due to network failures_
+- _**[Consistency](Consistency.md)** - Every read receives the most recent write or an error_
+- _**[Availability](Availability.md)** - Every request receives a response, without guarantee that it contains the most recent version of the information_
+- _**[Partition tolerance](Partition%20tolerance.md)** - The system continues to operate despite arbitrary partitioning due to network failures_
 
 _Networks aren't reliable, so you'll need to support partition tolerance. You'll need to make a software tradeoff between consistency and availability._
 
@@ -16,8 +16,8 @@ _Responses return the most readily available version of the data available on an
 
 _AP is a good choice if the business needs to allow for [eventual consistency](https://github.com/donnemartin/system-design-primer#eventual-consistency) or when the system needs to continue working despite external errors._
 
-![[Pasted image 20231226132747.png]]
-![[Pasted image 20231226132759.png]]
+![Pasted image 20231226132747](../../../_Attachments/Pasted%20image%2020231226132747.png)
+![Pasted image 20231226132759](../../../_Attachments/Pasted%20image%2020231226132759.png)
 
 Теорема CAP утверждает, что распределенная система не может одновременно обеспечивать более двух из этих трех гарантий:  **(C)onsistency** – согласованность, во всех серверах в один момент времени данные не противоречат друг другу. **(A)vailability** - доступность, любой запрос к системе завершается корректным откликом, однако, без гарантии, что ответы всех серверов системы совпадают. **(P)artition Tolerance** - устойчивость к разделению, разделение системы на несколько изолированных секций не приводит к некорректности отклика от каждой из секций.
 
@@ -30,11 +30,11 @@ _AP is a good choice if the business needs to allow for [eventual consistency](
 🛠️ Грани ромба: **PA/EL** – высокая доступность (A) при разделении (P) системы, иначе (E) высокая скорость ответа (L). Примеры: Cassandra. **PC/EC** – согласованность (С) при разделении (P) системы, иначе (E) согласованность (С). Примеры: MySQL, Postgres. **PC/EL** – согласованность (С) при разделении (P) системы, иначе (E) высокая скорость ответа (L). Примеры: PNUTS. **PA/EC** – высокая доступность (A) при разделении (P) системы, иначе (E) согласованность (С). Примеры: MongoDB.
 
 
-# 1. [[Consistency]]
+# 1. [Consistency](Consistency.md)
 
-# 2. [[Availability]]
+# 2. [Availability](Availability.md)
 
-# 3. [[Partition tolerance]]
+# 3. [Partition tolerance](Partition%20tolerance.md)
 
 
 # How To:

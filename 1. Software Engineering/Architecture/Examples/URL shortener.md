@@ -1,4 +1,4 @@
-![[Pasted image 20231217183012.png]]
+![Pasted image 20231217183012](../../../_Attachments/Pasted%20image%2020231217183012.png)
 
 1. pgadmin 
 

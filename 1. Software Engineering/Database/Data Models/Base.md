@@ -1,8 +1,8 @@
 
-![[telegram-cloud-photo-size-2-5253896973822577492-y.jpg]]
+![telegram-cloud-photo-size-2-5253896973822577492-y](../../../_Attachments/telegram-cloud-photo-size-2-5253896973822577492-y.jpg)
 
 
-A number of interesting database systems are now associated with the [[1. Software Engineering/Database/NoSQL/Base]] hashtag, and it has been retroactively reinterpreted as *Not Only SQL.*
+A number of interesting database systems are now associated with the [Base](../NoSQL/Base.md) hashtag, and it has been retroactively reinterpreted as *Not Only SQL.*
 
 ###### The Object-Relational Mismatch
 
@@ -14,7 +14,7 @@ Most application development today is done in object-oriented programming langua
 
 *The one-to-many relationships from the user profile to the user’s positions, educational history, and contact information imply a tree structure in the data, and the JSON representation makes this tree structure explicit*
 
-![[Pasted image 20230628191527.png]]
+![Pasted image 20230628191527](../../../_Attachments/Pasted%20image%2020230628191527.png)
 
 ###### Many-to-One and Many-to-Many Relationships
 
@@ -27,7 +27,7 @@ Unfortunately, ***normalizing this data requires many-to-one relationships*** (m
 *If the database itself does not support joins, you have to emulate a join in application code by making multiple queries to the database.*
 
 *Moreover, even if the initial version of an application fits well in a join-free document model, data has a tendency of becoming more interconnected as features are added to applications.*
-###### [[Hierarchical model]]
+###### [Hierarchical model](Hierarchical%20model)
 
 It represented all data as a tree of records nested within records, much like the JSON structure. 
 
@@ -35,6 +35,6 @@ The most popular database for business data processing in the 1970s was IBM’s 
 
 Like document databases, IMS worked well for one-to-many relationships, but it made many-to-many relationships difficult, and it didn’t support joins. Developers had to decide whether to duplicate (denormalize) data or to manually resolve references from one record to another.
 
-Various solutions were proposed to solve the limitations of the hierarchical model. The two most prominent were the [[Relational Model]] (which became SQL, and took over the world) and the [[Network Model]] (which initially had a large following but eventually faded into obscurity).
+Various solutions were proposed to solve the limitations of the hierarchical model. The two most prominent were the [Relational Model](../OTLP/Relational%20Model.md) (which became SQL, and took over the world) and the [Network Model](Network%20Model.md) (which initially had a large following but eventually faded into obscurity).
 
-[[Quorum]]
+[Quorum](../../Quorum.md)

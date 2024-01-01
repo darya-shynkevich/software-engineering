@@ -1,4 +1,4 @@
-![[Pasted image 20230826022023.png]]
+![Pasted image 20230826022023](../../../_Attachments/Pasted%20image%2020230826022023.png)
 
 *==Database replication is a strategy employed to maintain multiple copies of a single database across different servers or locations, with the aim of enhancing data availability, redundancy, and fault tolerance.==*
 
@@ -16,7 +16,7 @@ In a typical database replication setup, there exists a primary (or master) data
 
 Synchronous replication is a type of database replication where ***changes made to the primary database are immediately replicated*** to the replica databases ***before the write operation is considered complete***. In other words, the primary database waits for the replica databases to confirm that they have received and processed the changes before the write operation is acknowledged.
 
-![[Pasted image 20231014145242.png]]
+![Pasted image 20231014145242](../../../_Attachments/Pasted%20image%2020231014145242.png)
 
 **Pros:**
 - Consistency: Since replicas update instantly, all databases remain in harmony, eliminating data mismatches.
@@ -32,7 +32,7 @@ Synchronous replication is a type of database replication where ***changes made 
 
 Asynchronous replication is a type of database replication where ***changes made to the primary database are not immediately replicated to the replica databases***. Instead, the ***changes are queued and replicated to the replicas at a later time***.
 
-![[Pasted image 20231014145400.png]]
+![Pasted image 20231014145400](../../../_Attachments/Pasted%20image%2020231014145400.png)
 
 **Pros:**
 - Performance Boost: Without waiting for confirmations, operations are faster.
@@ -50,7 +50,7 @@ Semi-synchronous replication is a type of database replication that combines ele
 
 In semi-synchronous replication, the write operation on the primary is not considered complete until ***at least one replica database has confirmed that it has received and processed the changes.*** This ensures that there is some level of strong consistency between the primary and replica databases, while also providing improved performance compared to fully synchronous replication.
 
-![[Pasted image 20231014145528.png]]
+![Pasted image 20231014145528](../../../_Attachments/Pasted%20image%2020231014145528.png)
 
 **Pros:**
 - Balanced Approach: It combines the speed of asynchronous with the reliability of synchronous replication.

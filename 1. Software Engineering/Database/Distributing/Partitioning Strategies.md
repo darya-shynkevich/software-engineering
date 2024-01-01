@@ -1,4 +1,4 @@
-![[Pasted image 20230826021729.png]]
+![Pasted image 20230826021729](../../../_Attachments/Pasted%20image%2020230826021729.png)
 
 *==Data partitioning divides data within tables into smaller units called partitions.==*
 

@@ -1,5 +1,5 @@
 
-[[1. Software Engineering/Architecture/1. The Introduction of System Design/1. Concepts/Rate Limiting|Rate Limiting]]
+[Rate Limiting](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Rate%20Limiting.md)
 
 # References:
 

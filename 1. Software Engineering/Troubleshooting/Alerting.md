@@ -1,7 +1,7 @@
 
 ## The levels of monitoring & alerts
 
-![[Pasted image 20231014191613.png]]
+![Pasted image 20231014191613](../../_Attachments/Pasted%20image%2020231014191613.png)
 
 ### Operational alerts
 

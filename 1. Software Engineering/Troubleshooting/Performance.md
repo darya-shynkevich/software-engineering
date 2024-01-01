@@ -4,4 +4,4 @@
 
 ! **Note:** Profiling can add quite a bit of overhead to your code execution, so the execution time shown by the profiler will likely be longer than the actual execution time.
 
-[[Why does Python Code Run Faster in a Function?]]
+[Why does Python Code Run Faster in a Function?](../Python/Why%20does%20Python%20Code%20Run%20Faster%20in%20a%20Function?.md)

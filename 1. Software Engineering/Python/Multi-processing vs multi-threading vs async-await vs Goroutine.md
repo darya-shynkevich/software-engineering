@@ -4,7 +4,7 @@ So you and 2 of your friends walked into McDonald’s. you ordered a first meal.
 
 This is a blocking model. The whole process is slow and easy to understand.
 
-![[Pasted image 20231015195238.png]]
+![Pasted image 20231015195238](../../_Attachments/Pasted%20image%2020231015195238.png)
 
 In CS terms.
 - “You” and 2 friends are `function calls`.
@@ -19,7 +19,7 @@ In CS terms.
 
 > Note: the below model is not for Python.
 
-![[Pasted image 20231015195450.png]]
+![Pasted image 20231015195450](../../_Attachments/Pasted%20image%2020231015195450.png)
 
 - Kitchen is `kernel space`. The Cook is the `CPU thread`.
 - You and 2 of your friends are `3 threads`, executed together.
@@ -31,14 +31,14 @@ As you can see: ***threading is competing with each other. instead of coordinati
 
 # Multi-threading + GIL
 
-![[Pasted image 20231015195823.png]]
+![Pasted image 20231015195823](../../_Attachments/Pasted%20image%2020231015195823.png)
 
 - It is still a “mess”: ***everyone competition each other’s order***
 - It is even worse: the “waiter” limit only one order (`thread`) could be made (`executed`) at a time.
 - So overall, ***this is slower than the above model.***
 
 
-# [[12. Coroutines]]
+# [12. Coroutines](12.%20Coroutines.md)
 
 ***==Short: one Mcdonald, one waiter coordinating orders==***
 
@@ -46,7 +46,7 @@ We want better control of concurrency, instead of competing with each other.
 
 So here we have Coroutine. which is `asyncio` in Python. but, ***it is not multi-threaded. just one thread.***
 
-![[Pasted image 20231015200014.png]]
+![Pasted image 20231015200014](../../_Attachments/Pasted%20image%2020231015200014.png)
 
 ==***Compared to threading. we have better control. Exiting a function is easier than killing a thread, no context switch, or resource racing***.==
 
@@ -58,7 +58,7 @@ Wait. since asyncio can also archive concurrency in Python, with just one thread
 
 So this time, you all decided to eat faster. so you 3 walked into different McDonald’s separately and meet again after eating.
 
-![[Pasted image 20231015214915.png]]
+![Pasted image 20231015214915](../../_Attachments/Pasted%20image%2020231015214915.png)
 
 - You, F1, and F2 are 3 `processes`
 - The waiter is the `main thread`

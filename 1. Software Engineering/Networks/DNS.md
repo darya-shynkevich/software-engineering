@@ -1,4 +1,4 @@
-![[Pasted image 20230826020031.png]]
+![Pasted image 20230826020031](../../_Attachments/Pasted%20image%2020230826020031.png)
 
 The Domain Name System (DNS) is a component of the Internet infrastructure that plays the role of translating human-friendly domain names, like “[www.example.com](http://www.example.com/)," into machine-readable IP addresses, such as “192.168.1.1.” 
 

@@ -3,7 +3,7 @@ MVCC: maintain multiple snapshots of records using read-view to archive transact
 
 ## Read committed mode
 
-![[Pasted image 20231014190615.png]]
+![Pasted image 20231014190615](../../../_Attachments/Pasted%20image%2020231014190615.png)
 
 1. **Read-view:** a record including transaction ID list, creator transaction ID, max and min transaction ID
 2. **Record snapshot:** record information transaction ID

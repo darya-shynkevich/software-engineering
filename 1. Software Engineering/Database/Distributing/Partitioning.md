@@ -1,4 +1,4 @@
-## [[Partitioning vs Sharding]]
+## [Partitioning vs Sharding](Partitioning%20vs%20Sharding.md)
 
 ## Pros of Partitioning
 
@@ -16,16 +16,16 @@
 (-) Schema changes can be challenging. 
 	DB has to support this feature, but sometimes fails.
 
-## [[Partitioning Strategies]]:
+## [Partitioning Strategies](Partitioning%20Strategies.md):
 
-![[Pasted image 20230605121902.png]]
+![Pasted image 20230605121902](../../../_Attachments/Pasted%20image%2020230605121902.png)
 1. **Horizontal Partitioning** splits rows into partitions
 	range or list
 2. **Vertical Partitioning** splits columns into partitions
 	large column (blob) that you can store in a slow access drive in its own table space
 
 *More modern databases like Cassandra and others abstract that away from the application logic and its maintained at the database level.*
-## [[Partitioning Types]]
+## [Partitioning Types](Partitioning%20Types.md)
 
 ## Demo with Postgres
 
@@ -38,7 +38,7 @@ create table grades_org (id serial not null, g int not null);
 insert into grades_org(g) select floor(random()*100) from generate_series(0, 10000000);
 ```
 
-![[Pasted image 20231217171635.png]]
+![Pasted image 20231217171635](../../../_Attachments/Pasted%20image%2020231217171635.png)
 
 1. Create main partition table to which clients will refer:
    `create table grades_parts (id serial not null, g int not null) partition by range(g);`
@@ -54,20 +54,20 @@ insert into grades_org(g) select floor(random()*100) from generate_series(0, 100
 	4. `alter table grades_parts attach partition g80100 for values from (80) to (100);`
 4. Insert data into main partition table: `insert into grades_parts select * from grades_org;`
 	All data will be put to corresponding partition table automatically
-	![[Pasted image 20231217171303.png]]
+	![Pasted image 20231217171303](../../../_Attachments/Pasted%20image%2020231217171303.png)
 5. Create an index for `grades_partits` table. The index will be created auto for all partitions `create index grades_parts_indx on grades_parts(g);`
-	![[Pasted image 20231217171435.png]]
+	![Pasted image 20231217171435](../../../_Attachments/Pasted%20image%2020231217171435.png)
 6. Querying `explain analyze select count(*) from grades_parts where g = 30;`
-	![[Pasted image 20231217171522.png]]
+	![Pasted image 20231217171522](../../../_Attachments/Pasted%20image%2020231217171522.png)
 
 
 **Table size and index size comparison:**
 
-![[Pasted image 20231217155858.png]]
+![Pasted image 20231217155858](../../../_Attachments/Pasted%20image%2020231217155858.png)
 
 Make sure `ENABLE_PARTITION_PRUNING = true` 
 
-![[Pasted image 20231217160024.png]]
+![Pasted image 20231217160024](../../../_Attachments/Pasted%20image%2020231217160024.png)
 
 # References:
 

@@ -2,7 +2,7 @@
 
 ***Evolvability*** - *an attribute that bears on the ability of a system to accommodate changes in its requirements throughout the system’s lifespan with the least possible cost while maintaining architectural integrity.*
 
-![[Pasted image 20230818102632.png]]
+![Pasted image 20230818102632](../../../_Attachments/Pasted%20image%2020230818102632.png)
 
 #### Measuring attributes
 
@@ -14,7 +14,7 @@
 6. Testability: complexity, modularity
 7. Domain-specific attributes: depend on the specific domains
 
-![[Pasted image 20230818103547.png]]
+![Pasted image 20230818103547](../../../_Attachments/Pasted%20image%2020230818103547.png)
 
 *The evaluation results included (i) the identified and prioritized requirements on the software architecture; (ii) identified components/modules that need to be refactored for enhancement or adaptation; (iii) refactoring investigation documentation which describes the current situation and solutions to each identified candidate that need to be refactored, including estimated workload; and (iv) test scenarios.*
 

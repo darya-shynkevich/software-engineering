@@ -17,5 +17,5 @@
 Pytania:
 1. to było zaskoczenie dla nich obu. Co to jest "obu"? Jaka to forma/część mowy?
 2. https://www.youtube.com/watch?v=NIbaPpRtJPQ&list=PL1QyIbw3fgZi7sEg0xfFX6mxNCWwWBo2H&index=2 Czas 2:30 - 3:00. Jaki tu jest żart?
-![[Pasted image 20231217034400.png]]
+![Pasted image 20231217034400](../../_Attachments/Pasted%20image%2020231217034400.png)
 3. 

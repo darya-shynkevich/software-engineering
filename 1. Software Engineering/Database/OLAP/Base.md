@@ -1,17 +1,17 @@
 These queries are often written by business analysts, and feed into reports that help the management of a company make better decisions (business intelligence). In order to differentiate this pattern of using databases from transaction processing, it has been called online analytic processing (OLAP). The difference between OLTP and OLAP is not always clear-cut, but some typical characteristics are listed in
-![[Pasted image 20230604124305.png]]
+![Pasted image 20230604124305](../../../_Attachments/Pasted%20image%2020230604124305.png)
 The OLTP systems are usually expected to be highly available and to process transactions with low latency, since they are often critical to the operation of the business. 
 
 *A data warehouse, by contrast, is a separate database that analysts can query, without affecting OLTP operations.* 
 
 The **data warehouse** contains a read-only copy of the data in all the various OLTP systems in the company. Data is extracted from OLTP databases (using either a periodic data dump or a continuous stream of updates), transformed into an analysis-friendly schema, cleaned up, and then loaded into the data warehouse. This process of getting data into the warehouse is known as ***Extract–Transform–Load (ETL)***
 
-![[Pasted image 20230604124518.png]]
+![Pasted image 20230604124518](../../../_Attachments/Pasted%20image%2020230604124518.png)
 
 #### **Stars and Snowflakes: Schemas for Analytics**
 
 The name ***“star schema”*** comes from the fact that when the table relationships are visualized, the fact table is in the middle, surrounded by its dimension tables; the connections to these tables are like the rays of a star.
-![[Pasted image 20230604124825.png]]
+![Pasted image 20230604124825](../../../_Attachments/Pasted%20image%2020230604124825.png)
 
 A variation of this template is known as the ***snowflake schema***, where dimensions are further broken down into subdimensions. For example, there could be separate tables for brands and product categories, and each row in the dim_product table could reference the brand and category as foreign keys, rather than storing them as strings in the dim_product table. ==*Snowflake schemas are more normalized than star schemas, but star schemas are often preferred because they are simpler for analysts to work with.*==
 
@@ -31,7 +31,7 @@ Besides only loading those columns from disk that are required for a query, we c
 
 *There are also various other compression schemes for different kinds of data, but we won’t go into them in detail—see [58] for an overview.*
 
-[[Memory bandwidth and vectorized processing]] ?????
+[Memory bandwidth and vectorized processing](Memory%20bandwidth%20and%20vectorized%20processing.md) ?????
 
 **Several different sort orders**
 
@@ -54,7 +54,7 @@ Another aspect of data warehouses that is worth mentioning briefly is *==materia
 One way of creating such a cache is a *==materialized view==*. In a relational data model, it is often defined like a standard (virtual) view: a table-like object whose contents are the results of some query. The difference is that a *materialized view is an actual copy of the query results, written to disk, whereas a virtual view is just a shortcut for writing queries.* When you read from a virtual view, the SQL engine expands it into the view’s underlying query on the fly and then processes the expanded query.
 
 When the underlying data changes, a materialized view needs to be updated, because it is a denormalized copy of the data. *The database can do that automatically, but such updates make writes more expensive, which is why materialized views are not often used in OLTP databases.* In read-heavy data warehouses they can make more sense (whether or not they actually improve read performance depends on the individual case).
-![[Pasted image 20230604132322.png]]
+![Pasted image 20230604132322](../../../_Attachments/Pasted%20image%2020230604132322.png)
 
 The advantage of a materialized data cube is that certain queries become very fast because they have effectively been precomputed.
 

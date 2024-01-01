@@ -1,6 +1,6 @@
 How to invalidate client-cache in web development. 
 
-![[Pasted image 20231014172348.png]]
+![Pasted image 20231014172348](../../_Attachments/Pasted%20image%2020231014172348.png)
 
 ## Purge
 

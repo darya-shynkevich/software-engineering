@@ -24,7 +24,7 @@ The equivalent JSON representation of that schema is as follows:
 ```
 
 There is nothing to identify fields or their datatypes. The encoding simply consists of values concatenated together (no tag numbers in the schema).
-![[Pasted image 20230604151743.png]]
+![Pasted image 20230604151743](../../../../_Attachments/Pasted%20image%2020230604151743.png)
 To parse the binary data, you go through the fields in the order that they appear in the schema and use the schema to tell you the datatype of each field. This means that the binary data can only be decoded correctly if the code reading the data is using the exact same schema as the code that wrote the data. Any mismatch in the schema between the reader and the writer would mean incorrectly decoded data.
 
 #### The writer’s schema and the reader’s schema
@@ -36,7 +36,7 @@ When an application wants to decode some data (read it from a file or database, 
 The key idea with Avro is that the writer’s schema and the ***reader’s schema don’t have to be the same***  — they only need to be compatible.
 
 For example, it’s no problem if the writer’s schema and the reader’s schema have their fields in a different order, because the schema resolution matches up the fields by field name. If the code reading the data encounters a field that appears in the writer’s schema but not in the reader’s schema, it is ignored. If the code reading the data expects some field, but the writer’s schema does not contain a field of that name, it is filled in with a default value declared in the reader’s schema.
-![[Pasted image 20230604152103.png]]
+![Pasted image 20230604152103](../../../../_Attachments/Pasted%20image%2020230604152103.png)
 
 #### Schema evolution rules
 

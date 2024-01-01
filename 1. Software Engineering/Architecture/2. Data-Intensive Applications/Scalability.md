@@ -4,7 +4,7 @@ Load can be described with a few numbers which we call ***load parameters***. Th
 
 ###### Timelines at Scale
 
-![[Pasted image 20230628184059.png]]
+![Pasted image 20230628184059](../../../_Attachments/Pasted%20image%2020230628184059.png)
 *The first version of Twitter used approach 1, but the systems struggled to keep up with the load of home timeline queries, so the company switched to approach 2. This works better because the average rate of published tweets is almost two orders of magnitude lower than the rate of home timeline reads, and so in this case it’s preferable to do more work at write time and less at read time.*
 
 *However, the downside of approach 2 is that posting a tweet now requires a lot of extra work. On average, a tweet is delivered to about 75 followers, so 4.6k tweets per second become 345k writes per second to the home timeline caches.*
@@ -29,4 +29,4 @@ The architecture of systems that operate at large scale is usually highly specif
 
 # Case studies
 
-1. [[Discord]]
+1. [Discord](../Examples/Discord.md)

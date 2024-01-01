@@ -1,4 +1,4 @@
-![[Pasted image 20230826021112.png]]
+![Pasted image 20230826021112](../../_Attachments/Pasted%20image%2020230826021112.png)
 **Forward Proxy** — It functions as an intermediary between client computers and the internet. It receives requests from client machines and forwards them to internet resources. It enables clients on a private network to access resources on the public internet. A forward proxy provides several essential functions, including:
 
 - It masks the identity of client machines by sending requests on their behalf.

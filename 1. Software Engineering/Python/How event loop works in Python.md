@@ -1,11 +1,11 @@
 An event loop is a loop that can register tasks to be executed, execute them, delay or even cancel them and handle different events related to these operations.
 Generally, we schedule multiple async functions to the event loop. The loop runs one function, while that function waits for IO, it pauses it and runs another. When the first function completes IO, it is resumed. Thus two or more functions can co-operatively run together. This the main goal of an event loop.
 
-How event loop was born: [[4. Socket]]
+How event loop was born: [4. Socket](../Linux/4.%20Socket.md)
 
 ##### Event loop in browser (Chrome)
 
-![[Pasted image 20231205112239.png]]
+![Pasted image 20231205112239](../../_Attachments/Pasted%20image%2020231205112239.png)
 
 1. Chrome has a multi-process design
 2. Each process community each other through event loops. (sounds familiar? yes. In a distributed or Microservice designed system, they talk with each other through a message queue)
@@ -14,7 +14,7 @@ How event loop was born: [[4. Socket]]
 
 ##### Event loop in OS (Simplified model)
 
-![[Pasted image 20231205112333.png]]
+![Pasted image 20231205112333](../../_Attachments/Pasted%20image%2020231205112333.png)
 
 1. The win-form application started. UI-Thread which is the main thread focuses on rendering the UI elements
 2. The user clicks the mouse on a button, and the win-form application “publishes” a message to the OS message queue to “subscribe” mouse (or keyboard events)
@@ -25,7 +25,7 @@ How event loop was born: [[4. Socket]]
 
 ##### Event loop in nginx
 
-![[Pasted image 20231205112442.png]]
+![Pasted image 20231205112442](../../_Attachments/Pasted%20image%2020231205112442.png)
 
 1. When nginx server starts It will fork multiple worker processes
 2. In each worker process, there is an event loop, which is the “epoll model” and here is what happens when a worker process is forked by the master process:
@@ -43,7 +43,7 @@ At the system level, we call it a “Message queue”. the problems we are solvi
 - Higher throughput
 - Glue systems
 
-![[Pasted image 20231205112634.png]]
+![Pasted image 20231205112634](../../_Attachments/Pasted%20image%2020231205112634.png)
 
 The event-loop is an idea to enable non-blocking I/O, improved system throughput; decouple, scale, and integration; the implementation doesn’t have to be looping (e.g. epoll, message queue).
 # References:

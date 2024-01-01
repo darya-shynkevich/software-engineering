@@ -17,7 +17,7 @@ Kafka enables us the with three capabilities of a streaming platform:
 9. Production tested, used by LinkedIn, Netflix, Airbnb, Walmart…
 
 **Use cases of Kafka:**
-1. Command Query Responsibility Segregation ([[CQRS]])
+1. Command Query Responsibility Segregation ([CQRS](CQRS))
 2. Complex Event Processing (CEP)
 3. Staged Event-Driven Architecture (SEDA)
 4. Log Shipping & Aggregation
@@ -56,17 +56,17 @@ Topics are logical separations for storing messages in a Kafka cluster. Kafka re
 ## Broker
 
 `Kafka clusters` consist of multiple servers for high- availability needs, known as `brokers`. These are the actual machines and instances ***running the Kafka process***. Each broker can host a set of partitions and handle requests to write and read events to these partitions. They also help in message data replicated across partitions.
-![[Pasted image 20231019231915.png]]
+![Pasted image 20231019231915](../../_Attachments/Pasted%20image%2020231019231915.png)
 ## Partition
 
 Topics are subdivided into **partitions**, the smallest storage unit in the Kafka hierarchy. Partition is an *==**ordered and immutable sequence of records==*.** Inside each partition, each published event receives an identifier, the **offset**. The offset is used by the consumer to control which events have been already consumed and which event is the next one to consume. But **the consuming order is only guaranteed in the same partition.**
-![[Pasted image 20231019232015.png]]
+![Pasted image 20231019232015](../../_Attachments/Pasted%20image%2020231019232015.png)
 
 > Partitions are a unit of parallelism for Kafka consumers.
 
 Each partition stores **log files replicated** across nodes distributed into multiple brokers for fault tolerance. 
 These log files are called `segments`. A `segment` is simply a ***collection of messages of a partition***. Segment N contains the most recent records and Segment 1 contains the oldest retained records. The segment contains 1 GB of data (`log.segment.bytes`) or 1 week's worth of data (`log.roll.ms` or `log.roll.hours`) whichever is smaller. If this limit is reached, then the segment file is closed and a new segment file is created.
-![[Pasted image 20231019232112.png]]
+![Pasted image 20231019232112](../../_Attachments/Pasted%20image%2020231019232112.png)
 > A partition has only one consumer per consumer group.  
 > At any time a single broker will be the leader for a partition. That broker will be responsible for receiving and serving data of that partition.
 
@@ -127,7 +127,7 @@ _Note: Kafka is not a messaging service although it can provide a constrained qu
 
 # References:
 
-1. [[What makes Kafka so performant?]]
+1. [What makes Kafka so performant?](What%20makes%20Kafka%20so%20performant?.md)
 2. [Mastering Kafka Streams and ksqlDB: Building real-time data systems by example](http://libgen.rs/book/index.php?md5=9F77B9C094AEAACBF48960DB53FCC5D2) (book)
 3. [Простым языком об Apache Kafka, как, зачем и почему](https://teletype.in/@abstractart/kafka-for-novices)
 4. [Kafka за 20 минут. Ментальная модель и как с ней работать](https://habr.com/ru/companies/sbermarket/articles/738634/)

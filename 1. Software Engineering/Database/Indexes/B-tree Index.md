@@ -2,11 +2,11 @@ Engineers at Boeing invented the B-tree data structure in 1970 while on a quest 
 
 
 
-![[Pasted image 20230605133326.png]]
+![Pasted image 20230605133326](../../../_Attachments/Pasted%20image%2020230605133326.png)
 
-***B+Trees*** allows us to build a tree structure where each intermediate node points to the highest node value of its respective leaf nodes. It ***gives us a clear path to find the index [[Leaf Nodes]] that will point to the necessary data***.
+***B+Trees*** allows us to build a tree structure where each intermediate node points to the highest node value of its respective leaf nodes. It ***gives us a clear path to find the index [Leaf Nodes](../Internals/Leaf%20Nodes.md) that will point to the necessary data***.
 
-![[Pasted image 20230605133604.png]]
+![Pasted image 20230605133604](../../../_Attachments/Pasted%20image%2020230605133604.png)
 
 ##### B-Tree vs. B+Tree
 

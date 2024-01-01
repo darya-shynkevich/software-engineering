@@ -1,11 +1,11 @@
 
-To solve [[Read Phenomenas]] people designed Isolation levels.
+To solve [Read Phenomenas](Read%20Phenomenas.md) people designed Isolation levels.
 
 # Isolation Levels
 
 The SQL standard defines 4 standard isolation levels these can and should be configured globally (insidious things can happen if we can't reliably reason about isolation levels).
 
-![[Pasted image 20231210225424.png]]
+![Pasted image 20231210225424](../../../_Attachments/Pasted%20image%2020231210225424.png)
 
 ## 1. READ UNCOMMITTED
 
@@ -47,8 +47,8 @@ It does have the minor data inconsistency while its locked to specific view of t
 **Read Phenomena:** ***Phantom reads*** (you can not control new rows, you can lock only existing rows)
 
 Implementation:
-1. [[Transaction Loks]]
-2. [[MVCC]] <-- some of the implementations can provide guarantees to get rid of Phantom Reads 
+1. [Transaction Loks](Transaction%20Loks.md)
+2. [MVCC](MVCC.md) <-- some of the implementations can provide guarantees to get rid of Phantom Reads 
 
 ## 4. SERIALIZABLE
 
