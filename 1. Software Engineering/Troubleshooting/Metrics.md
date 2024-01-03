@@ -1,1 +1,0 @@
-[Percentiles](Percentiles.md)

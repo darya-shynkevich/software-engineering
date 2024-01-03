@@ -1,4 +1,6 @@
 
+[Тред фронтенд-инструментов для пет-проектов](https://twitter.com/nat_davydova/status/1737429176519418084) Куча полезной инфы по постороению UI
+
 # How to organise code:
 
 1. [Практическое руководство по разработке бэкенд-сервиса на Python](https://habr.com/ru/companies/yandex/articles/499534/)
