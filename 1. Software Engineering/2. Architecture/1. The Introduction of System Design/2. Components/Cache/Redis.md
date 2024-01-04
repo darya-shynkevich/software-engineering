@@ -166,7 +166,33 @@ In the case where there are changes, the kernel keeps track of references to eac
 3. How exactly `forking` works?
 4. Do clients wait for persistent? 
 
+# **Interview Questions:**
+
+1. [Redis Interview Questions from Javapoint](https://www.javatpoint.com/redis-interview-questions-and-answers)
+2. [Redis Interview Questions from Wisdomjobs](https://www.wisdomjobs.com/e-university/redis-interview-questions-answers.html)
+3. [Redis Interview Questions from Career Guru](https://career.guru99.com/top-10-redis-interview-questions/)
+
 ## References:
 
 1. https://architecturenotes.co/redis/ 
 2. [Redis In-memory Database Crash Course](https://www.youtube.com/watch?v=sVCZo5B8ghE&list=PLQnljOFTspQXNP6mQchJVP3S-3oKGEuw9&index=3) (video)
+3. [A little internal on Redis hash table implementation](https://kousiknath.medium.com/a-little-internal-on-redis-key-value-storage-implementation-fdf96bac7453)
+4. [Под капотом Redis: Хеш таблица (часть 1)](https://habr.com/ru/post/271205/)
+5. [4 Reasons Why Single-Threaded Redis is So Fast](https://levelup.gitconnected.com/4-reasons-why-single-threaded-redis-is-so-fast-414e0106f921)
+6. [Redis Data Types](https://medium.com/thedevproject/redis-data-types-1-eda9f60186d)
+7. [The Underlying Data Structures of Redis Database](https://jinlow.medium.com/the-underlying-data-structures-of-redis-database-82258d284d96)
+8. [How Redis efficiently snapshots gigabytes of memory to disk (forking)](https://www.youtube.com/watch?v=MBzcgNaXjvc&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=84) (video)
+9. [Павел Мальцев, Speechki. Redis, сова и глобус](https://www.youtube.com/watch?v=I3Ej8Npy2Lw)
+10. [Can Redis be used as a Primary database?](https://www.youtube.com/watch?v=VLTPqImLapM&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=79) (video)
+11. [Publish Subscribe In Redis](https://www.youtube.com/watch?v=UaKqUgMLus4&list=PLQnljOFTspQWKPjGnVgA5oVIhNKJ5mDXg&index=9) (video)
+12. [Redis Networking Transport Protocol](https://www.youtube.com/watch?v=4wwoAzkEBmE&list=PLQnljOFTspQWKPjGnVgA5oVIhNKJ5mDXg&index=10) (video)
+13. [Introduction to Redis](http://www.slideshare.net/dvirsky/introduction-to-redis)
+14. [A Closer Look at Redis Dictionary Implementation Internals](https://codeburst.io/a-closer-look-at-redis-dictionary-implementation-internals-3fd815aae535)
+15. [A little internal on Redis hash table implementation](https://kousiknath.medium.com/a-little-internal-on-redis-key-value-storage-implementation-fdf96bac7453)
+16. [Learn Redis at Redis University](https://university.redis.com/) (course)
+17. [**Understanding Redis High-Availability Architectures**](https://semaphoreci.medium.com/understanding-redis-high-availability-architectures-2b544fe3ec1e)
+18. [Redis Cluster: Architecture, Replication, Sharding and Failover](https://medium.com/opstree-technology/redis-cluster-architecture-replication-sharding-and-failover-86871e783ac0)
+19. [Redis Best Practices](https://habr.com/ru/post/485672/)
+20. [Redis на практических примерах](https://habr.com/ru/company/manychat/blog/507136/)
+21. [Успехи и провалы с Redis](https://www.youtube.com/watch?v=JBIm4sglyQU&list=PLH-XmS0lSi_x0OrxrC4GKInFRK8zG_tfZ&index=10) (video)
+22. [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)

@@ -14,3 +14,7 @@
 1. https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.93.8928 TBD
 2. https://www.infoq.com/presentations/Simple-Made-Easy/
 3. [Why Static Languages Suffer From Complexity](https://hirrolot.github.io/posts/why-static-languages-suffer-from-complexity.html#)
+4. [Use Solid Technologies - Don’t Re-invent the Wheel - Keep It Simple!](https://medium.com/@DataStax/instagram-engineerings-3-rules-to-a-scalable-cloud-application-architecture-c44afed31406)
+5. [Simplicity by Distributing Complexity](https://jobs.zalando.com/tech/blog/simplicity-by-distributing-complexity/)
+6. [Why Over-Reusing is Bad](http://tech.transferwise.com/why-over-reusing-is-bad/)
+7. [Avoid Over Engineering](https://medium.com/@rdsubhas/10-modern-software-engineering-mistakes-bc67fbef4fc8)

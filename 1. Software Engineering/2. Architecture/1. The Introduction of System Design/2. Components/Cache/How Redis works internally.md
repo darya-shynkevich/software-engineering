@@ -1,6 +1,6 @@
 
 > - Do you know what are the key features to make it so fast?
-> - Internally it is using [SkipList](../../../../1.%20Algorithms/Data%20Structures/SkipList.md) with a double list for [LRU](LRU.md), a very efficient data structure which makes it fast
+> - Internally it is using [SkipList](../../../../1.%20Algorithms/Data%20Structures/SkipList.md) with a double list for [LRU](../../1.%20Concepts/LRU.md), a very efficient data structure which makes it fast
 > - Very good, what else? How does it handle incoming connections?
 > - It is socket based server, listen and accept the connection then start a thread to process the incoming data”
 > - Ok, how about 10k connections at the time? Redis will open 10k threads?

@@ -1,6 +1,6 @@
 A key insight of the relational model was this: *you only need to build a query optimizer once, and then all applications that use the database can benefit from it.* If you don’t have a query optimizer, it’s easier to handcode the access paths for a particular query than to write a general-purpose optimizer—but the general-purpose solution wins in the long run.
 
-[OTLP Base](Base.md)
+[OTLP Base](_Base.md)
 [OLAP Base](../OLAP/Base.md)
 
 ### [Why to choose NoSQL?](../NoSQL/Why%20to%20choose%20NoSQL?.md)

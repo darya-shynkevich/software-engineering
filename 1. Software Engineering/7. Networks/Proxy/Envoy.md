@@ -1,0 +1,2 @@
+
+[Envoy Proxy Crash Course, Architecture, L7 & L4 Proxying, HTTP/2, Enabling TLS 1.2/1.3 and more](https://www.youtube.com/watch?v=40gKzHQWgP0&list=PLQnljOFTspQWGuRmwojJ6LiV0ejm6eOcs&index=36) is an open-source edge and service proxy designed for cloud-native applications. It’s written in C++ and designed for services and applications, and it serves as a data plane for service mesh. (video)

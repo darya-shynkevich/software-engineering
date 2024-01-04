@@ -1,5 +1,5 @@
 
-# [Load Balancer](../../../7.%20Networks/Load%20Balancer.md)
+# [7. Load Balancer](../../../7.%20Networks/7.%20Load%20Balancer.md)
 
 
 # References:

@@ -2,6 +2,10 @@
 
 # References:
 
+_[**10 System Design Interview Questions (With Answers) I Wished I Knew Before the Interview**](https://levelup.gitconnected.com/10-system-design-interview-questions-with-answers-i-wished-i-knew-before-the-interview-31dcfc3cddef)_
+[_**System design interview questions with solutions**_](https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions)
+_****[Top 10 Facebook system design interview questions](https://grokkingtechinterview.com/top-10-facebook-system-design-interview-questions-3c191b64c13b)****_
+
 1. ["What Happens When... and How" Questions](https://www.glassdoor.com/Interview/What-happens-when-you-type-www-google-com-in-your-browser-QTN_56396.htm)
 2. [Transit and Peering: How Your Requests Reach GitHub](https://githubengineering.com/transit-and-peering-how-your-requests-reach-github/)
 3. [Netflix: What Happens When You Press Play?](http://highscalability.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html)

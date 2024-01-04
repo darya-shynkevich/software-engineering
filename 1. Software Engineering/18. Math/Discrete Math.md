@@ -1,0 +1,15 @@
+Наиболее релевантная область математики для компьютерных наук - дискретная математика. "Дискретный" - антоним "непрерывного", и дискретная математика, по сути, это набор интересных прикладных тем, которые не вошли в дисциплину, называемую математический анализ. Не стоит пытаться охватить весь спектр этих тем - эта дисциплина имеет слишком много подразделов. Более реалистичная цель - подтянуть логику, комбинаторику и вероятность, теорию сетов, теорию графов, и изучить немного теорию чисел, которая широко применяется в криптографии. Еще одна область математики, которую стоит изучить, это линейная алгебра. Она очень важна для работы с компьютерной графикой и методами машинного обучения.
+# References:
+
+1. Для более продвинутых читателей мы советуем книгу Математика для компьютерных наук ([Mathematics for Computer Science](https://courses.csail.mit.edu/6.042/spring17/mcs.pdf)) - конспект лекций одноименного курса MIT, собранный в отдельную книгу. [Видеолекции](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/) курса также доступны бесплатно, и мы рекомендуем именно их для изучения дискретной математики.
+2. [Discrete Mathematics for Computing](http://libgen.rs/book/index.php?md5=2ADD6E533A01828DD0F24FF6526CC755) (book)
+3. [Основы комбинаторики и теори чисел](https://www.youtube.com/watch?v=hy08YTrcu1A&list=PL4_hYwCyhAvbGZOQrBtdahOGy4QydyTAB) (videos, course)
+4. [Основы комбинаторики и теории чисел (курс от ФПМИ) (video)](https://www.youtube.com/watch?v=195_Qzs4zxQ&list=PL4_hYwCyhAvaQVTXoaN9LfTevGEfKzaZn)
+5. [Основы комбинаторики и теории чисел (1 курс, осень 2022)](https://www.youtube.com/playlist?list=PL4_hYwCyhAvapIriPcZpubOFxFThZiKIi) (videos, course)
+6. [Основы комбинаторики и теории чисел (1 курс, весна 2023)](https://www.youtube.com/playlist?list=PL4_hYwCyhAvbMblgW-EjZWpCbdz-6NTEj) (videos, course)
+7. [Дискретная математика](https://www.youtube.com/watch?v=e98iysstIyw&list=PL4_hYwCyhAvaol0AYUevaMrW-uO4TYqUt) (videos, course)
+8. [Дискретный анализ (2 курс, осень 2021) - Райгородский А. М](https://www.youtube.com/watch?v=WcH03Kqflm4&list=PL4_hYwCyhAva78XFKFG1MoMdWXyV5ntmE) (videos, course)
+9. [Дискретный анализ (2 курс, весна 2023) - Райгородский А. М.](https://www.youtube.com/playlist?list=PL4_hYwCyhAvZGFAJd54v7jYl0FysH0zdg) (videos, course)
+10. [Дополнительная лекция по дискретной математике 1. Аддитивная комбинаторика (курс от ФПМИ)](https://www.youtube.com/watch?v=8V8D_0VnMbI&list=PL4_hYwCyhAvZS0aR4uUyyaqXMgaCYep1c) (video)
+11. [Practical Discrete Mathematics: Discover math principles that fuel algorithms for computer science and machine learning with Python](http://libgen.rs/book/index.php?md5=415C1FA12C39B984C33F8737E02D6267)
+12. [Найти вероятность выпадения k (сумма выпавших значений) при бросании n кубиков (часть 1 из 2)](https://habr.com/ru/articles/676854/)
