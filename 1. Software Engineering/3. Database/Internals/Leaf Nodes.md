@@ -1,5 +1,0 @@
-***Index leaf nodes** are given a specific column to index, they can store the location of the matching row(s).* *These index leaf nodes are the mapping between the indexed column and where the corresponding row lives on the disk. This gives us a quick way to get to a specific row if you reference it by indexed column. Scanning the index can be much faster since it is a compact representation (fewer bytes) of the column you are searching by. It saves you time reading a bunch of blocks looking for the requested data and is much more convenient to cache, further speeding up the entire process.*
-
-![Pasted image 20230605132807](../../../_Attachments/Pasted%20image%2020230605132807.png)
-
-*Since these leaf nodes aren't arranged physically on disk in order (remember pointers maintain the sorting in the doubly linked list), we need a way to get to the correct index leaf nodes.*

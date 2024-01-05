@@ -12,3 +12,4 @@ Make sure to watch information theory videos first!
     6. [Text Compression Meets Probabilities](https://www.youtube.com/watch?v=cCDCfoHTsaU)
 2. [Compressor Head videos](https://www.youtube.com/playlist?list=PLOU2XLYxmsIJGErt5rrCqaSGTMyyqNt2H)
 3. [(optional) Google Developers Live: GZIP is not enough!](https://www.youtube.com/watch?v=whGwm0Lky2s)
+4. [Huffman coding](https://vishalrana9915.medium.com/huffman-coding-544d82705b54)

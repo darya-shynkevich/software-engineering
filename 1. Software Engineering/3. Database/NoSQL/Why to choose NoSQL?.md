@@ -33,3 +33,30 @@ Schema changes have a bad reputation of being slow and requiring downtime. This 
 
 *It’s worth pointing out that the idea of grouping related data together for locality is not limited to the document model: Google’s Spanner database offers the same locality properties in a relational data model, by allowing the schema to declare that a table’s rows should be interleaved (nested) within a parent table. Oracle allows the same, using a feature called multi-table index cluster tables. The column-family concept in the Bigtable data model (used in Cassandra and HBase) has a similar purpose of managing locality*.
 
+# References:
+
+1. [Тред про БД. SQL и noSQL](https://twitter.com/_abstractart/status/1645427803670601729?t=AJ8OMxAOEpJpQ-r6XiozhA&s=35)
+2. [https://speakerdeck.com/conradirwin/mongodb-confessions-of-a-postgresql-lover](https://speakerdeck.com/conradirwin/mongodb-confessions-of-a-postgresql-lover)
+3. [Navigating the Database Selection Process: Tips and Best Practices](https://medium.com/bytebytego-system-design-alliance/navigating-the-database-selection-process-tips-and-best-practices-c737c89dab5f)
+4. [CP Databases and AP Databases](https://blog.andyet.com/2014/10/01/right-database)
+5. [Реляционные базы данных или NoSQL](https://boosty.to/megdu_skobok/posts/3bbc0208-9c69-4189-94ce-c941cbb08a78?share=post_link)
+6. [NoSQL Databases: a Survey and Decision Guidance](https://medium.baqend.com/nosql-databases-a-survey-and-decision-guidance-ea7823a822d#.wskogqenq)
+7. [Hilarious Video: Relational Database Vs NoSQL Fanbois](http://highscalability.com/blog/2010/9/5/hilarious-video-relational-database-vs-nosql-fanbois.html)
+8. [Сравнение SQL- и NoSQL-баз данных](https://habr.com/ru/companies/ruvds/articles/727474/)
+9. [SQL vs NoSQL](https://www.upwork.com/hiring/data/sql-vs-nosql-databases-whats-the-difference/)
+10. [SQL or NoSQL](https://github.com/donnemartin/system-design-primer#sql-or-nosql)
+11. [SQL vs NoSQL - Lesson Learned at Salesforce](https://engineering.salesforce.com/sql-or-nosql-9eaf1d92545b)
+12. [SQL vs NO-SQL Databases — Everything you need to know](https://medium.com/javarevisited/sql-vs-no-sql-databases-everything-you-need-to-know-b723457446a5)
+13. [ACID and BASE](https://neo4j.com/blog/acid-vs-base-consistency-models-explained/)
+14. [ACID vs BASE: Comparison of two Design Philosophies](https://luminousmen.com/post/acid-vs-base-comparison-of-two-design-philosophies)
+15. [Postgres vs Mongo](https://www.youtube.com/watch?v=SNzOZKvFZ68) (video)
+16. [MongoDB vs. Postgres Benchmarks](https://www.youtube.com/watch?v=-AIjKrWi0x0&list=PLH-XmS0lSi_zTZrols83QSxI3Q96dSbBm&index=103) (video)
+17. [Why MongoDB is ‘fundamentally better’ for developers](https://www.infoworld.com/article/3570729/why-mongodb-is-fundamentally-better-for-developers.amp.html)
+18. [Why You Should Never Use MongoDB](http://www.sarahmei.com/blog/2013/11/11/why-you-should-never-use-mongodb/)
+19. [Подумываете об использовании MongoDB?](https://habr.com/ru/company/otus/blog/565700/)
+20. [NoSQL Databases: Survey and Decision Guidance](https://medium.baqend.com/nosql-databases-a-survey-and-decision-guidance-ea7823a822d)
+21. [35+ Use Cases For Choosing Your Next NoSQL Database](http://highscalability.com/blog/2011/6/20/35-use-cases-for-choosing-your-next-nosql-database.html)
+22. [101 Questions To Ask When Considering A NoSQL Database](http://highscalability.com/blog/2011/6/15/101-questions-to-ask-when-considering-a-nosql-database.html)
+23. [What The Heck Are You Actually Using NoSQL For?](http://highscalability.com/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html)
+24. [Seven Signs You May Need A NoSQL Database](http://highscalability.com/blog/2010/2/16/seven-signs-you-may-need-a-nosql-database.html)
+25. **[MySQL vs PostgreSQL in 2023.](https://dbconvert.com/blog/mysql-vs-postgresql/)**

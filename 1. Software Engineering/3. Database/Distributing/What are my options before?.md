@@ -1,8 +1,0 @@
-Like any distributed architecture, ***database partitioning costs money***. Setting up shards, keeping the data on each shard up to date, and making sure requests are sent to the right shards is ***time-consuming and complicated***.
-
-1. **Do nothing**: If it isn't broken, don't fix it.
-2. **Vertical Scaling**: just get machines with more resources, adding additional RAM, adding more CPU cores for computationally heavy workloads, and adding additional storage. These are all options that don't require redesign of both your application and databases architectures.  *Other eventual limits, such as bandwidth (network or internal to the system), can also force you into sharding*.
-3. **Replication**: read performance can be improved by making more copies of the database. BUT: caches first. 
-	   *Replication makes write-heavy workloads harder to handle because each write must be copied to every node. This can vary depending on the datastore some of them do it asynchronously while others might delay the initial write to ensure its been replicated.*
-	   ![Pasted image 20230605124051](../../../_Attachments/Pasted%20image%2020230605124051.png)
-4. **Specialized Databases**: *Poor performance in a database can be improved by redesigning it to better suit its workload. For instance, using Elasticsearch for search data and S3 for blobs can be more effective than using a relational database. Outsourcing these functions may be preferable to sharding the entire database.*

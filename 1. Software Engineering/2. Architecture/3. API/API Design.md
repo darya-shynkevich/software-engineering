@@ -1,3 +1,5 @@
+[Sergey Konstantinov “The API”](https://twirl.github.io/The-API-Book/) (book)
+
 
 # References:
 

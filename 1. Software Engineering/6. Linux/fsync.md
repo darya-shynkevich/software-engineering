@@ -10,3 +10,6 @@
 
 *Overall, `fsync` is an important function in computer science to make sure that data is properly saved to a hard drive, preventing loss of valuable information.*
 
+# References:
+
+1. [Your SSD lies but that's ok .. I think | Postgres fsync](https://www.youtube.com/watch?v=JK2ZIx8jRu4) (video)

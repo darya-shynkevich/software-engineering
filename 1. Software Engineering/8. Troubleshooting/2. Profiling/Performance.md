@@ -4,7 +4,7 @@
 
 ! **Note:** Profiling can add quite a bit of overhead to your code execution, so the execution time shown by the profiler will likely be longer than the actual execution time.
 
-[Why does Python Code Run Faster in a Function?](../../4.%20Python/Why%20does%20Python%20Code%20Run%20Faster%20in%20a%20Function?.md)
+[Why does Python Code Run Faster in a Function?](../../4.%20Python/Internals/Why%20does%20Python%20Code%20Run%20Faster%20in%20a%20Function?.md)
 
 [**Performance Optimization by Brotli Compression](https://blogs.akamai.com/2016/02/understanding-brotlis-potential.html):**
 1. [Boosting Site Speed Using Brotli Compression at LinkedIn](https://engineering.linkedin.com/blog/2017/05/boosting-site-speed-using-brotli-compression)

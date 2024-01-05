@@ -21,7 +21,7 @@ This approach is seen in file systems and RDBMSes. Strong consistency works well
 
 ### 2. [Distributed Locks](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Distributed%20Locks.md)
 
-### 3. [Distributed Transactions](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Distributed%20Transactions.md)
+### 3. [Distributed Transactions](../../3.%20Database/OTLP/5.%20Distributed/Distributed%20Transactions.md)
 
 # References:
 

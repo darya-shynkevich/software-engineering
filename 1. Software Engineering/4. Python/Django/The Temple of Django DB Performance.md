@@ -49,7 +49,7 @@ Query Plan - is a visualisation of work that the database expects to do for a gi
 
 *The cost listed on the top-most node of the query plan is the cost for the entire query. The number reads like this: cost=.. . The number represents the estimated disk page fetches and CPU time needed to run the query. This query has a high cost, which equates to 2,758,484 rows accessed and an over 2 second execution time.*
 
-## [_Base](../../3.%20Database/Indexes/_Base.md)
+## [_Base](../../3.%20Database/OTLP/2.%20Indexes/_Base.md)
 
 How to create an index in Django:
 ![Pasted image 20231130233708](../../../_Attachments/Pasted%20image%2020231130233708.png)
@@ -71,7 +71,7 @@ The default setting in PostgreSQL is to lock the table you are indexing against 
 
 ### 1. The N+1 Problem and select_related
 
-`select_related` obtains all data at one time through multi-table join Association query and improves performance by reducing the number of database queries. It uses [JOIN statement](../../3.%20Database/OTLP/JOIN%20statement.md)s of SQL to optimize and improve performance by reducing the number of SQL queries. *(FK and One2One)*
+`select_related` obtains all data at one time through multi-table join Association query and improves performance by reducing the number of database queries. It uses [4. JOIN statement](../../3.%20Database/OTLP/6.%20SQL/4.%20JOIN%20statement.md)s of SQL to optimize and improve performance by reducing the number of SQL queries. *(FK and One2One)*
 
 `prefetch_related` works by fetching the related data in a separate query after the initial query has been executed. This is to solve the problem in the SQL query through a JOIN statement. However, for many-to-many relationships, it is not wise to use SQL statements to solve them, because the tables obtained by JOIN will be very long, which will lead to an increase in running time and memory occupation of SQL statements. The solution to prefetch_related() is to query each table separately and then use Python to handle their relationship! *(m2m, m2one (reversed FK))*
 

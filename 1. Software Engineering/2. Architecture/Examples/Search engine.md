@@ -1,0 +1,42 @@
+
+# Graph search function:
+
+1. [Building out the infrastructure for Graph Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-building-out-the-infrastructure-for-graph-search/10151347573598920)
+2. [Indexing and ranking in Graph Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-indexing-and-ranking-in-graph-search/10151361720763920)
+3. [The natural language interface of Graph Search](https://www.facebook.com/notes/facebook-engineering/under-the-hood-the-natural-language-interface-of-graph-search/10151432733048920) and [Erlang at Facebook](http://www.erlang-factory.com/upload/presentations/31/EugeneLetuchy-ErlangatFacebook.pdf)
+
+# References:
+
+1. [Amazon System Design Interview Question | Design Search Auto Complete System](https://www.youtube.com/watch?v=OzcpPSrNsCU&list=PLOAph0xkZvSuqy8yq_0D6NEABhmSTRYrN&index=7) (video)
+2. [Найди мне работу: как устроен поиск в hh.ru](https://www.youtube.com/watch?v=8uLu6GWaLSY&list=PLH-XmS0lSi_wRIh4RJjnTGMKaTiQoaGTc&index=42) (video)
+3. [Facebook real time text search engine](https://www.facebook.com/watch/?v=432864835468) (video)
+4. [How would you implement Google Search?](http://programmers.stackexchange.com/questions/38324/interview-question-how-would-you-implement-google-search)
+5. [Implementing Search Engines](http://www.ardendertat.com/2012/01/11/implementing-search-engines/)
+6. [DuckDuckGo Architecture - 1 Million Deep Searches A Day And Growing](http://highscalability.com/blog/2013/1/28/duckduckgo-architecture-1-million-deep-searches-a-day-and-gr.html)
+7. [The Anatomy Of Search Technology: Crawling Using Combinators](http://highscalability.com/blog/2012/5/28/the-anatomy-of-search-technology-crawling-using-combinators.html)
+8. [Distributed Searching](http://nwds.cs.washington.edu/files/nwds/pdf/Distributed-WR.pdf)
+9. [Twitter Search System Design](https://levelup.gitconnected.com/twitter-search-system-design-fd1391e7da50)
+10. [System Design — Twitter Search](https://mecha-mind.medium.com/system-design-twitter-search-ccb29c48d9b6)
+11. [Search Architecture at Instagram](https://instagram-engineering.com/search-architecture-eeb34a936d3a)
+12. [Search Architecture at eBay](http://www.cs.otago.ac.nz/homepages/andrew/papers/2017-8.pdf)
+13. [Search Architecture at Box](https://medium.com/box-tech-blog/scaling-box-search-using-lumos-22d9e0cb4175)
+14. [Search Discovery Indexing Platform at Coupang](https://medium.com/coupang-tech/the-evolution-of-search-discovery-indexing-platform-fa43e41305f9)
+15. [Universal Search System at Pinterest](https://medium.com/pinterest-engineering/building-a-universal-search-system-for-pinterest-e4cb03a898d4)
+16. [Improving Search Engine Efficiency by over 25% at eBay](https://www.ebayinc.com/stories/blogs/tech/making-e-commerce-search-faster/)
+17. [Indexing and Querying Telemetry Logs with Lucene at Palantir](https://medium.com/palantir/indexing-and-querying-telemetry-logs-with-lucene-234c5ce3e5f3)
+18. [Query Understanding at TripAdvisor](https://www.tripadvisor.com/engineering/query-understanding-at-tripadvisor/)
+19. [Search Federation Architecture at LinkedIn (2018)](https://engineering.linkedin.com/blog/2018/03/search-federation-architecture-at-linkedin)
+20. [Search at Slack](https://slack.engineering/search-at-slack-431f8c80619e)
+21. [Search and Recommendations at DoorDash](https://blog.doordash.com/powering-search-recommendations-at-doordash-8310c5cfd88c)
+22. [Stability and Scalability for Search at Twitter](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2022/stability-and-scalability-for-search)
+23. [Search Service at Twitter (2014)](https://blog.twitter.com/engineering/en_us/a/2014/building-a-complete-tweet-index.html)
+24. [Autocomplete Search (2 parts) at Traveloka](https://medium.com/traveloka-engineering/high-quality-autocomplete-search-part-2-d5b15bb0dadf)
+25. [Data-Driven Autocorrection System at Canva](https://product.canva.com/building-a-data-driven-autocorrection-system/)
+26. [Adapting Search to Indian Phonetics at Flipkart](https://blog.flipkart.tech/adapting-search-to-indian-phonetics-cdbe65259686)
+27. [Nautilus: Search Engine at Dropbox](https://blogs.dropbox.com/tech/2018/09/architecture-of-nautilus-the-new-dropbox-search-engine/)
+28. [Galene: Search Architecture of LinkedIn](https://engineering.linkedin.com/search/did-you-mean-galene)
+29. [Manas: High Performing Customized Search System at Pinterest](https://medium.com/@Pinterest_Engineering/manas-a-high-performing-customized-search-system-cf189f6ca40f)
+30. [Sherlock: Near Real Time Search Indexing at Flipkart](https://blog.flipkart.tech/sherlock-near-real-time-search-indexing-95519783859d)
+31. [Nebula: Storage Platform to Build Search Backends at Airbnb](https://medium.com/airbnb-engineering/nebula-as-a-storage-platform-to-build-airbnbs-search-backends-ecc577b05f06)
+32. [Как мы готовили поиск в Delivery Club / Иван Максимов (Delivery Club), Евгений Исупов](https://www.youtube.com/watch?v=0M0gDXBauD4)
+

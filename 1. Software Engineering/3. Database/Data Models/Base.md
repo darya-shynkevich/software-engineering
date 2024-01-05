@@ -35,6 +35,10 @@ The most popular database for business data processing in the 1970s was IBM’s 
 
 Like document databases, IMS worked well for one-to-many relationships, but it made many-to-many relationships difficult, and it didn’t support joins. Developers had to decide whether to duplicate (denormalize) data or to manually resolve references from one record to another.
 
-Various solutions were proposed to solve the limitations of the hierarchical model. The two most prominent were the [Relational Model](../OTLP/Relational%20Model.md) (which became SQL, and took over the world) and the [Network Model](Network%20Model.md) (which initially had a large following but eventually faded into obscurity).
+Various solutions were proposed to solve the limitations of the hierarchical model. The two most prominent were the [Relational Model](Relational%20Model.md) (which became SQL, and took over the world) and the [Network Model](Network%20Model.md) (which initially had a large following but eventually faded into obscurity).
 
-[Quorum](../../Quorum.md)
+[Quorum](../../2.%20Architecture/3.%20API/Concepts/Quorum.md)
+
+# References:
+
+1. [Основы правил проектирования базы данных](https://habr.com/ru/post/514364/)

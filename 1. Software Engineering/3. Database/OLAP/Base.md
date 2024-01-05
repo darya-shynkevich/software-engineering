@@ -60,4 +60,14 @@ The advantage of a materialized data cube is that certain queries become very fa
 
 The disadvantage is that a data cube doesn’t have the same flexibility as querying the raw data. Most data warehouses therefore try to keep as much raw data as possible, and use aggregates such as data cubes only as a performance boost for certain queries.
 
-[References](https://www.notion.so/DB-6ce16768bb054da69228f5a40cdfa87a?pvs=4#953ebb8548a54a318b29ce9ec1fc7707 )
+# References:
+
+1. [What You Always Wanted to Know About Datalog (And Never Dared to Ask)](https://www.researchgate.net/profile/Letizia-Tanca/publication/3296132_What_you_Always_Wanted_to_Know_About_Datalog_And_Never_Dared_to_Ask/links/0fcfd50ca2d20473ca000000/What-you-Always-Wanted-to-Know-About-Datalog-And-Never-Dared-to-Ask.pdf) (paper)
+2. [Analytics for a SaaS startup: first year with Snowflake](https://www.youtube.com/watch?v=N1vqrRBi63w&list=PLdMXteIaGViJFoRUOoPjYaNqZFJY64TYr) (video)
+3. Surajit Chaudhuri and Umeshwar Dayal: “[An Overview of Data Warehousing and OLAP Technology](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/sigrecord.pdf),” ACM SIGMOD Record, volume 26, number 1, pages 65–74, March 1997. [doi:10.1145/248603.248616](http://dx.doi.org/10.1145/248603.248616)
+4. Ralph Kimball and Margy Ross: The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling, 3rd edition. John Wiley & Sons, July 2013. ISBN: 978-1-118-53080-1 Derrick Harris: “[Why Apple, eBay, and Walmart Have Some of the Biggest Data Warehouses You’ve Ever Seen](http://gigaom.com/2013/03/27/why-apple-ebay-and-walmart-have-some-of-the-biggest-data-warehouses-youve-ever-seen/),” [gigaom.com](http://gigaom.com/), March 27, 2013.
+5. Daniel J. Abadi, Peter Boncz, Stavros Harizopoulos, et al.: “[The Design and Implementation of Modern Column-Oriented Database Systems](http://cs-www.cs.yale.edu/homes/dna/papers/abadi-column-stores.pdf),” Foundations and Trends in Databases, volume 5, number 3, pages 197–280, December 2013. [doi:10.1561/1900000024](http://dx.doi.org/10.1561/1900000024) [58]
+6. Michael Stonebraker, Daniel J. Abadi, Adam Batkin, et al.: “[C-Store: A Column-oriented DBMS](http://www.cs.umd.edu/~abadi/vldb.pdf),” at 31st International Conference on Very Large Data Bases (VLDB), pages 553–564, September 2005. [61]
+7. Andrew Lamb, Matt Fuller, Ramakrishna Varadarajan, et al.: “[The Vertica Analytic Database: C-Store 7 Years Later](http://vldb.org/pvldb/vol5/p1790_andrewlamb_vldb2012.pdf),” Proceedings of the VLDB Endowment, volume 5, number 12, pages 1790–1801, August 2012. [62]
+8. Julien Le Dem and Nong Li: “[Efficient Data Storage for Analytics with Apache Parquet 2.0](http://www.slideshare.net/julienledem/th-210pledem),” at Hadoop Summit, San Jose, June 2014.
+9. Jim Gray, Surajit Chaudhuri, Adam Bosworth, et al.: “[Data Cube: A Relational Aggregation Operator Generalizing Group-By, Cross-Tab, and Sub-Totals](http://arxiv.org/pdf/cs/0701155.pdf),” Data Mining and Knowledge Discovery, volume 1, number 1, pages 29–53, March 2007. [doi:10.1023/A:1009726021843](http://dx.doi.org/10.1023/A:1009726021843)

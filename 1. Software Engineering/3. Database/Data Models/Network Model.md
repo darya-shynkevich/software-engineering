@@ -8,4 +8,6 @@ A query in CODASYL was performed by moving a cursor through the database by iter
 
 With both the hierarchical and the network model, if you didn’t have a path to the data you wanted, you were in a difficult situation. You could change the access paths, but then you had to go through a lot of handwritten database query code and rewrite it to handle the new access paths. ***It was difficult to make changes to an application’s data model.***
 
+# References:
 
+1. [Таблично-сетевая модель данных. Введение](https://habr.com/ru/articles/462025/)

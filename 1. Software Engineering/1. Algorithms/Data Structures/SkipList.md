@@ -61,3 +61,6 @@ Worst case: O(N)
 
 # References:
 1. [Those Data structures can not be learned from leetcode- Skiplist](https://iorilan.medium.com/those-data-structures-can-not-be-learned-from-leetcode-skiplist-2b592d11e307)
+2. These are somewhat of a cult data structure" - Skiena
+3. [Randomization: Skip Lists (video)](https://www.youtube.com/watch?v=2g9OSRKJuzM&index=10&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp)
+4. [For animations and a little more detail](https://en.wikipedia.org/wiki/Skip_list)

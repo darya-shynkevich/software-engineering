@@ -1,0 +1,21 @@
+
+# References:
+
+1. **[Design Twitter - System Design Interview](https://www.youtube.com/watch?v=o5n85GRKuzk)** (video)
+2. [Twitter System Design](https://www.youtube.com/watch?v=EkudBdvbDhs) (video)
+3. [Twitter System Design](https://adityagoel123.medium.com/twitter-system-design-ecfccce298ca)
+4. [Twitter System Design](https://medium.com/@karan99/system-design-twitter-793ab06c9355)
+5. [Design Twitter — A System Design Interview Question](https://medium.com/@anuupadhyay1994/design-twitter-a-system-design-interview-question-8c0745eac0a6)
+6. [Design News Feed (Design Twitter)](https://www.youtube.com/watch?v=JI7KAlvvTGc&list=PLOAph0xkZvSuqy8yq_0D6NEABhmSTRYrN&index=4) (video)
+7. [Twitter System Design - Building the "Follow" Feature](https://www.youtube.com/watch?v=gfq-LG9ZJQA&list=PLQnljOFTspQXSevtRqvMNycWfHM7cXc3d&index=6) (video)
+8. [Twitter system design](https://www.youtube.com/watch?v=wYk0xPP_P_8&list=PLkQkbY7JNJuBoTemzQfjym0sqbOHt5fnV&index=3) (video)
+9. [Design the Twitter timeline and search](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/twitter/README.md) (solution)
+10. [System Design Interview: mini Twitter](https://eileen-code4fun.medium.com/system-design-interview-mini-twitter-1e0e99bd7377)
+11. [Early detection of Twitter trends explained](http://snikolov.wordpress.com/2012/11/14/early-detection-of-twitter-trends/)
+12. [How Twitter Stores 250 Million Tweets A Day Using MySQL](http://highscalability.com/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html)
+13. [Scaling Twitter: Making Twitter 10000 Percent Faster](http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster)
+14. [The Architecture Twitter Uses To Deal With 150M Active Users, 300K QPS, A 22 MB/S Firehose, And Send Tweets In Under 5 Seconds](http://highscalability.com/blog/2013/7/8/the-architecture-twitter-uses-to-deal-with-150m-active-users.html)
+15. [DataSift Architecture: Realtime Datamining At 120,000 Tweets Per Second](http://highscalability.com/blog/2011/11/29/datasift-architecture-realtime-datamining-at-120000-tweets-p.html)
+16. [How Twitter Uses Redis To Scale - 105TB RAM, 39MM QPS, 10,000+ Instances](http://highscalability.com/blog/2014/9/8/how-twitter-uses-redis-to-scale-105tb-ram-39mm-qps-10000-ins.html)
+17. [Scaling Infrastructure at Twitter - Yao Yue, Staff Software Engineer at Twitter](https://www.youtube.com/watch?v=6OvrFkLSoZ0)
+18. [Will Twitter collapse? Examining the resiliency of Twitter’s architecture](https://learningdaily.dev/will-twitter-collapse-examining-the-resiliency-of-twitters-architecture-45d3959ab9c0)
