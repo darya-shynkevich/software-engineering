@@ -4,3 +4,17 @@
 3. [Technical Debt Has Taken Over The Economy](https://medium.com/@jankammerath/technical-debt-has-taken-over-the-economy-1ffa55128d23)
 4. [Confessions of a Modern Oppressor](https://medium.com/counterarts/confessions-of-a-modern-oppressor-81158f814de6)
 5. [Report from a Relationship](https://juliovincent.medium.com/report-from-a-relationship-74650b0be3a8)
+
+
+goddaughter (was a baby)
+
+serve as part of memento = keepsake = treasured objects 
+
+vivid memories = bring back a flood of memories which can never be taken back
+
+emotionally attached to = go-to = get her into the right headspace = create a feeling of being at-home
+
+worth theirs weight in gold
+
+
+

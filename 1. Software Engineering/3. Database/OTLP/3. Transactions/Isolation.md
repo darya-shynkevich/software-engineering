@@ -47,7 +47,7 @@ It does have the minor data inconsistency while its locked to specific view of t
 **Read Phenomena:** ***Phantom reads*** (you can not control new rows, you can lock only existing rows)
 
 Implementation:
-1. [Transaction Loks](Transaction%20Loks.md)
+1. [_Base](Transaction%20Locks/_Base.md)
 2. [MVCC](MVCC.md) <-- some of the implementations can provide guarantees to get rid of Phantom Reads 
 
 ## 4. SERIALIZABLE

@@ -23,7 +23,7 @@ In computer science, **ACID** (atomicity, consistency, isolation, durability) 
 	- Redis, Memcached are not durable DBs
 # [Isolation](Isolation.md) Levels
 
-# [Transaction Loks](Transaction%20Loks.md)
+# [_Base](Transaction%20Locks/_Base.md)
 
 # [Transaction concurrency](Transaction%20concurrency.md)
 

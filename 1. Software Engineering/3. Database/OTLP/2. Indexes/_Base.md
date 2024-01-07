@@ -1,12 +1,12 @@
 ##### ==*Scale of data often works against you, and balanced trees are the first tool in your arsenal against it.*==
 
-A Database [Base](.md) is Like a Book Index: *When you want to look something up in a book, you don’t have to start at page one and read every page until you find the thing you’re looking for. Instead, you look in the index, which directs you to a page in the book. Then you flip to that page and voila, you find the thing.*
+A Database Index is Like a Book Index: *When you want to look something up in a book, you don’t have to start at page one and read every page until you find the thing you’re looking for. Instead, you look in the index, which directs you to a page in the book. Then you flip to that page and voila, you find the thing.*
 
 *There is one big difference between book indexes and database indexes: you’re probably updating the contents of the database constantly, while a book is indexed only when a new version is published.*
 
 *So unlike a book, the database needs to keep its index (really, it’s indexes — there are often many) up to date automatically and frequently.*
 
-**[B-tree Index](B-tree%20Index.md)** speeds up searching by maintaining a tree whose [Leaf Nodes](../1.%20Internals/Database%20Pages/Leaf%20Nodes.md) are pointers to the disk locations of table records.
+**[B-tree Index](Types/B-tree%20Index.md)** speeds up searching by maintaining a tree whose [Leaf Nodes](../1.%20Internals/Database%20Pages/Leaf%20Nodes.md) are pointers to the disk locations of table records.
 
 > Formal definition: *A database index functions as a specialized structure designed to accelerate the speed and efficiency of query operations within a database. Read performance increases as you index the data, but that comes at the cost of write performance since you need to keep index up to date.*
 
@@ -41,18 +41,15 @@ Hash indexes store a 32-bit hash code derived from the value of the indexed colu
 
 (-) невозможны операции >, <,  is null и тп
 (-) проблема коллизий
-
 #### References:
 
 1. [The Power of Database Indexing Algorithms: B-Tree vs. Hash Indexing](https://dip-mazumder.medium.com/the-power-of-database-indexing-algorithms-b-tree-vs-hash-indexing-6e3a4112a81)
 
-### 5. [R-tree indexes](R-tree%20indexes.md) for spatial data in MySQL
-
+### 5. [R-tree indexes](Types/R-tree%20indexes.md) for spatial data in MySQL
 
 PostgreSQL: point, line, polygon, box, path, circle
 MySQL: geometry, point, polygon, ...
-
-### 6. Covering Indexes (Index Only scan, INCLUDE)
+### 6. Covering Indexes ([Index Only Scan](Index%20Scan%20vs%20Index%20Only%20Scan.md), INCLUDE)
 
 An index is said to "cover" a query if the database can return all of the data needed for the query directly from the index, without having to search through table data.
 
@@ -77,8 +74,6 @@ It's wise to be conservative about adding non-key columns to an index, especiall
 ### 7. Multiple column index
 
 A multiple column index is created by specifying more than one column in the index definition. It allows for efficient retrieval of data ***based on the combination of values in multiple columns***. The index stores the values of all the indexed columns in a specific order, allowing for quick access to matching rows. This type of index is useful when queries involve equality or range conditions on multiple columns.
-
-
 ### 8. [Partial Indexes](Partial%20Indexes)
 
 A partial index is an index with a `WHERE` clause that limits which rows in the table get added to the index.
@@ -127,7 +122,6 @@ The InnoDB implementation can speed up range queries based on primary key, and a
 ### 12. Inverted index
 
 Полнотекстовый индекс, хранящий для каждой лексемы ключей отсортированный список адресов записей таблицы, которые содержат данный ключ
-
 #### References:
 
 1. [So what is an inverted index and how does it work?](https://iorilan.medium.com/so-what-is-an-inverted-index-and-how-does-it-work-95334d9a306d)
@@ -171,23 +165,24 @@ Your query may not match the index. For example, an index on the name column won
 2. [Как устроено индексирование баз данных](https://habr.com/ru/companies/ruvds/articles/724066/)
 3. [An in-depth look at Database Indexing](https://medium.com/free-code-camp/database-indexing-at-a-glance-bb50809d48bd)
 4. [Database Indexing under the hood](https://towardsdev.com/database-indexing-under-the-hood-5841ac77f7de)
-5. [Why does Innodb Engine use the B+ tree data structure for indexing?](https://iorilan.medium.com/why-does-innodb-engine-use-the-b-tree-data-structure-for-indexing-6c4a41f6f356)
-6. [Revisiting B+-tree vs. LSM-tree](https://www.usenix.org/publications/loginonline/revisit-b-tree-vs-lsm-tree-upon-arrival-modern-storage-hardware-built)
-7. [B-tree vs B+ tree in Database Systems](https://www.youtube.com/watch?v=UzHl2VzyZS4&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=77) (video)
-8. [B-Tree vs B+Tree in Production Database Systems](https://www.youtube.com/watch?v=a1Z40OC553Y&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=2) (video)
-9. [B+Tree index structures in InnoDB](https://blog.jcole.us/2013/01/10/btree-index-structures-in-innodb/)
-10. [Understanding database Indexes in PostgreSQL](https://mastermind.dev/indexes-in-postgresql)
-11. [Индексы в PostgreSQL — 1](https://habr.com/ru/company/postgrespro/blog/326096/)
-12. [Database Indexing Explained (with PostgreSQL)](https://www.youtube.com/watch?v=-qNSXK7s7_w&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=7) (video)
-13. [Indexing in PostgreSQL vs MySQL](https://www.youtube.com/watch?v=T9n_-_oLrbM&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=8) (video)
-14. [Index Fill Factor | The Backend Engineering Show](https://www.youtube.com/watch?v=qXDhMJCuDEc&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=97) (video)
-15. [Partial Indexing | The Backend Engineering Show](https://www.youtube.com/watch?v=WL2NXQmUOC0&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=81) (video)
-16. [Bitmap Index Scan in Postgres Explained with Examples](https://www.youtube.com/watch?v=rJ-oG0y1hqE&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=57) (video)
-17. [Combining Database Indexes for Better Performance in Your Backend Applications](https://www.youtube.com/watch?v=mBonHTpQO7E&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=54) (video)
-18. [Explaining Key vs Non-Key Column Database Indexing and How it can Improve Performance](https://www.youtube.com/watch?v=9v3GqKtbqzQ&list=PLQnljOFTspQUybacGRk1b_p13dgI-SmcZ&index=16) (video)
-19. [Index Scan vs Index Only Scan on Database Systems (with Postgres)](https://www.youtube.com/watch?v=xsPBT5gIQac&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=46) (video)
-20. [Key vs Non-Key Column Database Indexing](https://www.youtube.com/watch?v=Fac-gzudFIA&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=3) (video)
-21. [nbtree-индексы в PostgreSQL. Полезные новинки](https://www.youtube.com/watch?v=ueERqeB1YOM&list=PLH-XmS0lSi_xQkDOdfAYsdxjuadMPTw8H&index=2) (video)
+5. ~~[what is a database index?](https://www.youtube.com/watch?v=Jemuod4wKWo&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=96)~~
+6. [Why does Innodb Engine use the B+ tree data structure for indexing?](https://iorilan.medium.com/why-does-innodb-engine-use-the-b-tree-data-structure-for-indexing-6c4a41f6f356)
+7. [Revisiting B+-tree vs. LSM-tree](https://www.usenix.org/publications/loginonline/revisit-b-tree-vs-lsm-tree-upon-arrival-modern-storage-hardware-built)
+8. [B-tree vs B+ tree in Database Systems](https://www.youtube.com/watch?v=UzHl2VzyZS4&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=77) (video)
+9. [B-Tree vs B+Tree in Production Database Systems](https://www.youtube.com/watch?v=a1Z40OC553Y&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=2) (video)
+10. [B+Tree index structures in InnoDB](https://blog.jcole.us/2013/01/10/btree-index-structures-in-innodb/)
+11. [Understanding database Indexes in PostgreSQL](https://mastermind.dev/indexes-in-postgresql)
+12. [Индексы в PostgreSQL — 1](https://habr.com/ru/company/postgrespro/blog/326096/)
+13. [Database Indexing Explained (with PostgreSQL)](https://www.youtube.com/watch?v=-qNSXK7s7_w&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=7) (video)
+14. [Indexing in PostgreSQL vs MySQL](https://www.youtube.com/watch?v=T9n_-_oLrbM&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=8) (video)
+15. [Index Fill Factor | The Backend Engineering Show](https://www.youtube.com/watch?v=qXDhMJCuDEc&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=97) (video)
+16. [Partial Indexing | The Backend Engineering Show](https://www.youtube.com/watch?v=WL2NXQmUOC0&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=81) (video)
+17. [Bitmap Index Scan in Postgres Explained with Examples](https://www.youtube.com/watch?v=rJ-oG0y1hqE&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=57) (video)
+18. [Combining Database Indexes for Better Performance in Your Backend Applications](https://www.youtube.com/watch?v=mBonHTpQO7E&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=54) (video)
+19. [Explaining Key vs Non-Key Column Database Indexing and How it can Improve Performance](https://www.youtube.com/watch?v=9v3GqKtbqzQ&list=PLQnljOFTspQUybacGRk1b_p13dgI-SmcZ&index=16) (video)
+20. [Index Scan vs Index Only Scan on Database Systems (with Postgres)](https://www.youtube.com/watch?v=xsPBT5gIQac&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=46) (video)
+21. [Key vs Non-Key Column Database Indexing](https://www.youtube.com/watch?v=Fac-gzudFIA&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=3) (video)
+22. [nbtree-индексы в PostgreSQL. Полезные новинки](https://www.youtube.com/watch?v=ueERqeB1YOM&list=PLH-XmS0lSi_xQkDOdfAYsdxjuadMPTw8H&index=2) (video)
 
 
 
