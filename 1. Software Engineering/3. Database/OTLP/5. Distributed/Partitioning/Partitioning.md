@@ -15,7 +15,6 @@
 (-) Inefficient queries could accidentally scan all partitions resulting in slow performance
 (-) Schema changes can be challenging. 
 	DB has to support this feature, but sometimes fails.
-
 ## [Partitioning Strategies](Partitioning%20Strategies.md):
 
 ![Pasted image 20230605121902](../../../../../_Attachments/Pasted%20image%2020230605121902.png)

@@ -34,7 +34,7 @@ Benchmarking and profiling might point you to the following optimizations.
 ## 5. Tune the query cache
 
 - In some cases, the [query cache](https://dev.mysql.com/doc/refman/5.7/en/query-cache.html) could lead to [performance issues](https://www.percona.com/blog/2016/10/12/mysql-5-7-performance-tuning-immediately-after-installation/).
-## 6. [Sharding](../../../../3.%20Database/OTLP/5.%20Distributed/Sharding.md) DB
+## 6. [Sharding](../../../../3.%20Database/OTLP/5.%20Distributed/Sharding/Sharding.md) DB
 
 ## 7. Configuration improvements
 
