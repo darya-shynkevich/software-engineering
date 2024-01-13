@@ -14,7 +14,7 @@ These patterns are used to provide a mechanism for creating objects in a specifi
 ## [[2. Structural design patterns]]
 
 These patterns are concerned with class/object composition and relationships between objects. They let us add new functionalities to objects so that restructuring some parts of the system does not affect the rest. Hence, when some parts of the structure change, the entire system does not need to change.
-## 3. Behavioural design patterns
+## [[3. Behavioural design patterns]]
 
 These patterns are concerned with communication between dissimilar objects in a system. They streamline communication and ensure that the information is synchronized between such objects
 
