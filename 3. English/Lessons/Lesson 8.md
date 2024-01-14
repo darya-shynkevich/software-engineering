@@ -18,3 +18,4 @@ worth theirs weight in gold
 
 
 
+**In the past, buildings often reflected the culture of a society but today all modern buildings look alike and cities throughout the world are becoming more and more similar. What do you think is the reason for this, and is it a good thing or a bad thing?**
