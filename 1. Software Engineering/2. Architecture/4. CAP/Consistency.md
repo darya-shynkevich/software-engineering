@@ -8,12 +8,18 @@ This approach is seen in systems such as memcached. Weak consistency works well 
 ### 2. **[Eventual Consistency](Eventual%20Consistency)**
 
 After a write, reads will eventually see it (typically within milliseconds). Data is replicated asynchronously.
-This approach is seen in systems such as DNS and email. Eventual consistency works well in highly available systems.
+Eventual consistency works well in **highly available** systems.
+
+> This approach is seen in systems such as DNS and email. The **domain name system** is a highly available system that enables name lookups to a hundred million devices across the Internet. It uses an eventual consistency model and doesn’t necessarily reflect the latest values.
+
+> **Note:** Cassandra is a highly available NoSQL database that provides eventual consistency.
 
 ### 3. **Strong consistency**
 
-After a write, reads will see it. Data is replicated synchronously.
-This approach is seen in file systems and RDBMSes. Strong consistency works well in systems that need transactions.
+After a write, reads will see it. 
+Data is replicated synchronously.
+This approach is seen in file systems and RDBMSes. 
+Strong consistency works well in **systems that need transactions**.
 
 # Important topics:
 
