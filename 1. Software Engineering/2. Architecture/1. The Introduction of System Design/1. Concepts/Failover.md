@@ -1,22 +1,35 @@
 Failover is **the ability to switch automatically and seamlessly to a reliable backup system**. When a component or primary system fails, either a standby operational mode or redundancy should achieve failover and lessen or eliminate negative impact on users.
 	(-) adds more hardware and additional complexity. There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.
-#### 1. **Active-passive**
-With active-passive fail-over, heartbeats are sent between the active and the passive server on standby. If the heartbeat is interrupted, the passive server takes over the active's IP address and resumes service.
+
+# Fault tolerance techniques
+
+## 1. **Active-passive Failover**
+
+With active-passive fail-over, heartbeats are sent between the active and the passive server on standby. If the heartbeat is interrupted, ***the passive server takes over the active's IP address and resumes service.*** *(we have it with backup cluster)*
 
 The length of downtime is determined by whether the passive server is already running in 'hot' standby or whether it needs to start up from 'cold' standby. Only the active server handles traffic.
 
-Active-passive failover can also be referred to as master-slave failover.
-#### 2. **Active-active**
-In active-active, both servers are managing traffic, spreading the load between them.
+Active-passive failover can also be referred to as **master-slave failover**.
+## 2. **Active-active Failover**
+
+In active-active, ***both servers are managing traffic, spreading the load between them.***
 
 If the servers are public-facing, the DNS would need to know about the public IPs of both servers. If the servers are internal-facing, application logic would need to know about both servers.
 
-Active-active failover can also be referred to as master-master failover.
-#### 3. Checkpointing
+Active-active failover can also be referred to as **master-master failover.**
+## 3. Checkpointing
 
 **Checkpointing** is a technique that saves the system’s state in stable storage for later retrieval in case of failures due to errors or service disruptions.
 
 Checkpointing is a fault tolerance technique performed in many stages at different time intervals. When a distributed system fails, we can get the last computed data from the previous checkpoint and start working from there.
+
+Checkpointing is performed for different individual processes in a system in such a way that they represent a global state of the actual execution of the system. 
+Depending on the state, we can divide checkpointing into two types:
+1. **Consistent state:** A state is consistent in which all the individual processes of a system have a consistent view of the shared state or sequence of events that have occurred in a system. Snapshots taken in consistent states have data in coherent states, representing a possible situation of the system. For a checkpoint to be consistent, typically, the following criteria are met:
+    - All updates to data that were completed before the checkpoint are saved. Any updates to data that were in progress are rolled back as if they didn’t initiate.
+    - Checkpoints include all the messages that have been sent or received up until the checkpoint. No messages are in transit (in-flight) to avoid cases of missing messages.
+    - Relationships and dependencies between system components and their states match what would be expected during normal operation.
+2. **Inconsistent state:** This is a state where there are discrepancies in the saved state of different processes of a system. In other words, the checkpoints across different processes are not coherent and coordinated.
 
 # References:
 
