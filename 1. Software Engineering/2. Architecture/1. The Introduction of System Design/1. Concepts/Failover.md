@@ -1,5 +1,5 @@
-**Disadvantage(s):** Fail-over adds more hardware and additional complexity. There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.
-
+Failover is **the ability to switch automatically and seamlessly to a reliable backup system**. When a component or primary system fails, either a standby operational mode or redundancy should achieve failover and lessen or eliminate negative impact on users.
+	(-) adds more hardware and additional complexity. There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.
 #### 1. **Active-passive**
 With active-passive fail-over, heartbeats are sent between the active and the passive server on standby. If the heartbeat is interrupted, the passive server takes over the active's IP address and resumes service.
 
@@ -12,6 +12,12 @@ In active-active, both servers are managing traffic, spreading the load between 
 If the servers are public-facing, the DNS would need to know about the public IPs of both servers. If the servers are internal-facing, application logic would need to know about both servers.
 
 Active-active failover can also be referred to as master-master failover.
+#### 3. Checkpointing
+
+**Checkpointing** is a technique that saves the system’s state in stable storage for later retrieval in case of failures due to errors or service disruptions.
+
+Checkpointing is a fault tolerance technique performed in many stages at different time intervals. When a distributed system fails, we can get the last computed data from the previous checkpoint and start working from there.
+
 # References:
 
 1. [**Failover**](http://cloudpatterns.org/mechanisms/failover_system)

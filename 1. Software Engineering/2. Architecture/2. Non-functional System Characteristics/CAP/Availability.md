@@ -1,20 +1,27 @@
-[**Availability in numbers](https://github.com/donnemartin/system-design-primer#availability-in-numbers)** Availability is often quantified by uptime (or downtime) as a percentage of time the service is available. Availability is generally measured in number of 9s--a service with 99.99% availability is described as having four 9s.
+**Availability** is the percentage of time that some service or infrastructure is accessible to clients and is operated upon under normal conditions. For example, if a service has 100% availability, it means that the said service functions and responds as intended (operates normally) all the time. 
 
-There are two complementary patterns to support high availability: **[Failover](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Failover.md)** and **replication**.
+There are two complementary patterns to support high availability: **[Failover](../../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Failover.md)** and **[Replication](../../../3.%20Database/OTLP/5.%20Distributed/Replication/_Base.md)**.
+
+Mathematically, availability, `A`, is a ratio. The higher the `A` value, the better. We can also write this up as a formula:
+![](../../../../_Attachments/Pasted%20image%2020240118163558.png)
+
+[**Availability in numbers](https://github.com/donnemartin/system-design-primer#availability-in-numbers)** 
+
+![](../../../../_Attachments/Pasted%20image%2020240118163509.png)
 
 # Important topics:
 
-### 1. [Monitoring](../../8.%20Troubleshooting/1.%20Monitoring%20and%20Alerting/Monitoring.md)
+### 1. [Monitoring](../../../8.%20Troubleshooting/1.%20Monitoring%20and%20Alerting/Monitoring.md)
 
-### 2. [Circuit Breaker](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Circuit%20Breaker.md)
+### 2. [Circuit Breaker](../../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Circuit%20Breaker.md)
 
-### 3.  Latency: [Base](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Latency/Base.md)
+### 3.  [Latency](../../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Latency/Base.md)
 
-### 4. [Failover](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Failover.md)
+### 4. [Failover](../../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Failover.md)
 
-### 5. [Load Balancing](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Load%20Balancing.md)
+### 5. [Load Balancing](../../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Load%20Balancing.md)
 
-### 6. [Autoscaling](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Autoscaling.md)
+### 6. [Autoscaling](../../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Autoscaling.md)
 
 # References:
 

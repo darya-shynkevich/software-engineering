@@ -20,7 +20,7 @@ _Waiting for a response from the partitioned node might result in a timeout erro
 Good example of this is sync replicas (client should wait until all replicas are updated)
 1. fail write if something went wrong during sync => no availability (because we failed write)
 2. retry => eventually may succeed => eventually consistent? 
-![](../../../_Attachments/Pasted%20image%2020240107183814.png)
+![](../../../../_Attachments/Pasted%20image%2020240107183814.png)
 
 ### _AP - availability and partition tolerance_
 
@@ -32,9 +32,9 @@ _Responses return the most readily available version of the data available on an
 _AP is a good choice if the business needs to allow for [eventual consistency](https://github.com/donnemartin/system-design-primer#eventual-consistency) or when the system needs to continue working despite external errors._
 
 Good example of this is async replicas in background
-![](../../../_Attachments/Pasted%20image%2020240107183635.png)
+![](../../../../_Attachments/Pasted%20image%2020240107183635.png)
 
-![Pasted image 20231226132759](../../../_Attachments/Pasted%20image%2020231226132759.png)
+![Pasted image 20231226132759](../../../../_Attachments/Pasted%20image%2020231226132759.png)
 # How To:
 ## 1. If your system goes slow ⇒ Scalability (Partition tolerance)
 

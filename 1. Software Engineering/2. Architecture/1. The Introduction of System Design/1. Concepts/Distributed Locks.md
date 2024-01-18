@@ -1,4 +1,8 @@
+Most distributed systems receive multiple concurrent requests and need to perform concurrency control to prevent data inconsistencies because of interference between these requests.
 
+One of these concurrency control methods is **locking**. However using locking in the context of a distributed system comes with a lot of edge-cases that add a lot of risks.
+
+Of course, _distributed locking_ can also be modeled as a _consensus problem_, where the nodes of the system agree on a single value, which is the node that holds the lock.
 
 # References:
 

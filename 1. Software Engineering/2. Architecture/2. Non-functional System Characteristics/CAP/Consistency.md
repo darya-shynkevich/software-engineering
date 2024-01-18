@@ -2,32 +2,38 @@ With multiple copies of the same data, we are faced with options on how to synch
 
 ### 1. **Weak consistency**
 
-After a write, reads may or may not see it. A best effort approach is taken.
-This approach is seen in systems such as memcached. Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games. For example, if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.
+- After a write, reads may or may not see it. A best effort approach is taken.
+- This approach is seen in systems such as memcached. 
+- Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games. 
+- **Example**: if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.
 
 ### 2. **[Eventual Consistency](Eventual%20Consistency)**
 
-After a write, reads will eventually see it (typically within milliseconds). Data is replicated asynchronously.
-Eventual consistency works well in **highly available** systems.
+- After a write, reads will eventually see it (typically within milliseconds). Data is replicated asynchronously.
+- Eventual consistency works well in **highly available** systems.
 
 > This approach is seen in systems such as DNS and email. The **domain name system** is a highly available system that enables name lookups to a hundred million devices across the Internet. It uses an eventual consistency model and doesn’t necessarily reflect the latest values.
 
 > **Note:** Cassandra is a highly available NoSQL database that provides eventual consistency.
 
-### 3. **Strong consistency**
+### 3. **Strong consistency** (linearisability)
 
-After a write, reads will see it. 
-Data is replicated synchronously.
-This approach is seen in file systems and RDBMSes. 
-Strong consistency works well in **systems that need transactions**.
+- After a write, reads will see it. *Once the client receives the acknowledgment that the write operation has been performed, other clients can read that value.*
+- Data is replicated synchronously. We might need consensus algorithms such as [[Paxos]] and [[Raft]] to achieve strong consistency. 
+- Linearizability ***affects the system’s availability***, which is why it’s not always used. Applications with strong consistency requirements use techniques like ***quorum-based replication*** to increase the system’s availability.
+- This approach is seen in file systems and RDBMSes. 
+- Strong consistency works well in **systems that need transactions**.
+- **Example:** *Updating an account’s password requires strict consistency. For example, if we suspect suspicious activity on our bank account, we immediately change our password so that no unauthorized users can access our account. If it were possible to access our account using an old password due to a lack of strict consistency, then changing passwords would be a useless security strategy.*
+
+> **Note:** Google’s Spanner database claims to be linearisable for many of its operations.
 
 # Important topics:
 
-### 1. [Consistent Hashing](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Consistent%20Hashing.md)
+### 1. [Consistent Hashing](../../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Consistent%20Hashing.md)
 
-### 2. [Distributed Locks](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Distributed%20Locks.md)
+### 2. [Distributed Locks](../../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Distributed%20Locks.md)
 
-### 3. [Distributed Transactions](../../3.%20Database/OTLP/5.%20Distributed/Distributed%20Transactions.md)
+### 3. [Distributed Transactions](../../../3.%20Database/OTLP/5.%20Distributed/Distributed%20Transactions.md)
 
 # References:
 

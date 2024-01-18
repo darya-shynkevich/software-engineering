@@ -8,4 +8,16 @@ Maintainability has many facets, but in essence it’s about *making life better
 
 ***Evolvability***: Make it easy for engineers to make changes to the system in the future, adapting it for unanticipated use cases as requirements change. Also known as extensibility, modifiability, or plasticity.
 
-# [Documentation](Documentation.md)
+# How to measure?
+
+We use (mean time to repair) MTTR as the metric to measure `M`.
+
+![](../../../_Attachments/Pasted%20image%2020240118165301.png)
+
+In other words, MTTR is the average amount of time required to repair and restore a failed component. Our goal is to have as low a value of MTTR as possible.
+
+# Maintainability and [[Reliability]]
+
+Maintainability can be defined more clearly in close relation to reliability. The only difference between them is the variable of interest. Maintainability refers to `time-to-repair`, whereas reliability refers to both `time-to-repair` and the `time-to-failure`. Combining maintainability and reliability analysis can help us achieve availability, downtime, and uptime insights.
+
+# [Documentation](../2.%20Non-functional%20System%20Characteristics/Documentation.md)
