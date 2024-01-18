@@ -18,7 +18,7 @@ Distributed Systems:
 *The microservice architecture enables the rapid, frequent and reliable delivery of large, complex applications. It also enables an organization to evolve its technology stack.*
 
 1. [DNS](../../7.%20Networks/5.%20DNS.md) - translates human-friendly domain names, like “[www.example.com](http://www.example.com/)," into machine-readable IP addresses, such as “192.168.1.1.”
-2. [Load Balancer](../../7.%20Networks/7.%20Load%20Balancer.md) -  is a network device or software application that is used to evenly distribute incoming network traffic among multiple servers.
+2. [Load Balancers](../../7.%20Networks/LB/_Base.md) -  is a network device or software application that is used to evenly distribute incoming network traffic among multiple servers.
 3. [API Gateway](1.%20Concepts/API%20Gateway.md) -  an intermediary between external clients and the backend services or microservices within an application
 4. [CDN](../../7.%20Networks/4.%20CDN.md) - caches content close to end users
 5. [Proxy](../../7.%20Networks/Proxy/_Base.md) - functions as an intermediary between client computers and the internet

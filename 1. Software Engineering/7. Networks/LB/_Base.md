@@ -2,36 +2,34 @@ A load balancer is a network device or software application that is used to even
 
 Load balancers employ various algorithms to determine how to distribute incoming traffic among the available servers.
 
-***LB Benefits:***
-1. Reduced downtime
-2. Scalability
-3. Redundancy
-4. Flexibility
-5. Efficiency
+(+) **Reduced downtime**
+(+) **Availability:** if some servers go down or suffer a fault, the system still remains available. One of the jobs of the load balancers is to hide faults and failures of servers
+(+) **Scalability**: by adding servers, the capacity of the application/service can be increased seamlessly. Load balancers make such upscaling or downscaling transparent to the end users.
+(+) **Redundancy**
+(+) **Flexibility**
+(+) **Performance:** can forward requests to servers with a lesser load so the user can get a quicker response time. This not only improves performance but also improves resource utilisation.
+# Placing LB
 
+Generally, LBs sit between clients and servers. Requests go through to servers and back to clients via the load balancing layer. 
+
+In reality, load balancers can be potentially used between any two services with multiple instances within the design of a system.
+# Services offered by load balancers
+
+1. **[Healthchecks](../../2.%20Architecture/1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Healthchecks.md)** LBs use the heartbeat protocol to monitor the health and, therefore, reliability of end-servers. Another advantage of health checking is the improved user experience.
+2. **TLS termination**: LBs reduce the burden on end-servers by handling TLS termination with the client.
+3. **Predictive analytics**: LBs can predict traffic patterns through analytics performed over traffic passing through them or using statistics of traffic obtained over time.
+4. **Reduced human intervention**: Because of LB automation, reduced system administration efforts are required in handling failures.
+5. **Service discovery**: An advantage of LBs is that the clients’ requests are forwarded to appropriate hosting servers by inquiring about the service registry.
+6. **Security**: LBs may also improve security by mitigating attacks like denial-of-service (DoS) at different layers of the OSI model (layers 3, 4, and 7).
+
+As a whole, load balancers provide flexibility *(add or remove machines transparently on the fly)*, reliability *(buggy hosts can be removed through health monitoring which makes the system reliable)*, redundancy *(multiple paths leading to the same destination or failed server’s load is rerouted to the failover machine)*, and efficiency *(divide load evenly on all machines to use them effectively from the point of view of the service provider)* to the overall design of the system.
+
+# What if load balancers fail? Are they not a single point of failure (SPOF)?
+
+Load balancers are usually deployed in pairs as a means of disaster recovery. If one load balancer fails, and there’s nothing to failover to, the overall service will go down. Generally, to maintain high availability, enterprises use clusters of load balancers that use heartbeat communication to check the health of load balancers at all times. On failure of primary LB, the backup can take over. But, if the entire cluster fails, manual rerouting can also be performed in case of emergencies.
 # [Algorithms](Algorithms.md)
-## **Dynamic Load Balancing Algorithms**
 
-### **1. Least Connection** 
-Directs traffic to servers with the fewest active connections at the moment.
-### **2. Weighted Least Connection** 
-Administrators assign different weights to servers based on their capacity. Servers with higher weights can handle more connections and receive proportionally more traffic.
-### **3. Weighted Response Time** 
-Calculates the average response time of each server and combines it with the number of open connections to determine where to send traffic. It prioritizes servers with quicker response times for improved user experience.
-### **4 Resource-based** 
-Distributes load based on the resources available on each server, such as CPU and memory. Specialized software on servers measures resource availability, and the load balancer queries this information before directing traffic.
-
-## Static Load Balancing Algorithms
-
-### 1. Round Robin
-Distributes traffic sequentially to each server in rotation. This can be implemented using DNS to return different IP addresses for each server, spreading the load.
-
-### **2. Weighted Round Robin** 
-
-Administrators assign weights to servers, indicating their relative capacity. Servers with higher weights receive more traffic, allowing for proportional load distribution.
-### **3. IP Hash** 
-
-The load balancer performs a hash function on the client’s IP address. This hash value determines which server receives the connection. This approach helps maintain session persistence by ensuring that requests from the same client always go to the same server.
+# [[Global and Local Load Balancing]]
 
 # OSI layers
 
