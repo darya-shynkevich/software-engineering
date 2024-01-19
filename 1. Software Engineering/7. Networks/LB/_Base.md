@@ -55,6 +55,12 @@ The server can send the response directly to the routers (tier-1 LBs) through ti
 
 Tier-3 LBs maintain some state of connection—for example, SSL encryption/decryption. This is necessary to give clients a seamless experience.
 
+# Load Balancers as a Service (LBaaS)
+
+With the advent of the field of cloud computing, Load Balancers as a Service (LBaaS) has been introduced. This is where cloud owners provide load balancing services. Users pay according to their usage or the service-level agreement (SLA) with the cloud provider. Cloud-based LBs may not necessarily replace a local on-premise load balancing facility, but ***they can perform global traffic management between different zones***. Primary advantages of such load balancers include ease of use, management, metered cost, flexibility in terms of usage, auditing, and monitoring services to improve business decisions. An example of how cloud-based LBs can provide GSLB is given below:
+
+![](../../../_Attachments/Pasted%20image%2020240119152757.png)
+
 # References:
 
 1. [https://architecturenotes.co/load-balancers/](https://www.google.com/url?q=https://architecturenotes.co/load-balancers/&sa=D&source=calendar&usd=2&usg=AOvVaw3NIbOodYdko6gY8Ox2_whw) 
