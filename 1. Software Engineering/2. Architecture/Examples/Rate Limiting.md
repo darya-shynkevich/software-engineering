@@ -1,5 +1,5 @@
 
-[Rate Limiting](../1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Rate%20Limiting.md)
+[Rate Limiting](../1.%20Base/1.%20Concepts/Rate%20Limiting.md)
 
 # References:
 

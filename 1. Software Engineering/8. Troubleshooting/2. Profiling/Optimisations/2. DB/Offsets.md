@@ -3,7 +3,7 @@ Offset by design means fetch and drop the first x number of rows, so in the case
 Furthermore, the problem with offset is you might accidentally read duplicate records. consider the user now want to read page 11 and meanwhile someone inserted a new row in the table, row 111 will be read twice
 
 **Problems:**
-1. Bad performance (can especially hit SQL Server because of [Transaction Range Locks](../../../../3.%20Database/OTLP/3.%20Transactions/Transaction%20Locks/Transaction%20Range%20Locks.md))
+1. Bad performance (can especially hit SQL Server because of [Transaction Range Locks](../../../../3.%20Database/OTLP/SQL/3.%20Transactions/Transaction%20Locks/Transaction%20Range%20Locks.md))
 2. Duplicates on read
 
 ![](../../../../../_Attachments/Pasted%20image%2020240107180552.png)

@@ -16,7 +16,7 @@ An **asynchronous task queue** is one where tasks are executed at a different ti
 ![Pasted image 20231203220439](../../../_Attachments/Pasted%20image%2020231203220439.png)
 
 1. If time permits, move all asynchronous processes to Serverless systems such as AWS Lambda.
-2. If API calls to Serverless become an issue, encapsulate these calls in [Celery](../../2.%20Architecture/1.%20The%20Introduction%20of%20System%20Design/2.%20Components/Delayed%20Tasks/Celery.md) tasks. For us, this has only been a problem with bulk API calls to AWS Lambda.
+2. If API calls to Serverless become an issue, encapsulate these calls in [Celery](../../2.%20Architecture/1.%20Base/2.%20Components/Delayed%20Tasks/Celery.md) tasks. For us, this has only been a problem with bulk API calls to AWS Lambda.
 3. Use Django Channels for websockets. The lack of retry mechanism forces you to invent things that Celery provides out-of-the-box.
 4. For security and performance reasons, any and all API calls to user-defined URLs are done through task queues.
 

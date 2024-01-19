@@ -2,9 +2,9 @@ If there is no coordination in the system => components need make assumptions ab
 
 Optimistic assumptions = avoid or delay coordination (assumes it’ll get away with its plans)
 Pessimistic assumptions = require or seek coordination (takes the bull by the horns and makes sure it will)
-# [Cache](1.%20The%20Introduction%20of%20System%20Design/2.%20Components/Cache/Cache.md)
+# [Cache](1.%20Base/2.%20Components/Cache/Cache.md)
 
-[Distributed caching](1.%20The%20Introduction%20of%20System%20Design/2.%20Components/Cache/Distributed%20caching.md) typically isn’t _coherent_, but we still want it to be _eventually consistent_. By _eventually consistent_ we mean that if the write stream stops, the caches eventually all converge on containing the same data. In other words, ***inconsistencies are relatively short-lived.***
+[Distributed caching](1.%20Base/2.%20Components/Cache/Distributed%20caching.md) typically isn’t _coherent_, but we still want it to be _eventually consistent_. By _eventually consistent_ we mean that if the write stream stops, the caches eventually all converge on containing the same data. In other words, ***inconsistencies are relatively short-lived.***
 
 Possibly the most common way of ensuring this property — that inconsistencies are short-lived—is with a time to live (TTL). This simply means that the cache only keeps items around for a certain fixed period of time. It’s also a _pessimistic_ one: ***the cache is doing extra work assuming that the item has changed.*** In systems with a low per-item write rate, that pessimistic assumption can be wrong much more often than it’s right.
 
@@ -18,5 +18,5 @@ These protocol seem very similar to TTL, but are deeply fundamentally different.
 
 # [Concurrency control](Concurrency%20control)
 
-# [Leases](1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Leases.md)
+# [Leases](1.%20Base/1.%20Concepts/Leases.md)
 

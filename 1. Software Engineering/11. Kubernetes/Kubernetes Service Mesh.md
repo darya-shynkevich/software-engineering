@@ -1,5 +1,5 @@
 
-[Service Mesh](../2.%20Architecture/1.%20The%20Introduction%20of%20System%20Design/1.%20Concepts/Service%20Mesh.md)
+[Service Mesh](../2.%20Architecture/1.%20Base/1.%20Concepts/Service%20Mesh.md)
 
 # References:
 

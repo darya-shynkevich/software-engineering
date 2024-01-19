@@ -14,7 +14,7 @@ From the name of ECMP, it’s evident that this layer divides incoming traffic o
 
 ## Tier-2 LBs
 
-The second tier of LBs include layer 4 load balancers. Tier-2 LBs make sure that for any connection, all incoming packets are forwarded to the same tier-3 LBs. To achieve this goal, a technique like [[Consistent Hashing]] can be utilized. But in case of any changes to the infrastructure, consistent hashing may not be enough.
+The second tier of LBs include layer 4 load balancers. Tier-2 LBs make sure that for any connection, all incoming packets are forwarded to the same tier-3 LBs. To achieve this goal, a technique like [[1. Software Engineering/2. Architecture/1. Base/1. Concepts/Consistent Hashing]] can be utilized. But in case of any changes to the infrastructure, consistent hashing may not be enough.
 
 Tier-2 load balancers can be considered the glue between tier-1 and tier-3 LBs. ***Excluding tier-2 LBs could result in erroneous forwarding decisions in case of failures or dynamic scaling of LBs.***
 

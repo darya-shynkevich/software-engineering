@@ -18,7 +18,7 @@ Benchmarking and profiling might point you to the following optimizations.
 # Best Practices:
 ## 1. [[Tighten up the schema]]
 
-## 2. Use good [Indexes](../../../../3.%20Database/OTLP/2.%20Indexes/_Base.md)
+## 2. Use good [Indexes](../../../../3.%20Database/OTLP/SQL/2.%20Indexes/_Base.md)
 
 - Columns that you are querying (`SELECT`, `GROUP BY`, `ORDER BY`, `JOIN`) could be faster with indices.
 - Indices are usually represented as self-balancing [B-tree](https://en.wikipedia.org/wiki/B-tree) that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time.
@@ -28,13 +28,13 @@ Benchmarking and profiling might point you to the following optimizations.
 ## 3. Avoid expensive joins
 
 - [Denormalize](https://github.com/donnemartin/system-design-primer#denormalization) where performance demands it.
-## 4. [Partitioning](../../../../3.%20Database/OTLP/5.%20Distributed/Partitioning/Partitioning.md) tables
+## 4. [Partitioning](../../../../3.%20Database/OTLP/SQL/5.%20Distributed/Partitioning/Partitioning.md) tables
 
 - Break up a table by putting hot spots in a separate table to help keep it in memory.
 ## 5. Tune the query cache
 
 - In some cases, the [query cache](https://dev.mysql.com/doc/refman/5.7/en/query-cache.html) could lead to [performance issues](https://www.percona.com/blog/2016/10/12/mysql-5-7-performance-tuning-immediately-after-installation/).
-## 6. [Sharding](../../../../3.%20Database/OTLP/5.%20Distributed/Sharding/Sharding.md) DB
+## 6. [Sharding](../../../../3.%20Database/OTLP/SQL/5.%20Distributed/Sharding/Sharding.md) DB
 
 ## 7. Configuration improvements
 

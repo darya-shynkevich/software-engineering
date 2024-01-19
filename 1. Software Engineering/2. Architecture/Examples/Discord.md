@@ -1,6 +1,6 @@
 Decision to store all user's messages forever
 
-Arguably, one of the **best databases for iterating quickly is [MongoDB](../../3.%20Database/NoSQL/Types/Document%20Databases/MongoDB.md)** => but they planned everything for easy migration to a new DB (they knew they were not going to use [MongoDB](../../3.%20Database/NoSQL/Types/Document%20Databases/MongoDB.md) `sharding` because *it is complicated to use and not known for stability*
+Arguably, one of the **best databases for iterating quickly is [MongoDB](../../3.%20Database/OTLP/NoSQL/Types/Document%20Databases/MongoDB.md)** => but they planned everything for easy migration to a new DB (they knew they were not going to use [MongoDB](../../3.%20Database/OTLP/NoSQL/Types/Document%20Databases/MongoDB.md) `sharding` because *it is complicated to use and not known for stability*
 
 Up to 2015, the messages were stored in a ***MongoDB collection with a single compound index on `channel_id` and `created_at`***, but when they reached 100 million stored messages that approach stop working.
 
@@ -28,7 +28,7 @@ WHY?
 - **Not a blob store —** Writing thousands of messages per second would not work great if they had to constantly deserialize blobs and append to them.
 - **Open source —** They believe in controlling their own destiny and don’t want to depend on a third-party company.
 
-=> [Cassandra](../../3.%20Database/NoSQL/Types/Columnar%20Databases/Cassandra.md)
+=> [Cassandra](../../3.%20Database/OTLP/NoSQL/Types/Columnar%20Databases/Cassandra.md)
 
 # Data Modeling
 

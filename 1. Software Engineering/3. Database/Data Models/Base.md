@@ -2,7 +2,7 @@
 ![telegram-cloud-photo-size-2-5253896973822577492-y](../../../_Attachments/telegram-cloud-photo-size-2-5253896973822577492-y.jpg)
 
 
-A number of interesting database systems are now associated with the [Base](../NoSQL/Base.md) hashtag, and it has been retroactively reinterpreted as *Not Only SQL.*
+A number of interesting database systems are now associated with the [Base](../OTLP/NoSQL/Base.md) hashtag, and it has been retroactively reinterpreted as *Not Only SQL.*
 
 ###### The Object-Relational Mismatch
 

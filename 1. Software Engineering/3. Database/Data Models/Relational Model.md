@@ -1,9 +1,9 @@
 A key insight of the relational model was this: *you only need to build a query optimizer once, and then all applications that use the database can benefit from it.* If you don’t have a query optimizer, it’s easier to handcode the access paths for a particular query than to write a general-purpose optimizer—but the general-purpose solution wins in the long run.
 
-[OTLP Base](../OTLP/_Base.md)
+[OTLP Base](../OTLP/SQL/_Base.md)
 [OLAP Base](../OLAP/Base.md)
 
-### [Why to choose NoSQL?](../NoSQL/Why%20to%20choose%20NoSQL?.md)
+### [Why to choose NoSQL?](../OTLP/NoSQL/Why%20to%20choose%20NoSQL?.md)
 
 When it comes to representing *==many-to-one and many-to-many relation‐ ships,==* *==relational and document databases are not fundamentally different==*: in both cases, the related item is referenced by a unique identifier, which is called a *foreign key* in the relational model and a *document reference* in the document model.
 

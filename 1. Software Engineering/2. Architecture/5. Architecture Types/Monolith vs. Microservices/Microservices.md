@@ -12,7 +12,7 @@
 (+) Ease of development and testing of the Microservices.
 (+) Increased team agility
 
-(-) [Complexity of distributed systems](../../1.%20The%20Introduction%20of%20System%20Design/3.%20Complexity%20and%20Coupling/Complexity%20of%20distributed%20systems.md)
+(-) [Complexity of distributed systems](../../2.%20Non-functional%20System%20Characteristics/Complexity%20and%20Coupling/Complexity%20of%20distributed%20systems.md)
 (-) Deployment complexity for multiple systems
 (-) Operational complexity of the overall system.
 

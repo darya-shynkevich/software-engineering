@@ -1,3 +1,13 @@
+**Limitations of file storage**
+
+![](../../_Attachments/Pasted%20image%2020240119153131.png)
+
+There are two basic types of databases:
+
+- [SQL](OTLP/SQL/_Base.md) (relational databases)
+- [NoSQL](OTLP/NoSQL/Base.md) (non-relational databases)
+
+
 
 # References:
 
