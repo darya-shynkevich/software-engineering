@@ -1,4 +1,6 @@
-
+Layer 4 refers to the load balancing performed on the basis of transport protocols like TCP and UDP. 
+These types of LBs maintain connection/session with the clients and ensure that the same (TCP/UDP) communication ends up being forwarded to the same back-end server. 
+Even though TLS termination is performed at layer 7 LBs, some layer 4 LBs also support it.
 
 # References:
 

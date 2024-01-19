@@ -1,3 +1,6 @@
+HAProxy is an open-source software [LB](../LB/_Base.md) that can perform load balancing based on TCP and HTTP.
+
+![](../../../_Attachments/Pasted%20image%2020240118232028.png)
 
 # References:
 

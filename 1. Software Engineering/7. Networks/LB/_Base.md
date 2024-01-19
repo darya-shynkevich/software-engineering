@@ -31,6 +31,8 @@ Load balancers are usually deployed in pairs as a means of disaster recovery. If
 
 # [[Global and Local Load Balancing]]
 
+# [[Stateful versus stateless LBs]]
+
 # OSI layers
 
 ![](../../../_Attachments/Pasted%20image%2020240104090917.png)
@@ -40,12 +42,25 @@ Load balancers (LB) are divided into two groups **Layer 4** or **Layer 7.** 
 ***[[LB4]]*** *can only act on data found in the transport and network layers like IP and TCP.* 
 ***[[LB7]]*** *can distribute requests based on data found in the application layer, like HTTP, which can allow you to do fancy things like siphon traffic to your new service. This mechanism has come in handy a few times when using the Strangler Pattern to migrate traffic from an old system to a new one.*
 
+> Layer 7 load balancers are smart in terms of inspection. However layer 4 load balancers are faster in terms of processing.
+# [[LB deployment]]
+
+# [HAProxy](../Proxy/HAProxy.md)
+
+# How should the response be routed?
+
+The server can send the response directly to the routers (tier-1 LBs) through tier-3 LBs, which can forward the response from the data center. Such a response is called **direct routing** (**DR**) or **direct server return** (**DSR**). 
+
+**Why don’t the servers directly send the response to the routers (tier-1 LBs) instead of tier-3 LBs?**
+
+Tier-3 LBs maintain some state of connection—for example, SSL encryption/decryption. This is necessary to give clients a seamless experience.
+
 # References:
 
 1. [https://architecturenotes.co/load-balancers/](https://www.google.com/url?q=https://architecturenotes.co/load-balancers/&sa=D&source=calendar&usd=2&usg=AOvVaw3NIbOodYdko6gY8Ox2_whw) 
 2. ! [Load Balancer — System Design Interview Question](https://medium.com/@anuupadhyay1994/load-balancer-system-design-interview-question-60e3ba231e3c)
 3. [The Fundamental Knowledge of System Design — (9) — Load Balancer](https://medium.com/thedevproject/the-fundamental-knowledge-of-system-design-9-load-balancer-c55ff4feae5)
-4. 4. [What Is Load Balancing?](https://www.nginx.com/resources/glossary/load-balancing/)
+4. [What Is Load Balancing?](https://www.nginx.com/resources/glossary/load-balancing/)
 5. [What is a Load Balancer? — Every Software Engineer must know](https://dineshchandgr.medium.com/what-is-a-load-balancer-every-software-engineer-must-know-21c0ea7ce6d4)
 6. [What is Load Balancing?](https://www.youtube.com/watch?v=zaRkONvyGr8&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=5) (video)
 7. [Load Balancer vs. Reverse Proxy vs. API Gateway](https://medium.com/geekculture/load-balancer-vs-reverse-proxy-vs-api-gateway-e9ec5809180c)
