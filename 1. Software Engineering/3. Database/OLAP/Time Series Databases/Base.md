@@ -1,4 +1,28 @@
+A **time series database (TSDB)** is designed to efficiently store, retrieve, and manage data that is organised and indexed by time. It traditionally works like a ***columnar key-value database*** but has time stamps as keys. If the timestamp alone can’t uniquely identify rows, we can combine it with another key (or keys) to form a composite key.
 
+Examples:
+1. Amazon Timestream
+2. CrateDB
+3. InfluxDB
+4. TimescaleDB
+5. Prometheus
+
+(+) **time-based indexing:** they’re optimized for time-based indexing and querying, which is crucial for time series data;
+(+) **aggregation:** TSDBs provide built-in functions for summarizing data over time intervals;
+(+) **cost efficiency:** they can be more cost-effective for storing and processing time series data;
+(+) **scalability:** Many TSDBs scale horizontally with relative simplicity to handle consumption needs.
+
+However, they’re _inefficient_ for general data storage needs because they’re a niche use-case-specific type of database. So, it makes sense to use TSDBs only in combination with other databases in time-sensitive applications.
+## Time series data
+
+Time series data usually includes timestamped values such as stock prices, sensor readings, temperature measurements, network traffic data, etc. It’s usually represented by a graph, as shown below.
+
+![](../../../../_Attachments/Pasted%20image%2020240120144853.png)
+This kind of data can be stored in a TSDB, as shown in the table below. **Row 1** has the “2023-08-27 12:10:16” timestamp, which is the identifier or key for this row. Against this key, we have the crypto symbol “ETH” and a “+3.5” gain.
+
+![](../../../../_Attachments/Pasted%20image%2020240120144915.png)
+
+We can turn regular relational databases into TSDBs using add-ons, but since recently, standalone solutions in the market can provide a plug-and-play setup experience.
 # References:
 
 1. [Time series database (TSDB) explained](https://www.influxdata.com/time-series-database/#download)
