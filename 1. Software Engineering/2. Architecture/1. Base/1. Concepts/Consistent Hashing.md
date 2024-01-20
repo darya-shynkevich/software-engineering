@@ -68,9 +68,10 @@ In above diagram, we have 3 virtual nodes for server 1 that points to server 1, 
 
 The technique of assigning multiple positions to a node is known as a **virtual node**. The virtual nodes improve the load balancing of the system and prevent hotspots. The number of positions for a node is decided by the heterogeneity of the node. In other words, ***the nodes with a higher capacity are assigned more positions on the hash ring***
 
-As the number of virtual nodes increases, the distribution of requests become more balanced. We can use different hash functions for our virtual nodes to distribute them across hash ring.
+Let’s take an example. Suppose we have three hash functions. ***For each node, we calculate three hashes and place them into the ring.*** For the request, we use ***only one hash function***. Wherever the request lands onto the ring, it’s processed by the next node found while moving in the clockwise direction. Each server has three positions, so the load of requests is more uniform. Moreover, ***if a node has more hardware capacity than others, we can add more virtual nodes by using additional hash functions. ***This way, it’ll have more positions in the ring and serve more requests.
 
-The data objects can be replicated on adjacent nodes to minimize the data movement when a node crashes or when a node is added to the hash ring. In conclusion, consistent hashing resolves the problem of dynamic load.
+(+) if a node fails or does routine maintenance, the workload is uniformly distributed over other nodes. For each newly accessible node, the other nodes receive nearly equal load when it comes back online or is added to the system.
+(+) it’s up to each node to decide how many virtual nodes it’s responsible for, considering the heterogeneity of the physical infrastructure. For example, if a node has roughly double the computational capacity as compared to the others, it can take more load.
 
 # Consistent hashing implementation
 
