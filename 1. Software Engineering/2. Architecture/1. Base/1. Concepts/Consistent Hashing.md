@@ -13,7 +13,7 @@ This looks good, but the problem is when servers are added and removed from the 
 Let’s suppose , due to increase in load, we added a new server and now we have 5 servers to serve the traffic. Now, the issue is when user A will make a request, it will be handled by completely different server because our servers increased and so does our hash function output, because before it was calculating the value considering 4 servers but now we have 5. so This is where the whole issue lies.
 
 **Consistent hashing** is a hashing technique that allows nodes to be added or removed from a hash table (also called a distributed hash table or **DHT**) without significantly altering the mapping of keys to nodes.
-	Consistent hashing is used in distributed systems design such as the [URL shortener 1](URL%20shortener%201) and [Pastebin](../../Examples/Pastebin.md).
+	Consistent hashing is used in distributed systems design such as the [URL shortener](URL%20shortener%201) and [Pastebin](../../Examples/Pastebin.md).
 	***Consistent hashing minimises the number of keys to be remapped when the total number of nodes changes***
 
 *In consistent hashing, the set of all possible keys is called the “hash space.” The hash space is typically represented as a circle, with the keys distributed evenly around the circle. This representation is called a “hash ring.”*

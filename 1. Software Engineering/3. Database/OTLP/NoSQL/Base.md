@@ -3,7 +3,8 @@ A NoSQL database, often referred to as a “Not Only SQL” database, is a non-r
 [NoSQL](https://github.com/donnemartin/system-design-primer#nosql) is a collection of data items represented in a key-value store, document store, wide column store, or a graph database.
 #### [Why to choose NoSQL?](Why%20to%20choose%20NoSQL?.md)
 
-Different applications have different requirements, and the best choice of technology for one use case may well be different from the best choice for another use case. It therefore seems likely that in the foreseeable future, relational databases will continue to be used alongside a broad variety of nonrelational datastores—an idea that is sometimes called [Polyglot persistence](../../Polyglot%20persistence.md).
+(-) **lack of standardisation:** NoSQL doesn’t follow any specific standard, like how relational databases follow relational algebra. Porting applications from one type of NoSQL database to another might be a challenge;
+(-) **consistency:** we won’t have strong data integrity, like primary and referential integrities in a relational database. Data might not be strongly consistent but slowly converging using a weak model like eventual consistency;
 #### [MapReduce Querying](../../OLAP/MapReduce%20Querying.md)
 
 ## Primary categories of NoSQL DB

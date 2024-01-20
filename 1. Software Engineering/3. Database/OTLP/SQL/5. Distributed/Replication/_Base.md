@@ -1,16 +1,19 @@
 *==Database replication is a strategy employed to maintain multiple copies of a single database across different servers or locations, with the aim of enhancing data availability, redundancy, and fault tolerance.==*
 
-In a typical database replication setup, there exists a primary (or master) database along with one or more replica (or slave) databases. The primary goal is to ensure the ***consistency of data between the primary and replica databases by synchronizing them***. This synchronization process involves updating the replica databases whenever changes are applied to the primary database. ***The primary database serves as the definitive source of data, while the replica databases mirror its content.***
+In a typical database replication setup, there exists a primary (or master) database along with one or more replica (or slave) databases. The primary goal is to ensure the ***consistency of data between the primary and replica databases by synchronising them***. This synchronisation process involves updating the replica databases whenever changes are applied to the primary database. ***The primary database serves as the definitive source of data, while the replica databases mirror its content.***
 
-(+) Scalability: leads to ***improved system performance*** by distributing read queries across multiple replica databases. This reduces the workload on the primary database, resulting in faster query response times and overall system optimization + enables load balancing by ***directing read queries to replica databases***, distributing query processing, and enhancing system performance + you can put replicas in different locations => ***enhance the speed of data retrieval*** (users in Australia will retrieve data from Sydney faster, than from New York)
-(+) Data Availability: ensures ***high availability***, meaning that if the primary database encounters downtime or failure, the replica databases can seamlessly take over, allowing users to access data without disruption. 
-(+) Fault tolerance: provides an ***added layer of data protection*** ***by maintaining redundant copies*** of the database in different locations, safeguarding against data loss due to hardware failures or unforeseen events. 
+(+) **Scalability:** leads to ***improved system performance*** by distributing read queries across multiple replica databases. This reduces the workload on the primary database, resulting in faster query response times and overall system optimisation + enables load balancing by ***directing read queries to replica databases***, distributing query processing, and enhancing system performance + you can put replicas in different locations => ***enhance the speed of data retrieval*** (users in Australia will retrieve data from Sydney faster, than from New York)
+(+) **Data Availability:** ensures ***high availability***, meaning that if the primary database encounters downtime or failure, the replica databases can seamlessly take over, allowing users to access data without disruption. 
+(+) **Fault tolerance:** provides an ***added layer of data protection*** ***by maintaining redundant copies*** of the database in different locations, safeguarding against data loss due to hardware failures or unforeseen events. 
+# **How the replication can be done?**
 
- **How the replication can be done?**
- 1. Statement based replication: every sql query is sending from master to primary DB; Naive implementation because SQL server will have to do optimisations again.
- 2. WAL -> Statement: 
- 3. Streaming replication: no need to wait for commit, can stream during the write to the master
- 4. Logical Replication: does not stream the binary data from WAL because the binary representation of things changes from one release to another. So Postgres do Logical Replication (a higher level abstraction) and send them to the replica. ! Postgres 14 have Streaming Logical Replication
+ 1. **Statement based replication:** every sql query is sending from master to primary DB; Naive implementation because SQL server will have to do optimisations again + problems with `NOW()`. 
+	 ! This type of replication was used in MySQL before version 5.1.
+ 2. **WAL shipping** -> the primary node saves the query before executing it in a log file known as a write-ahead log file. It then uses these logs to copy the data onto the secondary nodes. This is used in PostgreSQL and Oracle. The problem with WAL is that it *only defines data at a very low level*. It’s tightly coupled with the inner structure of the database engine, which makes upgrading software on the leader and followers complicated.
+ 2. **Streaming replication:** no need to wait for commit, can stream during the write to the master
+ 3. **Logical Replication:** does not stream the binary data from WAL because the binary representation of things changes from one release to another. So Postgres do Logical Replication (a higher level abstraction) and send them to the replica. 
+	 ! Postgres 14 have Streaming Logical Replication
+# [[Data replication models]]
 
 # 1. Database Replication Strategies
 
@@ -18,7 +21,7 @@ In a typical database replication setup, there exists a primary (or master) data
 
 Synchronous replication is a type of database replication where ***changes made to the primary database are immediately replicated*** to the replica databases ***before the write operation is considered complete***. In other words, the primary database waits for the replica databases to confirm that they have received and processed the changes before the write operation is acknowledged.
 
-Example: Cassandra 
+Example: [[Cassandra]]
 
 ![Pasted image 20231014145242](../../../../../../_Attachments/Pasted%20image%2020231014145242.png)
 

@@ -7,8 +7,8 @@ There are two basic types of databases:
 - [SQL](OTLP/SQL/_Base.md) (relational databases)
 - [NoSQL](OTLP/NoSQL/Base.md) (non-relational databases)
 
-
-
+![](../../_Attachments/Pasted%20image%2020240119190600.png)
+Different applications have different requirements, and the best choice of technology for one use case may well be different from the best choice for another use case. It therefore seems likely that in the foreseeable future, relational databases will continue to be used alongside a broad variety of nonrelational datastores—an idea that is sometimes called [Polyglot persistence](../../Polyglot%20persistence.md).
 # References:
 
 1. [What Goes Around Comes Around](http://mitpress2.mit.edu/books/chapters/0262693143chapm1.pdf) (paper) 
