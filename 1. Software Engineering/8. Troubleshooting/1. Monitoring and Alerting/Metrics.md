@@ -8,7 +8,7 @@ Values that track how many physical resources our operating system uses can be a
 1. in the pull model, monitoring system asks distributed data collectors to give data that they collected locally. This means that the data flow happens only when requested by the monitoring system; 
 		(-) there can be situations when firewall prevents the monitoring system from accessing the server directly
 2. in the push model, distributed collectors send their collected data to the monitoring system periodically (OpenTelemetry)
-		(-) servers sending too much data or sending data too frequently can’t overload the monitoring system
+		(-) servers sending too much data or sending data too frequently can’t overload the monitoring system => can overwhelm the infrastructure with continual push requests from all services, resulting in network floods. 
 		(+) each service can decide when to send metrics
 
 ### Persist the data
