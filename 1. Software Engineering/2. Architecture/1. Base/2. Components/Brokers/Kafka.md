@@ -31,77 +31,91 @@ Kafka enables us the with three capabilities of a streaming platform:
 
 ## Producers
 
-Producers are services/applications that generate messages/data streams. They connect to a Kafka Cluster using a **Broker** or a **Zookeeper** URL. **All events having the same key will be published in the same partition**, which is a way to guarantee the ordering when consuming events. This is done using key hashing by murmur2 algorithm. A message produce by Producer will have following attributes:
+Producers are services/applications that generate messages/data streams. They connect to a Kafka Cluster using a **Broker** or a **Zookeeper** URL. **All events having the same key will be published in the same partition**, which is a way to guarantee the ordering when consuming events. This is done using key hashing by murmur2 algorithm.
+### Message
 
-1. Key — binary | Optional  
-2. Value — binary | Optional  
+A message produce by Producer will have following attributes:
+1. Key — binary | Optional  (Business Data)
+2. Value — binary | Optional  (Business Data)
 3. Compression — none | gzip | snappy | zstd | lz4  
-4. Headers — Metadata of message | Key: Value | Optional  
+4. Headers — Metadata of message | Key: Value | Optional  Example: MIME-type, request_uuid, ...
 5. Partition & Offset  
 6. Timestamp
+### Writing strategy
 
-## Consumers
+![](../../../../../_Attachments/Pasted%20image%2020240121160514.png)
 
-A consumer group is a group of multiple consumers where each consumer present in a group reads data directly from the exclusive partitions. ***In case, the number of consumers is more than the number of partitions, some of the consumers will be in an inactive state.***
+Example: card number can be a partition key => we guarantee that events about that card will go in write-in-partition order.
 
-Moving partition ownership from one consumer to another is called a `rebalance`.
+If there is no key => default partition strategy "round robin".
+![](../../../../../_Attachments/Pasted%20image%2020240121160853.png)
+Ack — It denotes the number of brokers that must receive the record before we consider the write as successful. Valid values are 0, 1, and ALL.
 
-> A consumer subscribes to one or more topics. 
-> A consumer can be part of only one consumer group.
-
-## Topic
-
-Topics are logical separations for storing messages in a Kafka cluster. Kafka retains message records as logs. **Offsets** determine the relative positioning of logs for producers’/consumers consumption. These are stored in the Kafka internal topic **__consumer_offsets.** A topic can have zero or more consumers, as well as it can have zero or more producers.
+> 0 (none) → producer won’t wait for a response from the broker **(At most once)**
+> 1 (leader) → producer will consider write successful when the leader receives the record **(At least once)**
+> -1 (all) → producer will consider the write successful when all of the in-sync replicas receive the record. Costly in terms of performance. **(Exactly once)** !!! `min.insync.replicas < replics_num`. Duplicates are still possible! => `enable.idempotence`
 
 ## Broker
 
-`Kafka clusters` consist of multiple servers for high- availability needs, known as `brokers`. These are the actual machines and instances ***running the Kafka process***. Each broker can host a set of partitions and handle requests to write and read events to these partitions. They also help in message data replicated across partitions.
+`Kafka clusters` consist of multiple servers for high-availability needs, known as `brokers`. These are the actual machines and instances ***running the Kafka process***. Each broker can host a set of partitions and handle requests to write and read events to these partitions. They also help in message data replicated across partitions.
 ![Pasted image 20231019231915](../../../../../_Attachments/Pasted%20image%2020231019231915.png)
-## Partition
+!! For fault tolerance partitions can be replicated. The number of replicas / **replication factor** can be configured globally or individually for each topic. 
 
-Topics are subdivided into **partitions**, the smallest storage unit in the Kafka hierarchy. Partition is an *==**ordered and immutable sequence of records==*.** Inside each partition, each published event receives an identifier, the **offset**. The offset is used by the consumer to control which events have been already consumed and which event is the next one to consume. But **the consuming order is only guaranteed in the same partition.**
+!! Replicas can be leaders or followers.Producer / Consumers usually work with leader (connects to the broker with stores leader), the followers just sync with leader.
+The data that was added to the leader by Producer auto replicates inside cluster (usually async). Since 2.4 Consumers can read from followers => less latency.
+
+!! Kafka auto assign leader ([Consensus Algorythm](../../1.%20Concepts/Consensus%20Algorithms/_Base.md))
+
+> We can increase the number of brokers => scale our system. We can also move partitions between brokers
+### Topic
+
+Topics are logical separations for storing messages in a Kafka cluster. 
+
+Kafka retains message records as logs. **Offsets** determine the relative positioning of logs for producers’/consumers consumption. These are stored in the Kafka internal topic **__consumer_offsets.** A topic can have zero or more consumers, as well as it can have zero or more producers.
+
+![](../../../../../_Attachments/Pasted%20image%2020240121154758.png)
+#### Partition
+
+Topics are subdivided into **partitions**, the smallest storage unit in the Kafka hierarchy. 
+
+! ! The increase of partitions => increase paralysation during write / read 
+
+Partition is an *==**ordered and immutable sequence of records==*.** Inside each partition, each published event receives an identifier, the **offset**. The offset is used by the consumer to control which events have been already consumed and which event is the next one to consume. But **the consuming order is only guaranteed in the same partition.**
+
 ![Pasted image 20231019232015](../../../../../_Attachments/Pasted%20image%2020231019232015.png)
 
-> Partitions are a unit of parallelism for Kafka consumers.
-
 Each partition stores **log files replicated** across nodes distributed into multiple brokers for fault tolerance. 
-These log files are called `segments`. A `segment` is simply a ***collection of messages of a partition***. Segment N contains the most recent records and Segment 1 contains the oldest retained records. The segment contains 1 GB of data (`log.segment.bytes`) or 1 week's worth of data (`log.roll.ms` or `log.roll.hours`) whichever is smaller. If this limit is reached, then the segment file is closed and a new segment file is created.
+##### Segments
+
+These log files are called **segments**. A **segment** is simply a ***collection of messages of a partition***. Segment N contains the most recent records and Segment 1 contains the oldest retained records. The segment contains 1 GB of data (`log.segment.bytes`) or 1 week's worth of data (`log.roll.ms` or `log.roll.hours`) whichever is smaller. If this limit is reached, then the segment file is closed and a new segment file is created.
+
 ![Pasted image 20231019232112](../../../../../_Attachments/Pasted%20image%2020231019232112.png)
 > A partition has only one consumer per consumer group.  
 > At any time a single broker will be the leader for a partition. That broker will be responsible for receiving and serving data of that partition.
 
-## Stream Processors
+!! It is impossible to remove anything from log file, yet you can use **Retention Policy**.
+## Consumers
 
-Streams consume an input stream from one or more topics and produce an output stream to one or more output topics, effectively transforming the input streams into output streams. **This is mainly used to transform data mainly in ELT/ETL pipelines.** Kafka provides an integrated Streams API library. This is similar to consumer API.
+> A consumer subscribes to one or more topics. 
+> A consumer can be part of only one consumer group.
+> Consumer in consumer group can work only with one partition
 
-## Connectors
+Partitions in the Consumers Groups are assigned automatically by Group Coordinator. 
 
-Connectors are the reusable producers or consumers that connect Kafka topics to existing applications or data systems. 
+A consumer group is a group of multiple consumers where each consumer present in a group reads data directly from the exclusive partitions. ***In case, the number of consumers is more than the number of partitions, some of the consumers will be in an inactive state.***
 
-1. Reduced development effort  
-2. Automatic Offset management & Recovering lost messages  
-3. Pluggable & Highly available and scalable  
-4. Standardization  
-5. Retrofitting of source/sink  
-6. Reduced maintenance
+Kafka stores on its side current offset for each topic partition => reads always from the last saved position. Each consumer in group after processing messages sends request to save current offset. 
 
-## Schema Registry
+### Rebalancing
 
-In Kafka, producers and consumers do not communicate with each other directly, instead, they transfer data via Kafka topics. Producers must know how to serialize data and consumers must know how to deserialize it.
+Moving partition ownership from one consumer to another is called a `rebalance`.
 
-A schema Registry is an independent process that runs separately from the Kafka brokers. It stores and retrieves Avro, JSON, Protobuf schemas, etc. Using these schemas it performs verification for data serialization and deserialization.
+Default behaviour: all consumers stop reads and wait. (**_Stop-The-World_**)
+Other behaviour:
+1. Static membership
+2. Cooperative Incremental Partition Assignor
 
-# Writing strategy
-
-Ack — It denotes the number of brokers that must receive the record before we consider the write as successful. Valid values are 0, 1, and ALL.
-
-> 0 → producer won’t wait for a response from the broker
-> 
-> 1 → producer will consider write successful when the leader receives the record
-> 
-> 2 →producer will consider the write successful when all of the in-sync replicas receive the record
-
- **==Since Kafka producer APIs are idempotent. Write will happen exactly once.==**
+! It is recommended to use one consumer group per topic.
 
 # Cross Cluster Replication (XDCR)
 
@@ -112,6 +126,8 @@ Kafka uses MirrorMaker2 for replication. MM2 is a combination of an Apache Kafka
 3. Mirror Heartbeat Connector
 
 MM2 automatically detects new topics and partitions, while also ensuring the topic configurations are synced between clusters.
+
+For our cluster, Kafka MirrorMaker offers geo-replication. Basically, messages are replicated across multiple data centers or cloud regions, with MirrorMaker. So, it can be used in active/passive scenarios for backup and recovery; or also to place data closer to our users, or support data locality requirements.
 
 Other options are **uReplicator** (from Uber), Mirus (from Salesforce), Brooklin (from LinkedIn), and confluent Replicator (from Confluent, not opens sourced).
 
@@ -129,8 +145,8 @@ _Note: Kafka is not a messaging service although it can provide a constrained qu
 
 1. [What makes Kafka so performant?](What%20makes%20Kafka%20so%20performant?.md)
 2. [Mastering Kafka Streams and ksqlDB: Building real-time data systems by example](http://libgen.rs/book/index.php?md5=9F77B9C094AEAACBF48960DB53FCC5D2) (book)
-3. [Простым языком об Apache Kafka, как, зачем и почему](https://teletype.in/@abstractart/kafka-for-novices)
-4. [Kafka за 20 минут. Ментальная модель и как с ней работать](https://habr.com/ru/companies/sbermarket/articles/738634/)
+3. ~~[Простым языком об Apache Kafka, как, зачем и почему](https://teletype.in/@abstractart/kafka-for-novices)~~
+4. ~~[Kafka за 20 минут. Ментальная модель и как с ней работать](https://habr.com/ru/companies/sbermarket/articles/738634/)~~
 5. [Чем различаются Kafka и RabbitMQ: простыми словами](https://habr.com/ru/companies/innotech/articles/698838/)
 6. ~~[What is Kafka and How does it work?](https://www.youtube.com/watch?v=LN_HcJVbySw&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=6) (video)~~
 7. [A Deep Dive into Apache Kafka: Unraveling the Magic Behind the Scenes](https://medium.com/cloud-native-daily/a-deep-dive-into-apache-kafka-unraveling-the-magic-behind-the-scenes-4233e1f00f6c)
@@ -164,3 +180,4 @@ _Note: Kafka is not a messaging service although it can provide a constrained qu
 35. [Finding Kafka throughput limit in infrastructure at Dropbox](https://blogs.dropbox.com/tech/2019/01/finding-kafkas-throughput-limit-in-dropbox-infrastructure/)
 36. [Cost Orchestration at Walmart](https://medium.com/walmartlabs/cost-orchestration-at-walmart-f34918af67c4)
 37. [InfluxDB and Kafka to Scale to Over 1 Million Metrics a Second at Hulu](https://medium.com/hulu-tech-blog/how-hulu-uses-influxdb-and-kafka-to-scale-to-over-1-million-metrics-a-second-1721476aaff5)
+38. ~~[When to use a Publish-Subscribe System Like Kafka?](https://www.youtube.com/watch?v=posIZrz-m7s&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=7) (video)~~
