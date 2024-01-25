@@ -24,7 +24,7 @@ Distributed Systems:
 5. [Proxy](../../7.%20Networks/Proxy/_Base.md) - functions as an intermediary between client computers and the internet
 6. [Cache](2.%20Components/Cache/Cache.md) - is a high-speed storage layer situated between an application and an original data source, such as a database, file system, or remote network service.
 7. [Partitioning Strategies](../../3.%20Database/OTLP/SQL/5.%20Distributed/Partitioning/Partitioning%20Strategies.md) - divides data within tables into smaller units called partitions.
-8. [Replication](../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/_Base.md) - is a strategy employed to maintain multiple copies of a single database across different servers or locations, with the aim of enhancing data availability, redundancy, and fault tolerance.
+8. [Replication](../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/Base.md) - is a strategy employed to maintain multiple copies of a single database across different servers or locations, with the aim of enhancing data availability, redundancy, and fault tolerance.
 9. [Distributed Messaging System](2.%20Components/Brokers/Distributed%20Messaging%20System.md) - serves as a vital component that facilitates communication among diverse applications, services, or components located across various geographical locations.
 10. [Microservices](../5.%20Architecture%20Types/Monolith%20vs.%20Microservices/Microservices.md) - a way of building software applications by breaking them into small, separate parts that can work together.
 11. [NoSQL](../../3.%20Database/OTLP/NoSQL/Base.md) - is a non-relational database system designed to efficiently handle the storage and retrieval of unstructured or semi-structured data.

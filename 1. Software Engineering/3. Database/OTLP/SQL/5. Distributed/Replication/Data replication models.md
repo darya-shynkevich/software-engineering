@@ -21,6 +21,12 @@ In case of failure of the primary node, a secondary node can be appointed as a p
 In a **manual approach**, an operator decides which node should be the primary node and notifies all secondary nodes.
 
 In an **automatic approach**, when secondary nodes find out that the primary node has failed, they appoint the new primary node by conducting an election known as a [[Leader election]].
+### New leader election problems
+
+If asynchronous replication is used, the new leader may not have received all the writes from the old leader before it failed. If the former leader rejoins the cluster after a new leader has been chosen, what should happen to those writes? The new leader may have received conflicting writes in the meantime. ***The most common solution is for the old leader’s unreplicated writes to simply be discarded, which may violate clients’ durability expectations.***
+### Split brain
+
+if both leaders accept writes, and there is no process for resolving conflicts, data is likely to be lost or corrupted. As a safety catch, some systems have a mechanism to shut down one node if two leaders are detected.ii However, if this mechanism is not carefully designed, you can end up with both nodes being shut down
 # 2. Multi-leader replication
 
 (+) can be useful in applications in which we can continue work offline and later sync our data

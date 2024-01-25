@@ -52,7 +52,7 @@ If there is no key => default partition strategy "round robin".
 Ack — It denotes the number of brokers that must receive the record before we consider the write as successful. Valid values are 0, 1, and ALL.
 
 > 0 (none) → producer won’t wait for a response from the broker **(At most once)**
-> 1 (leader) → producer will consider write successful when the leader receives the record **(At least once)**
+> 1 (leader) → producer will consider write successful when the leader receives the record **(At least once)**. *Duplicates can happen if for example confirmation ACK from the leader was missed.*
 > -1 (all) → producer will consider the write successful when all of the in-sync replicas receive the record. Costly in terms of performance. **(Exactly once)** !!! `min.insync.replicas < replics_num`. Duplicates are still possible! => `enable.idempotence`
 
 ## Broker
@@ -147,14 +147,13 @@ _Note: Kafka is not a messaging service although it can provide a constrained qu
 2. [Mastering Kafka Streams and ksqlDB: Building real-time data systems by example](http://libgen.rs/book/index.php?md5=9F77B9C094AEAACBF48960DB53FCC5D2) (book)
 3. ~~[Простым языком об Apache Kafka, как, зачем и почему](https://teletype.in/@abstractart/kafka-for-novices)~~
 4. ~~[Kafka за 20 минут. Ментальная модель и как с ней работать](https://habr.com/ru/companies/sbermarket/articles/738634/)~~
-5. [Чем различаются Kafka и RabbitMQ: простыми словами](https://habr.com/ru/companies/innotech/articles/698838/)
 6. ~~[What is Kafka and How does it work?](https://www.youtube.com/watch?v=LN_HcJVbySw&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=6) (video)~~
 7. [A Deep Dive into Apache Kafka: Unraveling the Magic Behind the Scenes](https://medium.com/cloud-native-daily/a-deep-dive-into-apache-kafka-unraveling-the-magic-behind-the-scenes-4233e1f00f6c)
 8. ~~[Apache Kafka Crash Course](https://www.youtube.com/watch?v=R873BlNVUB4&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=2) (video)~~
 9. [Top 8 Kafka Use Cases — Distributed Systems](https://levelup.gitconnected.com/top-8-kafka-use-cases-distributed-systems-d47fc733c7c1)
 10. [Important Kafka Interview Questions](https://naveenpn.medium.com/important-kafka-interview-questions-e836e3de41bf)
 11. ~~[Kafka Consumer Group is a Brilliant Design Choice and We should Discuss it](https://www.youtube.com/watch?v=e5uAhoT1hhU&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=12) (video)
-12. [When to use a Publish-Subscribe System Like Kafka?](https://www.youtube.com/watch?v=posIZrz-m7s&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=7) (video)
+12. ~~[When to use a Publish-Subscribe System Like Kafka?](https://www.youtube.com/watch?v=posIZrz-m7s&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=7) (video)~~
 13. [Hello Kafka World! The complete guide to Kafka with Docker and Python](https://medium.com/big-data-engineering/hello-kafka-world-the-complete-guide-to-kafka-with-docker-and-python-f788e2588cfc)
 14. [Паттерны проектирования приложений на Apache Kafka](https://highload.ru/moscow/2019/abstracts/6072) (video)
 15. [The Event-Carried State Transfer pattern](https://itnext.io/the-event-carried-state-transfer-pattern-aae49715bb7f)

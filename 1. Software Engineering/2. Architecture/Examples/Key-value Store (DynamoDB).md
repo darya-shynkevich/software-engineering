@@ -27,7 +27,7 @@ Key-value stores, like ordinary hash tables, provide two primary functions, whic
 
 ## Scalability => [Consistent Hashing](../1.%20Base/1.%20Concepts/Consistent%20Hashing.md)
 
-## Availability => Data [Replication](../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/_Base.md)
+## Availability => Data [Replication](../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/Base.md)
 
 ! Peer-to-peer approach
 

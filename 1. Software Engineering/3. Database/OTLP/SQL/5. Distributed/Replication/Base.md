@@ -5,99 +5,18 @@ In a typical database replication setup, there exists a primary (or master) data
 (+) **Scalability:** leads to ***improved system performance*** by distributing read queries across multiple replica databases. This reduces the workload on the primary database, resulting in faster query response times and overall system optimisation + enables load balancing by ***directing read queries to replica databases***, distributing query processing, and enhancing system performance + you can put replicas in different locations => ***enhance the speed of data retrieval*** (users in Australia will retrieve data from Sydney faster, than from New York)
 (+) **Data Availability:** ensures ***high availability***, meaning that if the primary database encounters downtime or failure, the replica databases can seamlessly take over, allowing users to access data without disruption. 
 (+) **Fault tolerance:** provides an ***added layer of data protection*** ***by maintaining redundant copies*** of the database in different locations, safeguarding against data loss due to hardware failures or unforeseen events. 
-# **How the replication can be done?**
+# Implementation of Replication Logs
 
  1. **Statement based replication:** every sql query is sending from master to primary DB; Naive implementation because SQL server will have to do optimisations again + problems with `NOW()`. 
 	 ! This type of replication was used in MySQL before version 5.1.
  2. **WAL shipping** -> the primary node saves the query before executing it in a log file known as a write-ahead log file. It then uses these logs to copy the data onto the secondary nodes. This is used in PostgreSQL and Oracle. The problem with WAL is that it *only defines data at a very low level*. It’s tightly coupled with the inner structure of the database engine, which makes upgrading software on the leader and followers complicated.
  2. **Streaming replication:** no need to wait for commit, can stream during the write to the master
- 3. **Logical Replication:** does not stream the binary data from WAL because the binary representation of things changes from one release to another. So Postgres do Logical Replication (a higher level abstraction) and send them to the replica. 
+ 3. **Logical Replication:** does not stream the binary data from WAL because the binary representation of things changes from one release to another. So Postgres do Logical Replication (a higher level abstraction) and send them to the replica. + A logical log format is also easier for external applications to parse. This aspect is useful if you want to send the contents of a database to an external system, such as a data warehouse for offline analysis, or for building custom indexes and caches
 	 ! Postgres 14 have Streaming Logical Replication
-# [[Data replication models]]
+4. **Trigger-based replication:** typically has greater overheads than other replication methods, and is more prone to bugs and limitations than the database’s built-in replication. However, it can nevertheless be useful due to its flexibility.
+# [[Data Replication Models]]
 
-# 1. Database Replication Strategies
-
-### 1.1 Synchronous Replication
-
-Synchronous replication is a type of database replication where ***changes made to the primary database are immediately replicated*** to the replica databases ***before the write operation is considered complete***. In other words, the primary database waits for the replica databases to confirm that they have received and processed the changes before the write operation is acknowledged.
-
-Example: [[Cassandra]]
-
-![Pasted image 20231014145242](../../../../../../_Attachments/Pasted%20image%2020231014145242.png)
-
-**Pros:**
-- Consistency: Since replicas update instantly, all databases remain in harmony, eliminating data mismatches.
-- Immediate Feedback: Any issue during data transfer is instantly known, allowing swift corrections.
-
-**Cons:**
-- Latency Issues: Waiting for confirmation from the replica can introduce delays, affecting performance.
-- Dependency: If a replica is unreachable, the whole update process can stall.
-
-**Ideal For**: Systems where data integrity and consistency are paramount, such as financial and medical databases.
-### 1.2 Asynchronous Replication
-
-Asynchronous replication is a type of database replication where ***changes made to the primary database are not immediately replicated to the replica databases***. Instead, the ***changes are queued and replicated to the replicas at a later time***.
-
-![Pasted image 20231014145400](../../../../../../_Attachments/Pasted%20image%2020231014145400.png)
-
-**Pros:**
-- Performance Boost: Without waiting for confirmations, operations are faster.
-- Resilience: Even if a replica is down, the primary continues functioning without hitches.
-
-**Cons:**
-- Data Lag: Replicas might not always have the latest data immediately.
-- Potential Data Loss: If the primary crashes before a replica updates, that recent data might be lost.
-
-**Ideal For**: Web applications where speed is crucial and minor data discrepancies can be tolerated.
-### 1.3 **Semi-synchronous Replication**
-
-Semi-synchronous replication is a type of database replication that combines elements of both synchronous and asynchronous replication. In semi-synchronous replication, ***changes made to the primary database are immediately replicated to at least one replica database, while other replicas may be updated asynchronously.***
-
-In semi-synchronous replication, the write operation on the primary is not considered complete until ***at least one replica database has confirmed that it has received and processed the changes.*** This ensures that there is some level of strong consistency between the primary and replica databases, while also providing improved performance compared to fully synchronous replication.
-
-![Pasted image 20231014145528](../../../../../../_Attachments/Pasted%20image%2020231014145528.png)
-
-**Pros:**
-- Balanced Approach: It combines the speed of asynchronous with the reliability of synchronous replication.
-- Guaranteed Backup: At least one replica is always up-to-date, ensuring data safety.
-
-**Cons:**
-- Partial Delays: While faster than fully synchronous, waiting for at least one confirmation can introduce some lag.
-- Complexity: Implementing and maintaining this hybrid can be more intricate.
-
-**Ideal For**: E-commerce platforms where a balance of speed and data safety is necessary.
-
-## Factors to Consider When Choosing a Replication Strategy
-
-### 1. **Data Consistency Requirements**
-
-**What’s At Stake?**: How crucial is it for your replicas to mirror the primary database in real-time?
-
-**Example**: In financial systems, where a slight inconsistency can lead to significant discrepancies, immediate consistency is non-negotiable. On the other hand, a blogging platform can afford a slight lag between the primary and replicas.
-
-### 2.  **Write Performance and Latency**
-
-**What’s At Stake?**: Speed! Do you prioritize rapid write operations, or can you afford a slight delay for data integrity?
-
-**Example**: A real-time gaming platform cannot afford latency in updates. Here, the speed of writing data (even if it compromises immediate consistency) can be more critical than in a digital library, where a minor delay in updating a catalog might be acceptable.
-
-### 3.  **==Network Infrastructure and Bandwidth==**
-
-**What’s At Stake?**: The physical aspects of your system. Can your network handle constant communication between primary and replicas?
-
-**Example**: *==In regions with unreliable or slow network connections, asynchronous replication might be more feasible than synchronous, which requires constant and speedy communication.==*
-
-### 4.  **Geographical Distribution of Databases**
-
-**What’s At Stake?**: The locations of your databases and their distances from one another.
-
-**Example**: If you have a globally dispersed user base, it might make sense to have replicas in various continents. However, *==the farther apart these databases are, the higher the latency, which might push you towards an asynchronous or semi-synchronous approach.==*
-
-### 5. **Recovery and Failover Strategies**
-
-**What’s At Stake?**: How quickly and smoothly can your system recover from failures?
-
-**Example**: E-commerce platforms that see heavy traffic, especially during sales, need robust recovery strategies. If the primary server fails, a replica needs to take over swiftly to avoid revenue losses. Here, the strategy should align with quick failover capabilities.
+# [[Data Replication Strategies]]
 
 # Challenges in Database Replication
 
@@ -116,6 +35,20 @@ Diving Deeper: Particularly in synchronous replication, every data update needs 
 The Scenario: The time taken for data to travel and get updated across databases can introduce delays.
 
 Diving Deeper: In geographically dispersed databases, the physical distance can cause latency, resulting in delays in reflecting updates. This can be especially challenging in applications demanding real-time data consistency.
+
+=> ***read-after-write consistency / read-your-writes consistency*** 
+This is a guarantee that if the user reloads the page, they will always see any updates they submitted themselves. It makes no promises about other users: other users’ updates may not be visible until some later time. However, it reassures the user that their own input has been saved correctly.
+	1. When reading something that the user may have modified, read it from the leader; otherwise, read it from a follower.
+	2. If most things in the application are potentially editable by the user, that approach won’t be effective, as most things would have to be read from the leader (negating the benefit of read scaling). In that case, other criteria may be used to decide whether to read from the leader. For example, you could track the time of the last update and, for one minute after the last update, make all reads from the leader. You could also monitor the replication lag on followers and prevent queries on any follower that is more than one minute behind the leader.
+	3. The client can remember the timestamp of its most recent write — then the system can ensure that the replica serving any reads for that user reflects updates at least until that timestamp. The timestamp could be a logical timestamp (something that indicates ordering of writes, such as the log sequence number) or the actual system clock (in which case clock synchronization becomes critical
+
+=> ***Monotonic reads*** 
+When you read data, you may see an old value; monotonic reads only means that if one user makes several reads in sequence, they will not see time go backward— i.e., they will not read older data after having previously read newer data.
+
+One way of achieving monotonic reads is to make sure that each user always makes their reads from the same replica (different users can read from different replicas). For example, the replica can be chosen based on a hash of the user ID, rather than randomly. However, if that replica fails, the user’s queries will need to be rerouted to another replica.
+
+=> 
+
 ## 4. Maintenance Complexity
 
 The Scenario: More replicas can mean more points of potential failures and maintenance overheads.
@@ -126,6 +59,7 @@ Diving Deeper: Replicas, while providing redundancy, also introduce complexity. 
 The Scenario: Implementing and running multiple replicas can escalate costs.
 
 Diving Deeper: Infrastructure costs for hosting replicas, network costs for data transfer, and human resource costs for maintenance can add up. It’s vital to strike a balance between the benefits of replication and its financial implications.
+
 # [Future Trends](Future%20Trends.md)
 
 # References:

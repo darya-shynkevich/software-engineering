@@ -1,3 +1,15 @@
+Comes with a code generation tool that takes a schema definition like the ones shown here, and produces classes that implement the schema in various programming languages. Your application code can call this generated code to encode or decode records of the schema.
+
+```Protobuf
+ message Person {
+        required string user_name= 1;
+        optional int64  favorite_number = 2;
+        repeated string interests= 3;
+
+}
+```
+![](../../../../_Attachments/Pasted%20image%2020240125125837.png)
+
 
 # References:
 
