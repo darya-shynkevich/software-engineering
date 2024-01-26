@@ -1,7 +1,6 @@
-Transaction concurrency problems can be solved by [_Base](Transaction%20Locks/_Base.md).
+Transaction concurrency problems can be solved by [Locks](Transaction%20Locks/_Base.md).
 
 BUT we forget about one very important thing in the database — performance.
-
 # [Transaction Locks](Transaction%20Locks/_Base.md)
 
 # Версионирование данных [MVCC](MVCC.md)

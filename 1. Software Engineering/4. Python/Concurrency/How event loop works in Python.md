@@ -1,7 +1,7 @@
 An event loop is a loop that can register tasks to be executed, execute them, delay or even cancel them and handle different events related to these operations.
 Generally, we schedule multiple async functions to the event loop. The loop runs one function, while that function waits for IO, it pauses it and runs another. When the first function completes IO, it is resumed. Thus two or more functions can co-operatively run together. This the main goal of an event loop.
 
-How event loop was born: [4. Socket](../../6.%20Linux/4.%20Socket.md)
+How event loop was born: [Socket](../../6.%20Linux/4.%20Socket.md)
 
 ##### Event loop in browser (Chrome)
 

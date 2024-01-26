@@ -1,6 +1,4 @@
-
 To solve [Read Phenomenas](Read%20Phenomenas.md) people designed Isolation levels.
-
 # Isolation Levels
 
 The SQL standard defines 4 standard isolation levels these can and should be configured globally (insidious things can happen if we can't reliably reason about isolation levels).
@@ -18,7 +16,7 @@ No Isolation, any change from the outside is visible to the transaction
 Each read creates its own consistent (committed) snapshot of time. ==*As a result, this isolation mode is susceptible to phantom reads if we execute multiple reads within the same transaction.*==
 
 1. Read only committed data
-2. Lock VISIBLE recored when update:
+2. Lock VISIBLE records when update:
 	1. the record exist in the DB
 	2. the record matched the “where” condition
 
@@ -35,6 +33,7 @@ visible record is 4 (3 is not included because it doesn't exist in the database)
 **Read Phenomena:** susceptible for ***Phantom reads*** because it doesn’t lock the “Gaps” between records (including the last record to infinity), ***Non-Repeatable*** reads (as ***each query*** in a transaction sees committed staff)
 
 **The majority of DB is implemented this isolation level.** 
+
 ## 3. REPEATABLE READ
 
 This isolation level ensures consistent reads within the transaction established by the first read. 
@@ -47,7 +46,7 @@ It does have the minor data inconsistency while its locked to specific view of t
 **Read Phenomena:** ***Phantom reads*** (you can not control new rows, you can lock only existing rows)
 
 Implementation:
-1. [_Base](Transaction%20Locks/_Base.md)
+1. [Locks](Transaction%20Locks/_Base.md)
 2. [MVCC](MVCC.md) <-- some of the implementations can provide guarantees to get rid of Phantom Reads 
 
 ## 4. SERIALIZABLE
@@ -67,7 +66,6 @@ brgin transaction isolation level serializable;
 ....
 commit;
 ```
-
 # References:
 
 1. [Isolation Levels - part I: Introduction](https://dev.to/franckpachot/isolation-levels-part-i-introduction-bd5

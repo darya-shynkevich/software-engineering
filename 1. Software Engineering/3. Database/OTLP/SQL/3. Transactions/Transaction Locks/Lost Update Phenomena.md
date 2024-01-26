@@ -7,7 +7,7 @@ Occurs when two different transactions update value at the same time. The first 
 ### 1.  Increase Transaction Isolation Level
 
 Set isolation level to Repeatable Read
-### 2. [[Optimistic and Pessimistic]]
+### 2. [[Optimistic and Pessimistic]] Transaction Locks
 
 ### 3. Atomic write operations
 

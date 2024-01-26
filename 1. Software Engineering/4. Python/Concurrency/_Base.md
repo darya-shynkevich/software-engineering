@@ -1,7 +1,7 @@
 
-- _Multithreading_
-- _Multiprocessing_
-- _Asyncio_
+- _[[Multithreading]]_
+- _[[Multiprocessing]]_
+- _[[Asyncio]]_
 
 # Quick Recap
 
@@ -16,7 +16,6 @@ Call to agent and write to boss => concurrency
 Ask friend to call to agent and write to boss by yourself => parallelism
 
 *Parallelism is in fact a form of concurrency. But parallelism is hardware dependent. For example if there’s only one core in the CPU, two operations can’t really run in parallel. They just share time slices from the same core. This is concurrency but not parallelism. But when we have multiple cores, we can actually run two or more operations (depending on the number of cores) in parallel.*
-
 
 _**When to use Multiprocessing over Multithreading ?**_
 
