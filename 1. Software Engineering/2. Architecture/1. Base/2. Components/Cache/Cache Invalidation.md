@@ -1,3 +1,13 @@
+Cache invalidation is the process of removing or updating outdated data from a cache to ensure that only the most recent and accurate information is stored.
+# [Writing policies](Writing%20policies.md)
+
+# [Eviction policies](Eviction%20policies.md)
+
+We can use two different approaches to deal with outdated items using TTL:
+- **Active expiration**: This method actively checks the TTL of cache entries through a daemon process or thread.
+- **Passive expiration**: This method checks the TTL of a cache entry at the time of access.
+# Cache Invalidation - Data Loss Problem
+
 Why simply deleting cache would not solve the problem:
 
 ![Pasted image 20231014202410](../../../../../_Attachments/Pasted%20image%2020231014202410.png)
@@ -33,6 +43,6 @@ If you really need to make sure 100% and want a bit more throughput. maybe can c
 
 What if my cache is distributed? and when I delete one cache then need to notify other nodes the cache is invalid.
 
-Remember how [CPU level cache](CPU%20level%20cache.md) “tells” other “CPUs” that its cache is outdated? just use the same idea. At the CPU level, it uses bus snooping with MESI protocol, at the system level we can ***use a message queue(or subscribe to Mysql binlog) to do pub/sub.***
+Remember how [7. CPU level cache](7.%20CPU%20level%20cache.md) “tells” other “CPUs” that its cache is outdated? just use the same idea. At the CPU level, it uses bus snooping with MESI protocol, at the system level we can ***use a message queue(or subscribe to Mysql binlog) to do pub/sub.***
 
 What if delete failed, Let’s say some nodes never ack the message. retry.

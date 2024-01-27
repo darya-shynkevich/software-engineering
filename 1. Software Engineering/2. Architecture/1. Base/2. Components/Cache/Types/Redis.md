@@ -3,35 +3,35 @@
 [How Redis works internally](How%20Redis%20works%20internally.md)
 
 
-![Pasted image 20230605224617](../../../../../_Attachments/Pasted%20image%2020230605224617.png)
+![Pasted image 20230605224617](../../../../../../_Attachments/Pasted%20image%2020230605224617.png)
 *Rather than iterating over, sorting, and ordering rows, what if the data was in data structures you wanted from the ground up? Early on, it was used much like Memcached, but as Redis improved, it became viable for many other use cases, including publish-subscribe mechanisms, streaming, and queues.*
 
-![Pasted image 20230605224913](../../../../../_Attachments/Pasted%20image%2020230605224913.png)
+![Pasted image 20230605224913](../../../../../../_Attachments/Pasted%20image%2020230605224913.png)
 
 Primarily, Redis is an in-memory database *==used as a cache in front of another "real" database like MySQL or PostgreSQL to help improve application performance.==* It leverages the speed of memory and alleviates load off the central application database for:
 - Data that changes infrequently and is requested often
 - Data that is less mission-critical and is frequently evolving.
 
-![Pasted image 20230605225013](../../../../../_Attachments/Pasted%20image%2020230605225013.png)
+![Pasted image 20230605225013](../../../../../../_Attachments/Pasted%20image%2020230605225013.png)
 
 However, for many use cases, *==Redis offers enough guarantees that it can be used as a full-fledged primary database==*. Coupled with Redis plug-ins and its various High Availability (HA) setups, Redis as a database  has become incredibly useful for certain scenarios and workloads.
 
 Another important aspect is that *==Redis blurred the lines between a cache and datastore==*. Important note to understand here is that ***reading and manipulating data in memory is much faster than anything possible in traditional datastores using SSDs or HDDs***.
-![Pasted image 20230605225125](../../../../../_Attachments/Pasted%20image%2020230605225125.png)
+![Pasted image 20230605225125](../../../../../../_Attachments/Pasted%20image%2020230605225125.png)
 Important latency and bandwidth numbers every software engineer to should be aware of.
 
 Originally Redis was most commonly compared to [Memcached](Memcached.md), which lacked any nonvolatile persistence at the time.
 
 ***Here is a current breakdown of capabilities between these two caches.***
 
-![Pasted image 20230605225352](../../../../../_Attachments/Pasted%20image%2020230605225352.png)
+![Pasted image 20230605225352](../../../../../../_Attachments/Pasted%20image%2020230605225352.png)
 ## Redis Architectures
 
 Depending on your use case and scale, you can decide to use one setup or another.
 
 ### 1. Single Redis Instance
 
-![Pasted image 20230605225601](../../../../../_Attachments/Pasted%20image%2020230605225601.png)
+![Pasted image 20230605225601](../../../../../../_Attachments/Pasted%20image%2020230605225601.png)
 Single Redis instance is the most straightforward deployment of Redis. It allows users to set up and run small instances that can help them grow and speed up their services. However, this deployment isn't without shortcomings. *==For example, if this instance fails or is unavailable, all client calls to Redis will fail and therefore degrade the system's overall performance and speed==*.
 
 Given enough memory and server resources, this instance can be powerful. *==A scenario primarily used for caching could result in a significant performance boost with minimal setup==*. Given enough system resources, you could deploy this Redis service on the same box the application is running.
@@ -42,7 +42,7 @@ These two flows allow Redis to have long-term storage, support various replicati
 
 ### 2. Redis HA
 
-![Pasted image 20230605225928](../../../../../_Attachments/Pasted%20image%2020230605225928.png)
+![Pasted image 20230605225928](../../../../../../_Attachments/Pasted%20image%2020230605225928.png)
 
 Another popular setup with Redis is the main deployment with a secondary deployment that is kept in sync with replication.  *==As data is written to the main instance it sends copies of those commands, to a replica client output buffer for secondary instances which facilitates replication.==* The secondary instances can be one or more instances in your deployment. *==These instances can help scale reads from Redis or provide failover in case the main is lost.==*
 
@@ -61,7 +61,7 @@ If an instance has the same replication ID and offset, they have precisely the s
 
 ### 4. Redis Sentinel
 
-![Pasted image 20230605230744](../../../../../_Attachments/Pasted%20image%2020230605230744.png)
+![Pasted image 20230605230744](../../../../../../_Attachments/Pasted%20image%2020230605230744.png)
 
 Sentinel is a distributed system. As with all distributed systems, Sentinel comes with several advantages and disadvantages. *==Sentinel is designed in a way where there is a cluster of sentinel processes working together to coordinate state to provide high availability for Redis.==* After all you wouldn't want the system protecting you from failure to have its own single point of failure.
 
@@ -75,13 +75,13 @@ Here are its responsibilities:
 3. Failover management — Sentinel nodes can start a failover process if the primary instance isn't available and enough (quorum of) nodes agree that is true.
 4. Configuration management — Sentinel nodes also serve as a point of discovery of the current main Redis instance.
 
-*==Using Redis Sentinel in this way allows for failure detection.==* This detection involves multiple sentinel processes agreeing that current main instance is no longer available. This agreement process is called [Quorum](../../../3.%20API/Concepts/Quorum.md). This allows for increased robustness and protection against one machine misbehaving and being unable to reach the main Redis node.
+*==Using Redis Sentinel in this way allows for failure detection.==* This detection involves multiple sentinel processes agreeing that current main instance is no longer available. This agreement process is called [Quorum](../../../../3.%20API/Concepts/Quorum.md). This allows for increased robustness and protection against one machine misbehaving and being unable to reach the main Redis node.
 
 You can deploy Redis Sentinel in several ways. Honestly to make any sane recommendation I would need more context than I currently have about your system. As general guidance *I would recommend running a sentinel node along aside each of your application servers (if possible) so you also don't need to factor in network reachability differences between sentinel nodes and clients who are actually using Redis.* You can run Sentinel alongside the Redis instances or even on independent nodes, but that complicates things in different ways. I recommend at least running three nodes with a quorum of at least two. Here is a simple chart breaking down numbers of servers in a cluster and associated quorum and tolerated failures that are sustainable.
 
 *Table of number of servers and quorum with number of tolerated failures.*
 
-![Pasted image 20230605231838](../../../../../_Attachments/Pasted%20image%2020230605231838.png)
+![Pasted image 20230605231838](../../../../../../_Attachments/Pasted%20image%2020230605231838.png)
 
 1. What if the sentinel nodes fall out of quorum?
 2. What if there is a network split which puts the old main instance in the minority group? What happens to those writes? (Spoiler: they are lost when the system recovers fully)
@@ -90,7 +90,7 @@ You can deploy Redis Sentinel in several ways. Honestly to make any sane recomme
 *There are a few ways to mitigate the level of losses if you force the main instance to replicate writes to a minimum of one secondary instance. Remember, all Redis replication is asynchronous and has its trade-offs. So it will need to independently track acknowledgement and if they aren't confirmed by at least one secondary, the main instance will stop accepting writes.*
 
 ### 5. Redis Cluster
-![Pasted image 20230605232305](../../../../../_Attachments/Pasted%20image%2020230605232305.png)
+![Pasted image 20230605232305](../../../../../../_Attachments/Pasted%20image%2020230605232305.png)
 
 *==Each Redis instance in the cluster is considered a shard of the data as a whole.==*
 
@@ -116,13 +116,13 @@ M3 contains hashslots from 10923 to 16383.*
 
 *All the keys that mapped the hashslots in M1 that are now mapped to M2 would need to move. But the hashing for the individual keys to hashslots wouldn't need to move because they have already been divided up across hashslots. So this one level of misdirection solves the resharding issue with algorithmic sharding.*
 
-### [Gossip protocol](../../1.%20Concepts/Gossip%20protocol.md)
+### [Gossip protocol](../../../1.%20Concepts/Gossip%20protocol.md)
 
 *In Redis Cluster, all the nodes in the cluster constantly communicate with each other to know which shards are available and can serve requests. If a sufficient number of shards agree that a primary instance is not responsive, they can decide to promote one of its secondary instances to primary to keep the cluster running smoothly. It is important to configure the number of nodes needed to trigger this properly to avoid a situation called split-brain, where the cluster is split if it cannot break the tie when both sides of a partition are equal. A good practice is to have an odd number of primary nodes and two replicas each for the most robust setup.*
 
 ## Redis Persistence Models
 
-![Pasted image 20230606192017](../../../../../_Attachments/Pasted%20image%2020230606192017.png)
+![Pasted image 20230606192017](../../../../../../_Attachments/Pasted%20image%2020230606192017.png)
 
 ### No persistence
 
@@ -140,7 +140,7 @@ The main downside to this mechanism is that *data between snapshots will be lost
 
 This way of ensuring persistence is much more durable than RDB snapshots since it is an append-only file. As operations happen, we buffer them to the log, but they aren't persisted yet. *This log consists of the actual commands we ran in order for replay when needed.*
 
-Then when possible, we flush it to disk with [fsync](../../../../6.%20Linux/fsync.md) (when this runs is configurable), it will be persisted. *The downside is that the format isn't compact and uses more disk than RDB files.*
+Then when possible, we flush it to disk with [fsync](../../../../../6.%20Linux/fsync.md) (when this runs is configurable), it will be persisted. *The downside is that the format isn't compact and uses more disk than RDB files.*
 
 ### Why not both?
 
@@ -150,11 +150,11 @@ Then when possible, we flush it to disk with [fsync](../../../../6.%20Linux/fsyn
 
 *How redis uses forking for point in time snapshots*
 
-![Pasted image 20230606192704](../../../../../_Attachments/Pasted%20image%2020230606192704.png)
+![Pasted image 20230606192704](../../../../../../_Attachments/Pasted%20image%2020230606192704.png)
 
 *[Forking](https://en.wikipedia.org/wiki/Fork_(system_call)?ref=architecturenotes.co) is a way for operating systems to create new processes by creating copies of themselves.* With this, you get a new process ID and a few other bits of information and handles, so the newly forked process (child) can talk to the original process parent.
 
-When you fork a process, the parent and child share memory, and in that child process Redis begins the snapshotting (Redis) process. This is made possible by a memory sharing technique called *[Copy-on-write](../../../../6.%20Linux/Copy-on-write.md)* — *which passes references to the memory at the time the fork was created. If no changes occur while the child process is persisting to disk, no new allocations are made.*
+When you fork a process, the parent and child share memory, and in that child process Redis begins the snapshotting (Redis) process. This is made possible by a memory sharing technique called *[Copy-on-write](../../../../../6.%20Linux/Copy-on-write.md)* — *which passes references to the memory at the time the fork was created. If no changes occur while the child process is persisting to disk, no new allocations are made.*
 
 In the case where there are changes, the kernel keeps track of references to each page, and if there are more than one to specific page the changes are written to new pages. The child process is fully unaware of the change and has consistent memory snapshot. Therefore only fraction of the memory is used and we are able to achieve a point in time snapshot of potentially gigabytes of memory extremely quickly and efficiently!
 
