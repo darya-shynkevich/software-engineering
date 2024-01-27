@@ -84,3 +84,7 @@ We’ll use blob storage to store our excessive data, apply elastic search, and 
 
 ![](../../../_Attachments/Pasted%20image%2020240120152249.png)
 
+- In a distributed system, it’s difficult to detect and respond to errors on the client side. So, it’s necessary to monitor such events to provide a good user experience.
+- We can handle errors using an independent agent that sends service reports about any failures to a collector. Such collectors should be independent of the primary service in terms of infrastructure and deployment.
+
+![](../../../_Attachments/Pasted%20image%2020240127150750.png)

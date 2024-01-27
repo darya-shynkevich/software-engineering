@@ -7,7 +7,7 @@ Distributed Systems:
 
 *[Fallacies of Distributed Systems](Fallacies%20of%20Distributed%20Systems.md) are a set of assertions made by L Peter Deutsch and others at Sun Microsystems describing false assumptions that programmers new to distributed applications invariably make.*
 
-*[Microservices](../5.%20Architecture%20Types/Monolith%20vs.%20Microservices/Microservices.md) - also known as the microservice architecture - is an architectural style that structures an application as a collection of services that are*
+*[Microservices](../4.%20Architecture%20Types/Monolith%20vs.%20Microservices/Microservices.md) - also known as the microservice architecture - is an architectural style that structures an application as a collection of services that are*
 
 - *Highly maintainable and testable
 - *Loosely coupled*
@@ -26,7 +26,7 @@ Distributed Systems:
 7. [Partitioning Strategies](../../3.%20Database/OTLP/SQL/5.%20Distributed/Partitioning/Partitioning%20Strategies.md) - divides data within tables into smaller units called partitions.
 8. [Replication](../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/Base.md) - is a strategy employed to maintain multiple copies of a single database across different servers or locations, with the aim of enhancing data availability, redundancy, and fault tolerance.
 9. [Distributed Messaging System](2.%20Components/Brokers/Distributed%20Messaging%20System.md) - serves as a vital component that facilitates communication among diverse applications, services, or components located across various geographical locations.
-10. [Microservices](../5.%20Architecture%20Types/Monolith%20vs.%20Microservices/Microservices.md) - a way of building software applications by breaking them into small, separate parts that can work together.
+10. [Microservices](../4.%20Architecture%20Types/Monolith%20vs.%20Microservices/Microservices.md) - a way of building software applications by breaking them into small, separate parts that can work together.
 11. [NoSQL](../../3.%20Database/OTLP/NoSQL/Base.md) - is a non-relational database system designed to efficiently handle the storage and retrieval of unstructured or semi-structured data.
 12. [Indexes](../../3.%20Database/OTLP/SQL/2.%20Indexes/_Base.md) - a specialized structure designed to accelerate the speed and efficiency of query operations within a database.
 13. [Distributed File System (DFS)](2.%20Components/Distributed%20File%20System%20(DFS).md) - is a storage solution strategically designed to oversee and facilitate access to files and directories across numerous servers, nodes, or machines, which are often spread out across a network.

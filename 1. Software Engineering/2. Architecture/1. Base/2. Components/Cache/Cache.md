@@ -1,26 +1,28 @@
 Caching ***improves application performance*** by ***temporarily storing frequently accessed data in memory, reducing the need to fetch it from slower storage systems***. However, when the original data changes, the cache must be updated or invalidated to maintain data consistency.
 
-_**[Cache](https://github.com/donnemartin/system-design-primer#cache)** improves page load times and can reduce the load on your servers and databases. In this model, the dispatcher will first lookup if the request has been made before and try to find the previous result to return, in order to save the actual execution._
-
-_Databases often benefit from a uniform distribution of reads and writes across its partitions. Popular items can skew the distribution, causing bottlenecks. Putting a cache in front of a database can help absorb uneven loads and spikes in traffic._
-
-![Pasted image 20230826021400](../../../../../_Attachments/Pasted%20image%2020230826021400.png)
-
 - **[Client-side caching](Client-side%20caching.md)** — *The client stores frequently accessed files locally. When a file is requested, the client checks if it has an up-to-date copy and uses it if available, reducing the need to request the file from the server.*
-- **Server-side caching** — *The server stores frequently accessed files in memory or on local disks. When a file is requested, the server checks if it’s in the cache and returns it without accessing the disk, reducing disk I/O.*
-- **[Distributed caching](Distributed%20caching.md)** — *This involves distributing the cache across multiple servers or nodes. When a file is requested, the system checks if it’s in the cache and returns it from the nearest server, minimizing network traffic.*
-- [CPU level cache](CPU%20level%20cache.md) - *it works completely differently from the lock. and this is the reason why volatile is safe to be used in boolean type, it can guarantee memory visibility, but not automatic operation (still needs lock).*
-  
-  [Distributed caching](Distributed%20caching.md) is becoming more common due to the decreasing cost of main memory and the increasing speed of network cards. However, cache consistency remains a challenge. Ensuring that the cached data is coherent with the source of truth (e.g., the database) is essential to prevent inconsistencies in application behavior. Different schemes such as “cache-aside” and “read-through cache” are used to manage cache invalidation and consistency.
+	- Use case: faster retrieval of content
+	- Solutions: Browser Cache,
+- **DNS Cache:**
+	- Use case: faster domain to IP resolution
+	- Solutions: AWS Rout 53, Azure DNS, GC DNS
+- **CDN Cache:**
+	- Use case: faster retrieval of static content
+	- Solutions: Akamai, CloudFront, Azure CDN, ElastiCache
+- **Web Server Cache:**
+	- Use case: faster retrieval of web content
+	- Solutions: ElastiCache, CloudFront
+- **App Server Cache:** *the server stores frequently accessed files in memory or on local disks. When a file is requested, the server checks if it’s in the cache and returns it without accessing the disk, reducing disk I/O.*
+	- Use case: accelerated application performance and data access
+	- Solutions: local server cache, remote cache on [Redis](Redis.md), [Memcached](Memcached.md), ElastiCache
+	- **[Distributed caching](Distributed%20caching.md)** involves distributing the cache across multiple servers or nodes. When a file is requested, the system checks if it’s in the cache and returns it from the nearest server, minimising network traffic. Becoming more popular due to the decreasing cost of main memory and the increasing speed of network cards. However, cache consistency and [cache invalidation](Cache%20Invalidation) remains a challenge. Ensuring that the cached data is coherent with the source of truth (e.g., the database) is essential to prevent inconsistencies in application behaviour. Different schemes such as “cache-aside” and “read-through cache” are used to manage cache invalidation and consistency.
+- **Database Cache:**
+	- Use case: faster access to data stored
+	- Local DB cache, remote cache on [[Redis]], [Memcached](Memcached.md), ElastiCache
+- **[CPU level cache](CPU%20level%20cache.md)** - *it works completely differently from the lock. and this is the reason why volatile is safe to be used in boolean type, it can guarantee memory visibility, but not automatic operation (still needs lock).*
 
-1. [Cache Invalidation](Cache%20Invalidation)
-2. [Memcached](Memcached.md)
-3. [Redis](Redis.md)
-
-
-_[Hazelcast Python Client](https://github.com/hazelcast/hazelcast-python-client) —- is an open-source distributed in-memory data store and computation platform that provides a wide variety of distributed data structures and concurrency primitives._
-
-[*](https://github.com/Yiling-J/theine)[https://github.com/Yiling-J/theine](https://github.com/Yiling-J/theine) — High performance in-memory cache inspired by [Caffeine](https://github.com/ben-manes/caffeine)*
+[Hazelcast Python Client](https://github.com/hazelcast/hazelcast-python-client) —- is an open-source distributed in-memory data store and computation platform that provides a wide variety of distributed data structures and concurrency primitives.
+[High performance in-memory cache](https://github.com/Yiling-J/theine) inspired by [Caffeine](https://github.com/ben-manes/caffeine)
 
 # References:
 

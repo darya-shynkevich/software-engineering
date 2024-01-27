@@ -1,6 +1,23 @@
-*==Cache invalidation is the process of removing or updating outdated data from a cache to ensure that only the most recent and accurate information is stored.==*
+A **distributed cache** is a caching system where multiple cache servers coordinate to store frequently accessed data. Distributed caches are needed in environments where a single cache server isn’t enough to store all the data. At the same time, it’s scalable and guarantees a higher degree of availability.
+
+(+) minimize user-perceived latency by precalculating results and storing frequently accessed data.
+(+) pre-generate expensive queries from the database.
+(+) store user session data temporarily.
+(+) serve data from temporary storage even if the data store is down temporarily.
+(+) reduce network costs by serving data from local resources.
+
+# Why distributed cache?
+
+When the size of data required in the cache increases, storing the entire data in one system is impractical:
+- It can be a potential single point of failure (SPOF).
+- A system is designed in layers, and each layer should have its caching mechanism to ensure the decoupling of sensitive data from different layers.
+- Caching at different locations helps reduce the serving latency at that layer.
+
+
 
 # Cache Invalidation Strategies
+
+*Cache invalidation is the process of removing or updating outdated data from a cache to ensure that only the most recent and accurate information is stored.*
 
 ## Write-through cache
 

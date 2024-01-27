@@ -1,3 +1,6 @@
+A [Cache](../1.%20Base/2.%20Components/Cache/Cache.md) is a temporary data storage that can serve data faster by keeping data entries in memory. Caches store only the most frequently accessed data. When a request reaches the serving host, it retrieves data from the cache (**cache hit**) and serves the user. However, if the data is unavailable in the cache (**cache miss**), the data will be queried from the database. Also, the cache is populated with the new value to avoid cache misses for the next time.
+
+
 
 # References:
 
