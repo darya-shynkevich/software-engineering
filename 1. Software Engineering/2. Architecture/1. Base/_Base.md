@@ -22,7 +22,7 @@ Distributed Systems:
 3. [API Gateway](1.%20Concepts/API%20Gateway.md) -  an intermediary between external clients and the backend services or microservices within an application
 4. [CDN](../../7.%20Networks/4.%20CDN.md) - caches content close to end users
 5. [Proxy](../../7.%20Networks/Proxy/_Base.md) - functions as an intermediary between client computers and the internet
-6. [0. Cache](2.%20Components/Cache/0.%20Cache.md) - is a high-speed storage layer situated between an application and an original data source, such as a database, file system, or remote network service.
+6. [Cache](2.%20Components/Cache/0.%20Cache.md) - is a high-speed storage layer situated between an application and an original data source, such as a database, file system, or remote network service.
 7. [Partitioning Strategies](../../3.%20Database/OTLP/SQL/5.%20Distributed/Partitioning/Partitioning%20Strategies.md) - divides data within tables into smaller units called partitions.
 8. [Replication](../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/Base.md) - is a strategy employed to maintain multiple copies of a single database across different servers or locations, with the aim of enhancing data availability, redundancy, and fault tolerance.
 9. [Distributed Messaging System](2.%20Components/Brokers/Distributed%20Messaging%20System.md) - serves as a vital component that facilitates communication among diverse applications, services, or components located across various geographical locations.

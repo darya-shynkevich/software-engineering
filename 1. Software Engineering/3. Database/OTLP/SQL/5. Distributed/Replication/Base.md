@@ -35,20 +35,6 @@ Diving Deeper: Particularly in synchronous replication, every data update needs 
 The Scenario: The time taken for data to travel and get updated across databases can introduce delays.
 
 Diving Deeper: In geographically dispersed databases, the physical distance can cause latency, resulting in delays in reflecting updates. This can be especially challenging in applications demanding real-time data consistency.
-
-=> ***read-after-write consistency / read-your-writes consistency*** 
-This is a guarantee that if the user reloads the page, they will always see any updates they submitted themselves. It makes no promises about other users: other users’ updates may not be visible until some later time. However, it reassures the user that their own input has been saved correctly.
-	1. When reading something that the user may have modified, read it from the leader; otherwise, read it from a follower.
-	2. If most things in the application are potentially editable by the user, that approach won’t be effective, as most things would have to be read from the leader (negating the benefit of read scaling). In that case, other criteria may be used to decide whether to read from the leader. For example, you could track the time of the last update and, for one minute after the last update, make all reads from the leader. You could also monitor the replication lag on followers and prevent queries on any follower that is more than one minute behind the leader.
-	3. The client can remember the timestamp of its most recent write — then the system can ensure that the replica serving any reads for that user reflects updates at least until that timestamp. The timestamp could be a logical timestamp (something that indicates ordering of writes, such as the log sequence number) or the actual system clock (in which case clock synchronization becomes critical
-
-=> ***Monotonic reads*** 
-When you read data, you may see an old value; monotonic reads only means that if one user makes several reads in sequence, they will not see time go backward— i.e., they will not read older data after having previously read newer data.
-
-One way of achieving monotonic reads is to make sure that each user always makes their reads from the same replica (different users can read from different replicas). For example, the replica can be chosen based on a hash of the user ID, rather than randomly. However, if that replica fails, the user’s queries will need to be rerouted to another replica.
-
-=> 
-
 ## 4. Maintenance Complexity
 
 The Scenario: More replicas can mean more points of potential failures and maintenance overheads.
