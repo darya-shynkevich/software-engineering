@@ -41,6 +41,8 @@ A message produce by Producer will have following attributes:
 4. Headers — Metadata of message | Key: Value | Optional  Example: MIME-type, request_uuid, ...
 5. Partition & Offset  
 6. Timestamp
+
+When communicating with a Kafka cluster, all messages are sent to the partition’s leader. The leader is responsible for writing the message to its own in sync replica and, once that message has been committed, is responsible for propagating the message to additional replicas on different brokers. Each replica acknowledges that they have received the message and can now be called in sync. 
 ### Writing strategy
 
 ![](../../../../../_Attachments/Pasted%20image%2020240121160514.png)
@@ -57,7 +59,8 @@ Ack — It denotes the number of brokers that must receive the record before we 
 
 ## Broker
 
-`Kafka clusters` consist of multiple servers for high-availability needs, known as `brokers`. These are the actual machines and instances ***running the Kafka process***. Each broker can host a set of partitions and handle requests to write and read events to these partitions. They also help in message data replicated across partitions.
+`Kafka clusters` consist of multiple servers for high-availability needs, known as `brokers`. These are the actual machines and instances ***running the Kafka process***. 
+Each broker holds a number of partitions and each of these partitions can be either a leader (primary) or a replica for a topic. All writes and reads to a topic go through the leader and the leader coordinates updating replicas with new data. If a leader fails, a replica takes over as the new leader.
 ![Pasted image 20231019231915](../../../../../_Attachments/Pasted%20image%2020231019231915.png)
 !! For fault tolerance partitions can be replicated. The number of replicas / **replication factor** can be configured globally or individually for each topic. 
 
@@ -67,6 +70,7 @@ The data that was added to the leader by Producer auto replicates inside cluster
 !! Kafka auto assign leader ([Consensus Algorythm](../../1.%20Concepts/Consensus%20Algorithms/_Base.md))
 
 > We can increase the number of brokers => scale our system. We can also move partitions between brokers
+
 ### Topic
 
 Topics are logical separations for storing messages in a Kafka cluster. 
@@ -99,6 +103,8 @@ These log files are called **segments**. A **segment** is simply a ***collection
 > A consumer subscribes to one or more topics. 
 > A consumer can be part of only one consumer group.
 > Consumer in consumer group can work only with one partition
+
+*If you have more consumers than partitions then some consumers will be idle because they have no partitions to read from. If you have more partitions than consumers then consumers will receive messages from multiple partitions. If you have equal numbers of consumers and partitions, each consumer reads messages in order from exactly one partition.*
 
 Partitions in the Consumers Groups are assigned automatically by Group Coordinator. 
 
@@ -133,6 +139,18 @@ Other options are **uReplicator** (from Uber), Mirus (from Salesforce), Brookl
 
 _Note: Kafka is not a messaging service although it can provide a constrained queueing solution, it will be wise to go for NATS or RabbitMQ as a specialized solution_
 
+# Consistency and Availability
+
+Guarantees hold _as long as you are producing to one partition and consuming from one partition_. 
+
+! All guarantees are off if you are reading from the same partition using two consumers or writing to the same partition using two producers.
+
+Kafka makes the following guarantees about data consistency and availability: 
+1. messages sent to a topic partition will be appended to the commit log in the order they are sent
+2. a single consumer instance will see messages in the order they appear in the log, 
+3. a message is ‘committed’ when all in sync replicas have applied it to their log 
+4. any committed message will not be lost, as long as at least one in sync replica is alive
+
 # Metrics to monitor
 
 1. Consumer/Producer Log  
@@ -145,8 +163,9 @@ _Note: Kafka is not a messaging service although it can provide a constrained qu
 
 1. [What makes Kafka so performant?](What%20makes%20Kafka%20so%20performant?.md)
 2. [Mastering Kafka Streams and ksqlDB: Building real-time data systems by example](http://libgen.rs/book/index.php?md5=9F77B9C094AEAACBF48960DB53FCC5D2) (book)
-3. ~~[Простым языком об Apache Kafka, как, зачем и почему](https://teletype.in/@abstractart/kafka-for-novices)~~
-4. ~~[Kafka за 20 минут. Ментальная модель и как с ней работать](https://habr.com/ru/companies/sbermarket/articles/738634/)~~
+3. ~~[Kafka in a Nutshell](https://sookocheff.com/post/kafka/kafka-in-a-nutshell/)~~
+4. ~~[Простым языком об Apache Kafka, как, зачем и почему](https://teletype.in/@abstractart/kafka-for-novices)~~
+5. ~~[Kafka за 20 минут. Ментальная модель и как с ней работать](https://habr.com/ru/companies/sbermarket/articles/738634/)~~
 6. ~~[What is Kafka and How does it work?](https://www.youtube.com/watch?v=LN_HcJVbySw&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=6) (video)~~
 7. [A Deep Dive into Apache Kafka: Unraveling the Magic Behind the Scenes](https://medium.com/cloud-native-daily/a-deep-dive-into-apache-kafka-unraveling-the-magic-behind-the-scenes-4233e1f00f6c)
 8. ~~[Apache Kafka Crash Course](https://www.youtube.com/watch?v=R873BlNVUB4&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=2) (video)~~

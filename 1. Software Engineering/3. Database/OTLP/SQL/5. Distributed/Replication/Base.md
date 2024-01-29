@@ -14,9 +14,16 @@ In a typical database replication setup, there exists a primary (or master) data
  3. **Logical Replication:** does not stream the binary data from WAL because the binary representation of things changes from one release to another. So Postgres do Logical Replication (a higher level abstraction) and send them to the replica. + A logical log format is also easier for external applications to parse. This aspect is useful if you want to send the contents of a database to an external system, such as a data warehouse for offline analysis, or for building custom indexes and caches
 	 ! Postgres 14 have Streaming Logical Replication
 4. **Trigger-based replication:** typically has greater overheads than other replication methods, and is more prone to bugs and limitations than the database’s built-in replication. However, it can nevertheless be useful due to its flexibility.
-# [[Data Replication Models]]
-
 # [[Data Replication Strategies]]
+
+Replication can be synchronous or asynchronous, which has a profound effect on the system behavior when there is a fault. Although asynchronous replication can be fast when the system is running smoothly, it’s important to figure out what happens when replication lag increases and servers fail. If a leader fails and you promote an asynchronously updated follower to be the new leader, recently committed data may be lost.
+# Data Replication Models
+
+## 1. [Single leader / primary-secondary replication](Models/Single%20leader.md)
+
+## 2. [Multi-leader replication](Models/Multi%20leader.md)
+
+## 3. [Peer-to-peer / leaderless replication](Models/Leaderless%20replication.md)
 
 # Challenges in Database Replication
 
@@ -45,7 +52,6 @@ Diving Deeper: Replicas, while providing redundancy, also introduce complexity. 
 The Scenario: Implementing and running multiple replicas can escalate costs.
 
 Diving Deeper: Infrastructure costs for hosting replicas, network costs for data transfer, and human resource costs for maintenance can add up. It’s vital to strike a balance between the benefits of replication and its financial implications.
-
 # [Future Trends](Future%20Trends.md)
 
 # References:

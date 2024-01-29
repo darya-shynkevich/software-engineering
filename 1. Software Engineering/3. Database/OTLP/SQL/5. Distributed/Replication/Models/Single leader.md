@@ -1,3 +1,5 @@
+> Clients send all writes to a single node (the leader), which sends a stream of data change events to the other replicas (followers). Reads can be performed on any replica, but reads from followers might be stale.
+
 (+) excellent for read heavy applications
 (+) read resilient
 
