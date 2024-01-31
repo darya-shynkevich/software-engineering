@@ -49,7 +49,7 @@ Query Plan - is a visualisation of work that the database expects to do for a gi
 
 *The cost listed on the top-most node of the query plan is the cost for the entire query. The number reads like this: cost=.. . The number represents the estimated disk page fetches and CPU time needed to run the query. This query has a high cost, which equates to 2,758,484 rows accessed and an over 2 second execution time.*
 
-## [_Base](../../3.%20Database/OTLP/SQL/2.%20Indexes/_Base.md)
+## [Indexes](../../3.%20Database/OTLP/SQL/2.%20Indexes/_Base.md)
 
 How to create an index in Django:
 ![Pasted image 20231130233708](../../../_Attachments/Pasted%20image%2020231130233708.png)
