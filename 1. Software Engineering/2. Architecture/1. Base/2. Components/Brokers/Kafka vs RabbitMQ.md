@@ -6,3 +6,4 @@
 # References:
 
 1. ~~[Чем различаются Kafka и RabbitMQ: простыми словами](https://habr.com/ru/companies/innotech/articles/698838/)~~
+2. [What’s the Difference Between Kafka and RabbitMQ?](https://aws.amazon.com/compare/the-difference-between-rabbitmq-and-kafka/#:~:text=RabbitMQ%20is%20a%20general%2Dpurpose,why%20they%20handle%20messaging%20differently)
