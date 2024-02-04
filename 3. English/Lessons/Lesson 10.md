@@ -8,3 +8,12 @@
 4. [Confessions of a Modern Oppressor](https://medium.com/counterarts/confessions-of-a-modern-oppressor-81158f814de6)
 5. [Report from a Relationship](https://juliovincent.medium.com/report-from-a-relationship-74650b0be3a8)
 6. [The best New Year’s resolutions you can make](https://kozyrkov.medium.com/the-15-new-years-resolutions-you-need-to-make-right-now-c0ec111bd212)
+
+
+
+1. [Why Waking Up Earlier Isn’t Necessarily Better]([https://time.com/6282822/better-to-be-morning-person/?utm_source=pocket_collection_story](https://time.com/6282822/better-to-be-morning-person/?utm_source=pocket_collection_story) )
+2. [There Is No Such Thing as “Junk” Food]([https://www.bonappetit.com/story/stop-saying-junk?utm_source=pocket_collection_story](https://www.bonappetit.com/story/stop-saying-junk?utm_source=pocket_collection_story))
+3. [Why It’s Finally Time To Stop Obsessing Over Counting Steps For Health](https://www.inverse.com/health/history-of-fitness-trackers?utm_source=pocket_collection_story) 
+4. [What If You Just Didn’t Clean That Up?]([https://www.thecut.com/2023/02/embracing-mess-vs-cleanliness.html?utm_source=pocket_collection_story](https://www.thecut.com/2023/02/embracing-mess-vs-cleanliness.html?utm_source=pocket_collection_story))
+5. [How Productivity Apps Can Make Us Less Productive (And Less Happy)]([https://www.wsj.com/articles/how-productivity-apps-can-make-us-less-productive-and-less-happy-01583524509?utm_source=pocket_collection_story](https://www.wsj.com/articles/how-productivity-apps-can-make-us-less-productive-and-less-happy-01583524509?utm_source=pocket_collection_story) )
+6. [Unexpected Ways Toxic Positivity Sneaks Its Sunshiny Way Into Your Day]([https://www.romper.com/p/toxic-positivity-messages-are-everywhere-sneaky-according-to-expert-18170511?utm_source=pocket_collection_story](https://www.romper.com/p/toxic-positivity-messages-are-everywhere-sneaky-according-to-expert-18170511?utm_source=pocket_collection_story))
