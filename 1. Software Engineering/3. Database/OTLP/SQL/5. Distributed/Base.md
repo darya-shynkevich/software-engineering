@@ -5,3 +5,6 @@ There are two common ways data is distributed across multiple nodes:
 A database split into two partitions, with two replicas per partition:
 ![](../../../../../_Attachments/Pasted%20image%2020240125132603.png)
 
+# References:
+
+1. [An Overview of Distributed PostgreSQL Architectures](https://www.crunchydata.com/blog/an-overview-of-distributed-postgresql-architectures)

@@ -52,7 +52,9 @@ Compatibility is a relationship between one process that encodes the data, and a
 
 # References:
 
-2. “A Matrix of the Features Each Individual Language Library Supports,” [wiki.apache.org](http://wiki.apache.org/).
-3. Tony Hoare: “[Null References: The Billion Dollar Mistake](http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare),” at QCon London, March 2009.
-4. Gwen Shapira: “[The Problem of Managing Schemas](http://radar.oreilly.com/2014/11/the-problem-of-managing-schemas.html),” [radar.oreilly.com](http://radar.oreilly.com), November 4, 2014.
-5. Aditya Auradkar and Tom Quiggle: “[Introducing Espresso—LinkedIn's Hot New Distributed Document Store](https://engineering.linkedin.com/espresso/introducing-espresso-linkedins-hot-new-distributed-document-store),” [engineering.linkedin.com](http://engineering.linkedin.com), January 21, 2015.
+1. [What is Idempotency mean?](https://medium.com/nerd-for-tech/what-is-idempotency-mean-f8eaef4229c5)
+2. [Idempotency in Scalable Distributed Architectures — Example](https://medium.com/@debasisdasnospdii/idempotency-in-scalable-distributed-architectures-example-e23a12c70048)
+3. “A Matrix of the Features Each Individual Language Library Supports,” [wiki.apache.org](http://wiki.apache.org/).
+4. Tony Hoare: “[Null References: The Billion Dollar Mistake](http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare),” at QCon London, March 2009.
+5. Gwen Shapira: “[The Problem of Managing Schemas](http://radar.oreilly.com/2014/11/the-problem-of-managing-schemas.html),” [radar.oreilly.com](http://radar.oreilly.com), November 4, 2014.
+6. Aditya Auradkar and Tom Quiggle: “[Introducing Espresso—LinkedIn's Hot New Distributed Document Store](https://engineering.linkedin.com/espresso/introducing-espresso-linkedins-hot-new-distributed-document-store),” [engineering.linkedin.com](http://engineering.linkedin.com), January 21, 2015.

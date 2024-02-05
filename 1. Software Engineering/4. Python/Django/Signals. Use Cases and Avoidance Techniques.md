@@ -41,3 +41,6 @@ How to test the transition out of signals. Simply follow these steps:
 8. Run the tests again.
 9. Rinse and repeat until done.
 
+# References:
+
+1. [Sync or Async? Unpacking the Mysteries of Django Signals](https://www.mattlayman.com/blog/2023/django-signals-async/)

@@ -42,4 +42,7 @@ The architecture of systems that operate at large scale is usually highly specif
 
 # Case studies
 
-1. [Discord](../Examples/Discord.md)
+1. [What is Scalability Anyway?](https://brooker.co.za/blog/2024/01/18/scalability.html)
+2. [10 Core Architecture Pattern Variations For Achieving Scalability](http://highscalability.com/blog/2011/11/7/10-core-architecture-pattern-variations-for-achieving-scalab.html)
+3. [Discord](../Examples/Discord.md)
+4. [When Taylor Swift crashed Ticketmaster: A lesson on scaling for spikes](https://learningdaily.dev/when-taylor-swift-crashed-ticketmaster-a-lesson-on-scaling-for-spikes-9931e2c888e9)

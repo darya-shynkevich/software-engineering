@@ -17,6 +17,7 @@
 9. [PostgreSQL Antipatterns: насколько глубока кроличья нора? пробежимся по иерархии](https://habr.com/ru/company/tensor/blog/501614/)
 10. [Девять способов выстрелить себе в ногу с PostgreSQL](https://habr.com/ru/articles/731942/)
 11. [PostgreSQL Antipatterns: простой(?) INSERT… VALUES](https://habr.com/ru/companies/tensor/articles/702902/)
+12. [Наполняем до краев: влияние порядка столбцов в таблицах на размеры баз данных PostgresQL](https://habr.com/ru/articles/756074/)
 
 ## Logical Replication
 

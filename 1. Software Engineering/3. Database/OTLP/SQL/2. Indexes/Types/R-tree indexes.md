@@ -11,8 +11,10 @@ The key idea of the data structure is to group nearby objects and represent them
 
 # References:
 
-1. [https://en.wikipedia.org/wiki/Spatial_database](https://en.wikipedia.org/wiki/Spatial_database)
-2. [https://docs.mongodb.com/manual/geospatial-queries/](https://docs.mongodb.com/manual/geospatial-queries/)
-3. [https://en.wikipedia.org/wiki/R-tree](https://en.wikipedia.org/wiki/R-tree)
-4. [System Design: Design a Geo-Spatial index for real-time location search](https://kousiknath.medium.com/system-design-design-a-geo-spatial-index-for-real-time-location-search-10968fe62b9c)
-5. [ИНДЕКСИРОВАНИЕ ПРОСТРАНСТВЕННЫХ ДАННЫХ](http://www.duskyrobin.com/tpu/2006-04-00037.pdf)
+1. **[Geohashing](https://medium.com/@karan99/system-design-geohashing-and-quadtrees-6e49a974cedd)**
+2. [GeoDjango and PostGIS in Django](https://pganalyze.com/blog/geodjango-postgis)
+3. [https://en.wikipedia.org/wiki/Spatial_database](https://en.wikipedia.org/wiki/Spatial_database)
+4. [https://docs.mongodb.com/manual/geospatial-queries/](https://docs.mongodb.com/manual/geospatial-queries/)
+5. [https://en.wikipedia.org/wiki/R-tree](https://en.wikipedia.org/wiki/R-tree)
+6. [System Design: Design a Geo-Spatial index for real-time location search](https://kousiknath.medium.com/system-design-design-a-geo-spatial-index-for-real-time-location-search-10968fe62b9c)
+7. [ИНДЕКСИРОВАНИЕ ПРОСТРАНСТВЕННЫХ ДАННЫХ](http://www.duskyrobin.com/tpu/2006-04-00037.pdf)

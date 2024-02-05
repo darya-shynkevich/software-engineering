@@ -34,4 +34,5 @@ These patterns are used for solving architectural problems within a given contex
 10. [Raymond Hettinger «Build powerful, new data structures with Python's abstract base classes»](https://www.youtube.com/watch?v=S_ipdVNSFlo)
 11. [Using the Facade Pattern to Wrap Third-Party Integrations](https://alysivji.github.io/tag/python.html)
 12. [Python Dependency Injection](https://testdriven.io/blog/python-dependency-injection/)
-13. Questions: Singleton. Самый известный паттерн, который тем не менее никто не отменял. Где встречается в реальной жизни, то есть в живом коде. Active Record. Chain of Responsibility. Data Transfer Object. Adapter. Decorator. Factory. Factory Method. Другие стандартные шаблоны программирования.
+13. [Python-Specific Design Patterns](https://stackabuse.com/python-specific-design-patterns/)
+14. Questions: Singleton. Самый известный паттерн, который тем не менее никто не отменял. Где встречается в реальной жизни, то есть в живом коде. Active Record. Chain of Responsibility. Data Transfer Object. Adapter. Decorator. Factory. Factory Method. Другие стандартные шаблоны программирования.
