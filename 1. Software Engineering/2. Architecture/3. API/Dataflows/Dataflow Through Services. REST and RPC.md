@@ -13,7 +13,7 @@ By contrast, [SOAP](SOAP) is an XML-based protocol for making network API reques
 
 Compared to data flowing through databases, we can make a simplifying assumption in the case of dataflow through services: *==it is reasonable to assume that all the servers will be updated first, and all the clients second. Thus, you only need backward compatibility on requests, and forward compatibility on responses.
 
-#### The problems with remote procedure calls ([RPC](RPC)s)
+#### The problems with remote procedure calls ([RPC](../RPC.md)s)
 
 All of these are based on the idea of a remote procedure call (RPC), which has been around since the 1970s. *The RPC model tries to make a request to a remote network service look the same as calling a function or method in your programming language*, within the same process (this abstraction is called location transparency). Although RPC seems convenient at first, the approach is fundamentally flawed. A network request is very different from a local function call: local function calls are predictable and under your control, while network requests are unpredictable and subject to network problems outside of your control. Local functions have consistent timing and can efficiently pass references to local memory, while network requests can experience variable latency and require encoding larger objects for transmission. Additionally, network requests may require datatype translation between programming languages.
 
