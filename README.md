@@ -26,11 +26,10 @@
     1. [Database Fundamentals](https://tontinton.com/posts/database-fundementals/?ref=architecturenotes.co)
     2. [System Design — 8 Data Structures That Power Your Databases](https://medium.com/@maheshsaini.sec/system-design-8-data-structures-that-power-your-databases-98ea40bf863)
     3. [Indexing In System Design | SDE Interview](https://ganeshprasad227.medium.com/indexing-in-system-design-sde-interview-3601398901b3)
-    4. [Index Types](notion://www.notion.so/ligonberry/!%3Chttps://www.postgresql.org/docs/current/indexes-types.html#INDEXES-TYPES-HASH%3E) На примере Postgres
-    5. [Absolutely Everything That I Know About Database Indexes](https://www.youtube.com/watch?v=Qhc8gFF2qS8) (video)
-    6. [Transaction Isolation in Postgres, explained](https://www.thenile.dev/blog/transaction-isolation-postgres)
-    7. [System Design Interview: Mastering Databases](https://levelup.gitconnected.com/system-design-interview-mastering-databases-9fb40bb561cd) ---- short summary
-    8. [Postgres vs MySQL](https://medium.com/@hnasr/postgres-vs-mysql-5fa3c588a94e)
+    4. [Absolutely Everything That I Know About Database Indexes](https://www.youtube.com/watch?v=Qhc8gFF2qS8) (video)
+    5. [Transaction Isolation in Postgres, explained](https://www.thenile.dev/blog/transaction-isolation-postgres)
+    6. [System Design Interview: Mastering Databases](https://levelup.gitconnected.com/system-design-interview-mastering-databases-9fb40bb561cd) ---- short summary
+    7. [Postgres vs MySQL](https://medium.com/@hnasr/postgres-vs-mysql-5fa3c588a94e)
 10. **[Устройство CPython. Доклад Яндекса / Блог компании Яндекс / Хабр](https://habr.com/ru/company/yandex/blog/511972/)** (video) <-- очень важный видос, тут рассказывается об основах и устройстве всего в питоне
 11. [Memory management in Python | Artem Golubin](https://rushter.com/blog/python-memory-managment/)
 12. [Pointers in Python: What's the Point? – Real Python](https://realpython.com/pointers-in-python/)
