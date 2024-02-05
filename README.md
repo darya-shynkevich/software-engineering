@@ -15,14 +15,13 @@
 	1. [Асинхронность в Python](notion://www.notion.so/ligonberry/!%3Chttps://www.youtube.com/playlist?list=PLlWXhlUMyooawilqK4lPXRvxtbYiw34S8%3E) (videos) <- рекомендовали в каком-то видосе
 	2. [Гринлеты, что это такое?](https://itbun.blogspot.com/2014/01/blog-post.html)
 	3. [Python Asyncio Part 2 – Awaitables, Tasks, and Futures](https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-2.html)
-	4. [Python behind the scenes #12: how async/await works in Python](https://tenthousandmeters.com/blog/python-behind-the-scenes-12-how-asyncawait-works-in-python/) Все-таки разобраться с этой статьей
-	5. [Should You Use AsyncIO for Your Next Python Web Application?](https://www.laac.dev/blog/page/2/)
-	6. [Why I hate asyncio](https://charlesleifer.com/blog/asyncio/)
-	7. [Асинхронность в программировании](https://habr.com/ru/companies/jugru/articles/446562/) (video) <-- выглядит как что-то интересное
-	8. [Understanding event loop with Python](https://medium.com/@pekelny/fake-event-loop-python3-7498761af5e0)
-	9. [Многопоточность в Python: очевидное и невероятное](https://habr.com/ru/articles/764420/)
-	10. [Two kinds of threads pools, and why you need both](https://pythonspeed.com/articles/two-thread-pools/)
-	11. [Практический гайд по процессам и потокам (и не только) в Python](https://habr.com/ru/articles/773376/)
+	4. [Should You Use AsyncIO for Your Next Python Web Application?](https://www.laac.dev/blog/page/2/)
+	5. [Why I hate asyncio](https://charlesleifer.com/blog/asyncio/)
+	6. [Асинхронность в программировании](https://habr.com/ru/companies/jugru/articles/446562/) (video) <-- выглядит как что-то интересное
+	7. [Understanding event loop with Python](https://medium.com/@pekelny/fake-event-loop-python3-7498761af5e0)
+	8. [Многопоточность в Python: очевидное и невероятное](https://habr.com/ru/articles/764420/)
+	9. [Two kinds of threads pools, and why you need both](https://pythonspeed.com/articles/two-thread-pools/)
+	10. [Практический гайд по процессам и потокам (и не только) в Python](https://habr.com/ru/articles/773376/)
 9. DB:
     1. [Database Fundamentals](https://tontinton.com/posts/database-fundementals/?ref=architecturenotes.co)
     2. [System Design — 8 Data Structures That Power Your Databases](https://medium.com/@maheshsaini.sec/system-design-8-data-structures-that-power-your-databases-98ea40bf863)
