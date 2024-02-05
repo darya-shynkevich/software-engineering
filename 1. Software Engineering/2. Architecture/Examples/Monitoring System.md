@@ -1,6 +1,6 @@
-## [Distributed Monitoring](../1.%20Base/2.%20Components/Distributed%20Monitoring.md)
+## [Distributed Monitoring](../2.%20Components/Distributed%20Monitoring.md)
 
-The system requirements are in "[What should I monitor?](../1.%20Base/2.%20Components/Distributed%20Monitoring.md)" section.
+The system requirements are in "[What should I monitor?](../2.%20Components/Distributed%20Monitoring.md)" section.
 
 We want automated monitoring that identifies an anomaly in the system and informs the alert manager or shows the progress on a dashboard. Cloud service providers provide a health status of their services:
 - AWS: [https://health.aws.amazon.com/health/status](https://health.aws.amazon.com/health/status)

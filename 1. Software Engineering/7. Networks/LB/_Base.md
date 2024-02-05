@@ -15,7 +15,7 @@ Generally, LBs sit between clients and servers. Requests go through to servers a
 In reality, load balancers can be potentially used between any two services with multiple instances within the design of a system.
 # Services offered by load balancers
 
-1. **[Healthchecks](../../2.%20Architecture/1.%20Base/1.%20Concepts/Healthchecks.md)** LBs use the heartbeat protocol to monitor the health and, therefore, reliability of end-servers. Another advantage of health checking is the improved user experience.
+1. **[Healthchecks](../../2.%20Architecture/1.%20Concepts/Healthchecks.md)** LBs use the heartbeat protocol to monitor the health and, therefore, reliability of end-servers. Another advantage of health checking is the improved user experience.
 2. **TLS termination**: LBs reduce the burden on end-servers by handling TLS termination with the client.
 3. **Predictive analytics**: LBs can predict traffic patterns through analytics performed over traffic passing through them or using statistics of traffic obtained over time.
 4. **Reduced human intervention**: Because of LB automation, reduced system administration efforts are required in handling failures.

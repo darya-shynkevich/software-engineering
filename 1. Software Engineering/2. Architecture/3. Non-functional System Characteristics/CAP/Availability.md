@@ -1,6 +1,6 @@
 **Availability** is the percentage of time that some service or infrastructure is accessible to clients and is operated upon under normal conditions. For example, if a service has 100% availability, it means that the said service functions and responds as intended (operates normally) all the time. 
 
-There are two complementary patterns to support high availability: **[Failover](../../1.%20Base/1.%20Concepts/Failover.md)** and **[Replication](../../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/Base.md)**.
+There are two complementary patterns to support high availability: **[Failover](../../1.%20Concepts/Failover.md)** and **[Replication](../../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/Base.md)**.
 
 Mathematically, availability, `A`, is a ratio. The higher the `A` value, the better. We can also write this up as a formula:
 ![](../../../../_Attachments/Pasted%20image%2020240118163558.png)
@@ -13,15 +13,15 @@ Mathematically, availability, `A`, is a ratio. The higher the `A` value, the 
 
 ### 1. [Monitoring](../../../8.%20Troubleshooting/1.%20Monitoring%20and%20Alerting/Monitoring.md)
 
-### 2. [Circuit Breaker](../../1.%20Base/1.%20Concepts/Circuit%20Breaker.md)
+### 2. [Circuit Breaker](../../1.%20Concepts/Circuit%20Breaker.md)
 
-### 3.  [Latency](../../1.%20Base/1.%20Concepts/Latency/Base.md)
+### 3.  [Latency](../../1.%20Concepts/Latency/Base.md)
 
-### 4. [Failover](../../1.%20Base/1.%20Concepts/Failover.md)
+### 4. [Failover](../../1.%20Concepts/Failover.md)
 
-### 5. [Load Balancing](../../1.%20Base/1.%20Concepts/Load%20Balancing.md)
+### 5. [Load Balancing](../../1.%20Concepts/Load%20Balancing.md)
 
-### 6. [Autoscaling](../../1.%20Base/1.%20Concepts/Autoscaling.md)
+### 6. [Autoscaling](../../1.%20Concepts/Autoscaling.md)
 
 # References:
 

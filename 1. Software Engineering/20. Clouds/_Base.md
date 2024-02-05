@@ -1,5 +1,5 @@
 
-[Serverless](../2.%20Architecture/4.%20Architecture%20Types/3.%20Serverless.md)
+[Serverless](../2.%20Architecture/5.%20Architecture%20Types/3.%20Serverless.md)
 
 # References:
 

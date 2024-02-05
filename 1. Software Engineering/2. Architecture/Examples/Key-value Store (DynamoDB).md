@@ -25,7 +25,7 @@ Key-value stores, like ordinary hash tables, provide two primary functions, whic
 
 > Dynamo uses MD5 hashes on the key to generate a 128-bit identifier. These identifiers help the system determine which server node will be responsible for this specific key.
 
-## Scalability => [Consistent Hashing](../1.%20Base/1.%20Concepts/Consistent%20Hashing.md)
+## Scalability => [Consistent Hashing](../1.%20Concepts/Consistent%20Hashing.md)
 
 ## Availability => Data [Replication](../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/Base.md)
 
@@ -49,7 +49,7 @@ To update an object in the key-value store, the client must give the `context`.
 
 ## Configurable service
 
-Use [Coordinator](../1.%20Base/2.%20Components/Coordinator.md)
+Use [Coordinator](../2.%20Components/Coordinator.md)
 
 Let’s take an example. Say `n` in the top `n` of the preference list is equal to 3. This means three copies of the data need to be maintained. We assume that nodes are placed in a ring. Say A, B, C, D, and E is the clockwise order of the nodes in that ring. If the write function is performed on node A, then the copies of that data will be placed on B and C. This is because B and C are the next nodes we find while moving in a clockwise direction of the ring.
 
@@ -63,7 +63,7 @@ The coordinator produces the vector clock for the new version and writes the new
 Requests for a `get()` operation are made to the `n` highest-ranked reachable nodes in a preference list for a key. They wait for `r` answers before returning the results to the client. Coordinators return all dataset versions that they regard as unrelated if they get several datasets from the same source (divergent histories that need reconciliation). The conflicting versions are then merged, and the resulting key’s value is rewritten to override the previous versions.
 ## Enable Fault Tolerance and Failure Detection
 
-### [Hinted handoff](../1.%20Base/1.%20Concepts/Hinted%20handoff.md)
+### [Hinted handoff](../1.%20Concepts/Hinted%20handoff.md)
 
 ### Handle permanent failures
 

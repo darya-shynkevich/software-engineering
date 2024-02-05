@@ -1,9 +1,9 @@
-A [Cache](../1.%20Base/2.%20Components/Cache/0.%20Cache.md) is a temporary data storage that can serve data faster by keeping data entries in memory. Caches store only the most frequently accessed data. When a request reaches the serving host, it retrieves data from the cache (**cache hit**) and serves the user. However, if the data is unavailable in the cache (**cache miss**), the data will be queried from the database. Also, the cache is populated with the new value to avoid cache misses for the next time.
-# [Writing policies](../1.%20Base/2.%20Components/Cache/Writing%20policies.md)
+A [Cache](../2.%20Components/Cache/0.%20Cache.md) is a temporary data storage that can serve data faster by keeping data entries in memory. Caches store only the most frequently accessed data. When a request reaches the serving host, it retrieves data from the cache (**cache hit**) and serves the user. However, if the data is unavailable in the cache (**cache miss**), the data will be queried from the database. Also, the cache is populated with the new value to avoid cache misses for the next time.
+# [Writing policies](../2.%20Components/Cache/Writing%20policies.md)
 
-# [Eviction policies](../1.%20Base/2.%20Components/Cache/Eviction%20policies.md)
+# [Eviction policies](../2.%20Components/Cache/Eviction%20policies.md)
 
-# [Cache Invalidation](../1.%20Base/2.%20Components/Cache/Cache%20Invalidation.md)
+# [Cache Invalidation](../2.%20Components/Cache/Cache%20Invalidation.md)
 
 # Storage mechanism
 
@@ -13,7 +13,7 @@ It’s possible to use hashing in two different scenarios:
 - Identify the cache server in a distributed cache to store and retrieve data.
 - Locate cache entries inside each cache server.
 
-For the first scenario, we can use different hashing algorithms. However, [Consistent Hashing](../1.%20Base/1.%20Concepts/Consistent%20Hashing.md) or its flavours usually perform well in distributed systems because simple hashing won’t be ideal in case of crashes or scaling.
+For the first scenario, we can use different hashing algorithms. However, [Consistent Hashing](../1.%20Concepts/Consistent%20Hashing.md) or its flavours usually perform well in distributed systems because simple hashing won’t be ideal in case of crashes or scaling.
 
 In the second scenario, we can use typical hash functions to locate a cache entry to read or write inside a cache server. However, a hash function alone can only locate a cache entry. It doesn’t say anything about managing data within the cache server. That is, it doesn’t say anything about how to implement a strategy to evict less frequently accessed data from the cache server. It also doesn’t say anything about what data structures are used to store the data within the cache servers. This is exactly the second design question of the storage mechanism. Let’s take a look at the data structure next.
 ## Linked list + [SkipList](../../1.%20Algorithms/Data%20Structures/SkipList.md)

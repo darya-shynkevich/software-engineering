@@ -1,11 +1,11 @@
-# [Latency](../1.%20Base/1.%20Concepts/Latency/Base.md)
+# [Latency](../1.%20Concepts/Latency/Base.md)
 
 **Fault tolerance** refers to a system’s ability to execute persistently even if one or more of its components fail. Here, components can be software or hardware. Conceiving a system that is hundred percent fault-tolerant is practically very difficult.
 
-1. **[[Availability]]** focuses on receiving every client’s request by being accessible 24/7.
+1. **[[CAP/Availability]]** focuses on receiving every client’s request by being accessible 24/7.
 2. **[[Reliability]]** is concerned with responding by taking specified action on every client’s request.
 
-# Fault tolerance techniques ([[../1. Base/1. Concepts/Failover]])
+# Fault tolerance techniques ([[../1. Concepts/Failover]])
 
 # References:
 

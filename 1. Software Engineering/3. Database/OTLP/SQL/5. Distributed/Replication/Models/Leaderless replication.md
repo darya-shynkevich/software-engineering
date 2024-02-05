@@ -4,7 +4,7 @@
 
 In primary-secondary replication, the primary node is a bottleneck and a single point of failure. Moreover, it helps to achieve read scalability but fails to provide write scalability. The **peer-to-peer replication** model resolves these problems by not having a single primary node. All the nodes have equal weightage and can accept read and write requests. 
 
-Like primary-secondary replication, this replication can also yield inconsistency. This is because when several nodes accept write requests, it may lead to concurrent writes. A helpful approach used for solving write-write inconsistency is called **[[Quorum]]**.
+Like primary-secondary replication, this replication can also yield inconsistency. This is because when several nodes accept write requests, it may lead to concurrent writes. A helpful approach used for solving write-write inconsistency is called **[[../../../../../../2. Architecture/4. API/Concepts/Quorum]]**.
 
 ! If you have `n` replicas, and you choose w and `r` such that `w + r > n`, you can generally expect every read to return the most recent value written for a key. This is the case because the set of nodes to which you’ve written and the set of nodes from which you’ve read must overlap.
 
@@ -23,9 +23,9 @@ Examples:
 **Anti-entropy process:** In addition, some datastores have a background process that constantly looks for differences in the data between replicas and copies any missing data from one replica to another. Unlike the replication log in leader-based replication, this anti-entropy process does not copy writes in any particular order, and there may be a significant delay before data is copied.
 	[[Voldemort]] does not have this feature => values that are rarely read may be missing from some replicas and thus have reduced durability, because read repair is only performed when a value is read by the application.
 
-# [Quorums](../../../../../../2.%20Architecture/3.%20API/Concepts/Quorum.md) for reading and writing
+# [Quorums](../../../../../../2.%20Architecture/4.%20API/Concepts/Quorum.md) for reading and writing
 
-If there are `n` replicas, every write must be confirmed by `w` nodes to be considered successful, and we must query at least `r` nodes for each read. (In our example, `n = 3`, `w = 2`, `r = 2`.) As long as `w + r > n`, we expect to get an up-to-date value when reading, because at least one of the `r` nodes we’re reading from must be up to date. Reads and writes that obey these `r` and `w` values are called [Quorum](../../../../../../2.%20Architecture/3.%20API/Concepts/Quorum.md) reads and writes. You can think of `r` and `w` as the minimum number of votes required for the read or write to be valid.
+If there are `n` replicas, every write must be confirmed by `w` nodes to be considered successful, and we must query at least `r` nodes for each read. (In our example, `n = 3`, `w = 2`, `r = 2`.) As long as `w + r > n`, we expect to get an up-to-date value when reading, because at least one of the `r` nodes we’re reading from must be up to date. Reads and writes that obey these `r` and `w` values are called [Quorum](../../../../../../2.%20Architecture/4.%20API/Concepts/Quorum.md) reads and writes. You can think of `r` and `w` as the minimum number of votes required for the read or write to be valid.
 
 > In Dynamo-style databases, the parameters `n`, `w`, and `r` are typically configurable. A common choice is to make `n` an odd number (typically `3` or `5`) and to set `w = r = (n + 1) / 2` (rounded up). However, you can vary the numbers as you see fit. For example, a workload with few writes and many reads may benefit from setting `w = n` and `r = 1`. This makes reads faster, but has the disadvantage that just one failed node causes all database writes to fail.
 
@@ -39,7 +39,7 @@ If fewer than the required `w` or `r` nodes are available, writes or reads retur
 5. 
 We only care whether the node returned a successful response and **don’t need to distinguish between different kinds of fault**.
 
-# Limitations of [Quorum](../../../../../../2.%20Architecture/3.%20API/Concepts/Quorum.md) Consistency
+# Limitations of [Quorum](../../../../../../2.%20Architecture/4.%20API/Concepts/Quorum.md) Consistency
 
 With a smaller (`w + r <= n`) `w` and `r` you are more likely to read stale values, because it’s more likely that your read didn’t include the node with the latest value. On the upside, this configuration allows lower latency and higher availability: if there is a network interruption and many replicas become unreachable, there’s a higher chance that you can continue processing reads and writes. Only after the number of reachable replicas falls below `w` or `r` does the database become unavailable for writing or reading, respectively.
 

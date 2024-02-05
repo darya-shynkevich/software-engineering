@@ -17,7 +17,7 @@ Example:
 2. zip codes
 3. countries
 
-### 3. By Hash ([Consistent Hashing](../../../../../2.%20Architecture/1.%20Base/1.%20Concepts/Consistent%20Hashing.md))
+### 3. By Hash ([Consistent Hashing](../../../../../2.%20Architecture/1.%20Concepts/Consistent%20Hashing.md))
 
 *Algorithmically partitioned databases use a hash function to locate data. This allows us given a specific partition key to find the correct physical shard to request the data from.*
 

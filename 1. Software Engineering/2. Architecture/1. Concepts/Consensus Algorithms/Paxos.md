@@ -47,7 +47,7 @@ As we have insinuated at the beginning of this section, multiple _proposers_ c
 
 As a result, it can proceed with making a proposal request. The value of this proposal will be the chosen one unless a majority of _acceptors_ have failed (and did not reply to the proposal) or another leader stepped up, becoming the temporary leader in the meanwhile (in which case, the _acceptors_ will reject this proposal).
 
-A majority _[[Quorum]]_ consists of more than half of the nodes of the system, such as at least k+1 nodes in a system of 2k nodes.
+A majority _[[../../4. API/Concepts/Quorum]]_ consists of more than half of the nodes of the system, such as at least k+1 nodes in a system of 2k nodes.
 
 This protocol guarantees that there can’t be two different proposers that complete both phases of the protocol concurrently because proposers require a majority quorum to proceed with a proposal. As a result, only a single value can be chosen, satisfying the agreement property of consensus.
 

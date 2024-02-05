@@ -19,7 +19,7 @@ With multiple copies of the same data, we are faced with options on how to synch
 ### 3. **Strong consistency** (linearisability)
 
 - After a write, reads will see it. *Once the client receives the acknowledgment that the write operation has been performed, other clients can read that value.*
-- Data is replicated synchronously. We might need consensus algorithms such as [[../../1. Base/1. Concepts/Consensus Algorithms/Paxos]] and [[../../1. Base/1. Concepts/Consensus Algorithms/Raft]] to achieve strong consistency. 
+- Data is replicated synchronously. We might need consensus algorithms such as [[../../1. Concepts/Consensus Algorithms/Paxos]] and [[../../1. Concepts/Consensus Algorithms/Raft]] to achieve strong consistency. 
 - Linearizability ***affects the system’s availability***, which is why it’s not always used. Applications with strong consistency requirements use techniques like ***quorum-based replication*** to increase the system’s availability.
 - This approach is seen in file systems and RDBMSes. 
 - Strong consistency works well in **systems that need transactions**.
@@ -29,9 +29,9 @@ With multiple copies of the same data, we are faced with options on how to synch
 
 # Important topics:
 
-### 1. [Consistent Hashing](../../1.%20Base/1.%20Concepts/Consistent%20Hashing.md)
+### 1. [Consistent Hashing](../../1.%20Concepts/Consistent%20Hashing.md)
 
-### 2. [Distributed Locks](../../1.%20Base/1.%20Concepts/Distributed%20Locks.md)
+### 2. [Distributed Locks](../../1.%20Concepts/Distributed%20Locks.md)
 
 ### 3. [Distributed Transactions](../../../3.%20Database/OTLP/SQL/5.%20Distributed/Distributed%20Transactions.md)
 

@@ -1,5 +1,5 @@
 
-[Service Mesh](../2.%20Architecture/1.%20Base/1.%20Concepts/Service%20Mesh.md)
+[Service Mesh](../2.%20Architecture/1.%20Concepts/Service%20Mesh.md)
 
 # References:
 

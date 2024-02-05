@@ -14,7 +14,7 @@ We often use **mean time between failures (MTBF)** and **mean time to repair 
 
 The things that can go wrong are called **faults**, and systems that anticipate faults and can cope with them are called **fault-tolerant** or **resilient**.
 
-# Reliability and [[Availability]]
+# Reliability and [[CAP/Availability]]
 
 Reliability and availability are two important metrics to measure compliance of service to agreed-upon service level objectives (SLO).
 

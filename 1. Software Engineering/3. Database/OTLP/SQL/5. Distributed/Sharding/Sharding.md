@@ -27,7 +27,7 @@ Sharding is a process of segmenting the data into shards that are spread on mult
 (-) Has to be something you know in the query
 # Sharding Types:
 
-1. How do we distribute the data across shards? Are there potential [Hotspot](../../../../../2.%20Architecture/1.%20Base/1.%20Concepts/Hotspot.md)s if data isn't distributed evenly?
+1. How do we distribute the data across shards? Are there potential [Hotspot](../../../../../2.%20Architecture/1.%20Concepts/Hotspot.md)s if data isn't distributed evenly?
 2. What queries do we run and how do the tables interact?
 3. How will data grow? How will it need to be redistributed later?
 4. How many shards per database?
@@ -67,7 +67,7 @@ The basic design techniques used in multi-table sharding are as follows:
 (+) Keys are uniformly distributed across the nodes.
 
 (-) We can’t perform range queries with this technique. Keys will be spread over all shards.
-## [Consistent Hashing](../../../../../2.%20Architecture/1.%20Base/1.%20Concepts/Consistent%20Hashing.md)
+## [Consistent Hashing](../../../../../2.%20Architecture/1.%20Concepts/Consistent%20Hashing.md)
 
 # Rebalance the shards
 
@@ -77,7 +77,7 @@ The basic design techniques used in multi-table sharding are as follows:
 
 ## Solutions
 
-1. Use techniques from [Consistent Hashing](../../../../../2.%20Architecture/1.%20Base/1.%20Concepts/Consistent%20Hashing.md). Using [[Consistent Hashing]] ring it is easy to add new node. 
+1. Use techniques from [Consistent Hashing](../../../../../2.%20Architecture/1.%20Concepts/Consistent%20Hashing.md). Using [[../../../../../2. Architecture/1. Concepts/Consistent Hashing]] ring it is easy to add new node. 
 2. **Fixed numbers of shards:** In this approach, the number of shards to be created is fixed at the time when we set our database up. We create a higher number of shards than the nodes and assign these shards to nodes. So, when a new node is added to the system, it can take a few shards from the existing nodes until the shards are equally divided.
 	   (-) the size of each shard grows with the total amount of data in the cluster since all the shards contain a small part of the total data. If a shard is very small, it will result in too much overhead because we may have to make a large number of small-sized shards, each costing us some overhead. If the shard is very large, rebalancing the nodes and recovering from node failures will be expensive. It’s very important to choose the right number of shards. 
 	   ! A fixed number of shards is used in Elasticsearch, Riak, and many more.
