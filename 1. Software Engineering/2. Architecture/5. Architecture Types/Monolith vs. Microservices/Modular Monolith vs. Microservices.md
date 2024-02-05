@@ -21,7 +21,7 @@
 
 - **Modular Monolith:** Given its contained nature, it’s often ***simpler to align architectural practices and enforce consistency***. It does mean, however, that the ***entire system might need to be redeployed for changes in a single module***.
 - **Microservices:** Services can be developed, deployed, and scaled independently. It’s the epitome of **separation of concerns** but can lead to challenges in maintaining uniformity and can complicate deployment pipelines.
-## [Conformist Pattern](../../../DDD/Conformist%20Pattern.md) in Modular Monoliths
+## [Conformist Pattern](../../../21.%20OOAD/DDD/Conformist%20Pattern.md) in Modular Monoliths
 
 ## Flexibility in Microservices
 

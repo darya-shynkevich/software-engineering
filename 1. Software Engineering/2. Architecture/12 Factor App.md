@@ -12,7 +12,7 @@
 11. Applications should produce logs as event streams and leave the execution environment to aggregate.'
 12. Any needed admin tasks should be kept in source control and packaged with the application.
 
-![Pasted image 20230602085402](../_Attachments/Pasted%20image%2020230602085402.png)
+![Pasted image 20230602085402](../../_Attachments/Pasted%20image%2020230602085402.png)
 
 # References:
 
