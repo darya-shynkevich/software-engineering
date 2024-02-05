@@ -49,34 +49,33 @@
 25. [Настоящий детектив: загадочные таймауты на проде](https://habr.com/ru/companies/vk/articles/684018/)
 26. [How to troubleshoot if you can’t access a particular website?](https://medium.com/nerd-for-tech/how-to-troubleshoot-if-you-cant-access-a-particular-website-af681fac3215) + [Knowledge Test](https://medium.com/nerd-for-tech/knowledge-test-how-to-troubleshoot-if-you-cant-access-a-particular-website-52bc9307343d)
 27. [What happens when you type a URL into your browser?](https://medium.com/nerd-for-tech/what-happens-when-you-type-a-url-into-your-browser-ca500d86975c) + [Knowledge Test](https://medium.com/nerd-for-tech/knowledge-test-what-happens-when-you-type-a-url-into-your-browser-8b47056c59c)
-28. [Basic Knowledge about CNN](# Convolution Explained — Introduction to Convolutional Neural Networks)
-29. [Bypassing the GIL for Parallel Processing in Python](https://realpython.com/python-parallel-processing/)
-30. **[Липкие сессии для самых маленьких](https://habr.com/ru/companies/domclick/articles/548610/)**
-31. **[Создаем простой ETL на Python](https://habr.com/ru/articles/664020/)**
-32. **[Threads and Connections | The Backend Engineering Show](https://www.youtube.com/watch?v=CZw57SIwgiE&list=PLQnljOFTspQU0ICDe-cL1EwXC4GDSayKY&index=25)** (video)
-33. [*Is MultiProcessing over a Single TCP Connection a Good Idea?](https://www.youtube.com/watch?v=NqpM2GYbovo&list=PLQnljOFTspQUVDsQcPnmdbtLUhqODSV1F&index=2)* (video)
-34. [Secure Search Over Encrypted Data](https://www.cossacklabs.com/blog/secure-search-over-encrypted-data-acra-se/)
-35. [How do databases execute expressions?](https://notes.eatonphil.com/2023-09-21-how-do-databases-execute-expressions.html) —— очень интересная статья
-36. [Backends For Frontends — My Take](https://faun.pub/backends-for-frontends-my-take-b97663ec1b68)
-37. [API vs. Messaging — How to Choose Which One to Use?](https://betterprogramming.pub/api-vs-messaging-how-to-choose-which-one-to-use-d6634599d2bd)
-38. [Sharing Data Between Microservices](https://medium.com/@denhox/sharing-data-between-microservices-fe7fb9471208)
-39. [How Does The Use Of Docker Effect Latency?](http://highscalability.com/blog/2015/12/16/how-does-the-use-of-docker-effect-latency.html)
-40. [Мини-гайд по погашению технического долга](https://habr.com/ru/articles/714568/)
-41. [Expand/Contract: making a breaking change without a big bang](https://blog.thepete.net/blog/2023/12/05/expand/contract-making-a-breaking-change-without-a-big-bang/)
-42. [How to implement security for microservices](https://medium.com/microservices-learning/how-to-implement-security-for-microservices-89b140d3e555)
-43. [Managing Version Dependencies Between Microservices](https://medium.com/@denhox/managing-version-dependencies-between-microservices-648d1d8dd4ca)
-44. [Should That Be a Microservice? Keep These Six Factors in Mind](https://tanzu.vmware.com/content/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind)
-45. [How I Optimized An API Endpoint To Make It 10x Faster](https://bootcamp.uxdesign.cc/how-i-optimized-an-api-endpoint-to-make-it-10x-faster-2f5fe9a84bd9)
-46. **[Длинная транзакция или когда размер имеет значение](https://www.youtube.com/watch?v=3h48iowNbwo)** (video)
-47. **[Свой распределённый S3 на базе MinIO — практический опыт наступания на грабли / Алексей Плетнёв](https://www.youtube.com/watch?v=XiJVC9nzAW4)**(video)
-48. [How to update millions of records in MySQL?](https://www.startdataengineering.com/post/update-mysql-in-batch/)
-49. [Best Practices Working with Billion-row Tables in Databases](https://www.youtube.com/watch?v=wj7KEMEkMUE&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=45) (video)
-50. [Don’t Build a Distributed Monolith](https://www.youtube.com/watch?v=p2GlRToY5HI) (video)
-51. [Decoupling database migrations from server startup: why and how](https://pythonspeed.com/articles/schema-migrations-server-startup/)
-52. [Event Patterns: Request-Reply — is it a pattern or anti-pattern?](https://blog.devgenius.io/event-patterns-request-reply-is-it-a-pattern-or-anti-pattern-641a257192d4)
+28. [Bypassing the GIL for Parallel Processing in Python](https://realpython.com/python-parallel-processing/)
+29. **[Липкие сессии для самых маленьких](https://habr.com/ru/companies/domclick/articles/548610/)**
+30. **[Создаем простой ETL на Python](https://habr.com/ru/articles/664020/)**
+31. **[Threads and Connections | The Backend Engineering Show](https://www.youtube.com/watch?v=CZw57SIwgiE&list=PLQnljOFTspQU0ICDe-cL1EwXC4GDSayKY&index=25)** (video)
+32. [*Is MultiProcessing over a Single TCP Connection a Good Idea?](https://www.youtube.com/watch?v=NqpM2GYbovo&list=PLQnljOFTspQUVDsQcPnmdbtLUhqODSV1F&index=2)* (video)
+33. [Secure Search Over Encrypted Data](https://www.cossacklabs.com/blog/secure-search-over-encrypted-data-acra-se/)
+34. [How do databases execute expressions?](https://notes.eatonphil.com/2023-09-21-how-do-databases-execute-expressions.html) —— очень интересная статья
+35. [Backends For Frontends — My Take](https://faun.pub/backends-for-frontends-my-take-b97663ec1b68)
+36. [API vs. Messaging — How to Choose Which One to Use?](https://betterprogramming.pub/api-vs-messaging-how-to-choose-which-one-to-use-d6634599d2bd)
+37. [Sharing Data Between Microservices](https://medium.com/@denhox/sharing-data-between-microservices-fe7fb9471208)
+38. [How Does The Use Of Docker Effect Latency?](http://highscalability.com/blog/2015/12/16/how-does-the-use-of-docker-effect-latency.html)
+39. [Мини-гайд по погашению технического долга](https://habr.com/ru/articles/714568/)
+40. [Expand/Contract: making a breaking change without a big bang](https://blog.thepete.net/blog/2023/12/05/expand/contract-making-a-breaking-change-without-a-big-bang/)
+41. [How to implement security for microservices](https://medium.com/microservices-learning/how-to-implement-security-for-microservices-89b140d3e555)
+42. [Managing Version Dependencies Between Microservices](https://medium.com/@denhox/managing-version-dependencies-between-microservices-648d1d8dd4ca)
+43. [Should That Be a Microservice? Keep These Six Factors in Mind](https://tanzu.vmware.com/content/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind)
+44. [How I Optimized An API Endpoint To Make It 10x Faster](https://bootcamp.uxdesign.cc/how-i-optimized-an-api-endpoint-to-make-it-10x-faster-2f5fe9a84bd9)
+45. **[Длинная транзакция или когда размер имеет значение](https://www.youtube.com/watch?v=3h48iowNbwo)** (video)
+46. **[Свой распределённый S3 на базе MinIO — практический опыт наступания на грабли / Алексей Плетнёв](https://www.youtube.com/watch?v=XiJVC9nzAW4)**(video)
+47. [How to update millions of records in MySQL?](https://www.startdataengineering.com/post/update-mysql-in-batch/)
+48. [Best Practices Working with Billion-row Tables in Databases](https://www.youtube.com/watch?v=wj7KEMEkMUE&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=45) (video)
+49. [Don’t Build a Distributed Monolith](https://www.youtube.com/watch?v=p2GlRToY5HI) (video)
+50. [Decoupling database migrations from server startup: why and how](https://pythonspeed.com/articles/schema-migrations-server-startup/)
+51. [Event Patterns: Request-Reply — is it a pattern or anti-pattern?](https://blog.devgenius.io/event-patterns-request-reply-is-it-a-pattern-or-anti-pattern-641a257192d4)
 
 
-[*Asynchronous](https://github.com/donnemartin/system-design-primer#asynchronism) workflows help reduce request times for expensive operations that would otherwise be performed in-line. They can also help by doing time-consuming work in advance, such as periodic aggregation of data.*
+*[Asynchronous](https://github.com/donnemartin/system-design-primer#asynchronism) workflows help reduce request times for expensive operations that would otherwise be performed in-line. They can also help by doing time-consuming work in advance, such as periodic aggregation of data.*
 
 1. [Message Delivery](https://newsletter.francofernando.com/p/message-delivery?utm_source=substack&publication_id=1172544&post_id=138761278&utm_medium=email&utm_content=share&utm_campaign=email-share&triggerShare=true&isFreemail=true&r=1vxw4z)
 2. [Message Brokers: Queue-based vs Log-based](https://towardsdev.com/message-brokers-queue-based-vs-log-based-66d1140f0f28)
