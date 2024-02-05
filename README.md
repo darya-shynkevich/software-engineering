@@ -12,7 +12,7 @@
 6. [Fastcore — недооцененная, но полезная библиотека Python](https://habr.com/ru/companies/skillfactory/articles/524334/)
 7. [How to (and how not to) design REST APIs](https://github.com/stickfigure/blog/wiki/How-to-(and-how-not-to)-design-REST-APIs)
 8. Asyncio:
-	1. [Асинхронность в Python](notion://www.notion.so/ligonberry/!%3Chttps://www.youtube.com/playlist?list=PLlWXhlUMyooawilqK4lPXRvxtbYiw34S8%3E) (videos) <- рекомендовали в каком-то видосе
+	1. [Асинхронность в Python](https://www.youtube.com/watch?v=ZGfv_yRLBiY) (videos) <- рекомендовали в каком-то видосе
 	2. [Гринлеты, что это такое?](https://itbun.blogspot.com/2014/01/blog-post.html)
 	3. [Python Asyncio Part 2 – Awaitables, Tasks, and Futures](https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-2.html)
 	4. [Should You Use AsyncIO for Your Next Python Web Application?](https://www.laac.dev/blog/page/2/)
