@@ -1,37 +1,33 @@
+Person 1
 
-[The Bizarre Truth About Purebred Dogs (and Why Mutts Are Better) - Adam Ruins Everything](https://www.youtube.com/watch?v=aCv10_WvGxo) (video)
-[How to get motivated even when you don’t feel like it](https://www.youtube.com/watch?v=II5h6uJPvvs) (video)
+1. incompetent
+	1. doesn't seem to have a clue how the department should work
+	2. expected from him
+	3. he's dragging the whole team down
+2. arrogant and bitchy:
+	1. not the easiest person to talk to
+	2. gets really defensive
+	3. puts up this great big barrier
+	4. make up his mind he will never back down
+	5. never accept that he made the wrong decision
+	6. goes behind his teammates back
+	7. interested in is sucking up to whoever is above them in order to get ahead
 
-1. [How To Make Friends As An Adult](https://betterhumans.pub/how-to-make-friends-as-an-adult-77714f99fbbb)
-2. [It Will Take a Lot of Rain Before You See the Rainbow](https://medium.com/the-narrative-arc/it-will-take-a-lot-of-rain-before-you-see-the-rainbow-2bdc6e828de2)
-3. [Technical Debt Has Taken Over The Economy](https://medium.com/@jankammerath/technical-debt-has-taken-over-the-economy-1ffa55128d23)
-4. [Confessions of a Modern Oppressor](https://medium.com/counterarts/confessions-of-a-modern-oppressor-81158f814de6)
-5. [Report from a Relationship](https://juliovincent.medium.com/report-from-a-relationship-74650b0be3a8)
-6. [The best New Year’s resolutions you can make](https://kozyrkov.medium.com/the-15-new-years-resolutions-you-need-to-make-right-now-c0ec111bd212)
-7. [These 14 Small Mindset Shifts Will Change Your Life](https://ryanholiday.medium.com/these-14-small-mindset-shifts-will-change-your-life-5811a4a072c2)
-8. [Prioritizing Your Mental Health During the Holidays](https://shirleydavis-23968.medium.com/prioritizing-your-mental-health-during-the-holidays-5e8d3a1502bf)
-9. [Why Waking Up Earlier Isn’t Necessarily Better]([https://time.com/6282822/better-to-be-morning-person/?utm_source=pocket_collection_story](https://time.com/6282822/better-to-be-morning-person/?utm_source=pocket_collection_story) )
-10. [There Is No Such Thing as “Junk” Food]([https://www.bonappetit.com/story/stop-saying-junk?utm_source=pocket_collection_story](https://www.bonappetit.com/story/stop-saying-junk?utm_source=pocket_collection_story))
-11. [Why It’s Finally Time To Stop Obsessing Over Counting Steps For Health](https://www.inverse.com/health/history-of-fitness-trackers?utm_source=pocket_collection_story) 
-12. [What If You Just Didn’t Clean That Up?]([https://www.thecut.com/2023/02/embracing-mess-vs-cleanliness.html?utm_source=pocket_collection_story](https://www.thecut.com/2023/02/embracing-mess-vs-cleanliness.html?utm_source=pocket_collection_story))
-13. [How Productivity Apps Can Make Us Less Productive (And Less Happy)]([https://www.wsj.com/articles/how-productivity-apps-can-make-us-less-productive-and-less-happy-01583524509?utm_source=pocket_collection_story](https://www.wsj.com/articles/how-productivity-apps-can-make-us-less-productive-and-less-happy-01583524509?utm_source=pocket_collection_story) )
-14. [Unexpected Ways Toxic Positivity Sneaks Its Sunshiny Way Into Your Day]([https://www.romper.com/p/toxic-positivity-messages-are-everywhere-sneaky-according-to-expert-18170511?utm_source=pocket_collection_story](https://www.romper.com/p/toxic-positivity-messages-are-everywhere-sneaky-according-to-expert-18170511?utm_source=pocket_collection_story))
-15. [How to Do 50 Things](https://forge.medium.com/how-to-do-50-things-b525e860fa69)
-16. [The surprising connection between after-hours work and decreased productivity](https://slack.com/intl/en-gb/blog/news/the-surprising-connection-between-after-hours-work-and-decreased-productivity)
-17. [Turning Dreaming into Doing - A Life Manual for Nerds](https://www.youtube.com/watch?v=GP-7GAREISk) (video)
-18. [Refactoring has a price. Not refactoring has a cost. Either way, you pay.](https://www.germanvelasco.com/blog/refactoring-is-a-habit?ref=architecturenotes.co)
-19. [Mastering the Three-Pass Approach to Reading Papers and Conducting Literature Surveys](https://jinlow.medium.com/mastering-the-three-pass-approach-to-reading-papers-and-conducting-literature-surveys-6ee56c83811a)
-20. [Do We Collaborate Too Much?](https://dfeldman.medium.com/do-we-collaborate-too-much-4feaf9efd5ac)
-21. [How We’ll Mess Up The Environment on the Moon](https://clivethompson.medium.com/how-well-mess-up-the-environment-on-the-moon-fa554c96067c)
-22. [Developer experience: What is it and why should you care?](https://github.blog/2023-06-08-developer-experience-what-is-it-and-why-should-you-care/)
-23. [Debugging My Life as an Engineering Manager With ADHD](https://betterprogramming.pub/debugging-my-life-as-an-engineering-manager-with-adhd-c135da4642db)
-24. [Don’t look back](https://medium.com/@Schwarzenegger/dont-look-back-1355725d01a)
-25. [Dear reader, love yourself](https://medium.com/@jindalisha01/dear-reader-love-yourself-e41f39e6d16b)
-26. [Leisure as Anti-Mimesis](https://luke.medium.com/leisure-as-anti-mimesis-f055f9ba23ba)
-27. [How I Learned to Stop Worrying & Love Misery • Gil Tene • YOW! 2019](https://www.youtube.com/watch?v=v7tfuzXQRqw)
-28. [We invested 10% to pay back tech debt; Here's what happened](https://blog.alexewerlof.com/p/tech-debt-day)
-29. [Building a strong knowledge sharing culture on engineering teams](https://swimm.io/blog/software-development-knowledge-sharing-methods-are-broken-heres-why)
-30. [Unleashing Engineering Excellence: Proven Methods to Tackle Tech Debt and Supercharge Your Engineering Team](https://betterprogramming.pub/unleashing-engineering-excellence-proven-methods-to-tackle-tech-debt-and-supercharge-your-team-21463cdca19f)
-31. [Kraken Technologies: How we organise our very large Python monolith](https://blog.europython.eu/kraken-technologies-how-we-organize-our-very-large-pythonmonolith/)
-32. [Code Red: The Business Impact of Code Quality -- A Quantitative Study of 39 Proprietary Production Codebases](https://www.researchgate.net/publication/359129462_Code_Red_The_Business_Impact_of_Code_Quality_--_A_Quantitative_Study_of_39_Proprietary_Production_Codebases)
-33. [Один стендап в Яндекс.Такси, или Чему нужно научить бэкенд-разработчика](https://habr.com/ru/companies/yandex/articles/464179/)
+Person 2
+
+1. decent gay
+	1. stand up for what he believes in
+2. fake
+	1. rubbish about saving the world and helping the starving millions that he's always going on about
+	2. at the centre of attention
+
+Person 3
+
+1. nice and very bright and chatty
+2. take no notice of problems with one bathroom
+
+Person 4
+1. a bit of a slacker
+2. takes everything in his stride
+3. nobody have ever seen him studying or at any lecture
+4. he just seems, well, extremely laid back about
