@@ -18,6 +18,6 @@
 # References
 
 1. [Why you should think twice about creating custom security solutions](https://vvsevolodovich.dev/why-you-should-think-twice-about-creating-custom-security-solutions/)
-2. 
+2. ! [All you need to know about login (SSO, LDAP, SAML, OAuth, OpenID)I was recently asked this question again: “What is the difference between authentication and authorization?”](https://iorilan.medium.com/all-you-need-to-know-about-login-sso-ldap-saml-oauth-openid-i-was-recently-asked-this-question-aea8ae47ce2b)
 3. [Криптографические атаки: объяснение для смятённых умов](https://habr.com/ru/post/462437/)
 

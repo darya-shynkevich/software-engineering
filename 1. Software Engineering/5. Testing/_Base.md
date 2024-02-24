@@ -1,4 +1,6 @@
 
+[localstack](https://www.localstack.cloud/) - develop and test your AWS applications locally to reduce development time and increase product velocity. Reduce unnecessary AWS spend and remove the complexity and risk of maintaining AWS dev accounts
+
 # Books:
 
 1. [Хориков В. - Принципы юнит-тестирования](http://libgen.rs/book/index.php?md5=FFFC58A9B1793A61F7EFF6EFCBDA11F2). Рекомендую, есть как на русском, так и на англ. Тема сама по себе не очень обширная (хотя в книге и интегр тестирование рассматривается), но рассмотрена со всех возможных сторон. Изложение слегка хромает, при этом книжка очень практическая, чувствуется, что автор сформировал всё на собственном обширном опыте. Есть спорные моменты, однако бескомпромиссных решений не бывает.

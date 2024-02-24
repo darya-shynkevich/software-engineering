@@ -5,6 +5,7 @@ Most relational databases do not offer an LSM tree storage option. MySQL is an e
 # References:
 
 1. ! [Log-Structured Merge Tree](https://itnext.io/log-structured-merge-tree-a79241c959e3)
-2. [On Disk IO, Part 1: Flavors of IO](!https://medium.com/@ifesdjeen/on-disk-io-part-1-flavours-of-io-8e1ace1de017)
-3. [Percona MyRocks Introduction](!https://docs.percona.com/percona-server/5.7/myrocks/index.html)
-4. [Deep dive into LSM tree](https://vishalrana9915.medium.com/maximising-performance-with-lsm-trees-a-guide-to-dynamic-data-storage-2c904954215a)
+2. ! [How does the LSM tree work](https://iorilan.medium.com/how-does-the-lsm-tree-work-7a9fa4b54c36)
+3. [On Disk IO, Part 1: Flavors of IO](!https://medium.com/@ifesdjeen/on-disk-io-part-1-flavours-of-io-8e1ace1de017)
+4. [Percona MyRocks Introduction](!https://docs.percona.com/percona-server/5.7/myrocks/index.html)
+5. [Deep dive into LSM tree](https://vishalrana9915.medium.com/maximising-performance-with-lsm-trees-a-guide-to-dynamic-data-storage-2c904954215a)
