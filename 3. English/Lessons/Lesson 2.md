@@ -1,6 +1,6 @@
 congested
 sprawling
-opluence
+opulence
 
 ![Pasted image 20231028234554](../../_Attachments/Pasted%20image%2020231028234554.png)
 
