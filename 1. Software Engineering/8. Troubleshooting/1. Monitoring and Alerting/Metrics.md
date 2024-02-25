@@ -1,3 +1,5 @@
+[autometrics-py](https://github.com/autometrics-dev/autometrics-py) provides a decorator that makes it trivial to instrument any function with the most useful metrics: request rate, error rate, and latency. It standardizes these metrics and then generates powerful Prometheus queries based on your function details to help you quickly identify and debug issues in production.
+
 [Percentiles](8.%20Troubleshooting/1.%20Monitoring%20and%20Alerting/Percentiles.md)
 
 ! We need to collect values of metrics with minimal performance penalty.
