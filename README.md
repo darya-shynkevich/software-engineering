@@ -104,13 +104,3 @@
 4. **[io_submit: альтернатива epoll, о которой вы никогда не слышали](https://habr.com/ru/companies/badoo/articles/439972/)**
 5. [Все, что вы хотели знать об обработке запросов, но стеснялись спросить](https://habr.com/ru/articles/432630/)
 6. [The Secret To 10 Million Concurrent Connections -The Kernel Is The Problem, Not The Solution](http://highscalability.com/blog/2013/5/13/the-secret-to-10-million-concurrent-connections-the-kernel-i.html)
-
-**Books:**
-1. Highload++ emails
-2. [Python Concurrency Learning Paths](https://superfastpython.com/learning-paths/)
-3. [Python Debugging Handbook – How to Debug Your Python Code](https://www.freecodecamp.org/news/python-debugging-handbook/)
-4. [Problem Solving with Algorithms and Data Structures using Python](https://runestone.academy/ns/books/published/pythonds/index.html)
-5. [**Software Architecture: The Hard Parts**](https://amzn.to/3vZD4JO) + [notes](https://medium.com/@techworldwithmilan/what-i-learned-from-the-software-architecture-the-hard-parts-0498c9eae88e)
-6. [Data Structures for Data-Intensive Applications: Tradeoffs and Design Guidelines](https://twitter.com/eatonphil/status/1755755110649450903?t=WKbEZxafwPIXSKsj4ddW4A)
-7. [Grokking Simplicity: Taming Complex Software with Functional Thinking](https://www.amazon.com/gp/aw/d/B09QLMPXHM/ref=tmm_aud_swatch_0?ie=UTF8&qid=&sr=)
-8. [The No Asshole Rule: Building a Civilized Workplace and Surviving One That Isn't](https://www.amazon.com/Asshole-Rule-Civilized-Workplace-Surviving/dp/1600245854)
