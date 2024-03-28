@@ -9,3 +9,4 @@
 3. [Открытое руководство по Amazon Web Services](https://github.com/nickpoida/og-aws/blob/master/translations/ru.md#s3) (краткое руководство по различным AWS сервисам)
 4. [AWS: the good, the bad and the ugly](https://web.archive.org/web/20160429075023/http://blog.awe.sm/2012/12/18/aws-the-good-the-bad-and-the-ugly/#~pIAs0YDtmgoLeq)
 5. [AWS Do's and Don'ts](https://8thlight.com/blog/sarah-sunday/2017/09/15/aws-dos-and-donts.html)
+6. [S3 is files, but not a filesystem](https://calpaterson.com/s3.html)

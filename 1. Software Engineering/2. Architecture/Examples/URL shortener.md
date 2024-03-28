@@ -33,3 +33,4 @@ To expose the functionality of our service, we can use REST APIs for the followi
 15. [URL Shortening System Design](https://medium.com/nerd-for-tech/url-shortening-system-design-88cd005604b4) + [Knowledge Test](https://medium.com/nerd-for-tech/knowledge-test-url-shortening-system-design-ad80b7e3073f)
 16. [Design URL Shortener](https://medium.com/@samjingwen/design-url-shortener-de7214ecea3)
 17. [URL shortener System design](https://medium.com/@narengowda/url-shortener-system-design-3db520939a1c)
+18. [How does URL shortening for TinyUrl, Bit.ly work?](https://medium.com/javarevisited/day-1-high-level-system-design-series-url-shortening-d28888d71084)

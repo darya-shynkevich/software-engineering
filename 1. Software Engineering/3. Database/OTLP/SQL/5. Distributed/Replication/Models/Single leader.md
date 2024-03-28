@@ -69,3 +69,6 @@ If the database always applies writes in the same order, reads always see a cons
 
 ?
 
+# References:
+
+1. [PostgreSQL Master-Slave Database Replication](https://blog.devgenius.io/postgresql-master-slave-database-replication-a845777901ab)

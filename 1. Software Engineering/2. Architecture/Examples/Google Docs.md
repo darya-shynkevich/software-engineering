@@ -63,5 +63,6 @@ A CRDT satisfies both commutativity and idempotency by assigning two key propert
 
 # References:
 
-1. [Two Ex-Google System Design Experts Compete: Who will design the better system?](https://www.youtube.com/watch?v=Zi0pPkiFemE)
-2. [Design Google Docs](https://www.enjoyalgorithms.com/blog/design-google-docs)
+1. ! [Design Google Docs/Real Time Text Editor | Systems Design Interview Questions With Ex-Google SWE](https://www.youtube.com/watch?v=YCjVIDv0zQY)
+2. [Two Ex-Google System Design Experts Compete: Who will design the better system?](https://www.youtube.com/watch?v=Zi0pPkiFemE)
+3. [Design Google Docs](https://www.enjoyalgorithms.com/blog/design-google-docs)

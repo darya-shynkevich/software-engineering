@@ -52,19 +52,20 @@ Good example of this is async replicas in background
 # References:
 
 1. [CAP Theorem Simplified](https://vishalrana9915.medium.com/cap-theorem-simplified-de3ddcc1f09e)
-2. [CAP theorem revisited](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
-3. [A plain english introduction to CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem)
-4. [CAP Theorem — An impossible choice](https://medium.com/@toxicdev/cap-theorem-an-impossible-choice-c04482b8a36c)
-5. [The CAP theorem](https://www.youtube.com/watch?v=k-Yaq8AHlFA)
-6. [CAP Theorem and Trade-offs](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
-7. [System design fundamentals: What is the CAP theorem?](https://www.educative.io/blog/what-is-cap-theorem#whatiscaptheorem)
-8. [An Illustrated Proof of the CAP Theorem](https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/)
-9. [The CAP FAQ](https://www.the-paper-trail.org/page/cap-faq/)
-10. ~~[My thoughts on the CAP theorem](https://www.youtube.com/watch?v=KmGy3sU6Xw8&list=PLQnljOFTspQXNP6mQchJVP3S-3oKGEuw9&index=73) (video)~~
-11. [](https://github.com/donnemartin/system-design-primer#cap-theorem)[https://github.com/donnemartin/system-design-primer#cap-theorem*](https://github.com/donnemartin/system-design-primer#cap-theorem*)
-12. [Spanner, TrueTime & The CAP Theorem](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45855.pdf)
-13. [Harvest, Yield and Scalable Tolerant Systems](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.33.411) - Real world applications of CAP from Brewer et al*
-14. [CAP Conjecture](https://web.archive.org/web/20190629112250/https://www.glassbeam.com/sites/all/themes/glassbeam/images/blog/10.1.1.67.6951.pdf) - Consistency, Availability, Parition Tolerance cannot all be satisfied at once*
-15. [CAP Twelve Years Later: How the "Rules" Have Changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed) - Eric Brewer expands on the original tradeoff description*
-16. [Забудьте САР теорему как более не актуальную](https://habr.com/ru/articles/258145/)
-17. [CAP vs PACELC](https://www.designgurus.io/blog/system-design-interview-basics-cap-vs-pacelc) [CAP and Consistenc](https://www.yugabyte.com/blog/a-for-apple-b-for-ball-c-for-cap-theorem/)
+2. ! [The CAP Theorem. The Bad, the Bad, & the Ugly](https://blog.dtornow.com/the-cap-theorem.-the-bad-the-bad-the-ugly/)
+3. [CAP theorem revisited](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
+4. [A plain english introduction to CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem)
+5. [CAP Theorem — An impossible choice](https://medium.com/@toxicdev/cap-theorem-an-impossible-choice-c04482b8a36c)
+6. [The CAP theorem](https://www.youtube.com/watch?v=k-Yaq8AHlFA)
+7. [CAP Theorem and Trade-offs](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
+8. [System design fundamentals: What is the CAP theorem?](https://www.educative.io/blog/what-is-cap-theorem#whatiscaptheorem)
+9. [An Illustrated Proof of the CAP Theorem](https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/)
+10. [The CAP FAQ](https://www.the-paper-trail.org/page/cap-faq/)
+11. ~~[My thoughts on the CAP theorem](https://www.youtube.com/watch?v=KmGy3sU6Xw8&list=PLQnljOFTspQXNP6mQchJVP3S-3oKGEuw9&index=73) (video)~~
+12. [](https://github.com/donnemartin/system-design-primer#cap-theorem)[https://github.com/donnemartin/system-design-primer#cap-theorem*](https://github.com/donnemartin/system-design-primer#cap-theorem*)
+13. [Spanner, TrueTime & The CAP Theorem](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45855.pdf)
+14. [Harvest, Yield and Scalable Tolerant Systems](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.33.411) - Real world applications of CAP from Brewer et al*
+15. [CAP Conjecture](https://web.archive.org/web/20190629112250/https://www.glassbeam.com/sites/all/themes/glassbeam/images/blog/10.1.1.67.6951.pdf) - Consistency, Availability, Parition Tolerance cannot all be satisfied at once*
+16. [CAP Twelve Years Later: How the "Rules" Have Changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed) - Eric Brewer expands on the original tradeoff description*
+17. [Забудьте САР теорему как более не актуальную](https://habr.com/ru/articles/258145/)
+18. [CAP vs PACELC](https://www.designgurus.io/blog/system-design-interview-basics-cap-vs-pacelc) [CAP and Consistenc](https://www.yugabyte.com/blog/a-for-apple-b-for-ball-c-for-cap-theorem/)

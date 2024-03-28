@@ -1,4 +1,4 @@
-When you create a table in a database, a file is created on disk and the data are layout out into a [_Base](_Base.md). How the data is laid out in the page depends on whether the engine is row-store or column-store. Think of a page as a structure which has a header and data, the data portion is where the rows live.
+When you create a table in a database, a file is created on disk and the data are layout out into a [_Base](1.%20Software%20Engineering/3.%20Database/OTLP/SQL/1.%20Internals/Database%20Pages/_Base.md). How the data is laid out in the page depends on whether the engine is row-store or column-store. Think of a page as a structure which has a header and data, the data portion is where the rows live.
 
 A database page can be 8KB (Postgres) or 16KB (e.g. MySQL innodb) or more. The table is stored as an array of pages in the file, where page index + size tells the database exactly which offset to seek to and how much to read. For example, assume database page size is 8KB to read page 7 on disk, you need to seek to the offset 7*8192 + 1 and you would read a length of 8192 bytes.
 

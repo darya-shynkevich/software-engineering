@@ -31,6 +31,7 @@
 15. [Пишем и тестируем миграции БД с Alembic](https://habr.com/ru/company/yandex/blog/511892/)
 16. [Тестируем слой БД в Python с использованием pytest и testcontainers](https://habr.com/ru/articles/677598/)
 17. [How to simulate a broken database connection for testing in Django](https://neilkakkar.com/test-database-connection-django.html)
+18. [Don't Mock Machine Learning Models In Unit Tests](https://eugeneyan.com/writing/unit-testing-ml/)
 
 #### Hypothesis:
 
