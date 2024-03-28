@@ -10,7 +10,7 @@ In Fig A, we have two nodes, each with green and red colours. In this case, ther
 
 In distributed systems, we mostly have an odd number of nodes, so the chances of us running into a situation like the one depicted in Fig A are slim. There will always be more than half the number of given nodes deciding on something, provided that there are two options to choose from.
 
-Quorum is used in almost all consensus-based algorithms in distributed systems. [[../../1. Concepts/Consensus Algorithms/Raft]] is one of the famous consensus algorithms that uses quorum as the core of their algorithm logic.
+Quorum is used in almost all consensus-based algorithms in distributed systems. [[Raft]] is one of the famous consensus algorithms that uses quorum as the core of their algorithm logic.
 
 # Problem of split brain in distributed systems
 

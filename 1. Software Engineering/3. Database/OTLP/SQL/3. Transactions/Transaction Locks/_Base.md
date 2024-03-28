@@ -1,3 +1,4 @@
+A lock is a mechanism that prevents access to a resource, such as a file, database or even a piece of memory by restricting access to only those users who have claimed the lock. In software applications, locks are used to ensure that multiple users or processes do not simultaneously access and modify a shared resource, which can lead to data corruption or inconsistency.
 # [Optimistic and Pessimistic](Optimistic%20and%20Pessimistic.md)
 
 # Shared or Exclusive
@@ -15,6 +16,11 @@ To do WRITE you need to acquire an **Exclusive lock** => all READers will wait.
 Disadvantages:
 1. Not good for concurrency
 
+There are a few other lock types, one I like are **_spin locks_** which are primarily used in lower-level programming, like in kernels, to minimise time spent waiting for lock release and acquisition.
+
+> It's important to note that ***spin locks*** can lead to high CPU usage if the lock is held for a long time, as the thread continues to spin and consume CPU cycles. Therefore, they should be used with caution and only in situations where the benefits outweigh the potential drawbacks, like in kernels where most locks are held for really short periods.
+
+In addition to optimizing the lock mechanism, it is also important to *properly design the software application to minimize the impact of locks on performance*. This can be achieved by *implementing asynchronous programming techniques, which allow the application to continue executing while waiting for a lock to be released*.
 # Two Phase Locking
 
 1. Используется в DB2, SQL Server

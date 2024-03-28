@@ -1,0 +1,3 @@
+A **computer cluster** is a set of computers that work together to be viewed as a single system. These systems came into existence to support workloads that needed more than one computer or to be backups in cases of failures. 
+
+Clusters can operate as individual nodes helping spread the load, e.g., traditional web servers or intricate systems that work closely together and present a unified front in like database systems like CockroachDB and etcd.

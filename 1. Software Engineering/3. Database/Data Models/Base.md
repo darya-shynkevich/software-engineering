@@ -37,7 +37,7 @@ Like document databases, IMS worked well for one-to-many relationships, but it m
 
 Various solutions were proposed to solve the limitations of the hierarchical model. The two most prominent were the [Relational Model](Relational%20Model.md) (which became SQL, and took over the world) and the [Network Model](Network%20Model.md) (which initially had a large following but eventually faded into obscurity).
 
-[Quorum](../../2.%20Architecture/4.%20API/Concepts/Quorum.md)
+[Quorum](Quorum.md)
 
 # References:
 

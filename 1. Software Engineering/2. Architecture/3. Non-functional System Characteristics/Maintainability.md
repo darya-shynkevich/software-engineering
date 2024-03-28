@@ -21,3 +21,13 @@ In other words, MTTR is the average amount of time required to repair and restor
 Maintainability can be defined more clearly in close relation to reliability. The only difference between them is the variable of interest. Maintainability refers to `time-to-repair`, whereas reliability refers to both `time-to-repair` and the `time-to-failure`. Combining maintainability and reliability analysis can help us achieve availability, downtime, and uptime insights.
 
 # [Documentation](Documentation.md)
+
+
+# Technical Debt
+
+Early on when you are standing up your system its important to keep things simple and as [loosely coupled](Complexity%20and%20Coupling/Loosely%20Coupled.md) as possible. This is both in architecture and implementation.
+
+*The perfect race car crosses the finish line in first place and immediately falls into pieces.*
+
+[[Complexity]] is inevitable, don't worry you won't need to try hard. Each new component is more one component that needs to be accounted for when making a change.
+

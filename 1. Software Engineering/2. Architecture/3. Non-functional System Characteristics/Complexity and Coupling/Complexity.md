@@ -9,6 +9,12 @@
     - Choosing constructs that generate simple artifacts.
     - Simplify by encapsulation.
 
+Overengineering can lead to the following problems:
+1. Increased complexity: The more complex a system is, the harder it is to maintain, test, and debug.
+2. Increased development time: Adding unnecessary features or functionality will take longer to develop and test.
+3. Increased maintenance costs: Overengineered systems are harder to maintain, meaning that it will cost more to keep them running.
+4. Reduced performance: Overengineered systems may perform worse than simpler systems, due to the increased complexity.
+
 ### References:
 
 1. https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.93.8928 TBD

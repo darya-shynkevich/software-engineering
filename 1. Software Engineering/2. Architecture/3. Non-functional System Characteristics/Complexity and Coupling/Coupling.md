@@ -1,4 +1,4 @@
-
+[Loosely Coupled](Loosely%20Coupled.md)
 # References:
 
 1. [Balancing Coupling in Software Design](https://www.youtube.com/watch?v=6indW7BSGZI) (video)

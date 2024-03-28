@@ -1,3 +1,25 @@
+Circuit breakers, much like their hardware counterparts, are a vital component of their respective systems, helping to ***improve reliability and resilience by preventing failures from cascading and causing widespread damage***. 
+
+When the circuit breaker "trips," it interrupts traffic flow to the affected component, redirects it elsewhere, or returns an unavailable error to the requesting client.
+### Tripping The Circuit
+
+At a high level, circuit breakers work by monitoring the performance of a component and "tripping" if the component starts to experience issues. The specific criteria for tripping the circuit breaker can vary (highly difficult to get write the first time), but it might include things like:
+1. high error rate
+2. slow response times, or a large number of timeouts.
+
+> When tripping the circuit, it is also essential to remember that your systems have a period of high load and low load. If you have an error threshold of 10% over 10,000 requests, that's 1,000 failures in the window before the circuit trips, but if there are ten requests, that's one failure tripping the circuit. Test for both scenarios and adjust by setting absolute minimum errors as another gate.
+
+### Resetting the Circuit
+
+1. We can wait for a set amount of time, we can also incorporate a back off here too, but remember this can effect overall system time to recovery.
+2. We can use some other metrics we know can caused the breaker to trip like load (don't do this, complexity inducing.) to see if the system is ready to work. I personally find this a bit janky unless you control the upstream system and ultimately ends up in a 'true engineering' task finding all the ways the metric you chose doesn't work in specific scenarios.
+3. Upstream system healthchecks.
+
+### Best Practices for Circuit Breakers
+
+1. Test, test, test: It's important to thoroughly test circuit breakers to ensure that they are tripping and resetting at the right times and providing the desired level of protection. This might include testing the circuit breaker under different load and failure scenarios to ensure it is functioning as expected.
+2. Monitor, monitor, monitor: Circuit breakers should be monitored to ensure they are functioning properly and to identify any potential issues. This might include tracking the number of times the circuit breaker has tripped, the length of time it takes for the circuit breaker to reset, and the impact of the circuit breaker on the system.
+3. Regular maintenance: Circuit breakers should be regularly maintained to ensure they are functioning properly and to make any necessary updates or adjustments. This might include things like updating the thresholds at which the circuit breaker trips or adjusting the circuit breaker's behaviour in response to changes in the system.
 
 # References:
 
