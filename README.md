@@ -1,4 +1,6 @@
 
+https://deadlockempire.github.io/
+
 1. [Feature flags are ruining your codebase](https://zaidesanton.substack.com/p/feature-flags-are-ruining-your-codebase)
 2. **[FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices?tab=readme-ov-file#fastapi-best-practices)**
 3. ! [The Copenhagen Book](https://thecopenhagenbook.com/)
@@ -46,6 +48,7 @@
     9. [System Design Interview: Mastering Databases](https://levelup.gitconnected.com/system-design-interview-mastering-databases-9fb40bb561cd) ---- short summary
     10. [Postgres vs MySQL](https://medium.com/@hnasr/postgres-vs-mysql-5fa3c588a94e)
     11. [Garbage Collection in PostgreSQL](https://akashcsharma.medium.com/garbage-collection-in-postgresql-d833b80b6ef5)
+    12. [Alexey Gotsman "Database Isolation Levels" ](https://www.youtube.com/watch?v=0PalC3X3x2A)(video)
 22. **[Устройство CPython. Доклад Яндекса / Блог компании Яндекс / Хабр](https://habr.com/ru/company/yandex/blog/511972/)** (video) <-- очень важный видос, тут рассказывается об основах и устройстве всего в питоне
 23. [Memory management in Python | Artem Golubin](https://rushter.com/blog/python-memory-managment/)
 24. [Pointers in Python: What's the Point? – Real Python](https://realpython.com/pointers-in-python/)

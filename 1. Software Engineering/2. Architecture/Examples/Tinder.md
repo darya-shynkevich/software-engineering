@@ -7,4 +7,4 @@
 4. [How we built the Tinder API Gateway](https://medium.com/tinder/how-we-built-the-tinder-api-gateway-831c6ca5ceca)
 5. [Tumblr Architecture](http://highscalability.com/blog/2012/2/13/tumblr-architecture-15-billion-page-views-a-month-and-harder.html)
 6. [Phoenix: Testing Platform (3 parts) at Tinder](https://medium.com/tinder-engineering/phoenix-tinders-testing-platform-part-iii-520728b9537)
-7. # Tinder
+7. [Tinder (System Design and Architecture)](https://durgesh0607.medium.com/tinder-system-design-and-architecture-5853b6ed50bd)
