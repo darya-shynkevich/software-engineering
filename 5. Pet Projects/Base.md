@@ -4,11 +4,12 @@
 
 1. [Тред фронтенд-инструментов для пет-проектов](https://twitter.com/nat_davydova/status/1737429176519418084) Куча полезной инфы по постороению UI
 2. [Propan — Python фреймворк для написания микросервисов с использованием брокеров сообщений](https://habr.com/ru/articles/737536/)
-3. [reflex](https://github.com/reflex-dev/reflex) —- Performant, customizable web apps in pure Python. Deploy in seconds.
-4. [15+ Best React Admin Templates 2021 - aThemes](https://athemes.com/collections/best-react-admin-templates/)
-5. [creosote](https://github.com/fredrikaverpil/creosote) —- Identify unused dependencies and avoid a bloated virtual environment.
-6. [Ultimate CI Pipeline for All of Your Python Projects](https://towardsdatascience.com/ultimate-ci-pipeline-for-all-of-your-python-projects-27f9019ea71a)
-7. [4 Python Packages to Create Interactive Dashboards](https://towardsdatascience.com/4-python-packages-to-create-interactive-dashboards-d50861d1117e)
+3. https://github.com/minos-framework/minos-python 
+4. [reflex](https://github.com/reflex-dev/reflex) —- Performant, customizable web apps in pure Python. Deploy in seconds.
+5. [15+ Best React Admin Templates 2021 - aThemes](https://athemes.com/collections/best-react-admin-templates/)
+6. [creosote](https://github.com/fredrikaverpil/creosote) —- Identify unused dependencies and avoid a bloated virtual environment.
+7. [Ultimate CI Pipeline for All of Your Python Projects](https://towardsdatascience.com/ultimate-ci-pipeline-for-all-of-your-python-projects-27f9019ea71a)
+8. [4 Python Packages to Create Interactive Dashboards](https://towardsdatascience.com/4-python-packages-to-create-interactive-dashboards-d50861d1117e)
 
 # How to organise code:
 
