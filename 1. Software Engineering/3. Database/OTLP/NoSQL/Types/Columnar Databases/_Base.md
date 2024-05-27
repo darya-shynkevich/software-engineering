@@ -1,5 +1,12 @@
 **Columnar databases** store data in columns instead of rows. They enable access to all entries in the database column quickly and efficiently. Popular columnar databases include [[Cassandra]], [[HBase]], [[Hypertable]], and Amazon [[Redshift]].
 
+(+) read the entire column value fast;
+(+) easy compression (the same data type stores closer could be easily compressed)
+
+Use cases:
+- reporting and BI
+- data analytics
+
 **Use case**: ***Columnar databases are efficient for a large number of aggregation and data analytics queries.*** ***It drastically reduces the disk I/O requirements and the amount of data required to load from the disk.*** For example, in applications related to financial institutions, there’s a need to sum the financial transaction over a period of time. Columnar databases make this operation quicker by just reading the column for the amount of money, ignoring other attributes of customers.
 
 The following figure shows an example of a columnar database, where data is stored in a column-oriented format. This is unlike relational databases, which store data in a row-oriented fashion:

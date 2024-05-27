@@ -46,3 +46,7 @@ What if my cache is distributed? and when I delete one cache then need to notify
 Remember how [7. CPU level cache](7.%20CPU%20level%20cache.md) “tells” other “CPUs” that its cache is outdated? just use the same idea. At the CPU level, it uses bus snooping with MESI protocol, at the system level we can ***use a message queue(or subscribe to Mysql binlog) to do pub/sub.***
 
 What if delete failed, Let’s say some nodes never ack the message. retry.
+
+# References:
+
+1. ~~[Lunch and cache invalidation — A story](https://medium.com/@hnasr/lunch-and-cache-invalidation-a-story-afa8684621d7)~~

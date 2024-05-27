@@ -25,9 +25,16 @@ Benchmarking and profiling might point you to the following optimizations.
 - Placing an index can keep the data in memory, requiring more space.
 - Writes could also be slower since the index also needs to be updated.
 - **When loading large amounts of data, it might be faster to disable indices, load the data, then rebuild the indices.**
+- Avoid creating too many indexes to prevent insert and update performance impact and storage consumption.
+
+[Sometimes indexes can be not effective](1.%20Software%20Engineering/3.%20Database/OTLP/SQL/2.%20Indexes/_Base.md) (`SHOWPLAN_TEXT` to check):
+
 ## 3. Avoid expensive joins
 
 - [Denormalize](https://github.com/donnemartin/system-design-primer#denormalization) where performance demands it.
+- Join small tables first to reduce dataset size before joining larger tables, improving query performance.
+- Avoid excessive table joins to prevent performance degradation and complexity in queries.
+- Be cautious of join types and conditions to avoid unintended Cartesian products or inefficient query plans.
 ## 4. [Partitioning](../../../../3.%20Database/OTLP/SQL/5.%20Distributed/Partitioning/Partitioning.md) tables
 
 - Break up a table by putting hot spots in a separate table to help keep it in memory.
@@ -41,6 +48,14 @@ Benchmarking and profiling might point you to the following optimizations.
 1. [Филипп Дельгядо — СУБД: индивидуальный пошив и подгонка по фигуре](https://www.youtube.com/watch?v=l4l5pLlC40U) (video)
 2. [Tuning Your PostgreSQL Server](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server)
 3. [Performance Tuning PostgreSQL](https://www.revsys.com/writings/postgresql-performance.html)
+
+## 8. Tune queries
+
+- Prefer `UNION ALL` over `UNION` for combining result sets to avoid removing duplicate rows and improve query efficiency.
+- Execute multiple operations in a single batch to minimize round trips between the application and database server.
+- Use OFFSET and FETCH NEXT for efficient pagination instead of LIMIT.
+- Rewrite subqueries as join operations for better performance.
+- Optimize GROUP BY queries by including only necessary columns and applying appropriate aggregate functions.
 
 # References:
 
