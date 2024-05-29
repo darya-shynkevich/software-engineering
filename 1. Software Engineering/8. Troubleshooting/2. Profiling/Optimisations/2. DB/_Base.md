@@ -19,9 +19,9 @@ Benchmarking and profiling might point you to the following optimizations.
 
 > `BUFFERS` extends `EXPLAIN` by adding values to describe the data read/written by each operation => *We’re not only getting info on the query plan, but also on the actual data we move around*
 
-`Buffers: shared hit=1166 read=3117` => **1166 blocks (9,551,872 bytes) were provided by the shared cache**, but **3117 blocks (25,534,464 bytes) had to be read from disk**. => we can take a look at the places where we read a lot of data from disk and try to optimise them. 
-
-
+1. Always use `BUFFERS` when running an `EXPLAIN`. It gives some data that may be crucial for the investigation. `Buffers: shared hit=1166 read=3117` => **1166 blocks (9,551,872 bytes) were provided by the shared cache**, but **3117 blocks (25,534,464 bytes) had to be read from disk**. => we can take a look at the places where we read a lot of data from disk and try to optimise them. 
+2. Always, always try to get an `Index Cond` (called `Index range scan` in MySQL) instead of a `Filter`.
+3. Always, always, always assume PostgreSQL and MySQL will behave differently. Because they do.
 
 # Best Practices:
 ## 1. [[Tighten up the schema]]
