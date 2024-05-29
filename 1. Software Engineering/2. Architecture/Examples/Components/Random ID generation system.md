@@ -44,7 +44,7 @@ This microservice can become a single point of failure, but a **failover server
 (+) numeric
 
 (-) we lose a significant range when a server dies and can only provide a new range once it’s live again
-![](../../../_Attachments/Pasted%20image%2020240127220104.png)
+![](Pasted%20image%2020240127220104.png)
 
 # Unique IDs with Causality
 

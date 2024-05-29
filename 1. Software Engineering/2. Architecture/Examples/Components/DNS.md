@@ -1,4 +1,4 @@
-# [How DNS works?](../../7.%20Networks/5.%20DNS.md)
+# [How DNS works?](5.%20DNS.md)
 
 The distributed nature of DNS has the following advantages:
 

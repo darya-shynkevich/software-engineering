@@ -1,6 +1,6 @@
 *==It serves as a mechanism for delivering notifications or alerts to users through various communication channels, including options like email, push notifications, and text messages.==*
 
-![Pasted image 20230826024221](../../../_Attachments/Pasted%20image%2020230826024221.png)
+![Pasted image 20230826024221](Pasted%20image%2020230826024221.png)
 
 
 # References:

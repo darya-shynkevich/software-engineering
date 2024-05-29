@@ -1,4 +1,12 @@
 
+**Transcoding** is the process of converting a video to different formats. It’s necessary because each client device supports a different format. While the **bit rate** represents the data in each second of the video.
+
+# Top k requests during past time interval
+
+1. [Efficient Computation of Frequent and Top-k Elements in Data Streams](http://www.cse.ust.hk/~raywong/comp5331/References/EfficientComputationOfFrequentAndTop-kElementsInDataStreams.pdf)
+2. [An Optimal Strategy for Monitoring Top-k Queries in Streaming Windows](http://davis.wpi.edu/xmdv/docs/EDBT11-diyang.pdf)
+
+
 # [**Stream Data Deduplication**](https://en.wikipedia.org/wiki/Data_deduplication)
 
 1. [Exactly-once Semantics with Kafka](https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/)

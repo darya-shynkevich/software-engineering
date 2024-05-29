@@ -1,5 +1,5 @@
 
-[Rate Limiting](../1.%20Concepts/Rate%20Limiting.md)
+[Rate Limiting](1.%20Software%20Engineering/2.%20Architecture/1.%20Concepts/Rate%20Limiting.md)
 
 # References:
 

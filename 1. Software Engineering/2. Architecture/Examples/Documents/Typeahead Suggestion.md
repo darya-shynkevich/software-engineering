@@ -15,15 +15,15 @@ The system should suggest top N (let’s say top ten) frequent and relevant te
 
 # Data Structure for Storing Prefixes
 
-We should use [Trie](../../1.%20Algorithms/Data%20Structures/Tree/Trie.md) as a structure to store our suggestions.
+We should use [Trie](Trie.md) as a structure to store our suggestions.
 
 The trie can combine nodes as one where only a single branch exists, which reduces the depth of the tree. This also reduces the traversal time, which in turn increases the efficiency. As an example, a space- and time-efficient model of the above trie is the following:
 
 **Track the top searches**: Since our system keeps track of the top searches and returns the top suggestion, we store the number of times each term is searched in the trie node. Let’s say that a user searches for `UNITED` 15 times, `UNIQUE` 20 times, `UNIVERSAL` 21 times, and `UNIVERSITY` 25 times. In order to provide the top suggestions to the user, these counts are stored in each node where these terms terminate.
-![](../../../_Attachments/Pasted%20image%2020240127213351.png)
+![](Pasted%20image%2020240127213351.png)
 
 One way to reduce the trie traversal time is to pre-compute and save the top ten (or any number of our choosing) suggestions for every prefix in the node. This means that instead of traversing the trie each time a user types in “UNIVERS” into the search box, the system will have precomputed, sorted, and stored the solution to the prefix `UNIVERS`—that is, `UNIVERSITY`, `UNIVERSAL`, and so on—inside the node that carries the prefix `UNIVERS`. However, this approach requires extra space to save precomputed results.
-![](../../../_Attachments/Pasted%20image%2020240127213517.png)
+![](Pasted%20image%2020240127213517.png)
 
 ### Trie partitioning
 
@@ -31,19 +31,19 @@ Let’s assume that the trie is split into two parts, and each part has a replic
 
 We can split the trie into as many parts as we wish to distribute the load on to different servers and achieve the desired performance.
 
-![](../../../_Attachments/Pasted%20image%2020240127213611.png)
+![](Pasted%20image%2020240127213611.png)
 
 *Where will the mapping between the prefixes and their primary and secondary storage be stored? Who will manage and direct the requests to these servers?*
 
 In a distributed system where multiple clusters consisting of several servers can be used for a specific service, we use a cluster manager like ZooKeeper to store the mapping between clusters.
 
-![](../../../_Attachments/Pasted%20image%2020240127214425.png)
+![](Pasted%20image%2020240127214425.png)
 
 1. **Suggestion service:** we will use `web sockets` to make suggestions faster
 2. **Collection service:** whenever a user types, this service collects the log that consists of phrases, time, and other metadata and dumps it in a database that’s processed later. Since the size of this data is huge, the **Hadoop Distributed File System (HDFS)** is considered a suitable storage system for storing this raw data.
 3. **Aggregator:** The raw data collected by the **collection service** is usually not in a consolidated shape. We need to consolidate the raw data to process it further and to create or update the tries. An aggregator retrieves the data from the HDFS and distributes it to different workers. Generally, the MapReducer is responsible for aggregating the frequency of the prefixes over a given interval of time, and the frequency is updated periodically in the associated Cassandra database. **Cassandra** is suitable for this purpose because it can store large amounts of data in a tabular format.
 4. **Trie builder:** This service is responsible for creating or updating tries. It stores these new and updated tries on their respective shards in the trie database via ZooKeeper. Tries are stored in persistent storage in a file so that we can rebuild our trie easily if necessary. NoSQL document databases such as MongoDB are suitable for storing these tries. This storage of a trie is needed when a machine restarts. 
-![](../../../_Attachments/Pasted%20image%2020240127214732.png)
+![](Pasted%20image%2020240127214732.png)
 ## Client-side optimisation
 
 - The client should only attempt to contact the server if the user hasn’t pressed any keys for some time—for example, any delay greater than 160 ms, which is the average delay between two keystrokes. This way, we can also avoid unnecessary bandwidth consumption. This suggestion might not be useful when a user is typing rapidly.
