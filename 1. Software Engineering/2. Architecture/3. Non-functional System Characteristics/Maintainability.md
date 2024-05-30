@@ -1,3 +1,5 @@
+> **[debugging code is twice as hard as writing it](https://read.engineerscodex.com/p/clever-code-is-probably-the-worst#:~:text=There%E2%80%99s%20a-,popular%20saying,-that%20debugging%20code)**
+
 Maintainability has many facets, but in essence it’s about *making life better for the engineering and operations teams who need to work with the system.* Good abstractions can help reduce complexity and make the system easier to modify and adapt for new use cases. Good operability means having good visibility into the system’s health, and having effective ways of managing it.
 
 ***Operability***: Make it easy for operations teams to keep the system running smoothly.
@@ -19,9 +21,7 @@ In other words, MTTR is the average amount of time required to repair and restor
 # Maintainability and [[Reliability]]
 
 Maintainability can be defined more clearly in close relation to reliability. The only difference between them is the variable of interest. Maintainability refers to `time-to-repair`, whereas reliability refers to both `time-to-repair` and the `time-to-failure`. Combining maintainability and reliability analysis can help us achieve availability, downtime, and uptime insights.
-
 # [Documentation](Documentation.md)
-
 
 # Technical Debt
 
@@ -31,3 +31,6 @@ Early on when you are standing up your system its important to keep things simpl
 
 [[Complexity]] is inevitable, don't worry you won't need to try hard. Each new component is more one component that needs to be accounted for when making a change.
 
+# Reference:
+
+1. ~~[Clever code is probably the worst code you could write](https://read.engineerscodex.com/p/clever-code-is-probably-the-worst)~~

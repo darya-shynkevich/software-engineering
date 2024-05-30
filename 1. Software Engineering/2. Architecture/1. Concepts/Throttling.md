@@ -1,0 +1,1 @@
+Throttling focuses on regulating the speed or frequency of API requests. It allows you to control the rate at which requests are processed or responses are sent back to clients.

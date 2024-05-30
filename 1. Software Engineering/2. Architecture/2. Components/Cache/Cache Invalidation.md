@@ -6,6 +6,7 @@ Cache invalidation is the process of removing or updating outdated data from a c
 We can use two different approaches to deal with outdated items using TTL:
 - **Active expiration**: This method actively checks the TTL of cache entries through a daemon process or thread.
 - **Passive expiration**: This method checks the TTL of a cache entry at the time of access.
+- **Event-Based Invalidation**: In this approach, the cache is invalidated based on specific events or triggers.
 # Cache Invalidation - Data Loss Problem
 
 Why simply deleting cache would not solve the problem:
