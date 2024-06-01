@@ -46,6 +46,7 @@ Pictured on the left is the time to access memory in a modern system, on the rig
 ![Pasted image 20230605223020](Pasted%20image%2020230605223020.png)
 *==Solutions must be adaptable and interoperable== to function in diverse environments with differing frameworks. This flexibility prevents problems and saves time in the long run.*
 
+# References:
 
-References:
-1. [https://architecturenotes.co/fallacies-of-distributed-systems/](https://www.google.com/url?q=https://architecturenotes.co/fallacies-of-distributed-systems/&sa=D&source=calendar&usd=2&usg=AOvVaw3jm7wpl4FFyb8cObkBv9PZ)
+1. ~~[Fallacies of Distributed Systems](https://architecturenotes.co/p/fallacies-of-distributed-systems)~~
+2. ~~[Fallacies of Distributed Computing series](https://particular.net/blog/the-network-is-reliable)~~
