@@ -1,4 +1,6 @@
- The main differentiating point between it and Redis is its lack of data types (**both the key and the value are strings**) and its limited eviction policy of just LRU (least recently used).
+### [Redis vs Memcached](Redis%20vs%20Memcached.md)
+
+The main differentiating point between it and Redis is its lack of data types (**both the key and the value are strings**) and its limited eviction policy of just LRU (least recently used).
 
 Redis is single-threaded while Memcached is **multithreaded**. 
 
@@ -6,7 +8,17 @@ Memcached has a client and server component, each of which is necessary to run t
 
 ![](../../../../../../_Attachments/Pasted%20image%2020240127200120.png)
 
+### **[Lease](Leases.md)**
 
+Leases are used to address _stale_ sets (when web server writes a stale value in the cache) and _thundering herds_ (when a key undergoes heavy read and write operations)
+![](Pasted%20image%2020240623184919.png)
+
+1. The first request gets routed to Memcache. But it isn’t a normal GET operation instead _lease_ GET operation. Memcache gives client a lease (a 64-bit token bound to the requested key). To mitigate thundering herds, Memcache returns a token only once every 10 seconds per key
+2. The Memcache forwards the request to PostgreSQL and asks the client to wait
+3. If a second read request comes within 10 seconds of a token issue, the client is notified to retry after a short time, by which the updated value is expected to be set in the cache. 
+4. In situations where returning stale data is not much problem, the client does not have to wait and stale data (at most 10 second old) is returned.
+5. The response to the first request updates the Memcache
+6. The pending and newer requests get fresh data from Memcache
 
 # References:
 

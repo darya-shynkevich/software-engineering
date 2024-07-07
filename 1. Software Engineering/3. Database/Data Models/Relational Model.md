@@ -13,7 +13,7 @@ When it comes to representing *==many-to-one and many-to-many relation‐ ships,
 
 ### Query Languages for Data
 
-When the relational model was introduced, it included a new way of querying data: SQL is a declarative query language, whereas IMS and CODASYL queried the database using imperative code: [Imperative and declarative languages](../../Imperative%20and%20declarative%20languages.md).
+When the relational model was introduced, it included a new way of querying data: SQL is a declarative query language, whereas IMS and CODASYL queried the database using imperative code: [Imperative I declarative](Imperative%20I%20declarative.md).
 
 ### [MapReduce Querying](../OLAP/MapReduce%20Querying.md)
 

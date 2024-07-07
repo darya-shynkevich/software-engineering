@@ -19,7 +19,7 @@ When a graph shows sudden spike, it is an indication of a 'possible' coordinated
 
 There is no point in looking at percentile graphs if you don't have performance goals set for your service. If you are comparing two systems and your target is 20ms, then you could plot graphs and see what is the maximum throughput each system supports while maintaining latency at 20 ms.
 
-What’s more important is testing the speeds in between idle and hitting the pole. Define your [[../../../../21. OOAD/SLA]]s and plot those requirements, then run different scenarios using different loads and different configurations. This tells us if we’re meeting our SLAs but also how many machines we need to provision to do so. If you don’t do this, you don’t know how many machines you need.
+What’s more important is testing the speeds in between idle and hitting the pole. Define your [[Incident response process]]s and plot those requirements, then run different scenarios using different loads and different configurations. This tells us if we’re meeting our SLAs but also how many machines we need to provision to do so. If you don’t do this, you don’t know how many machines you need.
 
 How do we capture this data? In an ideal world, we could store information for _every_ request, but this usually isn’t practical. [HdrHistogram](http://hdrhistogram.org/) is a tool which allows you to capture latency and retain high resolution. It also includes facilities for correcting coordinated omission and plotting latency distributions. The original version of HdrHistogram was written in Java, but there are versions for many other languages.
 

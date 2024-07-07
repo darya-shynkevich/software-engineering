@@ -1,4 +1,4 @@
-# [19. Logging](../../4.%20Python/19.%20Logging.md)
+# [19. Logging](19.%20Logging.md)
 
 
 # References:

@@ -29,4 +29,4 @@ Note that selective testing reduces the chances of flakiness. Imagine having a t
 # References:
 
 1. ~~[Improving CI/CD with a Focus on Developer Velocity](https://www.samsara.com/blog/improving-ci-cd-with-a-focus-on-developer-velocity)~~
-2. ~~[Flaky Tests Overhaul at Uber](https://www.uber.com/en-IN/blog/flaky-tests-overhaul/?utm_source=substack&utm_medium=email)~~
+2. [Flaky Tests Overhaul at Uber](https://www.uber.com/en-IN/blog/flaky-tests-overhaul/?utm_source=substack&utm_medium=email)

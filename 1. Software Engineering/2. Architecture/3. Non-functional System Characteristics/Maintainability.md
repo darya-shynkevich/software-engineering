@@ -34,3 +34,4 @@ Early on when you are standing up your system its important to keep things simpl
 # Reference:
 
 1. ~~[Clever code is probably the worst code you could write](https://read.engineerscodex.com/p/clever-code-is-probably-the-worst)~~
+2. ~~[The Controversial Truth about Tech Debt](https://medium.com/@raphael.moutard/the-controversial-truth-about-tech-debt-09ad0f787888)~~
