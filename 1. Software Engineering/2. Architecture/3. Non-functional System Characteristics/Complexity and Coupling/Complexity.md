@@ -1,3 +1,5 @@
+If we want to make it easier to write software, so that we can build more powerful systems more cheaply, we must find ways to make software simpler. (…) Most of the code in any system is written by extending the existing code base, so your most important job as a developer is to **facilitate those future extensions**. Thus, you should not think of “working code” as your primary goal, though of course your code must work. Your primary goal must be to produce a great design, which also happens to work. This is strategic programming. (…) If software developers should always be thinking about design issues, and reducing complexity is the most important element of software design, then software developers should always be thinking about complexity. [_A Philosophy of Software Design_](https://web.stanford.edu/~ouster/cgi-bin/aposd.php), John Ousterhout
+
 **Why it is so bad?**
 1. **A well-designed system will degrade into a badly designed system over time:** a well-designed system is an unstable, ephemeral state; whereas a badly designed system is a stable, persistent state.
 2. **Complexity is a Moat (filled by Leaky Abstractions):** when systems compete with each other for market share, delicacy goes out the window and designers often give the application everything it wants.
@@ -33,3 +35,4 @@
 6. [Why Over-Reusing is Bad](http://tech.transferwise.com/why-over-reusing-is-bad/)
 7. [Avoid Over Engineering](https://medium.com/@rdsubhas/10-modern-software-engineering-mistakes-bc67fbef4fc8)
 8. ~~[Three Laws of Software Complexity (or: why software engineers are always grumpy)](https://maheshba.bitbucket.io/blog/2024/05/08/2024-ThreeLaws.html)~~
+9. ~~[A Note on Essential Complexity](https://olano.dev/blog/a-note-on-essential-complexity/?utm_source=substack&utm_medium=email)~~

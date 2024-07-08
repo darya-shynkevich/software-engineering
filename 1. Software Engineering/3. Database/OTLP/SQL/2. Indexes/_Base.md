@@ -6,41 +6,76 @@ A Database Index is Like a Book Index: *When you want to look something up in a 
 
 *So unlike a book, the database needs to keep its index (really, it’s indexes — there are often many) up to date automatically and frequently.*
 
+# [B-tree Index](Types/B-tree%20Index.md)
+
 **[B-tree Index](Types/B-tree%20Index.md)** speeds up searching by maintaining a tree whose [Leaf Nodes](../1.%20Internals/Database%20Pages/Leaf%20Nodes.md) are pointers to the disk locations of table records.
 
-> Formal definition: *A database index functions as a specialized structure designed to accelerate the speed and efficiency of query operations within a database. Read performance increases as you index the data, but that comes at the cost of write performance since you need to keep index up to date.*
+> **Formal definition:** *A database index functions as a specialized structure designed to **accelerate the speed and efficiency of query operations** within a database. Read performance increases as you index the data, but that comes at the cost of write performance since you need to keep index up to date.*
 
-1. наиболее часто используемый индекс
-2. поддерживается всеми СУБД для всех типов данных
-3. оптимален для множеств с хорошим распределением значений и высокой мощностью (кол-во уникальных значений)
-
-![Pasted image 20230605131446](../../../../../_Attachments/Pasted%20image%2020230605131446.png)
-
-# [LSM Trees and SSTables](../1.%20Internals/LSM%20Trees%20and%20SSTables.md)
+1. supported by all DBMSs for all data types
+2. optimal for columns with high selectivity, and if the column is used for both equality checks and range scans
+3. a very important aspect of B+Tree indexes is that they are sorted by the index key => auto-incremented column values or monotonically increasing timestamp values make very good candidates for a B+Tree since the index will grow in the same direction, therefore providing a very good *page fill factor*
+4. random column values are not very suitable for a B+Tree index because the newer elements will not necessarily fill the existing index nodes as they may require their own nodes due to the randomness of the key values => the B+Tree index would have a low fill factor and a very large size on the disk that would put pressure on the in-memory Buffer Pool
+5. since the B+Tree index is already sorted, as long as we are interested in displaying the result set on the ascending or descending order of an index, then the PostgreSQL query optimizer may choose to scan the indexed records in that particular order
 
 # Other Index Types
 
-### 1. [GIN indexes](GIN%20indexes.md) for JSON data in PostgreSQL
+### 1. [[GIN indexes]] for JSON data in PostgreSQL
 
-> PostgreSQL offers two JSON field types: json and jsonb . Django’s JSONField uses the jsonb column type, so any references to JSON data in a PostgreSQL database in this section refer to the jsonb column type.
+**MySQL and SQLite** both have some support for working with JSON data, but neither offers a specialized index type like the GIN index suitable for indexing JSON directly. However, with MySQL you can index a column generated from JSON data
 
-GIN stands for Generalized Inverted Index. It is an index type that works particularly well with "contains" logic for JSON data and full-text search.
+**PostgreSQL** offers two JSON field types: `json` and `jsonb`. Django’s `JSONField` uses the `jsonb` column type, so any references to JSON data in a PostgreSQL database in this section refer to the `jsonb` column type.
 
-*MySQL and SQLite both have some support for working with JSON data, but neither offers a specialized index type like the GIN index suitable for indexing JSON directly. However, with MySQL you can index a column generated from JSON data*
+GIN stands for **Generalized Inverted Index**. It is an index type that works particularly well with "contains" logic for JSON data and full-text search.
+
+> `properties` is `jsonb` field
+
+```sql
+CREATE INDEX idx_properties_gin ON book USING GIN (properties)
+```
+
+```sql
+SELECT *
+FROM table_name
+WHERE
+    properties ? 'publisher'
+```
+
+
+Another type of SQL query that we can speed up with the GIN index is the one that has to filter by a given attribute name and value combination.
+
+```sql
+CREATE INDEX idx_properties_gin ON book USING GIN (properties jsonb_path_ops)
+```
+
+With the `idx_properties_gin` index supporting the `jsonb_path_ops` operator, when running the following SQL query that searches if there is an existing `title` attribute with the value of `High-Performance Java Persistence` inside the `properties` JSON column value:
+
+```sql
+SELECT title, author, published_on
+FROM book
+WHERE
+  properties @> '{"title": "High-Performance Java Persistence"}'
+```
+
+*The SQL query filters the `book` table rows using the `idx_properties_gin` GIN Index, and only `6` pages are scanned from the PostgreSQL Shared Buffers.*
 ### 2. [GiST indexes](GiST%20indexes) for spatial data in PostgreSQL
 
 ### 3. [BRIN indexes](BRIN%20indexes) for very large tables in PostgreSQL
 
 ### 4. [Hash indexes](Hash%20indexes) for in-memory tables in MySQL
 
-Hash indexes store a 32-bit hash code derived from the value of the indexed column. Hence, such indexes can only handle simple equality comparisons. The query planner will consider using a hash index whenever an indexed column is involved in a comparison using the equal operator:
+Hash indexes store a 32-bit hash code derived from the value of the indexed column. Hence, such indexes can only handle simple equality comparisons. The query planner will consider using a hash index whenever an indexed column is involved in a comparison using the **equal operator**
 
-Хранение не самих значений, а их хэшей. 
-(+) уменьшение размера
-(+) ускорение сравнения ==
+Storing not the values ​​themselves, but their hashes.
+(+) size reduction (if column = 50 characters => 50 bytes to store index; for hash index it is only 4 bytes). The more compact the indexes, the better chance they would fit into the PostgreSQL Shared Buffers or the OS cache.
+(+) comparison acceleration ==
 
-(-) невозможны операции >, <,  is null и тп
-(-) проблема коллизий
+(-) operations >, <, is null, etc. are not possible
+(-) collision problem
+
+```sql
+CREATE INDEX IF NOT EXISTS idx_column_name_hash ON table_name USING HASH (column_name)
+```
 #### References:
 
 1. [The Power of Database Indexing Algorithms: B-Tree vs. Hash Indexing](https://dip-mazumder.medium.com/the-power-of-database-indexing-algorithms-b-tree-vs-hash-indexing-6e3a4112a81)
@@ -166,6 +201,9 @@ Your query may not match the index. For example, an index on the name column won
 	6. **using wildcards (%) on the left side of LIKE** — Using wildcards (%) on the left side of the LIKE operator can prevent index usage.
 	7. **using OR operator without caution** — Using the OR operator without caution may lead to index failure as it may prevent the use of indexes efficiently.
 
+# [LSM Trees and SSTables](../1.%20Internals/LSM%20Trees%20and%20SSTables.md)
+
+
 # References:
 
 1. ! [Build your own Database Index](https://dx13.co.uk/articles/2023/12/02/byo-index-pt1/)
@@ -191,6 +229,7 @@ Your query may not match the index. For example, an index on the name column won
 21. [Index Scan vs Index Only Scan on Database Systems (with Postgres)](https://www.youtube.com/watch?v=xsPBT5gIQac&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=46) (video)
 22. [Key vs Non-Key Column Database Indexing](https://www.youtube.com/watch?v=Fac-gzudFIA&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=3) (video)
 23. [nbtree-индексы в PostgreSQL. Полезные новинки](https://www.youtube.com/watch?v=ueERqeB1YOM&list=PLH-XmS0lSi_xQkDOdfAYsdxjuadMPTw8H&index=2) (video)
+24. ~~[PostgreSQL Index Types](https://vladmihalcea.com/postgresql-index-types/)~~
 
 
 

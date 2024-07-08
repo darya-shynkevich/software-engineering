@@ -33,7 +33,7 @@ With multiple copies of the same data, we are faced with options on how to synch
 
 ### 2. [Distributed Locks](../../1.%20Concepts/Distributed%20Locks.md)
 
-### 3. [Distributed Transactions](../../../3.%20Database/OTLP/SQL/5.%20Distributed/Distributed%20Transactions.md)
+### 3. [_Base](1.%20Software%20Engineering/3.%20Database/OTLP/SQL/5.%20Distributed/Distributed%20Transactions/_Base.md)
 
 # References:
 

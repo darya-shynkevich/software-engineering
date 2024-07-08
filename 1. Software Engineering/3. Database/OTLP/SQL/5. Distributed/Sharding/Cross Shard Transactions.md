@@ -1,4 +1,4 @@
-# [Distributed Transactions](../Distributed%20Transactions.md)
+# [_Base](1.%20Software%20Engineering/3.%20Database/OTLP/SQL/5.%20Distributed/Distributed%20Transactions/_Base.md)
 
 ! No transaction support => Client decides to which server it will connect:
 

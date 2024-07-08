@@ -21,3 +21,6 @@ Event.objects.filter(data__contains={ "latitude": 44.523064 }).count()
 																	
 ```
 
+# References:
+
+1. [GIN indexes](GIN%20indexes.md)
