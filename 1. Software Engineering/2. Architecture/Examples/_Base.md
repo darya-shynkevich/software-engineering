@@ -87,3 +87,4 @@ _****[Top 10 Facebook system design interview questions](https://grokkingtechint
 83. [The Technology Ecosystem of Medium.com](https://jinlow.medium.com/the-technology-ecosystem-of-medium-com-acf3bbae4de7)
 84. **[System design: Newsfeed System](https://medium.com/@sureshpodeti/system-design-newsfeed-system-da50486a8a9b)**
 85. [Urban Bus/Subway Transit System Architecture](https://medium.com/thedevproject/urban-bus-subway-transit-system-architecture-c23e7522ed03)
+86. [School Bus Tracker System Architecture](https://medium.com/@joudwawad/school-bus-tracker-system-architecture-6dd3307e3860)

@@ -56,3 +56,4 @@
 2. [TDD in Python with pytest](https://www.thedigitalcatonline.com/blog/2020/09/10/tdd-in-python-with-pytest-part-1/) (several articles)
 3. [Build a Hash Table in Python With TDD](https://realpython.com/python-hash-table/)
 4. [Rumbling about Test Driven Development](https://luminousmen.com/post/rumbling-about-test-driven-development)
+5. [TDD CANNOT Work](https://rahem027.gitlab.io/blogs/tdd-cannot-work.html)
