@@ -49,4 +49,4 @@ Pictured on the left is the time to access memory in a modern system, on the rig
 # References:
 
 1. ~~[Fallacies of Distributed Systems](https://architecturenotes.co/p/fallacies-of-distributed-systems)~~
-2. ~~[Fallacies of Distributed Computing series](https://particular.net/blog/the-network-is-reliable)~~
+2. [Fallacies of Distributed Computing series](https://particular.net/blog/the-network-is-reliable)

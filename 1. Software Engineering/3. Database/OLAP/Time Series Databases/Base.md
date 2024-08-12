@@ -4,7 +4,7 @@ Examples:
 1. Amazon Timestream
 2. CrateDB
 3. InfluxDB
-4. TimescaleDB
+4. [[TimescaleDB]]
 5. Prometheus
 
 (+) **time-based indexing:** they’re optimized for time-based indexing and querying, which is crucial for time series data;

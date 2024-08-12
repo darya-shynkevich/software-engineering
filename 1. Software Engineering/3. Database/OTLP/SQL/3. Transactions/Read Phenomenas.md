@@ -28,4 +28,5 @@ Example:
 
 # References:
 
-1. [Phantom Reads in Postgres Explained Compared to Other DBMS](!https://www.youtube.com/watch?v=MEAD5JNc_Dw&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=66)
+1. [A beginner’s guide to Non-Repeatable Read anomaly](https://vladmihalcea.com/non-repeatable-read/)
+2. [Phantom Reads in Postgres Explained Compared to Other DBMS](!https://www.youtube.com/watch?v=MEAD5JNc_Dw&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=66)

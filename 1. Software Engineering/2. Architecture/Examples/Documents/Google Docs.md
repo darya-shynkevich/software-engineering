@@ -1,68 +1,110 @@
+### Functional requirements:
 
-### Functional requirements
+1. Users should be able to edit documents and have their changes propagated to other users in real time
+2. When other users make edits they should be propagated to us in real time
+3. All users must eventually see the same state of the document
+### Concurrency in Collaborative Editing
 
-The activities a user will be able to perform using our collaborative document editing service are listed below:
+#### 1. Operational transformation
 
-- **Document collaboration**: Multiple users should be able to edit a document simultaneously. Also, a large number of users should be able to view a document.
-- **Conflict resolution**: The system should push the edits done by one user to all the other collaborators. The system should also resolve conflicts between users if they’re editing the same portion of the document.
-- **Suggestions**: The user should get suggestions about completing frequently used words, phrases, and keywords in a document, as well as suggestions about fixing grammatical mistakes.
-- **View count**: Editors of the document should be able to see the view count of the document.
-- **History**: The user should be able to see the history of collaboration on the document.
+**Operational Transform**: centralised server takes in concurrent writes and transforms them as necessary before sending back to client. 
+1. **Causality preservation**: If operation `a` happened before operation `b`, then operation `a` is executed before operation `b`.
+2. **Convergence**: All document replicas at different clients will eventually be identical.
 
-A real-world document editor also has to have functions like document creation, deletion, and managing user access. We focus on the core functionalities listed above, but we also discuss the possibility of other functionalities in the lessons ahead.
+**Example:**
+Two users, Sam and Aditi, are working on the same document, which has an initial state "BC", and they both make changes to it. Their changes will be sent to the server along with their last revision. Specifically, if Aditi inserts the character "D" at position 2 and Sam inserts the character "A" at the beginning, the server will transform Aditi's change to be inserted at the 3rd index. The server keeps track of the complete revision history of each document, allowing each collaborator to edit the document. 
 
-### Non-functional Requirements
+![](Pasted%20image%2020240812202449.png)
 
-- **Latency**: Different users can be connected to collaborate on the same document. Maintaining low latency is challenging for users connected from different regions.
-- **Consistency**: The system should be able to resolve conflicts between users editing the document concurrently, thereby enabling a consistent view of the document. At the same time, users in different regions should see the updated state of the document. Maintaining consistency is important for users connected to both the same and different zones.
-- **Availability**: The service should be available at all times and show robustness against failures.
-- **Scalability**: A large number of users should be able to use the service at the same time. They can either view the same document or create new documents.
+**Workflow:**
+1. Let’s say Bob begins the text by entering the word Hello at the top.
+2. Bob keeps typing and adds the term world to his paper. John types an ‘!’ in his empty version of the document at the exact moment.
+3. The edit was added to Bob’s client’s list of pending revisions. He then sent the update to the server and added it to his sent changes list.
+4. John got Bob’s edit from the server and transformed it against his pending (‘!’)update using operational transformation (OT). As a result of the transition, John’s pending change was moved up five spaces to create a place for Bob’s Hello at the top of the document. When Bob and John received the notifications from the server, they both changed their last synced revision numbers to 1.
+5. Following that, both Bob and John will send their pending changes to the server.
+6. Because Bob’s change arrived before John’s, the server processed it first. Bob received a confirmation of the adjustment. The modification was delivered to John, who had it changed against his (‘!) change, which was still waiting.
+7. The server received John’s pending modification, and John believes it should be Revision 2. The server, however, has already added Revision 2 to the revision log. The server will apply OT to John’s patch and save it as Revision 3.
+8. The server started by comparing John’s transmitted change to all the other modifications committed since the last time John synced with the server. It turned John’s change against Bob’s in this example (‘Google’ at 6). As a result, John’s change over-index was pushed by 6. This shift is identical to John’s client’s metamorphosis when he first received Bob’s (‘Hello’ at 1).
 
-![](Pasted%20image%2020240127200957.png)
+**Disadvantages:**
+1. Each operation to characters may require changes to the positional index. This means that **operations are order dependent** on each other.
+2. It’s challenging to develop and implement.
+#### 2. Conflict-free Replicated Data Type (CRDT)
 
-- **API gateway**: Different client requests will get intercepted through the API gateway. Depending on the request, it’s possible to forward a single request to multiple components, reject a request, or reply instantly using an already cached response, all through the API gateway. Edit requests, comments on a document, notifications, authentication, and data storing requests will all go through the API gateway.
-- **Application servers**: The application servers will run business logic and tasks that generally require computational power. For instance, some documents may be converted from one file type to another (for example, from a PDF to a Word document) or support features like import and export. It’s also central to the attribute collection for the recommendation engine.
-- **Data stores**: Various data stores will be used to fulfill our requirements. We’ll employ a relational database for saving users’ information and document-related information for imposing privilege restrictions. We can use NoSQL for storing user comments for quicker access. To save the edit history of documents, we can use a time series database. We’ll use blob storage to store videos and images within a document. Finally, we can use distributed cache like Redis and a CDN to provide end users good performance. We use Redis specifically to store different data structures, including user sessions, features for the [Typeahead Suggestion](Typeahead%20Suggestion.md) service, and frequently accessed documents. The CDN stores frequently accessed documents and heavy objects, like images and videos.
-- **Processing queue**: Since document editing requires frequently sending small-sized data (usually characters) to the server, it’s a good idea to queue this data for periodic batch processing. We’ll add characters, images, videos, and comments to the processing queue. Using an HTTP call for sending every minor character is inefficient. Therefore, we’ll use WebSockets to reduce overhead and observe live changes to the document by different users.
-- **Other components**: Other components include the session servers that maintain the user’s session information. We’ll manage document access privileges through the session servers. Essentially, there will also be configuration, monitoring, pub-sub, and logging services that will handle tasks like monitoring and electing leaders in case of server failures, queueing tasks like user notifications, and logging debugging information.
-### Workflow
+CRDTs are when we can have data live on multiple servers such that when we eventually merge the CRDTs, all of the nodes converge on the same data.
 
-- **Collaborative editing and conflict resolution**: Each request gets forwarded to the operations queue. This is where conflicts get resolved between different collaborators of the same document. If there are no conflicts, the data is batched and stored in the time series database via session servers. Data like videos and images get compressed for storage optimisation, while characters are processed right away.
-- **History**: It’s possible to recover different versions of the document with the help of a time series database. Different versions can be compared using DIFF operations that compare the versions and identify the differences to recover older versions of the same document.
-- **Asynchronous operations**: Notifications, emails, view counts, and comments are asynchronous operations that can be queued through a pub-sub component like Kafka. The API gateway generates these requests and forwards them to the pub-sub module. Users sharing documents can generate notifications through this process.
-- **Suggestions**: Suggestions are in the form of the [Typeahead Suggestion](Typeahead%20Suggestion.md) service that offers autocomplete suggestions for typically used words and phrases. The [Typeahead Suggestion](Typeahead%20Suggestion.md) service can also extract attributes and keywords from within the document and provide suggestions to the user. Since the number of words can be high, we’ll use a NoSQL database for this purpose. In addition, most frequently used words and phrases will be stored in a caching system like Redis.
-- **Import and export documents**: The application servers perform a number of important tasks, including importing and exporting documents. Application servers also convert documents from one format to another. For example, a `.doc` or `.docx` document can be converted in to `.pdf` or vice versa. Application servers are also responsible for feature extraction for the [Typeahead Suggestion](Typeahead%20Suggestion.md) service.
+**Idea:** we want to avoid having to send each write through a single server before sending it off to client, or else that server will become a bottleneck for us. No every single server needs to see every single write. 
+##### State vs. Operation CRDT
 
-# Concurrency in Collaborative Editing
+###### 2.1 State CRDT:
+- Send full text document
+- Have a merge function *(will merge two documents into one)* that is commutative, associative and idempotent
+- Problematic for big documents
+###### 2.2 Operation CRDT:
+- Just send the "operation" -> "Index x at position y"
+- Need a merge function that is commutative and associative
+- Idempotent? Need to include additional metadata for each operation
+	- It assigns a globally unique identity to each character.
+	- It globally orders each character.
+- How to we make character insertion commutative? 
 
-## Techniques for conflict resolution
+**Operation CRDT Merge Function**
 
-### Operational transformation
+How can we make it so that the order of our writes do not matter and we still get the same result?
 
-- **Causality preservation**: If operation `a` happened before operation `b`, then operation `a` is executed before operation `b`.
-- **Convergence**: All document replicas at different clients will eventually be identical.
+![](Pasted%20image%2020240812193308.png)
 
-![](Pasted%20image%2020240127211250.png)
+![](Pasted%20image%2020240812193410.png)
 
-OT has two disadvantages:
-- Each operation to characters may require changes to the positional index. This means that operations are order dependent on each other.
-- It’s challenging to develop and implement.
+**Example of problem**: interleaving (when we try to insert two words with different length at the same place in document)
 
-### Conflict-free Replicated Data Type (CRDT)
+![](Pasted%20image%2020240812193618.png)
 
- A CRDT has a complex data structure but a simplified algorithm.
+**Idempotence**
+How can we ensure that if we receive a write as a client, we do not process it more than once?
+1. Each write has associated UUID: works but now all of a sudden each client has to store an extra UUID per character type
+2. A [version vector](Version%20vector.md): if version vector of write is smaller than ours, we have seen it
 
-A CRDT satisfies both commutativity and idempotency by assigning two key properties to each character:
-- It assigns a globally unique identity to each character.
-- It globally orders each character.
+![](Pasted%20image%2020240812195601.png)
 
+- All changes will be in DB before a single client can see them
+- So if the Client has the last change `C4` and suddenly recieved change `C8` => the Client knows that changes `C5`, `C6` and `C7` are in the DB and the Client can fetch missed changes. 
 
-**Note:** OT and CRDTs are good solutions for conflict resolution in collaborative editing, but our use of WebSockets makes it possible to highlight a collaborator’s cursor. Other users will anticipate the position of a collaborator’s next operation and naturally avoid conflict.
+**New clients:**
+When a new client starts up, it needs to fetch the whole document.
 
-![](Pasted%20image%2020240127211726.png)
+![](Pasted%20image%2020240812200107.png)
+
+=> Solution - [[Change Data Capture]]
+
+![](Pasted%20image%2020240812200443.png)
+
+Having two tables allows us much greater performance if we need to partition. Imagine a 100 page document, now we can partition. 
+
+**Documents Polling**
+
+![](Pasted%20image%2020240812200826.png)
+
+1. New client subscribe for the changes 
+2. New client request Document from Document Snapshot DB
+3. New client receives `C5`
+4. New client poll `C4` from Writes DB
+
+**We can use just a Document Snapshot DB**
+
+We can remove `step 4` and use Document Snapshot DB. 
+
+Eventually will be correct if we just write to a single document DB. However, then it may become a bottleneck. 
+We could also have each server write to its own partition, but then a client that wants to read a document has to read from many DB nodes.
+##### High Level Design 
+
+![](Pasted%20image%2020240812203055.png)
+#### 3. Natural conflict avoidance 
+
+OT and CRDTs are good solutions for conflict resolution in collaborative editing, but the usage of WebSockets makes it possible to highlight a collaborator’s cursor. Other users will anticipate the position of a collaborator’s next operation and naturally avoid conflict.
 
 # References:
 
-1. ! [Design Google Docs/Real Time Text Editor | Systems Design Interview Questions With Ex-Google SWE](https://www.youtube.com/watch?v=YCjVIDv0zQY)
+1. ! ~~[Design Google Docs/Real Time Text Editor | Systems Design Interview Questions With Ex-Google SWE](https://www.youtube.com/watch?v=YCjVIDv0zQY) (video)~~
 2. [Two Ex-Google System Design Experts Compete: Who will design the better system?](https://www.youtube.com/watch?v=Zi0pPkiFemE)
-3. [Design Google Docs](https://www.enjoyalgorithms.com/blog/design-google-docs)
+3. ~~[Design Google Docs](https://www.enjoyalgorithms.com/blog/design-google-docs)~~
