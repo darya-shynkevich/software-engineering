@@ -10,20 +10,16 @@
 
 *Choć może być to bolesne, czasem zerwanie przyjaźni jest najlepszym rozwiązaniem.*
 
-1. ma prawo **do swoich emocji** 
-2. **komunikuje się w sposób**
-3. zwierzać się
+- ma prawo **do swoich emocji** 
+- **komunikuje się w sposób**
+- zwierzać się = ufać
 
 ### 08.08.2024
 
-1. poczucie humoru
-2. wspólne wartości
-3. obóz harcerski
-4. gimnazjum - gimnazja
-5. klasa
-6. system
-7. gimnazjum artystyczne
-8. świetni nauczyciele
+- poczucie humoru
+- wspólne wartości
+- gimnazjum artystyczne
+- świetni nauczyciele
 
 ### 18.07.2024
 
