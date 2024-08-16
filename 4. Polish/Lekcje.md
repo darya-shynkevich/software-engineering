@@ -15,6 +15,8 @@
 - **Jest mi wszystko jedno, czy...**
 - **Chciał(a)bym, aby...**
 
+[NARZĘDNIK, BIERNIK I DOPEŁNIACZ PO CZASOWNIKACH](https://easypolish.com.pl/images/dla-obcokrajowcow-lekcja2/przypadki-po-czasownikach.pdf)
+
 ## 15.08.24
 
 ***Jak zerwać przyjaźń?***
