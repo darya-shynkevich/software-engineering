@@ -37,7 +37,7 @@
 1. **to be up to speed** = having the latest information or knowledge about something
 	   - *Some school officials are only now getting up to speed regarding computers.*
 	   *- John will bring you up to speed (=tell you the latest information).*
-2. **with hindsigh**t = used to say it is easier to know the right thing to do after something has happened or if you have a lot of experience
+2. **with hindsight** = used to say it is easier to know the right thing to do after something has happened or if you have a lot of experience
 	   - *He admitted that, with the benefit of hindsight, the original launch had not been large enough.*
 3. time flies = time passes quickly
 	   - *When you're having fun, it's true that time flies.*
@@ -208,7 +208,7 @@
 
 [Quizlet](https://quizlet.com/_cjvuz4?x=1qqt&i=xcuxr)
 
-1. to be drowning in paperwork
+1. to be **drowning** in paperwork
 2. **to be snowed under**
 3. to have a lot on one's plate
 4. **to be frazzled** (/ˈfræzl/) = to be extremely tired in a nervous or slightly worried way after a lot of mental or physical effort
