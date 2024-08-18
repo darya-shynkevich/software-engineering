@@ -1,3 +1,7 @@
+1. to beat up = to hurt someone badly by hitting or kicking them repeatedly
+2. to progress up
+3. a bit behind schedule
+
 ### 2. Time
 
 [Quizlet](https://quizlet.com/580973066/time-idioms-flash-cards/)
@@ -83,7 +87,7 @@
 3. **a creature of habit** = someone who always does the same thing in the same way
     - *"he's a creature of habit—he keeps to the places he knows"*
     - *My father's such a creature of habit - he always has to have a biscuit and a cup of tea at bedtime.*
-4. by force of habit = doing something because you have always done it in the past, rather than because you have thought carefully about it
+4. **by force of habit** = doing something because you have always done it in the past, rather than because you have thought carefully about it
     - *He looked around from force of habit, but nobody paid any attention to him.* 
 	- *Unconsciously, by force of habit, she plugged the coffee pot in*
 5. **to nip in the bud** = to stop (something) immediately so that it does not become a worse problem. *When a leaf or flower is beginning to form, it's just a little bud, and if you nip it — cut it — then it won't grow.*
@@ -129,7 +133,7 @@
 
 [Quizlet](https://quizlet.com/pl/754178858/decision-making-flash-cards/?new=)
 
-1. up in the air
+1. up in the air = висящий в воздухе
 2. **to be fraught (/frɔːt/) with difficulties** = to be full of difficulties
 	- *The negotiations have been fraught with difficulties right from the start.*
 	- *The situation is fraught with problems and requires sensitive handling.*
@@ -294,18 +298,26 @@
 ### 12. Success
 
 1. unicorn vomit 
+2. **to turn down**
+3. **to go up in smoke** = was completely ruined or lost, often unexpectedly or quickly
+4. **to go downhill** = there were a decline in quality or success
+5. **to go under** = failed or went bankrupt
+6. **to drop like a rock** = a sudden / significant decline
+7. make a killing =  success in something for the first time in history
+8. **pouring in**
+9. impressive accomplishment
+10. phenomenal / unprecedented / modest success
+11. dramatic improvement / a room for improvement / to make good progress
+12. highly effective
+13. make a breakthrough
+14. **bring out the best of**
+15. to win the respect
+16. **to dash** (dashing his hopes) = smash
+17. **lose one's nerve** = to become afraid
+18. mediocre performance (pronunciation!!!)
+19. to fail miserable ; completely / spectacular failed / lack of remarkable achievements ; **a recipe for disaster** ; doomed to failure
+20. **way off** the market
+21. **if all else fails** = if everything is unsuccessful
+22. a last resort = a final possibility
 
 
-
-I trusted in tenure
-bona fide experts
-innocuously
-zeal
-plough
-unscrupulous 
-verbatim 
-to nosedive
-existing users churning
-a downward spiral from which it will likely never recover
-that vision was horse-traded away
-imbue
