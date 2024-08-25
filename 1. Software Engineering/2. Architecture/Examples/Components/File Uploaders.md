@@ -1,4 +1,6 @@
 
+# [File Upload](File%20Upload.md)
+
 # **Direct byte stream upload for small files**
 
 Works well for files < 100 mb

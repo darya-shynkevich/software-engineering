@@ -1,10 +1,7 @@
 
 https://deadlockempire.github.io/
 
-1. [How Python Asyncio Works: Recreating it from Scratch](https://jacobpadilla.com/articles/recreating-asyncio)
-2. [Asyncio Coroutine Object Methods in Python](https://superfastpython.com/asyncio-coroutine-methods/)
-3. [Asyncio Run Multiple Concurrent Event Loops](https://superfastpython.com/asyncio-multiple-event-loops/)
-4. [Pydantic: Simplifying Data Validation in Python](https://realpython.com/python-pydantic/)
+
 5. [What happens when databases crash?](https://medium.com/@hnasr/what-happens-when-databases-crash-74540fd97ea9)
 6. [Populating the page: how browsers work](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work)
 7. [Feature flags are ruining your codebase](https://zaidesanton.substack.com/p/feature-flags-are-ruining-your-codebase)
@@ -32,16 +29,19 @@ https://deadlockempire.github.io/
 24. [Fastcore — недооцененная, но полезная библиотека Python](https://habr.com/ru/companies/skillfactory/articles/524334/)
 25. [How to (and how not to) design REST APIs](https://github.com/stickfigure/blog/wiki/How-to-(and-how-not-to)-design-REST-APIs)
 26. Asyncio:
-	1. [Асинхронность в Python](https://www.youtube.com/watch?v=ZGfv_yRLBiY) (videos) <- рекомендовали в каком-то видосе
-	2. [Гринлеты, что это такое?](https://itbun.blogspot.com/2014/01/blog-post.html)
-	3. [Python Asyncio Part 2 – Awaitables, Tasks, and Futures](https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-2.html)
-	4. [Should You Use AsyncIO for Your Next Python Web Application?](https://www.laac.dev/blog/page/2/)
-	5. [Why I hate asyncio](https://charlesleifer.com/blog/asyncio/)
-	6. [Асинхронность в программировании](https://habr.com/ru/companies/jugru/articles/446562/) (video) <-- выглядит как что-то интересное
-	7. [Understanding event loop with Python](https://medium.com/@pekelny/fake-event-loop-python3-7498761af5e0)
-	8. [Многопоточность в Python: очевидное и невероятное](https://habr.com/ru/articles/764420/)
-	9. [Two kinds of threads pools, and why you need both](https://pythonspeed.com/articles/two-thread-pools/)
-	10. [Практический гайд по процессам и потокам (и не только) в Python](https://habr.com/ru/articles/773376/)
+	1. [How Python Asyncio Works: Recreating it from Scratch](https://jacobpadilla.com/articles/recreating-asyncio)
+    2. [Asyncio Coroutine Object Methods in Python](https://superfastpython.com/asyncio-coroutine-methods/)
+    3. [Asyncio Run Multiple Concurrent Event Loops](https://superfastpython.com/asyncio-multiple-event-loops/)
+    4. [Асинхронность в Python](https://www.youtube.com/watch?v=ZGfv_yRLBiY) (videos) <- рекомендовали в каком-то видосе
+    4. [Гринлеты, что это такое?](https://itbun.blogspot.com/2014/01/blog-post.html)
+   3. [Python Asyncio Part 2 – Awaitables, Tasks, and Futures](https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-2.html)
+   4. [Should You Use AsyncIO for Your Next Python Web Application?](https://www.laac.dev/blog/page/2/)
+   5. [Why I hate asyncio](https://charlesleifer.com/blog/asyncio/)
+   6. [Асинхронность в программировании](https://habr.com/ru/companies/jugru/articles/446562/) (video) <-- выглядит как что-то интересное
+   7. [Understanding event loop with Python](https://medium.com/@pekelny/fake-event-loop-python3-7498761af5e0)
+   8. [Многопоточность в Python: очевидное и невероятное](https://habr.com/ru/articles/764420/)
+   9. [Two kinds of threads pools, and why you need both](https://pythonspeed.com/articles/two-thread-pools/)
+   10. [Практический гайд по процессам и потокам (и не только) в Python](https://habr.com/ru/articles/773376/)
 27. DB:
     1. [Why Observability Requires a Distributed Column Store](https://www.honeycomb.io/blog/why-observability-requires-distributed-column-store)
     2. [Database Background Writers](https://www.youtube.com/watch?v=HyVkULIb9-w) (video)
