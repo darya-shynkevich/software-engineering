@@ -15,7 +15,7 @@ DDD:
 3. [The Many Meanings of Event-Driven Architecture](https://www.youtube.com/watch?v=STKCRSUsyP0) • Martin Fowler • GOTO 2017
 
 
-1. [Issue 30 - Idempotence](https://dtornow225.substack.com/p/issue-30-idempotence)
+1. ~~[Issue 30 - Idempotence](https://dtornow225.substack.com/p/issue-30-idempotence)~~
 2. [Database Transactions, Lost Updates & Idempotency](https://www.strv.com/blog/database-transactions-lost-updates-idempotency-engineering)
 3. [Unanimous 2PC: Fault-tolerant Distributed Transactions Can be Fast and Simple](https://muratbuffalo.blogspot.com/2024/07/unanimous-2pc-fault-tolerant.html?m=1)
 4. [How Event Driven Architectures Go Wrong & How to Fix Them](https://www.youtube.com/watch?v=_dbyp3rL_4Q)
