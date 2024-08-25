@@ -56,19 +56,25 @@ const store = configureStore({
 sagaMiddleware.run(mySaga)
 ```
 
+# References:
+
+1. [JavaScript Power Tools: redux-saga]([https://formidable.com/blog/2017/javascript-power-tools-redux-saga/](https://formidable.com/blog/2017/javascript-power-tools-redux-saga/) )
+2. [JavaScript Power Tools Part II: Composition Patterns in redux-saga]([https://formidable.com/blog/2017/composition-patterns-in-redux-saga/](https://formidable.com/blog/2017/composition-patterns-in-redux-saga/) 
+3. [Javascript Power Tools Part III: Real-world redux-saga Patterns]([https://formidable.com/blog/2017/real-world-redux-saga-patterns/](https://formidable.com/blog/2017/real-world-redux-saga-patterns/) )
+4. [Exploring Redux Sagas]([https://medium.com/onfido-tech/exploring-redux-sagas-cc1fca2015ee](https://medium.com/onfido-tech/exploring-redux-sagas-cc1fca2015ee))
+5. [Managing Side Effects In React + Redux Using Sagas]([https://jaysoo.ca/2016/01/03/managing-processes-in-redux-using-sagas/](https://jaysoo.ca/2016/01/03/managing-processes-in-redux-using-sagas/) )
+6. [API Reference]([https://redux-saga.js.org/docs/api/#effect-creators](https://redux-saga.js.org/docs/api/#effect-creators) )
 
 
-[https://redux-saga.js.org/docs/api/#effect-creators](https://redux-saga.js.org/docs/api/#effect-creators) 
 
-[https://jaysoo.ca/2016/01/03/managing-processes-in-redux-using-sagas/](https://jaysoo.ca/2016/01/03/managing-processes-in-redux-using-sagas/) 
+
 
   
 
-[https://formidable.com/blog/2017/javascript-power-tools-redux-saga/](https://formidable.com/blog/2017/javascript-power-tools-redux-saga/) 
 
-[https://formidable.com/blog/2017/composition-patterns-in-redux-saga/](https://formidable.com/blog/2017/composition-patterns-in-redux-saga/) 
 
-[https://formidable.com/blog/2017/real-world-redux-saga-patterns/](https://formidable.com/blog/2017/real-world-redux-saga-patterns/) 
+
+
+
 
   
-[https://medium.com/onfido-tech/exploring-redux-sagas-cc1fca2015ee](https://medium.com/onfido-tech/exploring-redux-sagas-cc1fca2015ee)
