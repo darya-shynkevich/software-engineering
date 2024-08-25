@@ -111,3 +111,4 @@ Within your `SettingsConfigDict`, you specify that environment variables should
 # References:
 
 1. ~~[Pydantic: Simplifying Data Validation in Python](https://realpython.com/python-pydantic/)~~
+2. [Approximating sum types in Python with Pydantic](https://blog.yossarian.net/2024/08/12/Approximating-sum-types-in-Python-with-Pydantic)

@@ -1,7 +1,7 @@
 **Key-value databases** use key-value methods like hash tables to store data in key-value pairs. We can see this depicted in the figure a couple of paragraphs below. Here, the key serves as a unique or primary key, and the values can be anything ranging from simple scalar values to complex objects. These databases allow easy partitioning and horizontal scaling of the data. 
 Some popular key-value databases include 
 1. [[Amazon DynamoDB]], 
-2. [[1. Software Engineering/2. Architecture/2. Components/Cache/Types/Redis/_Base]], 
+2. [Redis](1.%20Software%20Engineering/2.%20Architecture/2.%20Components/Cache/Types/Redis/_Base.md), 
 3. [[Memcached]] DB.
 
 **Use case**: Key-value databases are efficient for session-oriented applications. Session oriented-applications, such as web applications, store users’ data in the main memory or in a database during a session. This data may include user profile information, recommendations, targeted promotions, discounts, and more. A unique ID (a key) is assigned to each user’s session for easy access and storage. Therefore, a better choice to store such data is the key-value database.
