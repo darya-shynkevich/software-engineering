@@ -19,6 +19,8 @@ Benchmarking and profiling might point you to the following optimizations.
 
 > `BUFFERS` extends `EXPLAIN` by adding values to describe the data read/written by each operation => *We’re not only getting info on the query plan, but also on the actual data we move around*
 
+`Buffers: shared hit=1166 read=3117` => **1166 blocks (9,551,872 bytes) were provided by the shared cache**, but **3117 blocks (25,534,464 bytes) had to be read from disk**. => we can take a look at the places where we read a lot of data from disk and try to optimise them. 
+
 
 
 # Best Practices:
@@ -66,24 +68,25 @@ Benchmarking and profiling might point you to the following optimizations.
 # References:
 
 1. ~~[Best Practices Working with Billion-row Tables in Databases](https://www.youtube.com/watch?v=wj7KEMEkMUE&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=48) (video)~~
-2. [11 Database Optimization Techniques](https://danielfoo.medium.com/11-database-optimization-techniques-97fdbed1b627)
-3. [8 Techniques To Speed up Your Database](https://betterprogramming.pub/8-techniques-to-speed-up-your-database-292754ff7739)
-4. [Three things you should never put in your database](https://www.revsys.com/tidbits/three-things-you-should-never-put-your-database/)
-5. [Поиск проблем в базе данных, если ты разработчик / Алексей Лесовский (Coins.ph)](https://www.youtube.com/watch?v=h8UIX94XJGc) (video)
-6. [**Understanding Postgres Performance**](https://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/)
-7. [**More on Postgres Performance**](https://www.craigkerstiens.com/2013/01/10/more-on-postgres-performance/)
-8. **[PostgreSQL 13. Оптимизация запросов](https://postgrespro.ru/education/courses/QPT)** (course)
-9. [SQL Optimization Strategies for Performance Improvement](https://jinlow.medium.com/sql-optimization-strategies-for-performance-improvement-bd8138fcbcc5)
-10. [11 SQL Query Optimization Techniques commonly used in Projects](https://experiencestack.co/11-sql-query-optimization-techniques-commonly-used-in-projects-ed45c31c45cd)
+2. ~~[Buffer analysis when using EXPLAIN ANALYSE in Postgres](https://willj.net/posts/buffer-analysis-when-using-explain-analyse-in-postgres/)~~
+3. ~~[Making a Postgres query 1,000 times faster](https://mattermost.com/blog/making-a-postgres-query-1000-times-faster/?utm_source=substack&utm_medium=email)~~
+4. [11 Database Optimization Techniques](https://danielfoo.medium.com/11-database-optimization-techniques-97fdbed1b627)
+5. [8 Techniques To Speed up Your Database](https://betterprogramming.pub/8-techniques-to-speed-up-your-database-292754ff7739)
+6. [Three things you should never put in your database](https://www.revsys.com/tidbits/three-things-you-should-never-put-your-database/)
+7. [Поиск проблем в базе данных, если ты разработчик / Алексей Лесовский (Coins.ph)](https://www.youtube.com/watch?v=h8UIX94XJGc) (video)
+8. [**Understanding Postgres Performance**](https://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/)
+9. [**More on Postgres Performance**](https://www.craigkerstiens.com/2013/01/10/more-on-postgres-performance/)
+10. **[PostgreSQL 13. Оптимизация запросов](https://postgrespro.ru/education/courses/QPT)** (course)
 11. [SQL Optimization Strategies for Performance Improvement](https://jinlow.medium.com/sql-optimization-strategies-for-performance-improvement-bd8138fcbcc5)
-12. [Top Performance issues every developer/architect must know — part 1-Database](https://medium.com/javarevisited/top-performance-issues-every-developer-architect-must-know-part-1-fc1ad6e1644b)
-13. [Почему PostgreSQL тормозит: индексы и корреляция данных](https://habr.com/ru/company/ozontech/blog/564520/)
-14. [Анализ запросов в MySQL, PostgreSQL, MongoDB](https://www.youtube.com/watch?v=dJR10fEH6uM&list=PLH-XmS0lSi_x0OrxrC4GKInFRK8zG_tfZ&index=9) (video)
-15. [Длинная транзакция или когда размер имеет значение](https://www.youtube.com/watch?v=3h48iowNbwo) (video)
-16. [Дорогой DELETE](https://www.youtube.com/watch?v=fVF1PoKplps&list=PLH-XmS0lSi_zTZrols83QSxI3Q96dSbBm&index=35) (video)
-17. [One Database Transaction Too Many](https://hakibenita.com/django-nested-transaction)
-18. [Необычные случаи оптимизации производительности на примере ClickHouse](https://www.youtube.com/watch?v=GW07RZVpH4M&list=PLH-XmS0lSi_xQtVkWsUMSVUScK_3G_LUP&index=19) (video)
-19. [Отъявленные баги и как их избежать на примере ClickHouse](https://www.youtube.com/watch?v=ooBAQIe0KlQ&list=PLH-XmS0lSi_zTZrols83QSxI3Q96dSbBm&index=93) (video)
-20. [Не изобретая велосипед. Кэширование: рассказываем главные секреты оптимизации доступа к данным](https://habr.com/ru/company/stm_labs/blog/654201/)
-21. [30x Performance Improvements on MySQLStreamer at Yelp](https://engineeringblog.yelp.com/2018/02/making-30x-performance-improvements-on-yelps-mysqlstreamer.html)
-22. ~~[Making a Postgres query 1,000 times faster](https://mattermost.com/blog/making-a-postgres-query-1000-times-faster/?utm_source=substack&utm_medium=email)~~
+12. [11 SQL Query Optimization Techniques commonly used in Projects](https://experiencestack.co/11-sql-query-optimization-techniques-commonly-used-in-projects-ed45c31c45cd)
+13. [SQL Optimization Strategies for Performance Improvement](https://jinlow.medium.com/sql-optimization-strategies-for-performance-improvement-bd8138fcbcc5)
+14. [Top Performance issues every developer/architect must know — part 1-Database](https://medium.com/javarevisited/top-performance-issues-every-developer-architect-must-know-part-1-fc1ad6e1644b)
+15. [Почему PostgreSQL тормозит: индексы и корреляция данных](https://habr.com/ru/company/ozontech/blog/564520/)
+16. [Анализ запросов в MySQL, PostgreSQL, MongoDB](https://www.youtube.com/watch?v=dJR10fEH6uM&list=PLH-XmS0lSi_x0OrxrC4GKInFRK8zG_tfZ&index=9) (video)
+17. [Длинная транзакция или когда размер имеет значение](https://www.youtube.com/watch?v=3h48iowNbwo) (video)
+18. [Дорогой DELETE](https://www.youtube.com/watch?v=fVF1PoKplps&list=PLH-XmS0lSi_zTZrols83QSxI3Q96dSbBm&index=35) (video)
+19. [One Database Transaction Too Many](https://hakibenita.com/django-nested-transaction)
+20. [Необычные случаи оптимизации производительности на примере ClickHouse](https://www.youtube.com/watch?v=GW07RZVpH4M&list=PLH-XmS0lSi_xQtVkWsUMSVUScK_3G_LUP&index=19) (video)
+21. [Отъявленные баги и как их избежать на примере ClickHouse](https://www.youtube.com/watch?v=ooBAQIe0KlQ&list=PLH-XmS0lSi_zTZrols83QSxI3Q96dSbBm&index=93) (video)
+22. [Не изобретая велосипед. Кэширование: рассказываем главные секреты оптимизации доступа к данным](https://habr.com/ru/company/stm_labs/blog/654201/)
+23. [30x Performance Improvements on MySQLStreamer at Yelp](https://engineeringblog.yelp.com/2018/02/making-30x-performance-improvements-on-yelps-mysqlstreamer.html)
