@@ -1,20 +1,27 @@
-***Redis** (“**RE**mote **DI**ctionary **S**ervice”) is an open-source key-value database server.*
+***Redis** (“**RE**mote **DI**ctionary **S**ervice”) is an open-source key-value database server.* _Redis provides_ [_data structures_](https://redis.io/docs/data-types/) _such as_ [_strings_](https://redis.io/docs/data-types/strings/)_,_ [_hashes_](https://redis.io/docs/data-types/hashes/)_,_ [_lists_](https://redis.io/docs/data-types/lists/)_,_ [_sets_](https://redis.io/docs/data-types/sets/)_,_ [_sorted sets_](https://redis.io/docs/data-types/sorted-sets/) _with range queries,_ [_bitmaps_](https://redis.io/docs/data-types/bitmaps/)_,_ [_hyperloglogs_](https://redis.io/docs/data-types/hyperloglogs/)_,_ [_geospatial indexes_](https://redis.io/docs/data-types/geospatial/)_, and_ [_streams_](https://redis.io/docs/data-types/streams/)_. Redis has built-in_ [_replication_](https://redis.io/topics/replication)_,_ [_Lua scripting_](https://redis.io/commands/eval)_,_ [_LRU eviction_](https://redis.io/docs/reference/eviction/)_,_ [_transactions_](https://redis.io/topics/transactions)_, and different levels of_ [_on-disk persistence_](https://redis.io/topics/persistence)_, and provides high availability via_ [_Redis Sentinel_](https://redis.io/topics/sentinel) _and automatic partitioning with_ [_Redis Cluster_](https://redis.io/topics/cluster-tutorial)_._
 
 [How Redis works internally](How%20Redis%20works%20internally.md)
 
 
 ![Pasted image 20230605224617](../../../../../../_Attachments/Pasted%20image%2020230605224617.png)
-*Rather than iterating over, sorting, and ordering rows, what if the data was in data structures you wanted from the ground up? Early on, it was used much like Memcached, but as Redis improved, it became viable for many other use cases, including publish-subscribe mechanisms, streaming, and queues.*
 
-![Pasted image 20230605224913](../../../../../../_Attachments/Pasted%20image%2020230605224913.png)
+(+) reduces impedance mismatch with native data types
+(+) enterprise provides even more enterprise grade feature such as Active-Active Geo replication
+(+) viable for many other use cases, including publish-subscribe mechanisms, streaming, and queues.
 
-Primarily, Redis is an in-memory database *==used as a cache in front of another "real" database like MySQL or PostgreSQL to help improve application performance.==* It leverages the speed of memory and alleviates load off the central application database for:
-- Data that changes infrequently and is requested often
-- Data that is less mission-critical and is frequently evolving.
+Usually Redis is used in front of primary DB for cases when:
+- data changes infrequently and is requested often
+- data  is less mission-critical and is frequently evolving.
 
 ![Pasted image 20230605225013](../../../../../../_Attachments/Pasted%20image%2020230605225013.png)
 
-However, for many use cases, *==Redis offers enough guarantees that it can be used as a full-fledged primary database==*. Coupled with Redis plug-ins and its various High Availability (HA) setups, Redis as a database  has become incredibly useful for certain scenarios and workloads.
+[It can be even a multi-model db](https://www.youtube.com/watch?v=VLTPqImLapM&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=83) Coupled with Redis plug-ins and its various High Availability (HA) setups, Redis as a database  has become incredibly useful for certain scenarios and workloads.
+1. Atomicity: +
+2. Isolation: serialiseble
+3. Durability: AOF (fast and similar to WAL)
+4. Consistency +
+5. Availability + (depends on consistency)
+6. Concurrency Control (Optimistic locks)
 
 Another important aspect is that *==Redis blurred the lines between a cache and datastore==*. Important note to understand here is that ***reading and manipulating data in memory is much faster than anything possible in traditional datastores using SSDs or HDDs***.
 ![Pasted image 20230605225125](../../../../../../_Attachments/Pasted%20image%2020230605225125.png)
@@ -28,7 +35,6 @@ Originally Redis was most commonly compared to [Memcached](Memcached.md), which 
 ## Redis Architectures
 
 Depending on your use case and scale, you can decide to use one setup or another.
-
 ### 1. Single Redis Instance
 
 ![Pasted image 20230605225601](../../../../../../_Attachments/Pasted%20image%2020230605225601.png)
@@ -39,7 +45,6 @@ Given enough memory and server resources, this instance can be powerful. *==A sc
 Understanding a few Redis concepts on managing data within the system is essential. *Commands sent to Redis are first processed in memory. Then, if persistence is set up on these instances, there is a forked process on some interval that facilitates data persistence RDB (very compact point-in-time representation of Redis data) snapshots or AOF (append-only files).*
 
 These two flows allow Redis to have long-term storage, support various replication strategies, and enable more complicated topologies. *If Redis isn't set up to persist data, data is lost in case of a restart or failover.* If the persistence is enabled on a restart, it loads all of the data in the RDB snapshot or AOF back into memory, and then the instance can support new client requests.
-
 ### 2. Redis HA
 
 ![Pasted image 20230605225928](../../../../../../_Attachments/Pasted%20image%2020230605225928.png)
@@ -47,7 +52,6 @@ These two flows allow Redis to have long-term storage, support various replicati
 Another popular setup with Redis is the main deployment with a secondary deployment that is kept in sync with replication.  *==As data is written to the main instance it sends copies of those commands, to a replica client output buffer for secondary instances which facilitates replication.==* The secondary instances can be one or more instances in your deployment. *==These instances can help scale reads from Redis or provide failover in case the main is lost.==*
 
 *In these HA (**High availability**) systems, **it is essential to not have a single point of failure so systems can recover gracefully and quickly**. This results in reliable crossover, so data isn't lost during the transition from primary to secondary, in addition to automatically detecting failure and recovery from it.*
-
 ### 3. Redis Replication
 
 Every main instance of Redis has a replication ID and an offset. These two pieces of data are critical to figure out a point in time ==*where a replica can continue its replication process or to determine if it needs to do a complete sync*.== This offset is incremented for every action that happens on the main Redis deployment.
@@ -58,7 +62,6 @@ If an instance has the same replication ID and offset, they have precisely the s
 
 *For example, two instances, primary and secondary, have the identical replication ID but offsets that differ by a few hundred commands, meaning that if those were replayed on the instance that is just behind in offset, they would have the same dataset. Now if the replication IDs differ entirely, and when we are unaware of the previous replication ID (no common ancestor) of the newly demoted (and rejoining) secondary. We will need to perform an expensive full sync.*
 *Alternatively if we are aware of previous replication ID we can then reason about how to get the data in sync since we are able to reason about common ancestor they both shared and the offset is again meaningful for a partial sync.*
-
 ### 4. Redis Sentinel
 
 ![Pasted image 20230605230744](../../../../../../_Attachments/Pasted%20image%2020230605230744.png)
@@ -88,7 +91,6 @@ You can deploy Redis Sentinel in several ways. Honestly to make any sane recomme
 3. What happens if the network topologies of sentinel nodes and client nodes (application nodes) are misaligned?
 
 *There are a few ways to mitigate the level of losses if you force the main instance to replicate writes to a minimum of one secondary instance. Remember, all Redis replication is asynchronous and has its trade-offs. So it will need to independently track acknowledgement and if they aren't confirmed by at least one secondary, the main instance will stop accepting writes.*
-
 ### 5. Redis Cluster
 ![Pasted image 20230605232305](../../../../../../_Attachments/Pasted%20image%2020230605232305.png)
 
@@ -115,8 +117,7 @@ M2 contains hashslots from 5461 to 10922.
 M3 contains hashslots from 10923 to 16383.*
 
 *All the keys that mapped the hashslots in M1 that are now mapped to M2 would need to move. But the hashing for the individual keys to hashslots wouldn't need to move because they have already been divided up across hashslots. So this one level of misdirection solves the resharding issue with algorithmic sharding.*
-
-### [Gossip protocol](../../../1.%20Concepts/Gossip%20protocol.md)
+### [Gossip protocol](Gossip%20protocol.md)
 
 *In Redis Cluster, all the nodes in the cluster constantly communicate with each other to know which shards are available and can serve requests. If a sufficient number of shards agree that a primary instance is not responsive, they can decide to promote one of its secondary instances to primary to keep the cluster running smoothly. It is important to configure the number of nodes needed to trigger this properly to avoid a situation called split-brain, where the cluster is split if it cannot break the tie when both sides of a partition are equal. A good practice is to have an odd number of primary nodes and two replicas each for the most robust setup.*
 
@@ -159,13 +160,6 @@ When you fork a process, the parent and child share memory, and in that child pr
 In the case where there are changes, the kernel keeps track of references to each page, and if there are more than one to specific page the changes are written to new pages. The child process is fully unaware of the change and has consistent memory snapshot. Therefore only fraction of the memory is used and we are able to achieve a point in time snapshot of potentially gigabytes of memory extremely quickly and efficiently!
 
 *It's like taking a picture of something that hasn't moved - you don't need to take a whole new picture, just the parts that have changed.*
-
-## Points to discuss:
-
-1. What us `fsync` ?
-2. How `copy-on-write` works?
-3. How exactly `forking` works?
-4. Do clients wait for persistent? 
 # **Interview Questions:**
 
 1. [Redis Interview Questions from Javapoint](https://www.javatpoint.com/redis-interview-questions-and-answers)
@@ -196,13 +190,4 @@ In the case where there are changes, the kernel keeps track of references to eac
 20. [Redis на практических примерах](https://habr.com/ru/company/manychat/blog/507136/)
 21. [Успехи и провалы с Redis](https://www.youtube.com/watch?v=JBIm4sglyQU&list=PLH-XmS0lSi_x0OrxrC4GKInFRK8zG_tfZ&index=10) (video)
 22. [11 Common Web Use Cases Solved In Redis](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
-23. ~~[Can Redis be used as a Primary database?](https://www.youtube.com/watch?v=VLTPqImLapM&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=83)~~ checks all the boxes of a primary database => even a multi-model db
-	1. Atomicity: +
-	2. Isolation: serialiseble
-	3. Durability: AOF (fast and similar to WAL)
-	4. Consistency +
-	5. Availability + (depends on consistency)
-	6. Concurrency Control (Optimistic locks)
-
-	- reduces impedance mismatch with native data types
-	- enterprise provides even more enterprise grade feature such as Active-Active Geo replication
+23. ~~[Can Redis be used as a Primary database?](https://www.youtube.com/watch?v=VLTPqImLapM&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=83)~~ 
