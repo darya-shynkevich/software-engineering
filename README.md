@@ -7,6 +7,20 @@ FE:
 Course:
 1. [Python AsyncIO](https://superfastpython.com/category/asyncio/page/20/)
 
+Серия статей из  по асинхронному программированию от Staff инженера Spotify. Под капотом 8 частей покрывающий практически все вопросы по asyncio возникающие у разработчика:
+
+1. Part 0: Initial Setup
+2. Part 1: True Concurrency
+3. Part 2: Graceful Shutdowns
+4. Part 3: Exception Handling
+5. Part 4: Working with Synchronous & Threaded Code
+6. Part 5: Testing asyncio Code
+7. Part 6: Debugging asyncio Code
+8. Part 7: Profiling asyncio Code
+
+Во многом благодаря этому сокровищу я разобрался как готовить асинхронщину на Python и не выстрелить себе в ногу. Советую к ознакомлению всем питонистам и тем кому просто интересна тема конкуретности.
+https://www.roguelynn.com/words/asyncio-we-did-it-wrong/
+
 Articles:
 
 DDD:
