@@ -27,20 +27,21 @@
     - *It's better not to procrastinate. Otherwise, you'll have to make up for lost time and rush through things.*
 20. **to play for time** = to delay something because you are not ready, or need more time to think about it
 21. just around the corner = happening very soon
+22. **to kill time**
 
 ### 3. Time perception
 
-1. (do something) time and again = repeatedly; happening many times
+1. **(do something) time and again** = repeatedly; happening many times
 	   - *The police were catching the same kids stealing time after time.*
 	   *- The same patterns seem to come up time and again.*
-1. to be up to speed = having the latest information or knowledge about something
+1. **to be up to speed** = having the latest information or knowledge about something
 	   - *Some school officials are only now getting up to speed regarding computers.*
 	   *- John will bring you up to speed (=tell you the latest information).*
-2. with hindsight = used to say it is easier to know the right thing to do after something has happened or if you have a lot of experience
+2. **with hindsigh**t = used to say it is easier to know the right thing to do after something has happened or if you have a lot of experience
 	   - *He admitted that, with the benefit of hindsight, the original launch had not been large enough.*
 3. time flies = time passes quickly
 	   - *When you're having fun, it's true that time flies.*
-4. time really drags = time seems to move slowly and feel long
+4. **time really drags** = time seems to move slowly and feel long
 	   - *But when you're bored, time really drags*
 5. to be behind the times = to be old-fashioned
 	   - *Sometimes it feels like you're really behind the times when everyone seems to be moving faster than you.*
@@ -63,30 +64,30 @@
 	- *Decluttering your mind before bed can help reduce mental clutter and improve sleep quality.*
 6. to cultivate a habit
 	- Trying to cultivate a habit of journaling daily can improve mental clarity.
-7. to impair = to damage something or make something worse
+7. **to impair** = to damage something or make something worse
 	- *His age impaired his chances of finding a new job.*
 	- *Lack of sleep can impair your ability to concentrate during the day.*
-8. to nurture (/ˈnɜːtʃə(r)/) an idea = to care for and protect somebody/something while they are growing and developing
+8. **to nurture** (/ˈnɜːtʃə(r)/) an idea = to care for and protect somebody/something while they are growing and developing
 	- *These delicate plants need careful nurturing.*
 	- *children nurtured by loving parents*
 	- *Learning to nurture relationships with coworkers can improve teamwork in the workplace.*
 9. to gain a fresh perspective
 	- *Sometimes taking a break can help gain a fresh perspective on a challenging task.*
-10. to cut down on = to eat or drink less of a particular thing, usually in order to improve your health:
+10. **to cut down on** = to eat or drink less of a particular thing, usually in order to improve your health:
 	- *I’m trying to cut down on the amount of sugar I eat.*
 	- *Cutting down on sugary snacks can lead to better overall health and well-being.*
 	- *When looking at your habits, try to cut down on unproductive activities, such as excessive social media use.*
 1. to unwind
-2. to break a habit = to stop doing something that you do regularly, especially something that you should not do
+2. **to break a habit** = to stop doing something that you do regularly, especially something that you should not do
     - *a new drug which helps smokers to break their habit*
-3. a creature of habit = someone who always does the same thing in the same way
+3. **a creature of habit** = someone who always does the same thing in the same way
     - *"he's a creature of habit—he keeps to the places he knows"*
     - *My father's such a creature of habit - he always has to have a biscuit and a cup of tea at bedtime.*
 4. by force of habit = doing something because you have always done it in the past, rather than because you have thought carefully about it
     - *He looked around from force of habit, but nobody paid any attention to him.* 
 	- *Unconsciously, by force of habit, she plugged the coffee pot in*
-5. to nip in the bud = to stop (something) immediately so that it does not become a worse problem. *When a leaf or flower is beginning to form, it's just a little bud, and if you nip it — cut it — then it won't grow.*
-6. to head him off at the pass (idiom) = to prevent someone or something from reaching or passing a certain point, especially to escape.
+5. **to nip in the bud** = to stop (something) immediately so that it does not become a worse problem. *When a leaf or flower is beginning to form, it's just a little bud, and if you nip it — cut it — then it won't grow.*
+6. **to head him off at the pass** (idiom) = to prevent someone or something from reaching or passing a certain point, especially to escape.
      to preempt or forestall someone from doing something or something from happening.
      - *The aim of this new treatment method is to identify the disease much earlier and then head it off the pass, rather than simply managing the symptoms it presents down the line.*
 
@@ -99,11 +100,11 @@
 	- divisive issue
 	- *The strike was a divisive issue in the community.*
 	- *socially divisive policies*
-3. influx (/ˈɪnflʌks/) = the arrival of large numbers of people or large amounts of money, goods etc, especially suddenly
+3. **influx** (/ˈɪnflʌks/) = the arrival of large numbers of people or large amounts of money, goods etc, especially suddenly
 	- *influx of migrants*
 	- *a sudden influx of cash*
 	- *a large influx of tourists in the summer*
-4. ravage (/ˈrævɪdʒ/) = to damage something very badly
+4. **ravage** (/ˈrævɪdʒ/) = to damage something very badly
 	- *ravages of war*
 	- *a country ravaged by civil war*
 	- *His health was gradually ravaged by drink and drugs.*
@@ -112,32 +113,32 @@
 6. unprecedented
     - *unprecedented growth*
     - *The speed at which our communication, habits and interactions are changing is unprecedented.*
-7. daunting
+7. **daunting**
 	- *a daunting task*
 	- *learning a new skill can be daunting*
-1. setting aside = to reserve for a special purpose; put to one side
+1. **setting aside** = to reserve for a special purpose; put to one side
 	- *set aside time*
 	- *There is a wealth of free online content to aid with this setting aside a small amount of time each week to focus on it can really add up over the long term.*
 	- *Make sure to set aside time each week for self-development activities.*
 
-*They estimate that it will help 5.3 million new jobs to be created, adding over $6 trillion to the global economy – a vital influx into a world still recovering from the ravages of the pandemic.*
+*They estimate that it will help 5.3 million new jobs to be created, adding over $6 trillion to the global economy – **a vital influx** into a world still recovering from the **ravages of the pandemic**.*
 
-*Understanding the need for diversity and inclusion in the work place is paramount in a world that is often divisive and lacking in empathy for others.*
+*Understanding the need for diversity and inclusion in the work place is **paramount** in a world that is often **divisive and lacking in empathy** for others.*
 
 ### 6. Decision Making
 
 [Quizlet](https://quizlet.com/pl/754178858/decision-making-flash-cards/?new=)
 
 1. up in the air
-2. to be fraught (/frɔːt/) with difficulties = to be full of difficulties
+2. **to be fraught (/frɔːt/) with difficulties** = to be full of difficulties
 	- *The negotiations have been fraught with difficulties right from the start.*
 	- *The situation is fraught with problems and requires sensitive handling.*
 	- *From beginning to end, the airlift was fraught with risks.*
-3. an astounding (/əˈstaʊndɪŋ/) amount of information = so surprising that it is difficult to believe
+3. an **astounding** (/əˈstaʊndɪŋ/) amount of information = so surprising that it is difficult to believe
 	- There was an astounding 20 per cent increase in sales.
 	- The performance was an astounding success.
 	- They can perform astounding mathematical feats in seconds.
-4. conviction = 
+4. **conviction** = 
    a strong opinion or belief
    the act of finding somebody guilty of a crime in court; the fact of having been found guilty
 	   - *conviction for something* : She has six previous convictions for theft.
@@ -145,21 +146,21 @@
 	   - strong political/moral convictions
 	   - *conviction that*… We were sustained by the conviction that all would be well in the end.
 5. a massive waste of energy 
-6. to whittle down = to gradually reduce the size of something
+6. **to whittle down** = to gradually reduce the size of something
 	- I finally managed to whittle down the names on the list to only five.
-7. earth-shattering consequences
-8. to kick the can down the road
-9. make-or-break = to be the thing that makes somebody/something either a success or a failure
+7. **earth-shattering consequences**
+8. **to kick the can down the road**
+9. **make-or-break** = to be the thing that makes somebody/something either a success or a failure
 	- This movie will make or break him as a director.
 	- It's make-or-break time for the company.
 10. plentiful opportunities
 11. a front-runner
-12. to take a back seat = to allow somebody else to play a more active and important role in a particular situation than you do
+12. **to take a back seat** = to allow somebody else to play a more active and important role in a particular situation than you do
 	- Many managers take a back seat and leave recruitment to specialists.
-13. to sit on the fence = to avoid saying which side of an argument you support or what your opinion is about a particular subject
-14. to stick to your guns (informal) = to refuse to change your mind about something even when other people are trying to persuade you that you are wrong
+13. **to sit on the fence** = to avoid saying which side of an argument you support or what your opinion is about a particular subject
+14. **to stick to your guns** (informal) = to refuse to change your mind about something even when other people are trying to persuade you that you are wrong
 	- Despite harsh criticism, she's sticking to her guns on this issue.
-15. to be in two minds = to be unable to decide about something
+15. **to be in two minds** = to be unable to decide about something
 
 ### 7. Motivation
 
@@ -167,38 +168,38 @@
 
 1. to stoke inner fire
 2. to burn the midnight oil
-3. to brag about something
-4. audacious goals
-5. to reap rewards
-6. to hold yourself accountable for
-7. the crux of the issue
-8. to wane willpower
-9. to crave achievement
+3. **to brag about something**
+4. **audacious goals**
+5. to **reap** rewards
+6. **to hold yourself accountable for**
+7. **the crux of the issue**
+8. **to wane willpower**
+9. **to crave achievement**
 10. to be worth one's weight in gold
 
 ### 8. How Miscommunication Happens
 
 [Quizlet](https://quizlet.com/757923632/how-miscommunication-happens-personal-growth-flash-cards/?new)
 
-1. perceptual (/pəˈseptʃuəl/) = understanding or thinking about something or someone in a certain way
+1. **perceptual** (/pəˈseptʃuəl/) = understanding or thinking about something or someone in a certain way
 	- *perceptual skills*
-2. animosity (/ˌænɪˈmɒsəti/) = a strong negative feeling towards someone or something
+2. **animosity** (/ˌænɪˈmɒsəti/) = a strong negative feeling towards someone or something
 	- *He felt no animosity towards his critics.*
 	- *personal animosities between members of the two groups*
-3. connotation = the idea connected to a word’s meaning
+3. **connotation** = the idea connected to a word’s meaning
 	- *The word ‘professional’ has connotations of skill and excellence.*
 	- *negative connotations*
 	- *It is important to understand the power of connotation.*
 4. utter confusion
-5. mush = any unpleasant thick soft substance, such as food that has been cooked for too long
+5. **mush** = any unpleasant thick soft substance, such as food that has been cooked for too long
 	1. to turn to mush / my brain has *turned to mush*
-6. to get one's wires crossed (informal) = to become confused about what somebody has said to you so that you think they meant something else
+6. **to get one's wires crossed** (informal) = to become confused about what somebody has said to you so that you think they meant something else
 	- *We seem to have got our wires crossed. I thought you were coming on Tuesday.*
-7. to hit it off with someone (informal) to have a good friendly relationship with somebody
+7. **to hit it off with someone** (informal) to have a good friendly relationship with somebody
 	- *We hit it off straight away.*
-8. to put your foot in it = to say or do something that upsets, offends or [embarrasses](https://www.oxfordlearnersdictionaries.com/definition/english/embarrass#embarrass_sng_1 "embarrasses definition") somebody
+8. **to put your foot in it** = to say or do something that upsets, offends or [embarrasses](https://www.oxfordlearnersdictionaries.com/definition/english/embarrass#embarrass_sng_1 "embarrasses definition") somebody
 	- *I really put my foot in my mouth with Ella—I didn't know she'd split up with Tom.*
-9. to put someone at ease = to make someone start to feel relaxed
+9. **to put someone at ease** = to make someone start to feel relaxed
 10. to establish *shared interests* = to find *common ground* = to find common interests
 11. **to cloud one's judgement** = to cause someone to be unable to think clearly
 	- *The alcohol must have clouded my judgment.*
@@ -292,7 +293,10 @@
 
 ### 12. Success
 
-unicorn vomit 
+1. unicorn vomit 
+
+
+
 I trusted in tenure
 bona fide experts
 innocuously
