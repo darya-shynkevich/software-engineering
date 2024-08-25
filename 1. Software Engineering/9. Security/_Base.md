@@ -2,7 +2,9 @@
 
 
 [RSA key lengths](https://www.javamex.com/tutorials/cryptography/rsa_key_length.shtml)
+# [Best Python Security Practices for Web Developers](https://www.arjancodes.com/blog/best-practices-for-securing-python-applications/)
 
+1. [What is Security Engineering?](https://newsletter.pragmaticengineer.com/p/security-engineering?utm_source=substack&publication_id=458709&post_id=143615572&utm_medium=email&utm_content=share&utm_campaign=email-share&triggerShare=true&isFreemail=true&r=1vxw4z&triedRedirect=true)
 
 # Books:
 
