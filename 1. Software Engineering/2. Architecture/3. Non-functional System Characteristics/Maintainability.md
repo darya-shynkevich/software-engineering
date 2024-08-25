@@ -25,7 +25,7 @@ Maintainability can be defined more clearly in close relation to reliability. Th
 
 # Technical Debt
 
-Early on when you are standing up your system its important to keep things simple and as [loosely coupled](Complexity%20and%20Coupling/Loosely%20Coupled.md) as possible. This is both in architecture and implementation.
+Early on when you are standing up your system its important to keep things simple and as [loosely coupled](Coupling.md) as possible. This is both in architecture and implementation.
 
 *The perfect race car crosses the finish line in first place and immediately falls into pieces.*
 

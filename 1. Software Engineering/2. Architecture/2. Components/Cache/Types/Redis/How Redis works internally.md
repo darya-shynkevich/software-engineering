@@ -26,8 +26,6 @@ Single-threaded approach:
 5. The event-driven approach is asynchronous; Redis doesn’t actively poll each socket but rather responds to events as they occur. This allows Redis to efficiently manage a large number of connections without wasting resources on constant polling.
 6. By waiting for events rather than blocking on individual sockets, Redis maximizes the utilisation of its single thread and system resources. This ensures that the server remains responsive to events across multiple connections without unnecessary delays.
 
-
-
 # References:
 
 1. ~~[What is Redis and how does it work Internally](https://medium.com/@ayushsaxena823/what-is-redis-and-how-does-it-work-cfe2853eb9a9)~~
