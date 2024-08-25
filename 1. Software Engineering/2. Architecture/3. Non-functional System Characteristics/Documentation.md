@@ -14,3 +14,4 @@ https://github.com/MerrimanInd/drawpyo
 10. [Open-sourcing a revised C4-model and other Software Architecture Models](https://nikolaschou.medium.com/open-sourcing-software-architecture-models-17b0149ba638)
 11. [Making C4-Model in Software Architecture](https://medium.easyread.co/c4-model-in-software-architecture-6587ab4a2d0f)
 12. [Unleashing the Power of Software Documentation](https://jinlow.medium.com/unleashing-the-power-of-software-documentation-e7d684d45329)
+13. [Software Architecture Diagrams with C4 Model](https://packagemain.tech/p/software-architecture-diagrams-c4)
