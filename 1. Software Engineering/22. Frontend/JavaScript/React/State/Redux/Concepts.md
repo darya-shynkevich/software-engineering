@@ -116,4 +116,4 @@ console.log(currentValue)
 // 2
 ```
 
-
+Selectors will re-run whenever the Redux store is updated, and if the data they return has changed, the component will re-render
