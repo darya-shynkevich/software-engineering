@@ -158,6 +158,13 @@ As mentioned at the beginning of this section, the query planner won’t use an 
 ### 3. Query Doesn’t Match the Index
 
 Your query may not match the index. For example, an index on the name column won’t match a query that uses both name and age in its `WHERE` clause. Be sure that if you use a field in a `WHERE` clause, you include that field in the index.
+	1. **does not satisfy the leftmost prefix rule** — indexes may fail if the query does not use the leftmost column(s) of the index.
+	2. **range index columns not placed last** — when creating composite indexes, ensure that columns involved in range operations are placed after columns involved in equality operations.
+	3. **using SELECT** -  retrieving all columns using SELECT * may cause index failure as it does not optimize index usage.
+	4. **index columns involved in computations** — indexes may fail if the indexed columns are involved in computations or expressions in the query.
+	5. **using functions on indexed columns** — applying functions directly to indexed columns in the query can prevent the use of indexes.
+	6. **using wildcards (%) on the left side of LIKE** — Using wildcards (%) on the left side of the LIKE operator can prevent index usage.
+	7. **using OR operator without caution** — Using the OR operator without caution may lead to index failure as it may prevent the use of indexes efficiently.
 
 # References:
 
