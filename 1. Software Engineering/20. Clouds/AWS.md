@@ -1,4 +1,4 @@
-
+[List of AWS services with short descriptions](https://aws.dendron.so/notes/1f759d8c-cca7-4fc4-9aa2-6dbf6e596abf.html) 
 
 # Lambda
 
