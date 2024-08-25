@@ -1,5 +1,5 @@
 
-[4. CDN](../../7.%20Networks/4.%20CDN.md)
+[4. CDN](4.%20CDN.md)
 
 # References:
 

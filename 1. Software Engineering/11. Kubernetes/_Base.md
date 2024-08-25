@@ -12,3 +12,4 @@
 9. [Go microservice template for Kubernetes](https://github.com/stefanprodan/podinfo)
 10. [How to Create Helm Chart Comprehensive Beginners Guide](https://devopscube.com/create-helm-chart/)
 11. [Kubernetes production best practices | A curated checklist of best practices designed to help you release to production](https://learnk8s.io/production-best-practices)
+12. [How Kubernetes picks which pods to delete during scale-in](https://rpadovani.com/k8s-algorithm-pick-pod-scale-in)

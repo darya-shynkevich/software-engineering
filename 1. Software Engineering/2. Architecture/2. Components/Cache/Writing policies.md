@@ -58,12 +58,12 @@ In the write-back cache mechanism, the data is first written to the cache and co
 
 ***The write to the permanent storage is done*** based on certain conditions, for example, ***when the system needs some free space***. 
 
-**Example:** Imagine a collaborative document editing application that allows multiple users to make changes to a document simultaneously. When users make changes, those changes are first saved to the cache, allowing the application to respond quickly and provide a smooth editing experience. When certain conditions are met (e.g., the number of changes reaches a certain threshold), the application writes the cached changes back to the data store, updating the document with the latest changes from all users. This approach minimizes the number of write operations to the data store and reduces the load on the storage system, improving the overall performance of the application. ([[../../Examples/Google Docs]])
+**Example:** Imagine a collaborative document editing application that allows multiple users to make changes to a document simultaneously. When users make changes, those changes are first saved to the cache, allowing the application to respond quickly and provide a smooth editing experience. When certain conditions are met (e.g., the number of changes reaches a certain threshold), the application writes the cached changes back to the data store, updating the document with the latest changes from all users. This approach minimizes the number of write operations to the data store and reduces the load on the storage system, improving the overall performance of the application. ([[Google Docs]])
 ## Write-behind cache
 
 It is quite similar to write-back cache. In this scheme, data is written to the cache and acknowledged to the application immediately, but it is not immediately written to the permanent storage. Instead, the write operation is deferred, and the data is eventually written to the permanent storage at a later time. ***The main difference between write-back cache and write-behind cache is ==when== the data is written to the permanent storage.*** In write-back caching, data is only written to the permanent storage when it is necessary for the cache to free up space or when an event happens, while in ***==write-behind caching, data is written to the permanent storage at specified intervals==***.
 
-**Example:** A document editor application temporarily saves changes to the cache while the user is editing. Periodically, the changes are written back to the data store to minimize the number of write operations. ([[../../Examples/Google Docs]])
+**Example:** A document editor application temporarily saves changes to the cache while the user is editing. Periodically, the changes are written back to the data store to minimize the number of write operations. ([[Google Docs]])
 
 ![Pasted image 20231014172227](../../../../../_Attachments/Pasted%20image%2020231014172227.png)
 

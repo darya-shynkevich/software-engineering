@@ -18,7 +18,7 @@ A real-world document editor also has to have functions like document creation, 
 - **Availability**: The service should be available at all times and show robustness against failures.
 - **Scalability**: A large number of users should be able to use the service at the same time. They can either view the same document or create new documents.
 
-![](../../../_Attachments/Pasted%20image%2020240127200957.png)
+![](Pasted%20image%2020240127200957.png)
 
 - **API gateway**: Different client requests will get intercepted through the API gateway. Depending on the request, it’s possible to forward a single request to multiple components, reject a request, or reply instantly using an already cached response, all through the API gateway. Edit requests, comments on a document, notifications, authentication, and data storing requests will all go through the API gateway.
 - **Application servers**: The application servers will run business logic and tasks that generally require computational power. For instance, some documents may be converted from one file type to another (for example, from a PDF to a Word document) or support features like import and export. It’s also central to the attribute collection for the recommendation engine.
@@ -42,7 +42,7 @@ A real-world document editor also has to have functions like document creation, 
 - **Causality preservation**: If operation `a` happened before operation `b`, then operation `a` is executed before operation `b`.
 - **Convergence**: All document replicas at different clients will eventually be identical.
 
-![](../../../_Attachments/Pasted%20image%2020240127211250.png)
+![](Pasted%20image%2020240127211250.png)
 
 OT has two disadvantages:
 - Each operation to characters may require changes to the positional index. This means that operations are order dependent on each other.
@@ -59,7 +59,7 @@ A CRDT satisfies both commutativity and idempotency by assigning two key propert
 
 **Note:** OT and CRDTs are good solutions for conflict resolution in collaborative editing, but our use of WebSockets makes it possible to highlight a collaborator’s cursor. Other users will anticipate the position of a collaborator’s next operation and naturally avoid conflict.
 
-![](../../../_Attachments/Pasted%20image%2020240127211726.png)
+![](Pasted%20image%2020240127211726.png)
 
 # References:
 

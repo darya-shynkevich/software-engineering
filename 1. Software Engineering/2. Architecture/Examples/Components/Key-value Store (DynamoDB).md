@@ -25,9 +25,9 @@ Key-value stores, like ordinary hash tables, provide two primary functions, whic
 
 > Dynamo uses MD5 hashes on the key to generate a 128-bit identifier. These identifiers help the system determine which server node will be responsible for this specific key.
 
-## Scalability => [Consistent Hashing](../1.%20Concepts/Consistent%20Hashing.md)
+## Scalability => [Consistent Hashing](Consistent%20Hashing.md)
 
-## Availability => Data [Replication](../../3.%20Database/OTLP/SQL/5.%20Distributed/Replication/Base.md)
+## Availability => Data [Replication](1.%20Software%20Engineering/3.%20Database/OTLP/SQL/5.%20Distributed/Replication/Base.md)
 
 ! Peer-to-peer approach
 
@@ -49,13 +49,13 @@ To update an object in the key-value store, the client must give the `context`.
 
 ## Configurable service
 
-Use [Coordinator](../2.%20Components/Coordinator.md)
+Use [Coordinator](Coordinator.md)
 
 Let’s take an example. Say `n` in the top `n` of the preference list is equal to 3. This means three copies of the data need to be maintained. We assume that nodes are placed in a ring. Say A, B, C, D, and E is the clockwise order of the nodes in that ring. If the write function is performed on node A, then the copies of that data will be placed on B and C. This is because B and C are the next nodes we find while moving in a clockwise direction of the ring.
 
 Now, consider two variables, `r` and `w`. The `r` means the minimum number of nodes that need to be part of a successful read operation, while `w` is the minimum number of nodes involved in a successful write operation. So if `r=2`, it means our system will read from two nodes when we have data stored in three nodes. We need to pick values of `r` and `w` such that at least one node is common between them. This ensures that readers could get the latest-written value. For that, we’ll use a quorum-like system by setting `r+w>n`.
 
-![](../../../_Attachments/Pasted%20image%2020240120135153.png)
+![](Pasted%20image%2020240120135153.png)
 Let’s say `n=3`, which means we have three nodes where the data is copied to. Now, for `w=2`, the operation makes sure to write in two nodes to make this request successful. For the third node, the data is updated asynchronously.
 
 The coordinator produces the vector clock for the new version and writes the new version locally upon receiving a `put()` request for a key. The coordinator sends `n` highest-ranking nodes with the updated version and a new vector clock. We consider a write successful if at least `w−1` nodes respond. Remember that the coordinator writes to itself first, so we get `w` writes in total.
@@ -63,7 +63,7 @@ The coordinator produces the vector clock for the new version and writes the new
 Requests for a `get()` operation are made to the `n` highest-ranked reachable nodes in a preference list for a key. They wait for `r` answers before returning the results to the client. Coordinators return all dataset versions that they regard as unrelated if they get several datasets from the same source (divergent histories that need reconciliation). The conflicting versions are then merged, and the resulting key’s value is rewritten to override the previous versions.
 ## Enable Fault Tolerance and Failure Detection
 
-### [Hinted handoff](../1.%20Concepts/Hinted%20handoff.md)
+### [Hinted handoff](Hinted%20handoff.md)
 
 ### Handle permanent failures
 
