@@ -82,7 +82,8 @@ Here is an example of how tuples are referenced.
 
 # References:
 
-1. [How Do Databases Store Tables on Disk? Explained both SSD & HDD](https://www.youtube.com/watch?v=DbxddGtHl70&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=38) (videos)
-2. [Database page splits | The Backend Engineering Show](https://www.youtube.com/watch?v=fnR215jy-X8&list=PLQnljOFTspQUybacGRk1b_p13dgI-SmcZ&index=53) (video)
-3. [How databases store data on disk?](https://www.youtube.com/watch?v=haz2h7_xFDk) (video)
-4. [The physical structure of InnoDB index pages](https://blog.jcole.us/2013/01/07/the-physical-structure-of-innodb-index-pages/)
+1. ~~[Why is the deleted record still there?](https://iorilan.medium.com/my-friend-asked-these-questions-to-his-interviewers-but-couldnt-get-an-answer-4e79835c14de)~~
+2. [How Do Databases Store Tables on Disk? Explained both SSD & HDD](https://www.youtube.com/watch?v=DbxddGtHl70&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=38) (videos)
+3. [Database page splits | The Backend Engineering Show](https://www.youtube.com/watch?v=fnR215jy-X8&list=PLQnljOFTspQUybacGRk1b_p13dgI-SmcZ&index=53) (video)
+4. [How databases store data on disk?](https://www.youtube.com/watch?v=haz2h7_xFDk) (video)
+5. [The physical structure of InnoDB index pages](https://blog.jcole.us/2013/01/07/the-physical-structure-of-innodb-index-pages/)

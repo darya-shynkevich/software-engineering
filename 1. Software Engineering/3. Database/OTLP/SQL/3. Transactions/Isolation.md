@@ -66,6 +66,8 @@ brgin transaction isolation level serializable;
 ....
 commit;
 ```
+
+In PostgreSQL there is a new technique ([Serializable Snapshot Isolation](Serializable%20Snapshot%20Isolation.md)) that allows a not-lock-based serializable isolation level
 # References:
 
 1. [Isolation Levels - part I: Introduction](https://dev.to/franckpachot/isolation-levels-part-i-introduction-bd5
@@ -77,3 +79,4 @@ commit;
 7. [Read Committed DBMS Isolation Level - (Explained by Example)](https://www.youtube.com/watch?v=7cvU1Q0AJOU&list=PLQnljOFTspQXOkIpdwjsMlVqkIffdqZ2K&index=73) (video)
 8. [Serializable vs Repeatable Read Isolation Level - When to use one over the other in Database System](https://www.youtube.com/watch?v=KoULlXKK1H8&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=64) (video)
 9. [Phantom Reads in Postgres Explained Compared to Other DBMS](https://www.youtube.com/watch?v=MEAD5JNc_Dw&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=63) (video)
+10. ~~[Serializable Snapshot Isolation in PostgreSQL](https://drkp.net/papers/ssi-vldb12.pdf)~~
