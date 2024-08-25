@@ -64,7 +64,7 @@ Benchmarking and profiling might point you to the following optimizations.
 - [Use OFFSET and FETCH NEXT for efficient pagination instead of LIMIT.](Offsets.md)
 - Rewrite subqueries as join operations for better performance.
 - Optimize GROUP BY queries by including only necessary columns and applying appropriate aggregate functions.
-- [Improve Insert Performance](Improve%20Insert%20Performance.md)
+- [Improve INSERT Performance](Improve%20INSERT%20Performance.md)
 
 ## 9. Maybe add abstraction on the top
 

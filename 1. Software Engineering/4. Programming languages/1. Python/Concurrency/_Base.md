@@ -41,9 +41,32 @@ _"If your code is IO bound, both **multiprocessing** and **multithreading** in
 
 ![Pasted image 20231204230352](Pasted%20image%2020231204230352.png)
 
+# [Multiprocessing](2.%20Multiprocessing.md)
+
+- **Process** - an independent execution unit that the OS manages.
+- It has memory space and resources like CPU time and I/O devices.
+- Identified by a unique Process Identifier (PID), processes can run concurrently and be managed by the operating system to share resources efficiently.
+-  It has its own independent virtual address space, which includes code, data, and stack segments.
+- It communicates with other processes through Inter-Process Communication (IPC) mechanisms like pipes, message queues, and shared memory.
+- It requires more resources to create and manage. Each process needs its own memory space and OS resources. Higher overhead due to the need for separate memory space and additional resources.
+- Shared memory allows processes to communicate by accessing a common memory space. This enables direct reading and writing of data but requires careful synchronisation to avoid race conditions.
+
+To get parallelism, Python introduced the `multiprocessing` module which provides APIs which will feel very similar if you have used Threading before.
+
+Processes are costly to spawn. So for I/O, Threads are chosen largely.
+
 # [Multithreading](1.%20Multithreading.md)
 
-**Thread** is the smallest sequence of programmed instructions that can be managed independently by a scheduler.
+- Thread is the smallest unit of execution within a process, sharing its memory space.
+- It shares the process’s virtual address space but has its stack => it requires fewer resources.
+- Threads communicate more easily by sharing data within the process.
+- Multitreading allows a process to execute multiple threads concurrently. Each thread represents a separate execution path within the same program, sharing the same memory space but operating independently.
+
+A multithreaded process uses an operating system API to create, manage, and terminate threads. Threads run concurrently, with the OS scheduler allocating CPU time slices to each. They communicate via shared memory and use synchronization mechanisms like mutexes and semaphores to coordinate access to shared resources.
+- **Main thread** — assign tasks to your workers (threads).
+- **Workers (threads)** — perform the tasks concurrently, sharing the memory and resources.
+- When multiple workers need the same memory and resources, leading to potential delays.
+-  Methods to manage conflicts, such as waiting for turns or notifying when a resource is free.
 
 *Consider a web browser — it’s a multi-threaded application. When we open multiple tabs, each tab is handled by a separate thread. So, while one tab is loading a webpage, we can continue scrolling or reading on another. This is **multithreading** at work!  <- how threads work in normal languages*
 
@@ -79,13 +102,6 @@ Quick facts about the GIL:
 2. **Use Thread Pools:** A thread pool is a group of pre-instantiated, idle threads that are ready to be used. Using a thread pool minimizes the overhead of thread creation and destruction.
 3. **Avoid Thread Priorities:** Depending on thread priorities for program correctness can lead to portability issues, as thread scheduling is not consistent across different operating systems.
 4. **Synchronize Carefully:** Incorrect synchronization can lead to problems like deadlocks and race conditions. It’s often better to use higher-level synchronization utilities provided by your language’s standard library, rather than trying to solve these problems yourself with low-level primitives.
-
-# [Multiprocessing](2.%20Multiprocessing.md)
-
-To get parallelism, Python introduced the `multiprocessing` module which provides APIs which will feel very similar if you have used Threading before.
-
-Processes are costly to spawn. So for I/O, Threads are chosen largely.
-
 # [Concurrency](3.%20Concurrency.md)
 
 Concurrency means multiple computations are happening in overlapping time periods. *It’s like juggling. Even though you’re managing multiple balls, you’re only ever handling one at a time.* By this mechanism, an OS can run thousands of processes on a machine that has only a few cores. If multiple tasks do run at the same physical time, as in the case of a multi-core machine or a cluster, then we have **parallelism**, a special case of concurrency.
@@ -124,11 +140,12 @@ The idea is very simple. There’s an event loop. And we have functions that run
 
 # References:
 
-1. [Modern operating systems. Chapter 2](http://libgen.rs/book/index.php?md5=AC5BFB29F9BC58C7EEBF11F627221EA0) (book)
-2. [Multithreading and Concurrency Concepts I Wish I Knew Before the Interview](https://levelup.gitconnected.com/multithreading-and-concurrency-concepts-i-wish-i-knew-before-the-interview-11895226179)
-3. [Parallelism implies Concurrency. But Concurrency doesn’t always mean Parallelism.](http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/)
-4. **[Multithreading and concurrency fundamentals](https://learningdaily.dev/multithreading-and-concurrency-fundamentals-fb40a502fdb)**
-5. **[Asynchronous vs Multithreading and Multiprocessing Programming (The Main Difference)](https://www.youtube.com/watch?v=0vFgKr5bjWI&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=5)**
-6. [**Speed Up Your Python Program With Concurrency**](https://realpython.com/python-concurrency/)
-7. **[Multiprocessing VS Threading VS AsyncIO in Python](https://leimao.github.io/blog/Python-Concurrency-High-Level/)**
-8. [I/O is no longer the bottleneck](https://benhoyt.com/writings/io-is-no-longer-the-bottleneck/)
+1. ~~[Process vs Thread](https://jinlow.medium.com/process-vs-thread-77a964da82b4)~~
+2. [Modern operating systems. Chapter 2](http://libgen.rs/book/index.php?md5=AC5BFB29F9BC58C7EEBF11F627221EA0) (book)
+3. [Multithreading and Concurrency Concepts I Wish I Knew Before the Interview](https://levelup.gitconnected.com/multithreading-and-concurrency-concepts-i-wish-i-knew-before-the-interview-11895226179)
+4. [Parallelism implies Concurrency. But Concurrency doesn’t always mean Parallelism.](http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/)
+5. **[Multithreading and concurrency fundamentals](https://learningdaily.dev/multithreading-and-concurrency-fundamentals-fb40a502fdb)**
+6. **[Asynchronous vs Multithreading and Multiprocessing Programming (The Main Difference)](https://www.youtube.com/watch?v=0vFgKr5bjWI&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=5)**
+7. [**Speed Up Your Python Program With Concurrency**](https://realpython.com/python-concurrency/)
+8. **[Multiprocessing VS Threading VS AsyncIO in Python](https://leimao.github.io/blog/Python-Concurrency-High-Level/)**
+9. [I/O is no longer the bottleneck](https://benhoyt.com/writings/io-is-no-longer-the-bottleneck/)
