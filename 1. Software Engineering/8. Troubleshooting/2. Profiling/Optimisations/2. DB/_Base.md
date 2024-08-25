@@ -15,6 +15,12 @@ Benchmarking and profiling might point you to the following optimizations.
 3. [Explaining the Postgres Query Optimizer](https://momjian.us/main/writings/pgsql/optimizer.pdf)
 4. [Explain Explained in PostgreSQL - How Databases Prepare Optimal Query Plans to Execute SQL](https://www.youtube.com/watch?v=P7EUFtjeAmI&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=9) (video)
 
+# How to investigate
+
+> `BUFFERS` extends `EXPLAIN` by adding values to describe the data read/written by each operation => *We’re not only getting info on the query plan, but also on the actual data we move around*
+
+
+
 # Best Practices:
 ## 1. [[Tighten up the schema]]
 
@@ -49,11 +55,11 @@ Benchmarking and profiling might point you to the following optimizations.
 2. [Tuning Your PostgreSQL Server](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server)
 3. [Performance Tuning PostgreSQL](https://www.revsys.com/writings/postgresql-performance.html)
 
-## 8. Tune queries
+## 8. [Tune queries](https://github.com/donnemartin/system-design-primer#sql-tuning)
 
 - Prefer `UNION ALL` over `UNION` for combining result sets to avoid removing duplicate rows and improve query efficiency.
 - Execute multiple operations in a single batch to minimize round trips between the application and database server.
-- Use OFFSET and FETCH NEXT for efficient pagination instead of LIMIT.
+- [Use OFFSET and FETCH NEXT for efficient pagination instead of LIMIT.](Offsets.md)
 - Rewrite subqueries as join operations for better performance.
 - Optimize GROUP BY queries by including only necessary columns and applying appropriate aggregate functions.
 
@@ -80,3 +86,4 @@ Benchmarking and profiling might point you to the following optimizations.
 19. [Отъявленные баги и как их избежать на примере ClickHouse](https://www.youtube.com/watch?v=ooBAQIe0KlQ&list=PLH-XmS0lSi_zTZrols83QSxI3Q96dSbBm&index=93) (video)
 20. [Не изобретая велосипед. Кэширование: рассказываем главные секреты оптимизации доступа к данным](https://habr.com/ru/company/stm_labs/blog/654201/)
 21. [30x Performance Improvements on MySQLStreamer at Yelp](https://engineeringblog.yelp.com/2018/02/making-30x-performance-improvements-on-yelps-mysqlstreamer.html)
+22. ~~[Making a Postgres query 1,000 times faster](https://mattermost.com/blog/making-a-postgres-query-1000-times-faster/?utm_source=substack&utm_medium=email)~~
