@@ -29,10 +29,6 @@ Two-phase commit:
 16. [Reservation Pattern: Can it replace distributed transactions?](https://blog.devgenius.io/reservation-pattern-can-it-replace-distributed-transactions-de2481240e20)
 17. [I asked this system design question to 3 guys during a developer interview and none of them gave the answer](https://iorilan.medium.com/i-asked-this-system-design-question-to-3-guys-during-a-developer-interview-and-none-of-them-gave-9c23abe45687)
 
-**Saga:**
-1. [Applying the Saga Pattern • Caitie McCaffrey • GOTO 2015](https://www.youtube.com/watch?v=xDuwrtwYHu8) (video)
-2. [Reference 6: A Saga on Sagas](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/jj591569(v=pandp.10)?redirectedfrom=MSDN)
-
 **2PC:**
 	1. [Avoiding Two-Phase Commit](https://web.archive.org/web/20180821165044/http://www.addsimplicity.com/adding_simplicity_an_engi/2006/12/avoiding_two_ph.html) - Two phase commit avoidance approaches
 	2. [2PC or not 2PC, Wherefore Art Thou XA?](https://web.archive.org/web/20180821164931/http://www.addsimplicity.com/adding_simplicity_an_engi/2006/12/2pc_or_not_2pc_.html) - Two phase commit isn't a silver bullet
