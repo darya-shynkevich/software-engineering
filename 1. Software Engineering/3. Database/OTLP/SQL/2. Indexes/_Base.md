@@ -20,7 +20,7 @@ A Database Index is Like a Book Index: *When you want to look something up in a 
 
 # Other Index Types
 
-### 1. [GIN indexes](../../../../4.%20Python/Django/GIN%20indexes.md) for JSON data in PostgreSQL
+### 1. [GIN indexes](GIN%20indexes.md) for JSON data in PostgreSQL
 
 > PostgreSQL offers two JSON field types: json and jsonb . Django’s JSONField uses the jsonb column type, so any references to JSON data in a PostgreSQL database in this section refer to the jsonb column type.
 

@@ -262,7 +262,7 @@ References:
 
 [Stack](Stack.md)
 
-[3. Iterators](../../4.%20Python/3.%20Iterators.md)
+[3. Iterators](3.%20Iterators.md)
 
 ![](../../../_Attachments/Pasted%20image%2020240101225238.png)
 
