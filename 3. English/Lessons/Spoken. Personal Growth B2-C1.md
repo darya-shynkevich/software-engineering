@@ -219,7 +219,7 @@
 	- *be burnt, worn, etc. to a frazzle*
 5. **to be working one's socks off** = to be working very hard
 	- *We've all worked our socks off to produce this show.*
-6. **to get/take a grip on oneself** = to make an effort to control your emotions and behave more calmly
+6. **to get/take a grip on oneself** = **to pull yourself together** = to make an effort to control your emotions and behave more calmly
 	- *I have to take a grip on myself, he told himself firmly.*
 7. to let off steam
 8. to replenish one's energy
