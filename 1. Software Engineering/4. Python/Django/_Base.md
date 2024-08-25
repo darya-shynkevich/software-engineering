@@ -1,3 +1,4 @@
+[django-auditlog](https://github.com/jazzband/django-auditlog) - logs changes to models along with the user who made the changes (later referred to as actor).
 
 # 10 reasons I stick to Django rather than FastAPI
 
