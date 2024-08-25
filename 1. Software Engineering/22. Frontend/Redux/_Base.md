@@ -1,4 +1,6 @@
 
+All of your application's state is stored in an object inside **a single store**. The only way to change the state tree is to call an **action***, an object describing what happened. To specify how actions transform the state tree, you write pure "**reducers**".
+
 A frontend application architecture using Redux consists of
 
 1. A store holding an _immutable_ application’s state.
