@@ -9,6 +9,9 @@
 9. nie trzeba pytać
 10. potrzebny mi jest bilet
 
+
+dostać kopa w
+
 - **Zależy mi na...**
 - **Dla mnie ważne jest....**
 - **.....nie ma dla mnie znaczenia**
