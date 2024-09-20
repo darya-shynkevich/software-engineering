@@ -2,7 +2,7 @@
 https://deadlockempire.github.io/
 
 FE:
-1. 
+1. [Understanding TypeScript](https://www.udemy.com/course/understanding-typescript/?couponCode=ST11MT91624B)
 
 Course:
 1. [Python AsyncIO](https://superfastpython.com/category/asyncio/page/20/)

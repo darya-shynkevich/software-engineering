@@ -31,7 +31,13 @@ Early on when you are standing up your system its important to keep things simpl
 
 [[Complexity]] is inevitable, don't worry you won't need to try hard. Each new component is more one component that needs to be accounted for when making a change.
 
+## Why we should paying down tech debt:
+
+- **Use tech debt payments to get into the flow.** In a counter-intuitive observation: by making small, non-functional improvements, you gain more confidence in a new codebase, and can start to move faster.
+- **Big rewrites need heavyweight support.** Without the backing of management, a large-scale rewrite is likely to fail.
+
 # Reference:
 
 1. ~~[Clever code is probably the worst code you could write](https://read.engineerscodex.com/p/clever-code-is-probably-the-worst)~~
 2. ~~[The Controversial Truth about Tech Debt](https://medium.com/@raphael.moutard/the-controversial-truth-about-tech-debt-09ad0f787888)~~
+3. ~~[Paying down tech debt: further learnings](https://newsletter.pragmaticengineer.com/p/paying-down-tech-debt-further-learnings?utm_source=substack&publication_id=458709&post_id=149105633&utm_medium=email&utm_content=share&utm_campaign=email-share&triggerShare=true&isFreemail=true&r=1vxw4z&triedRedirect=true)~~
