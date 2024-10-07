@@ -63,15 +63,16 @@ With the advent of the field of cloud computing, Load Balancers as a Service (LB
 
 # References:
 
-1. [https://architecturenotes.co/load-balancers/](https://www.google.com/url?q=https://architecturenotes.co/load-balancers/&sa=D&source=calendar&usd=2&usg=AOvVaw3NIbOodYdko6gY8Ox2_whw) 
-2. ! [Load Balancer — System Design Interview Question](https://medium.com/@anuupadhyay1994/load-balancer-system-design-interview-question-60e3ba231e3c)
-3. [The Fundamental Knowledge of System Design — (9) — Load Balancer](https://medium.com/thedevproject/the-fundamental-knowledge-of-system-design-9-load-balancer-c55ff4feae5)
-4. [What Is Load Balancing?](https://www.nginx.com/resources/glossary/load-balancing/)
-5. [What is a Load Balancer? — Every Software Engineer must know](https://dineshchandgr.medium.com/what-is-a-load-balancer-every-software-engineer-must-know-21c0ea7ce6d4)
-6. [What is Load Balancing?](https://www.youtube.com/watch?v=zaRkONvyGr8&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=5) (video)
-7. [Load Balancer vs. Reverse Proxy vs. API Gateway](https://medium.com/geekculture/load-balancer-vs-reverse-proxy-vs-api-gateway-e9ec5809180c)
-8. [Load Balancer vs Reverse Proxy (Explained by Example)](https://www.youtube.com/watch?v=S8J2fkN2FeI&list=PLQnljOFTspQUBSgBXilKhRMJ1ACqr7pTr&index=9) (video)
-9. [Load balancer](https://github.com/donnemartin/system-design-primer#load-balancer) distribute incoming client requests to computing resources such as application servers and databases. In each case, the load balancer returns the response from the computing resource to the appropriate client.
-10. [Why WebSockets over HTTP/2 (RFC8441) is Critical for Effective Load Balancing and Backend Scaling](https://www.youtube.com/watch?v=wLdxC9gesBs&list=PLQnljOFTspQUybacGRk1b_p13dgI-SmcZ&index=30) (video)
-11. [Load Balancing in HTTP/2 Explained](https://www.youtube.com/watch?v=0avOYByiTRQ&list=PLQnljOFTspQWdgYcGXCTkjda8vd2jWJYt&index=6) (video)
-12. [Why DNS Based Global Server Load Balancing (GSLB) Doesn’t Work](http://www.tenereillo.com/GSLBPageOfShame.htm)
+1. [Introduction to modern network load balancing and proxying](https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236)
+2. [https://architecturenotes.co/load-balancers/](https://www.google.com/url?q=https://architecturenotes.co/load-balancers/&sa=D&source=calendar&usd=2&usg=AOvVaw3NIbOodYdko6gY8Ox2_whw) 
+3. ! [Load Balancer — System Design Interview Question](https://medium.com/@anuupadhyay1994/load-balancer-system-design-interview-question-60e3ba231e3c)
+4. [The Fundamental Knowledge of System Design — (9) — Load Balancer](https://medium.com/thedevproject/the-fundamental-knowledge-of-system-design-9-load-balancer-c55ff4feae5)
+5. [What Is Load Balancing?](https://www.nginx.com/resources/glossary/load-balancing/)
+6. [What is a Load Balancer? — Every Software Engineer must know](https://dineshchandgr.medium.com/what-is-a-load-balancer-every-software-engineer-must-know-21c0ea7ce6d4)
+7. [What is Load Balancing?](https://www.youtube.com/watch?v=zaRkONvyGr8&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=5) (video)
+8. [Load Balancer vs. Reverse Proxy vs. API Gateway](https://medium.com/geekculture/load-balancer-vs-reverse-proxy-vs-api-gateway-e9ec5809180c)
+9. [Load Balancer vs Reverse Proxy (Explained by Example)](https://www.youtube.com/watch?v=S8J2fkN2FeI&list=PLQnljOFTspQUBSgBXilKhRMJ1ACqr7pTr&index=9) (video)
+10. [Load balancer](https://github.com/donnemartin/system-design-primer#load-balancer) distribute incoming client requests to computing resources such as application servers and databases. In each case, the load balancer returns the response from the computing resource to the appropriate client.
+11. [Why WebSockets over HTTP/2 (RFC8441) is Critical for Effective Load Balancing and Backend Scaling](https://www.youtube.com/watch?v=wLdxC9gesBs&list=PLQnljOFTspQUybacGRk1b_p13dgI-SmcZ&index=30) (video)
+12. [Load Balancing in HTTP/2 Explained](https://www.youtube.com/watch?v=0avOYByiTRQ&list=PLQnljOFTspQWdgYcGXCTkjda8vd2jWJYt&index=6) (video)
+13. [Why DNS Based Global Server Load Balancing (GSLB) Doesn’t Work](http://www.tenereillo.com/GSLBPageOfShame.htm)

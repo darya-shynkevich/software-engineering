@@ -1,4 +1,6 @@
 
+! [How to Check Whether a Username Exists Among One Billion Users?](https://medium.com/javarevisited/interview-how-to-check-whether-a-username-exists-among-one-billion-users-ffa0d0522998)
+
 # References:
 
 1. [Bloom Filters – Introduction and Implementation](https://www.geeksforgeeks.org/bloom-filters-introduction-and-python-implementation/)

@@ -1,3 +1,4 @@
+1. [How Google Search Works](https://newsletter.systemdesign.one/p/search-engine-architecture?utm_source=substack&publication_id=1511845&post_id=148923137&utm_medium=email&utm_content=share&utm_campaign=email-share&triggerShare=true&isFreemail=true&r=1vxw4z&triedRedirect=true)
 
 # Graph search function:
 
