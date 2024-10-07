@@ -167,6 +167,12 @@ The InnoDB implementation can speed up range queries based on primary key, and a
 
 Indexes on `JSONB` in PostgreSQL
 
+PostgreSQL: indexes can be made on expressions which may call functions (e.g `lower(username)` in a unique index to ensure unique lowercase usernames) and partial (e.g. `unique index on assets(project_id, external_id) where deleted_at is not null`) or both.
+
+- [Efficient Use of PostgreSQL Indexes](https://devcenter.heroku.com/articles/postgresql-indexes)
+- [Postgres docs on indexing expressions](https://www.postgresql.org/docs/current/indexes-expressional.html)
+- [Postgres docs on partial indexes](https://www.postgresql.org/docs/current/indexes-partial.html)
+
 # When the Database Ignores an Index
 
 With Postgres, which is representative of other relational databases in this respect, the query planner/ optimiser may decide not to use an index if: 
