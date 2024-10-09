@@ -88,6 +88,14 @@ Typically used with ranges, exclusion constraints can ensure that e.g. the same 
 - [Postgres docs on exclusion constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-EXCLUSION)
 - [Exclusion operators: beyond unique](https://www.cybertec-postgresql.com/en/postgresql-exclude-beyond-unique/)
 
+### Webhooks (`pgstream`)
+
+[pgstream](https://xata.io/pgstream) is a CDC ([[Change-Data-Capture]]) tool focused on PostgreSQL. Among other [things](https://github.com/xataio/pgstream?tab=readme-ov-file#features), it can be used to call webhooks whenever there is a data (or schema) change in a Postgres database. This means that whenever a row is inserted, updated, or deleted, or a table is created, altered, truncated or deleted, a webhook is notified of the relevant event details.
+
+![](Pasted%20image%2020241009011327.png)
+
+- [Postgres webhooks with pgstream](https://xata.io/blog/postgres-webhooks-with-pgstream?ref=blog.vvsevolodovich.dev)
+
 ### LISTEN / NOTIFY
 
 > Notify payloads need to be small and are only delivered to live connections. Not a queuing solution in their own!

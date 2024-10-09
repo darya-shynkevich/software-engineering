@@ -5,6 +5,7 @@
 4. [[Culinary site for bots]]
 5. Messagebox
 6. Multipart file uploader + download file by pages
+7. [Django Project Ideas](https://blog.jetbrains.com/pycharm/2024/09/django-project-ideas/)
 
 # References:
 

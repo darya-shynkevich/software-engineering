@@ -1,4 +1,9 @@
 
+#### Why I Still Use Python Virtual Environments in Docker
+
+1. Predictability : It’s _good_ to use the same tools and primitives in development and in production.
+2. Predictability : **if** you a) never install anything globally, **and** you b) use the `python` binary from the virtual environment **while** passing it `-I`, you **know** everything that’s not in the standard library **must** be in the virtual environment. That makes Python’s import behavior much more **predictable** and debugging import issues less of a murder mystery.
+
 # References:
 
 1. ! [50 вопросов по Docker, которые задают на собеседованиях, и ответы на них](https://habr.com/ru/company/southbridge/blog/528206/)
@@ -11,3 +16,4 @@
 8. [Docker Best Practices for Python Developers](https://testdriven.io/blog/docker-best-practices/)
 9. [Методики уменьшения размеров образов Docker](https://habr.com/ru/company/ruvds/blog/485650/)
 10. [Несколько советов о том, как ускорить сборку Docker-образов](https://habr.com/ru/company/itsumma/blog/501680/)
+11. ! ~~[Why I Still Use Python Virtual Environments in Docker](https://hynek.me/articles/docker-virtualenv/)~~
