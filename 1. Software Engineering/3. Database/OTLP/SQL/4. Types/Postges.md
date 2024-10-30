@@ -136,6 +136,17 @@ SELECT depname, empno, salary, avg(salary) OVER (PARTITION BY depname) FROM emps
 - [pg_stat_statements](https://www.postgresql.org/docs/current/pgstatstatements.html): tracking planning and execution statistics of all SQL statements executed by a server
 - [The most useful Postgres extension: pg_stat_statements](https://www.citusdata.com/blog/2019/02/08/the-most-useful-postgres-extension-pg-stat-statements/)
 
+# [Just use Postgres](https://mccue.dev/pages/8-16-24-just-use-postgres)
+
+Why not
+1. `sqlite` : data is stored in a single file => your application is running on one machine and one machine only. Or at least one shared filesystem. 
+2. `DynamoDB`, `Cassandra`, or `MongoDB` : a giant distributed hash map.
+   You should use them
+	1. You know exactly what your app needs to do, up-front
+	2. You know exactly what your access patterns will be, up-front
+	3. You have a known need to scale to really large sizes of data
+	4. You are okay giving up some level of consistency
+
 # References:
 
 1. ~~[Postgres can do THAT?](https://medium.com/cognite/postgres-can-do-that-f221a8046e)~~
