@@ -108,3 +108,5 @@ OT and CRDTs are good solutions for conflict resolution in collaborative editing
 1. ! ~~[Design Google Docs/Real Time Text Editor | Systems Design Interview Questions With Ex-Google SWE](https://www.youtube.com/watch?v=YCjVIDv0zQY) (video)~~
 2. [Two Ex-Google System Design Experts Compete: Who will design the better system?](https://www.youtube.com/watch?v=Zi0pPkiFemE)
 3. ~~[Design Google Docs](https://www.enjoyalgorithms.com/blog/design-google-docs)~~
+4. [Collaborative Text Editing with Eg-walker: Better, Faster, Smaller](https://arxiv.org/pdf/2409.14252)
+5. [Software Architect Interview: Designing Google Docs | System Design Mock Interview](https://www.youtube.com/watch?v=y9K-6XkvSgQ)

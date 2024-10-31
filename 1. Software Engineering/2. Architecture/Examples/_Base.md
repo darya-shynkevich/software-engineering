@@ -88,3 +88,4 @@ _****[Top 10 Facebook system design interview questions](https://grokkingtechint
 84. **[System design: Newsfeed System](https://medium.com/@sureshpodeti/system-design-newsfeed-system-da50486a8a9b)**
 85. [Urban Bus/Subway Transit System Architecture](https://medium.com/thedevproject/urban-bus-subway-transit-system-architecture-c23e7522ed03)
 86. [School Bus Tracker System Architecture](https://medium.com/@joudwawad/school-bus-tracker-system-architecture-6dd3307e3860)
+87. [How Amazon S3 Works](https://newsletter.systemdesign.one/p/s3-architecture?utm_source=substack&publication_id=1511845&post_id=150109909&utm_medium=email&utm_content=share&utm_campaign=email-share&triggerShare=true&isFreemail=true&r=1vxw4z&triedRedirect=true)

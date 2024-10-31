@@ -44,4 +44,5 @@ As soon as the user-facing impact is mitigated, the incident can be considered 
 # References:
 
 1. [SLA, SLO, and SLI](https://medium.com/@karan99/system-design-sla-slo-sli-4b1e575d7f94)
-2. ~~[Call me, maybe: designing an incident response process](https://grafana.com/blog/2024/03/28/call-me-maybe-designing-an-incident-response-process/)~~
+2. [Service Level Terminology](https://blog.alexewerlof.com/p/service-level-terminology)
+3. ~~[Call me, maybe: designing an incident response process](https://grafana.com/blog/2024/03/28/call-me-maybe-designing-an-incident-response-process/)~~

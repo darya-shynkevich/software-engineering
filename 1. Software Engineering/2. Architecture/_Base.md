@@ -26,7 +26,7 @@ Distributed Systems:
 
 1. [DNS](../../7.%20Networks/5.%20DNS.md) - translates human-friendly domain names, like “[www.example.com](http://www.example.com/)," into machine-readable IP addresses, such as “192.168.1.1.”
 2. [Load Balancers](../../7.%20Networks/LB/_Base.md) -  is a network device or software application that is used to evenly distribute incoming network traffic among multiple servers.
-3. [API Gateway](../1.%20Concepts/API%20Gateway.md) -  an intermediary between external clients and the backend services or microservices within an application
+3. [API Gateway](API%20Gateway.md) -  an intermediary between external clients and the backend services or microservices within an application
 4. [CDN](../../7.%20Networks/4.%20CDN.md) - caches content close to end users
 5. [Proxy](../../7.%20Networks/Proxy/_Base.md) - functions as an intermediary between client computers and the internet
 6. [Cache](../2.%20Components/Cache/0.%20Cache.md) - is a high-speed storage layer situated between an application and an original data source, such as a database, file system, or remote network service.

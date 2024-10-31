@@ -2,9 +2,9 @@ These queries are often written by business analysts, and feed into reports that
 ![Pasted image 20230604124305](../../../_Attachments/Pasted%20image%2020230604124305.png)
 The OLTP systems are usually expected to be highly available and to process transactions with low latency, since they are often critical to the operation of the business. 
 
-*A data warehouse, by contrast, is a separate database that analysts can query, without affecting OLTP operations.* 
+*A [[Data Warehouse]], by contrast, is a separate database that analysts can query, without affecting OLTP operations.* 
 
-The **data warehouse** contains a read-only copy of the data in all the various OLTP systems in the company. Data is extracted from OLTP databases (using either a periodic data dump or a continuous stream of updates), transformed into an analysis-friendly schema, cleaned up, and then loaded into the data warehouse. This process of getting data into the warehouse is known as ***Extract–Transform–Load (ETL)***
+The **[[Data Warehouse]]** contains a read-only copy of the data in all the various OLTP systems in the company. Data is extracted from OLTP databases (using either a periodic data dump or a continuous stream of updates), transformed into an analysis-friendly schema, cleaned up, and then loaded into the [[Data Warehouse]]. This process of getting data into the warehouse is known as ***Extract–Transform–Load (ETL)***
 
 ![Pasted image 20230604124518](../../../_Attachments/Pasted%20image%2020230604124518.png)
 
@@ -35,7 +35,7 @@ Besides only loading those columns from disk that are required for a query, we c
 
 **Several different sort orders**
 
-A clever extension of this idea was introduced in C-Store and adopted in the commercial data warehouse Vertica [61, 62]. Different queries benefit from different sort orders, ==*so why not store the same data sorted in several different ways*==? Data needs to be replicated to multiple machines anyway, so that you don’t lose data if one machine fails. You might as well store that redundant data sorted in different ways so that *when you’re processing a query, you can use the version that best fits the query pattern*.
+A clever extension of this idea was introduced in C-Store and adopted in the commercial [[Data Warehouse]] Vertica [61, 62]. Different queries benefit from different sort orders, ==*so why not store the same data sorted in several different ways*==? Data needs to be replicated to multiple machines anyway, so that you don’t lose data if one machine fails. You might as well store that redundant data sorted in different ways so that *when you’re processing a query, you can use the version that best fits the query pattern*.
 
 Having multiple sort orders in a column-oriented store is a bit similar to having multiple secondary indexes in a row-oriented store. But the big difference is that the row-oriented store keeps every row in one place (in the heap file or a clustered index), and secondary indexes just contain pointers to the matching rows. In a column store, there normally aren’t any pointers to data elsewhere, only columns containing values.
 
@@ -49,7 +49,7 @@ Queries need to examine both the column data on disk and the recent writes in me
 
 #### Aggregation: Data Cubes and Materialized Views
 
-Another aspect of data warehouses that is worth mentioning briefly is *==materialized aggregates==*. As discussed earlier, data warehouse queries often involve an aggregate function, such as COUNT, SUM, AVG, MIN, or MAX in SQL. If the same aggregates are used by many different queries, it can be wasteful to crunch through the raw data every time.  
+Another aspect of data warehouses that is worth mentioning briefly is *==materialized aggregates==*. As discussed earlier, [[Data Warehouse]] queries often involve an aggregate function, such as COUNT, SUM, AVG, MIN, or MAX in SQL. If the same aggregates are used by many different queries, it can be wasteful to crunch through the raw data every time.  
 
 One way of creating such a cache is a *==materialized view==*. In a relational data model, it is often defined like a standard (virtual) view: a table-like object whose contents are the results of some query. The difference is that a *materialized view is an actual copy of the query results, written to disk, whereas a virtual view is just a shortcut for writing queries.* When you read from a virtual view, the SQL engine expands it into the view’s underlying query on the fly and then processes the expanded query.
 
