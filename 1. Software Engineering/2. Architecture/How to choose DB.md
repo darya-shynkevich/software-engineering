@@ -79,12 +79,11 @@ If you don't have some killer `MSSQL` feature that you simply cannot live with
 2. It's got the same slick indexing scheme as MSSQL -- clustered indexes -- and so can be made very performant.
 3. Its team is adding objects, like SEQUENCEs, to help people escape Oracle's clutches. And other active development is happening.
 
-### AI vector DB
+### [`Vector DB`](1.%20Software%20Engineering/3.%20Database/OTLP/NoSQL/Types/Vector%20Databases/Base.md)
 
 - Most are new. Remember the risks of using something new.
 - AI is a bubble. A load-bearing bubble, but a bubble. Don't build a house on it if you can avoid it.
 - Even if your business is another AI grift, you probably only need to `import openai`.
-
 
 
 # References:
