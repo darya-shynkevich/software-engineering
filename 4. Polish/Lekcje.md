@@ -9,6 +9,11 @@
 9. nie trzeba pytać
 10. potrzebny mi jest bilet
 
+- *kilka lat temu*
+- *od kilku lat = на несколько лет*
+- *przed kilkoma laty = несколько лет назад*
+- *za kilka lat = через несколько лет*
+- *przez kilka lat = в течение нескольких лет*
 
 dostać kopa w
 
@@ -317,8 +322,6 @@ Nie należy jeździć bez kasku. / Nie powinno się jeździć bez kasku.
 - niekompetentny człowiek
 
 ## 19.10
-
-
 
 ## 28.09
 
