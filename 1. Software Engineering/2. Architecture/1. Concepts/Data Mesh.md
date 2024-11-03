@@ -1,3 +1,16 @@
+Pros:
+
+- Clear decentralised Data ownership
+- No Data Monoliths
+- Granular scalability
+- Data as a Product
+
+Cons:
+
+- Duplication of Efforts
+- Data Integration Challenges
+
+
 
 # References:
 
