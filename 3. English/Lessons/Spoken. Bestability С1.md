@@ -177,3 +177,21 @@ Quizlet
 11. **to throw (someone) in at the deep end** = to put someone in a challenging or unfamiliar situation without much preparation or support, requiring them to adapt quickly
 12. **to jump/be thrown in at the deep end** = to start a new or difficult task or situation without preparation or support.
 13. **to challenge preconceived notions** = to question or re-evaluate ideas, beliefs, or stereotypes that were formed before gaining complete knowledge or experience
+
+### 05.11.2024. Lesson 10
+
+- *a transparent pay structure  (7)*
+- *supportive colleagues (1)*
+- *teamwork (5)*
+- *financial bonuses  (2)*
+- *a flexible schedule  (4)*
+- *a possibility to work from home  (3)*
+- *a helpful, experienced manager (6)*
+
+1. **rain on someone’s parade (idiom)** - criticize something which someone really likes
+2. **friction (n)** - differing opinions and negative feelings between people
+3. **niggle (v)** - bother someone, usually a small problem which is more annoying than it should be
+4. **self-regarding (adj.)** - having an inflated opinion of yourself and your abilities
+5. **at each other’s throats (idiom)** - be angry and in disagreement with each other
+6. **outdo (v)** - beat someone competitively
+7. **brown-nose (v)** - try to impress someone by saying overly nice things about them
