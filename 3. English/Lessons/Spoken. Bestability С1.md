@@ -178,7 +178,7 @@ Quizlet
 12. **to jump/be thrown in at the deep end** = to start a new or difficult task or situation without preparation or support.
 13. **to challenge preconceived notions** = to question or re-evaluate ideas, beliefs, or stereotypes that were formed before gaining complete knowledge or experience
 
-### 05.11.2024. Lesson 10
+### 05.11.2024. Toxic workplaces. Lesson 10
 
 - *a transparent pay structure  (7)*
 - *supportive colleagues (1)*
@@ -195,3 +195,32 @@ Quizlet
 5. **at each other’s throats (idiom)** - be angry and in disagreement with each other
 6. **outdo (v)** - beat someone competitively
 7. **brown-nose (v)** - try to impress someone by saying overly nice things about them
+
+### 08.11.2024. Defining Happiness. Lesson 11
+
+1. 'Happiness is not being pained in body or troubled in mind’.  
+2. 'A person is never happy except at the price of some ignorance’.  
+3. 'The happiness of your life depends upon the quality of your thoughts’.  
+4. 'Happiness resides not in possessions, and not in gold - happiness dwells in the soul.'  
+5. 'You're happiest while you're making the greatest contribution’.
+
+1. bliss
+	1. euphoria
+	2. elation 
+	3. rapture
+2. contagious
+	1. infectious
+	2. invasive
+	3. virulent
+3. ephemeral
+	1. momentary
+	2. transient
+	3. fleeting
+
+1. be on cloud nine
+2. through rose-tinted spectacles 
+3.  beyond my wildest dreams
+4. in my book
+5. put yourself on the line
+6. feel under the weather
+7. tip the balance
