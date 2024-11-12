@@ -204,23 +204,45 @@ Quizlet
 4. 'Happiness resides not in possessions, and not in gold - happiness dwells in the soul.'  
 5. 'You're happiest while you're making the greatest contribution’.
 
-1. bliss
-	1. euphoria
-	2. elation 
-	3. rapture
-2. contagious
-	1. infectious
-	2. invasive
-	3. virulent
-3. ephemeral
-	1. momentary
-	2. transient
-	3. fleeting
+1. bliss: *extreme happiness or joy*
+	1. euphoria - *a feeling or state of intense excitement and happiness*
+	2. **elation** - *a feeling of great joy or pride, exhilaration*
+	3. **rapture** - *a state of intense pleasure, happiness, or excitement*
+2. contagious: *easily transmitted or spread, especially from one person to another*
+	1. infectious - *capable of spreading or affecting others easily*
+	2. invasive - *tending to intrude or spread aggressively*
+	3. virulent - *extremely severe or harmful in its effects, highly infectious or poisonous*
+3. ephemeral: *lasting for a very short time*
+	1. momentary - *lasting for only a brief moment*
+	2. transient - *lasting only for a short time, temporary*
+	3. fleeting - *passing swiftly, lasting for a very short time*
 
-1. be on cloud nine
-2. through rose-tinted spectacles 
-3.  beyond my wildest dreams
-4. in my book
-5. put yourself on the line
-6. feel under the weather
-7. tip the balance
+*Enjoying a peaceful morning with a cup of coffee and a good book is pure bliss for me.*
+*The euphoria of receiving good news, like getting a promotion at work, is unparalleled.*
+*There was a momentary pause in the conversation before they continued discussing their weekend plans.*
+*Laughter is contagious, when one person starts laughing, soon others join in.*
+*The fleeting smile she gave him as she passed by made his day brighter.*
+*Seeing the joy and **rapture** on a child's face when they receive a gift is heartwarming.*
+*Winning a competition filled her with **elation** and a sense of accomplishment.*
+*Her positive attitude was infectious, brightening the mood of everyone around her.*
+*The transient happiness from buying new gadgets often fades quickly once the novelty wears off.*
+*The beauty of a rainbow after rain showers is ephemeral but always captivating.*
+*The invasive sound of construction outside disrupted the peacefulness of the neighborhood.*
+*The flu virus this season was particularly virulent, spreading rapidly through the community.*
+
+1. be on cloud nine - to be extremely happy or joyful; to feel ecstatic
+2. **through rose-tinted spectacles** - to view or perceive things in an overly optimistic or idealistic way; to see things as better than they really are
+3. beyond my wildest dreams - refers to something that exceeds all expectations, surpassing what one could have imagined or hoped for
+4. **in my book** - according to one's personal opinion or judgment; in one's view or understanding
+5. **put yourself on the line** - to take a risk or put oneself in a vulnerable or exposed position in pursuit of a goal or belief
+6. feel under the weather - to feel unwell or in poor health; to feel slightly sick or not at one's best physically
+7. **tip the balance** - to be the deciding factor or influence that causes a significant change in a situation or outcome
+
+### 12.11.2024. Ways Sound Affects Us. Lesson 12
+
+1. There are both pleasant and awful sounds around us but most sounds are pleasant.  F
+2. Sounds affect your breathing.   T
+3. For most people the sound of the ocean is soothing or relaxing.   T
+4. Music sound affects your emotions.  T
+5. People who work in an open-plan office are more productive because sound is not blocked. F 
+6. Most companies, stores and brand developers use sound carefully and effectively to promote sales. T
