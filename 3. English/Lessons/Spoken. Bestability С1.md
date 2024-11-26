@@ -240,9 +240,82 @@ Quizlet
 
 ### 12.11.2024. Ways Sound Affects Us. Lesson 12
 
+Vocabulary:
+1. **Disconcerting – Unsettling** 
+	1. Definition: causing discomfort, confusion, or worry; making someone feel uneasy or disturbed
+	2. Examples: 
+		1. The loud banging noise was ***disconcerting*** in the quiet library.
+		2. The eerie silence in the abandoned house was **unsettling**.
+2. Irresistible – **Compelling**
+	1. Definition: so strong or attractive that it cannot be resisted; captivating or forcefully convincing
+	2. Examples: 
+		1. The smell of freshly baked cookies was ***irresistible***.
+		2. The lawyer presented a ***compelling*** argument that convinced the jury.
+3. Tempting – **Enticing**
+	1. Definition: appealing or attractive, often in a way that arouses a desire or interest.
+	2. Examples: 
+		1. The display of chocolates was so ***tempting*** that I had to buy some.
+		2. The ***enticing*** aroma of the barbecue made everyone gather around the grill.
+4. Distracting – **Off-putting**
+	1. Definition: causing a loss of focus or concentration; making someone feel uncomfortable or disinterested.
+	2. Examples: 
+		1. The buzzing sound of a fly in the room was very ***distracting***.
+		2. His rude behaviour during the meeting was ***off-putting*** to everyone.
+5. **Reassuring** – Comforting
+	1. Definition: providing a sense of security, relief, or support
+	2. Examples: 
+		1. The doctor’s kind words were ***reassuring*** to the anxious patient.
+		2. A warm blanket and a cup of tea were ***comforting*** on a cold evening.
+6. Energising – **Stirring**
+	1. Definition: revitalising or giving energy; exciting or thought-provoking.
+	2. Examples: 
+		1. A brisk morning walk was ***energising*** and set a positive tone for the day.
+		2. The discussion was intellectually ***stimulating*** and sparked new ideas.
+7. **Rousing** – Stimulating
+	1. Definition: inspiring enthusiasm or emotion; creating excitement or passion.
+	2. Examples: 
+		1. The crowd gave a ***rousing*** cheer when the team scored the winning goal.
+		2. The ***stirring*** speech by the activist moved the audience to take action.
+8. **Infuriating – Maddening**
+	1. Definition: causing extreme anger or frustration.
+	2. Examples: 
+		1. It was ***infuriating*** to wait in line for hours only to be told the system was down.
+		2. The constant honking of horns during the traffic jam was ***maddening***.
+9. **Soothing** – Relaxing
+	1. Definition: providing a sense of calm, comfort, or ease.
+	2. Examples: 
+		1. The gentle sound of rain was ***soothing*** and helped me fall asleep.
+		2. A warm bath with candles was the perfect way to end a ***relaxing*** evening.
+
+
+Tasks: 
 1. There are both pleasant and awful sounds around us but most sounds are pleasant.  F
 2. Sounds affect your breathing.   T
 3. For most people the sound of the ocean is soothing or relaxing.   T
 4. Music sound affects your emotions.  T
 5. People who work in an open-plan office are more productive because sound is not blocked. F 
 6. Most companies, stores and brand developers use sound carefully and effectively to promote sales. T
+
+### 22.11.2024. Humor. Lesson 13
+
+a) **cackle** to laugh in a loud unpleasant way, making short high sounds  
+_The great and evil mastermind cackled from the top of his castle thinking about his plan!_   
+  
+b) **giggle** = to laugh quickly, quietly, and in a high voice, because something is funny or because you are nervous or embarrassed  
+_When a man resembling a young Brad Pitt entered the room, all the girls started giggling._   
+  
+c) **chuckle** = to laugh quietly  
+_“Do you remember the time when I mistook Auntie Christie for your mother?” Steve chuckled._  
+  
+d) **snigger** (BrE) /**snicker** (AmE) = to laugh quietly and in a way that is not nice at something which is not supposed to be funny  
+_Kate felt deeply hurt when she noticed a group of colleagues sniggering at her during her speech_.  
+  
+e) **guffaw** = to laugh loudly  
+_The play was so hilarious that you could hear the audience guffawing  
+through almost the entire performance._   
+  
+f) **titter** = to laugh quietly in a high voice, especially because you are nervous  
+_For his age, James was really immature. He tittered whenever he heard the word kiss or date._   
+  
+g) **chortle** = to laugh because you are amused or pleased about something  
+_I was hesitant about giving her that present, yet when she unwrapped the gift and began to chortle, I knew it was a good choice._
