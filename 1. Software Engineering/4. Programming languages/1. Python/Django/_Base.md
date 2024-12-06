@@ -1,5 +1,9 @@
 [django-auditlog](https://github.com/jazzband/django-auditlog) - logs changes to models along with the user who made the changes (later referred to as actor).
 
+**!!! [The Practical Guide to Scaling Django](https://slimsaas.com/blog/django-scaling-performance)**
+
+**!!! [Performance and optimization](https://docs.djangoproject.com/en/5.1/topics/performance/)**
+
 # 10 reasons I stick to Django rather than FastAPI
 
 1. Boring Tech Over Fancy Tech

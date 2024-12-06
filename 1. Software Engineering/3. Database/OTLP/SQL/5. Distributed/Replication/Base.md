@@ -56,20 +56,21 @@ Diving Deeper: Infrastructure costs for hosting replicas, network costs for data
 
 # References:
 
-1. ~~[Mastering Database Replication: An Essential Guide for 2023](https://levelup.gitconnected.com/mastering-database-replication-an-essential-guide-for-2023-9fa6deb3efe4)~~
-2. [~~All Types of Database Replication Discussed](https://www.youtube.com/watch?v=aE2UPg3Ckck&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=75) (video)~~
-3. [Database Replication Crash Course ( with Postgres 13 )](https://www.youtube.com/watch?v=9aFu7APZQmY&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=14) (video)
-4. [Data Replication Strategies I Wish I Knew Before the System Design Interview](https://levelup.gitconnected.com/i-wished-i-knew-these-data-replication-strategies-before-the-system-design-interview-e228216290f3)
-5. [The Inner Workings of Distributed Databases](https://questdb.io/blog/inner-workings-distributed-databases/)
-6. [Борьба с нагрузкой в PostgreSQL, помогает ли репликация в этом?](https://www.youtube.com/watch?v=xY_M8TGdm6A&list=PLH-XmS0lSi_zgalbXwsytGNdAlNYmmE5C&index=15) (video)
-7. [Асинхронная репликация без цензуры](https://highload.guide/blog/asynchronous-replication.html)
-8. [Lazy Replication: Exploiting the Semantics of Distributed Services](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.469)
-9. [Optimistic Replication](https://www.hpl.hp.com/techreports/2002/HPL-2002-33.pdf) - Relaxed consistency approaches for data replication
-10. [Репликация между разными СУБД](https://www.youtube.com/watch?v=6rWhswb_3YA&list=PLH-XmS0lSi_wRIh4RJjnTGMKaTiQoaGTc&index=88) (video)
-11. [Black-Box Auditing: Verifying End-to-End Replication Integrity between MySQL and Redshift at Yelp](https://engineeringblog.yelp.com/2018/04/black-box-auditing.html)
-12. [Read Consistency with Database Replicas at Shopify](https://shopify.engineering/read-consistency-database-replicas)
-13. [Netflix Data replication - Change Data Capture](https://netflixtechblog.com/dblog-a-generic-change-data-capture-framework-69351fb9099b)
-14. [Herb: Multi-DC Replication Engine for Schemaless Datastore at Uber](https://eng.uber.com/herb-datacenter-replication/)
+1. [Replication in Distributed Systems - Part 1](https://manthanguptaa.in/posts/replication_in_distributed_systems_part_1/)
+2. ~~[Mastering Database Replication: An Essential Guide for 2023](https://levelup.gitconnected.com/mastering-database-replication-an-essential-guide-for-2023-9fa6deb3efe4)~~
+3. [~~All Types of Database Replication Discussed](https://www.youtube.com/watch?v=aE2UPg3Ckck&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=75) (video)~~
+4. [Database Replication Crash Course ( with Postgres 13 )](https://www.youtube.com/watch?v=9aFu7APZQmY&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=14) (video)
+5. [Data Replication Strategies I Wish I Knew Before the System Design Interview](https://levelup.gitconnected.com/i-wished-i-knew-these-data-replication-strategies-before-the-system-design-interview-e228216290f3)
+6. [The Inner Workings of Distributed Databases](https://questdb.io/blog/inner-workings-distributed-databases/)
+7. [Борьба с нагрузкой в PostgreSQL, помогает ли репликация в этом?](https://www.youtube.com/watch?v=xY_M8TGdm6A&list=PLH-XmS0lSi_zgalbXwsytGNdAlNYmmE5C&index=15) (video)
+8. [Асинхронная репликация без цензуры](https://highload.guide/blog/asynchronous-replication.html)
+9. [Lazy Replication: Exploiting the Semantics of Distributed Services](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.469)
+10. [Optimistic Replication](https://www.hpl.hp.com/techreports/2002/HPL-2002-33.pdf) - Relaxed consistency approaches for data replication
+11. [Репликация между разными СУБД](https://www.youtube.com/watch?v=6rWhswb_3YA&list=PLH-XmS0lSi_wRIh4RJjnTGMKaTiQoaGTc&index=88) (video)
+12. [Black-Box Auditing: Verifying End-to-End Replication Integrity between MySQL and Redshift at Yelp](https://engineeringblog.yelp.com/2018/04/black-box-auditing.html)
+13. [Read Consistency with Database Replicas at Shopify](https://shopify.engineering/read-consistency-database-replicas)
+14. [Netflix Data replication - Change Data Capture](https://netflixtechblog.com/dblog-a-generic-change-data-capture-framework-69351fb9099b)
+15. [Herb: Multi-DC Replication Engine for Schemaless Datastore at Uber](https://eng.uber.com/herb-datacenter-replication/)
 
 ## MySQL
 

@@ -20,3 +20,4 @@ Cons:
 4. [Особенности построения аналитического in-house data lake в EdTech](https://www.youtube.com/watch?v=aaJcSzDoZr4) (video)
 5. [Data Mesh — A Data Movement and Processing Platform @ Netflix](https://netflixtechblog.com/data-mesh-a-data-movement-and-processing-platform-netflix-1288bcab2873)
 6. [Data Movement in Netflix Studio via Data Mesh](https://netflixtechblog.com/data-movement-in-netflix-studio-via-data-mesh-3fddcceb1059)
+7. [Data Mesh From an Engineering Perspective](https://www.datamesh-architecture.com/)

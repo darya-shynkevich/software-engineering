@@ -92,3 +92,4 @@ Serverless integration services appear to be topology decoupled thanks to logica
 1. ~~[The Many Facets of Coupling](https://www.enterpriseintegrationpatterns.com/ramblings/coupling_facets.html)~~
 2. [Balancing Coupling in Software Design](https://www.youtube.com/watch?v=6indW7BSGZI) (video)
 3. [I Made Everything Loosely Coupled. Does My App Fall Apart? • Gregor Hohpe • GOTO 2022](https://www.youtube.com/watch?v=w9a7eI6BlVc&list=PLEx5khR4g7PKxJBkaGmSDRywZ3aAZcwpK&index=7) (video)
+4. [The Myth of Loose Coupling](https://dtornow225.substack.com/p/issue-45-the-myth-of-loose-coupling?r=1m9i62&utm_campaign=post&utm_medium=email&ref=blog.vvsevolodovich.dev&triedRedirect=true)

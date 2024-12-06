@@ -89,3 +89,6 @@ _****[Top 10 Facebook system design interview questions](https://grokkingtechint
 85. [Urban Bus/Subway Transit System Architecture](https://medium.com/thedevproject/urban-bus-subway-transit-system-architecture-c23e7522ed03)
 86. [School Bus Tracker System Architecture](https://medium.com/@joudwawad/school-bus-tracker-system-architecture-6dd3307e3860)
 87. [How Amazon S3 Works](https://newsletter.systemdesign.one/p/s3-architecture?utm_source=substack&publication_id=1511845&post_id=150109909&utm_medium=email&utm_content=share&utm_campaign=email-share&triggerShare=true&isFreemail=true&r=1vxw4z&triedRedirect=true)
+88. [AWS & OpenTelemetry: Collector architecture at scale](https://sodkiewiczm.medium.com/aws-opentelemetry-collector-architecture-at-scale-24c13f231d90)
+89. [Tesla System Architecture](https://medium.com/tech-x-humanity/tesla-system-architecture-b8f9ea2b03ca)
+90. [Automated-Guided Vehicle System Architecture](https://jinlow.medium.com/automated-guided-vehicle-system-architecture-05be37432082)

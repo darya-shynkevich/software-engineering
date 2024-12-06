@@ -4,10 +4,8 @@ Web performance includes both objective measurements like time to load, frames p
 
 The longer it takes for a site to respond, the more users will abandon the site. It is important to minimize the loading and response times and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
 
-
-
-
 # References:
 
 1. [Web performance](https://developer.mozilla.org/en-US/docs/Web/Performance)
-2. ~~[The "why" of web performance](https://developer.mozilla.org/en-US/docs/Learn/Performance/why_web_performance)~~
+2. [A Netflix Web Performance Case Study](https://medium.com/dev-channel/a-netflix-web-performance-case-study-c0bcde26a9d9)
+3. ~~[The "why" of web performance](https://developer.mozilla.org/en-US/docs/Learn/Performance/why_web_performance)~~
