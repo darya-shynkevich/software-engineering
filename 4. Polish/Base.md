@@ -15,5 +15,3 @@
 10. [Cezary Pazura](https://www.youtube.com/channel/UCY_fyIMTLLOZgmkuUYo6JKw/featured) — все для киноманов: история кинематографа, польские хиты проката и интернета в целом.
 11. [SciFun](https://www.youtube.com/@scifun/videos) — короткие ролики с научпопом для самых ленивых.
 12. [Mówiąc Inaczej](https://www.youtube.com/@mowiacinaczej) — изучение польского через видеоуроки на все случаи жизни.
-
-[Таблица](https://docs.google.com/spreadsheets/d/10syjy5LvKuBjwFLgn5vey_7RXcZelbAUUQrEzoQKhEI/edit#gid=0) со ссылками на учебники для разных уровней.
