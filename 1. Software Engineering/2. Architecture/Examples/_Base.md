@@ -92,3 +92,4 @@ _****[Top 10 Facebook system design interview questions](https://grokkingtechint
 88. [AWS & OpenTelemetry: Collector architecture at scale](https://sodkiewiczm.medium.com/aws-opentelemetry-collector-architecture-at-scale-24c13f231d90)
 89. [Tesla System Architecture](https://medium.com/tech-x-humanity/tesla-system-architecture-b8f9ea2b03ca)
 90. [Automated-Guided Vehicle System Architecture](https://jinlow.medium.com/automated-guided-vehicle-system-architecture-05be37432082)
+91. [Проектируем масштабируемую и отказоустойчивую систему поддержки клиентов, работающую через чат.](https://youtu.be/FGgIRo7_Yj0)

@@ -18,7 +18,8 @@ Breaking down the domain into manageable subdomains is critical for tackling com
 
 # References:
 
-1. [What Means Domain in the Context of Domain-Driven Design?](https://levelup.gitconnected.com/what-means-domain-in-the-context-of-domain-driven-design-6d604685f5ca)
-2. [A gentle introduction to Domain Driven Design](https://blog.thelonearchitect.com/a-gentle-introduction-to-domain-driven-design-dc7cc169b1d)
-3. [Learning Domain-Driven Design: Aligning Software Architecture and Business Strategy](http://library.lol/main/4F6FC3E2CE3FB49FDA969A126A42C899) (book) + [Tinkoff Book Club](https://www.youtube.com/playlist?list=PLLrf_044z4Jr19VrA7NCmHQ4Wfi8e8Qq7)
-4. [10 Things to Avoid in Domain-Driven Design (DDD)](https://dzone.com/articles/10-things-to-avoid-in-domain-driven-design)
+1. [DDD: Do not leak your domain events](https://joemugen.medium.com/ddd-do-not-leak-your-domain-events-456919346273)
+2. [What Means Domain in the Context of Domain-Driven Design?](https://levelup.gitconnected.com/what-means-domain-in-the-context-of-domain-driven-design-6d604685f5ca)
+3. [A gentle introduction to Domain Driven Design](https://blog.thelonearchitect.com/a-gentle-introduction-to-domain-driven-design-dc7cc169b1d)
+4. [Learning Domain-Driven Design: Aligning Software Architecture and Business Strategy](http://library.lol/main/4F6FC3E2CE3FB49FDA969A126A42C899) (book) + [Tinkoff Book Club](https://www.youtube.com/playlist?list=PLLrf_044z4Jr19VrA7NCmHQ4Wfi8e8Qq7)
+5. [10 Things to Avoid in Domain-Driven Design (DDD)](https://dzone.com/articles/10-things-to-avoid-in-domain-driven-design)

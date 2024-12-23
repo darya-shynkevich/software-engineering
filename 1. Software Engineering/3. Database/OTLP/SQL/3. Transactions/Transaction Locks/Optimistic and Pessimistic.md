@@ -19,3 +19,5 @@ Disadvantages:
 
 1. ~~[Should you go with an Optimistic or Pessimistic Concurrency Control Database?](!https://www.youtube.com/watch?v=H_zJ81I_D5E&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=81)~~
 2. ~~[Pessimistic concurrency control vs Optimistic concurrency control in Database Systems Explained](https://www.youtube.com/watch?v=I8IlO0hCSgY&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=18) (video)~~
+3. [Pessimistic or Optimistic Concurrency Control? Lessons Learned from Real-World Customer Scenarios](https://medium.com/@siddontang/pessimistic-or-optimistic-concurrency-control-lessons-learned-from-real-world-customer-scenarios-a4f0b8dd6e49)
+4. [Optimistic Concurrency Control: Alice and Bob Couldn't Sit Together](https://dev.to/aws-heroes/optimistic-concurrency-control-alice-and-bob-couldnt-sit-together-5bh)

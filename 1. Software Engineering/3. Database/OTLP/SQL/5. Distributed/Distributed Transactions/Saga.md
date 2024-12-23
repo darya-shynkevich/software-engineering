@@ -44,6 +44,7 @@ So they use a durable and distributed **log**:
 ![](Pasted%20image%2020240708104752.png)
 # References:
 
-1. [Applying the Saga Pattern • Caitie McCaffrey • GOTO 2015](https://www.youtube.com/watch?v=xDuwrtwYHu8) (video)
-2. [Reference 6: A Saga on Sagas](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/jj591569(v=pandp.10)?redirectedfrom=MSDN)
-3. ~~[How Halo Scaled to 11.6 Million Users Using the Saga Design Pattern](https://newsletter.systemdesign.one/p/saga-design-pattern?utm_source=substack&publication_id=1511845&post_id=145900943&utm_medium=email&utm_content=share&utm_campaign=email-share&triggerShare=true&isFreemail=true&r=1vxw4z&triedRedirect=true)~~
+1. [Understanding the SAGA Pattern: A Guide to Implementing Reliable Distributed Transactions](https://jinlow.medium.com/understanding-the-saga-pattern-a-guide-to-implementing-reliable-distributed-transactions-a6772d76d194)
+2. [Applying the Saga Pattern • Caitie McCaffrey • GOTO 2015](https://www.youtube.com/watch?v=xDuwrtwYHu8) (video)
+3. [Reference 6: A Saga on Sagas](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/jj591569(v=pandp.10)?redirectedfrom=MSDN)
+4. ~~[How Halo Scaled to 11.6 Million Users Using the Saga Design Pattern](https://newsletter.systemdesign.one/p/saga-design-pattern?utm_source=substack&publication_id=1511845&post_id=145900943&utm_medium=email&utm_content=share&utm_campaign=email-share&triggerShare=true&isFreemail=true&r=1vxw4z&triedRedirect=true)~~

@@ -1,3 +1,5 @@
+1. [Distributed Payment Systems — Security Measures](https://blog.devgenius.io/distributed-payment-systems-security-measures-74bc91da9c74)
+2. [Distributed Payment Systems— Avoid Double Payments(Idempotency)](https://jinlow.medium.com/distributed-payment-systems-avoid-double-payments-idempotency-f40eb485d706)
 
 # References:
 
