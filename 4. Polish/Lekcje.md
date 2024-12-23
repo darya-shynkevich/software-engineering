@@ -41,7 +41,7 @@ dostać kopa w
 - **komunikuje się w sposób**
 - zwierzać się = ufać
 
-## 08.08.2024
+### 08.08.2024
 
 - poczucie humoru
 - wspólne wartości
@@ -321,8 +321,6 @@ Nie należy jeździć bez kasku. / Nie powinno się jeździć bez kasku.
 - zasady ruchu drogowego
 - niekompetentny człowiek
 
-## 19.10
-
 ## 28.09
 
 1. burza z piorunami
@@ -331,7 +329,7 @@ Nie należy jeździć bez kasku. / Nie powinno się jeździć bez kasku.
 4. bardzo - bardziej
 5. mieszkać w studiu
 
-### 21.09.2024
+## 21.09
 
 1. większość
 2. zorganizować 
@@ -346,3 +344,62 @@ Nie należy jeździć bez kasku. / Nie powinno się jeździć bez kasku.
 11. wykorzystać czas aktywnie
 12. uprawiać sport
 13. wybiera się na wakacje a partnerem 
+
+## 23.12.2024 JAk SIĘ UCZYĆ JĘZYkA?
+
+1. **uczyć się / nauczyć się (czego?)** matematyki, słówek
+2. **oduczyć się** (czego?) matematyki, słówek
+3. **zapamiętywać / zapamiętać** (co?)
+4. **opanowywać / opanować** (co?) = осваивать
+5. **przyswajać / przyswoić** (co?) = поглощать
+	1. *powtarzać wiadomości, żeby je przyswoić*
+6. **przetwarzać / przetworzyć** (co?) = обрабатывать
+7. **zdobywać / zdobyć** (co?)
+8. **powtarzać / powtórzyć** (co?)
+	1. **powtórka** materiału = повторение материала
+9. **notować / zanotować** (co?) = делать заметки / записывать
+	1. notatka ze spotkania = записка о встрече
+10. **pisać / napisać** (co?)
+	3. zapisać / zapisywać informacje
+	4. przepisać / przepisywać zadanie
+11. **wiedzieć**
+	1. **wiedza** (jaka?) głęboka, rozległa = szeroka, ograniczona
+	2. mieć (co?), **zdobywać / zdobyć** (co?) wiedzę
+12. zgadywać / zgadnąć (co?) = odgadywać / odgadnąć
+13. **pojęcie** : mieć pojęcie (o czym?) = orientować się (w czym?) ≠ nie mieć (bladego, zielonego) pojęcia (o czym?)
+14. **mieć (co?) w małym palcu**  = oznacza móc pozyskiwać wiedzę całego świata i umieć nią rozporządzać
+	1. *Na swej robocie znał się jak nikt: sekrety planowania przestrzennego, architektury, administracji robót, kamieniarki i ciesiołki **miał w małym palcu***
+15. być (w czym?/z czego?) bardzo dobrym
+
+
+16. **umysł** = b) dzięki niemu myślimy 
+17. **rozum** = c) dzięki niemu **myślimy rozsądnie**
+18. mózg =  a) dzięki niemu funkcjonuje cały organizm
+19. wiedza = d) ogół posiadanych wiadomości
+
+uczyć się i robić notatki - 2
+powtarzać wiadomości, żeby je przyswoić - 3
+nie mieć o czymś bladego pojęcia - 1
+mieć coś w małym palcu - 5
+mieć wiedzę na dany temat - 4
+
+**Język**
+1. (jaki?) **ojczysty, rodzimy, pierwszy/drugi/obcy**
+	1. ojczysty język = связан с национальной или культурной идентичностью.
+		- *Polski to mój ojczysty język*
+	2. rodzimy język = первый язык или язык семьи; акцент на личной принадлежности к языку как средству общения с близкими.
+		- *Moim rodzimym językiem jest ukraiński, ale polskiego nauczyłem się później.*
+		- rodzimy użytkownik języka = native speaker
+1. (jaki?) mówiony, pisany, książkowy, potoczny 
+2. mówić (czym?), władać (czym?), posługiwać się (czym?) językiem 
+3. znać / poznać (co?) język
+
+- **trzymać język za zębami** - e) dotrzymać tajemnicy
+- **ugryźć się w język** - c) zamilknąć w odpowiedniej chwili
+- **mieć coś na końcu języka** - d) nie móc sobie czegoś przypomnieć
+- **mieć długi język** - f) mówić bez potrzeby
+- **mieć ostry język** - a) mówić rzeczy wprost, bez ogródek
+- **strzępić sobie język** - b) plotkować 
+
+**Poznawać język**
+
