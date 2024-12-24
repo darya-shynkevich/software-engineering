@@ -1,0 +1,5 @@
+**Example:** a celebrity user with millions of followers may cause a storm of activity when they do something. This event can result in a large volume of writes to the same key (where the key is perhaps the user ID of the celebrity, or the ID of the action that people are commenting on). Hashing the key doesn’t help, as the hash of two identical IDs is still the same.
+
+**Solution:** today, most data systems are not able to automatically compensate for such a highly skewed workload, so it’s the **responsibility of the application to reduce the skew**. 
+	if one key is known to be very hot, a simple technique is to add a random number to the beginning or end of the key. Just a two-digit decimal random number would split the writes to the key evenly across 100 different keys, allowing those keys to be distributed to different partitions.
+	BUT: we will have to read from data from all 100 keys and combine it.

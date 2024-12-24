@@ -1,5 +1,6 @@
 > Clients send each write to one of several leader nodes, any of which can accept writes. The leaders send streams of data change events to each other and to any follower nodes.
 
+(+) more robust than [Single leader](Single%20leader.md) replication
 (+) can be useful in applications in which we can continue work offline and later sync our data
 (+) better performance and scalability than single leader replication
 

@@ -21,9 +21,13 @@ Replication can be synchronous or asynchronous, which has a profound effect on t
 
 ## 1. [Single leader / primary-secondary replication](Models/Single%20leader.md)
 
+Clients send all writes to a single node (the leader), which sends a stream of data change events to the other replicas (followers). Reads can be performed on any replica, but reads from followers might be stale.
 ## 2. [Multi-leader replication](Models/Multi%20leader.md)
 
+Clients send each write to one of several leader nodes, any of which can accept writes. The leaders send streams of data change events to each other and to any follower nodes.
 ## 3. [Peer-to-peer / leaderless replication](Models/Leaderless%20replication.md)
+
+Clients send each write to several nodes, and read from several nodes in parallel in order to detect and correct nodes with stale data.
 
 # Challenges in Database Replication
 

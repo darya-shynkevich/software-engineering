@@ -2,6 +2,8 @@
 
 (+) excellent for read heavy applications
 (+) read resilient
+(+) fairly easy to understand 
+(+) no conflict resolution to worry about
 
 (-) bad choice for write heavy applications
 (-) comes with inconsistency if we use asynchronous replication

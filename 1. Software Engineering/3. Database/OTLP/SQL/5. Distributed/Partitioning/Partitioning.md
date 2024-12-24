@@ -15,6 +15,16 @@
 (-) Inefficient queries could accidentally scan all partitions resulting in slow performance
 (-) Schema changes can be challenging. 
 	DB has to support this feature, but sometimes fails.
+
+## Partitioning and Replication
+
+Partitioning is usually combined with replication so that copies of each partition are stored on multiple nodes => **better fault tolerance.**
+
+Each partition’s leader is assigned to one node, and its followers are assigned to other nodes. Each node may be the leader for some partitions and a follower for other partitions.
+
+The choice of partitioning scheme is mostly independent of the choice of replication scheme, so we will keep things simple and ignore replication in this chapter.
+
+![](Pasted%20image%2020241224000511.png)
 ## [Partitioning Strategies](Partitioning%20Strategies.md):
 
 ![Pasted image 20230605121902](../../../../../../_Attachments/Pasted%20image%2020230605121902.png)
@@ -25,6 +35,10 @@
 
 *More modern databases like Cassandra and others abstract that away from the application logic and its maintained at the database level.*
 ## [Partitioning Types](Partitioning%20Types.md)
+
+## [[Skewed Workloads and Relieving Hot Spots]]
+
+## [[Partitioning and Secondary Indexes]]
 
 ## Demo with Postgres
 

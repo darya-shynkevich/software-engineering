@@ -345,7 +345,7 @@ Nie należy jeździć bez kasku. / Nie powinno się jeździć bez kasku.
 12. uprawiać sport
 13. wybiera się na wakacje a partnerem 
 
-## 23.12.2024 JAk SIĘ UCZYĆ JĘZYkA?
+## 23.12.2024 JAK SIĘ UCZYĆ JĘZYKA?
 
 1. **uczyć się / nauczyć się (czego?)** matematyki, słówek
 2. **oduczyć się** (czego?) matematyki, słówek
@@ -371,17 +371,18 @@ Nie należy jeździć bez kasku. / Nie powinno się jeździć bez kasku.
 	1. *Na swej robocie znał się jak nikt: sekrety planowania przestrzennego, architektury, administracji robót, kamieniarki i ciesiołki **miał w małym palcu***
 15. być (w czym?/z czego?) bardzo dobrym
 
+A
+1. **umysł** = b) dzięki niemu myślimy 
+2. **rozum** = c) dzięki niemu **myślimy rozsądnie**
+3. mózg =  a) dzięki niemu funkcjonuje cały organizm
+4. wiedza = d) ogół posiadanych wiadomości
 
-16. **umysł** = b) dzięki niemu myślimy 
-17. **rozum** = c) dzięki niemu **myślimy rozsądnie**
-18. mózg =  a) dzięki niemu funkcjonuje cały organizm
-19. wiedza = d) ogół posiadanych wiadomości
-
-uczyć się i robić notatki - 2
-powtarzać wiadomości, żeby je przyswoić - 3
-nie mieć o czymś bladego pojęcia - 1
-mieć coś w małym palcu - 5
-mieć wiedzę na dany temat - 4
+B
+1. uczyć się i robić notatki - 2
+2. powtarzać wiadomości, żeby je przyswoić - 3
+3. nie mieć o czymś bladego pojęcia - 1
+4. mieć coś w małym palcu - 5
+5. mieć wiedzę na dany temat - 4
 
 **Język**
 1. (jaki?) **ojczysty, rodzimy, pierwszy/drugi/obcy**
@@ -394,12 +395,48 @@ mieć wiedzę na dany temat - 4
 2. mówić (czym?), władać (czym?), posługiwać się (czym?) językiem 
 3. znać / poznać (co?) język
 
-- **trzymać język za zębami** - e) dotrzymać tajemnicy
-- **ugryźć się w język** - c) zamilknąć w odpowiedniej chwili
-- **mieć coś na końcu języka** - d) nie móc sobie czegoś przypomnieć
-- **mieć długi język** - f) mówić bez potrzeby
-- **mieć ostry język** - a) mówić rzeczy wprost, bez ogródek
-- **strzępić sobie język** - b) plotkować 
+C
+1. **trzymać język za zębami** - e) dotrzymać tajemnicy
+2. **ugryźć się w język** - c) zamilknąć w odpowiedniej chwili
+3. **mieć coś na końcu języka** - d) nie móc sobie czegoś przypomnieć
+4. **mieć długi język** - b) plotkować
+5. **mieć ostry język** - a) mówić rzeczy wprost, bez ogródek
+6. **strzępić sobie język** - b) mówić bez potrzeby
 
 **Poznawać język**
+
+słowo:
+	1. → (jakie?) odpowiednie, właściwe, stosowne
+	2. → (komu?) **brakować / braknąć** (czego?) słowa / słów
+1. słówko
+2. słownik
+	1. **sprawdzać / sprawdzić** (co?) znaczenie wyrazu (w czym?) w słowniku
+	2. **sięgać / sięgnąć** (po co?) po słownik, **korzystać / skorzystać** (z czego?) ze słownika
+3. słownictwo
+	1. **poszerzać / poszerzyć** (co?) znajomość słownictwa
+	2. mieć (co?) szeroki zasób słownictwa, mieć (co?) bogate ≠ ubogie słownictwo
+
+**ekwiwalent** **= odpowiednik**
+
+tłumaczyć (co?)
+1. wytłumaczyć (co?) = wyjaśnić coś, powiedzieć coś w prosty sposób
+2. przetłumaczyć (co?) = napisać / powiedzieć to samo w innym języku
+3. tłumacz
+		1. → (jaki?) konferencyjny, przysięgły
+
+błąd
+	1. → **popełniać / popełnić** (co?) błąd (ошибаться / ошибиться)
+	2. → robić / zrobić (co?) błąd
+1. błędny
+		1. → zapis, wymowa
+
+- Jeśli nie wiem, jak napisać dany wyraz, mogę to **sprawdzić w słowniku ortograficznym**.
+- Jeśli chcę znać pochodzenie wyrazu, muszę **sięgnąć po słownik etymologiczny**.
+- Jeśli nie wiem, jak brzmi wyraz o podobnym znaczeniu, **skorzystam ze słownika synonimów**
+- Jeśli nie wiem, jak brzmi wyraz o znaczeniu przeciwnym, **sprawdzę w słowniku antonimów.**
+- Jeśli nie znam znaczenia związku frazeologicznego, **potrzebuję słownika idiomów**.
+- Teraz wszystko można sprawdzić w słownikach on-line, czyli w słownikach internetowych.
+- Słownik, w którym słowa są **definiowan**e za pomocą rysunków, to słownik obrazkowy. 
+
+SPRAWDŹ, CZY WIESZ!
 
