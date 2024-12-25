@@ -9,7 +9,7 @@
 **Cons:**
 (-) complicated reads: need to query to all partitions, and combine all the results you get back.
 
-> The approach is widely used: [MongoDB](MongoDB.md), [Riak](Riak), [Cassandra](Cassandra.md), [Elasticsearch](Elasticsearch), [[SolrCloud]], and [[VoltDB]] all use document-partitioned secondary indexes.
+> The approach is widely used: [MongoDB](MongoDB.md), [Riak](Riak), [Cassandra](Cassandra.md), [Elasticsearch](Elasticsearch.md), [[SolrCloud]], and [[VoltDB]] all use document-partitioned secondary indexes.
 
 ## Partitioning Secondary Indexes by Term
 

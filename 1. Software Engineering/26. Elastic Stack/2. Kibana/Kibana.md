@@ -1,0 +1,1 @@
+Kibana was created primarily as a visualization tool for data residing on [[Elasticsearch]] and is bundled together as part of the stack. Since its inception, Kibana has evolved to cater to use cases such as alerting, reporting, and monitoring Elastic Stack components, as well as administrating and managing the [[Elasticsearch]] cluster in use.

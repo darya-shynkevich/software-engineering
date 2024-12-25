@@ -55,7 +55,7 @@ But:
 - Making a Kafka consumer is a bit more error-prone than you'd expect. You need to keep track of your place in the log after all.
 - Even when maintained by a cloud provider (and there are good managed `Kafka` services) its another piece of infrastructure you need to monitor.
 
-### [`ElasticSearch`](Elasticsearch)
+### [`ElasticSearch`](Elasticsearch.md)
 
 Is searching over data the primary function of your product?
 
