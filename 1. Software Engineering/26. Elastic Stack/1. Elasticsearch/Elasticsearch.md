@@ -8,5 +8,11 @@ Elasticsearch is a full-text search engine and a versatile data store. It can st
 
 ## [Architectural characteristics](Architectural%20characteristics%20of%20Elasticsearch.md)
 
+### [Elasticsearch index](Elasticsearch%20index.md)
+
+### [Elasticsearch nodes](Elasticsearch%20nodes.md)
+
+### [Elasticsearch clusters](Elasticsearch%20clusters.md)
+
 
 

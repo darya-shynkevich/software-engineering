@@ -163,41 +163,42 @@ Kafka makes the following guarantees about data consistency and availability:
 
 1. [What makes Kafka so performant?](What%20makes%20Kafka%20so%20performant?.md)
 2. [Mastering Kafka Streams and ksqlDB: Building real-time data systems by example](http://libgen.rs/book/index.php?md5=9F77B9C094AEAACBF48960DB53FCC5D2) (book)
-3. ~~[Kafka in a Nutshell](https://sookocheff.com/post/kafka/kafka-in-a-nutshell/)~~
-4. ~~[Простым языком об Apache Kafka, как, зачем и почему](https://teletype.in/@abstractart/kafka-for-novices)~~
-5. ~~[Kafka за 20 минут. Ментальная модель и как с ней работать](https://habr.com/ru/companies/sbermarket/articles/738634/)~~
-6. ~~[What is Kafka and How does it work?](https://www.youtube.com/watch?v=LN_HcJVbySw&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=6) (video)~~
-7. [Kafka Exception Handling and Retry Mechanism](https://medium.com/@cobch7/kafka-exception-handling-and-retry-mechanism-a911541321fe)
-8. [A Deep Dive into Apache Kafka: Unraveling the Magic Behind the Scenes](https://medium.com/cloud-native-daily/a-deep-dive-into-apache-kafka-unraveling-the-magic-behind-the-scenes-4233e1f00f6c)
-9. ~~[Apache Kafka Crash Course](https://www.youtube.com/watch?v=R873BlNVUB4&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=2) (video)~~
-10. [Top 8 Kafka Use Cases — Distributed Systems](https://levelup.gitconnected.com/top-8-kafka-use-cases-distributed-systems-d47fc733c7c1)
-11. [Important Kafka Interview Questions](https://naveenpn.medium.com/important-kafka-interview-questions-e836e3de41bf)
-12. ~~[Kafka Consumer Group is a Brilliant Design Choice and We should Discuss it](https://www.youtube.com/watch?v=e5uAhoT1hhU&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=12) (video)
-13. ~~[When to use a Publish-Subscribe System Like Kafka?](https://www.youtube.com/watch?v=posIZrz-m7s&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=7) (video)~~
-14. [Hello Kafka World! The complete guide to Kafka with Docker and Python](https://medium.com/big-data-engineering/hello-kafka-world-the-complete-guide-to-kafka-with-docker-and-python-f788e2588cfc)
-15. [Паттерны проектирования приложений на Apache Kafka](https://highload.ru/moscow/2019/abstracts/6072) (video)
-16. [The Event-Carried State Transfer pattern](https://itnext.io/the-event-carried-state-transfer-pattern-aae49715bb7f)
-17. [Apache Kafka как основа для велосипедостроения](https://www.youtube.com/watch?v=cAzblxYZstU&list=PLH-XmS0lSi_wMtn1TsBc2_vv7tBDAf7Qg&index=7) (video)
-18. [Kafka, Python и золотая рыбка / Хабр](https://habr.com/ru/post/587592/)
-19. [Python микросервисы с Kafka без боли](https://habr.com/ru/post/578916/)
-20. [Кафка. "Описание одной борьбы"](https://www.youtube.com/watch?v=m5CDfrQLzrs&list=PLH-XmS0lSi_zTZrols83QSxI3Q96dSbBm&index=10) (video)
-21. [How We Process One Billion Events Per Day With Kafka](https://www.metarouter.io/blog-posts/how-we-process-one-billion-events-per-day-with-kafka)
-22. [API-First Approach to Kafka Topic Creation](https://doordash.engineering/2023/12/05/api-first-approach-to-kafka-topic-creation/?ref=architecturenotes.co)
-23. [KSQLDB for Kafka](https://docs.ksqldb.io/en/latest/operate-and-deploy/how-it-works/)
-24. [Kafka и Chronicle Queue](https://habr.com/ru/companies/ruvds/articles/677454/)
-25. [Kafka at LinkedIn](https://engineering.linkedin.com/kafka/running-kafka-scale)
-26. [Kafka at Pinterest](https://medium.com/pinterest-engineering/how-pinterest-runs-kafka-at-scale-ff9c6f735be)
-27. [Kafka at Trello](https://tech.trello.com/why-we-chose-kafka/)
-28. [Kafka at Salesforce](https://engineering.salesforce.com/how-apache-kafka-inspired-our-platform-events-architecture-2f351fe4cf63)
-29. [Kafka at The New York Times](https://open.nytimes.com/publishing-with-apache-kafka-at-the-new-york-times-7f0e3b7d2077)
-30. [Kafka at Yelp](https://engineeringblog.yelp.com/2016/07/billions-of-messages-a-day-yelps-real-time-data-pipeline.html)
-31. [Kafka at Criteo](https://medium.com/criteo-labs/upgrading-kafka-on-a-large-infra-3ee99f56e970)
-32. [Kafka on Kubernetes at Shopify](https://shopifyengineering.myshopify.com/blogs/engineering/running-apache-kafka-on-kubernetes-at-shopify)
-33. [Kafka on PaaSTA: Running Kafka on Kubernetes at Yelp (2 parts)](https://engineeringblog.yelp.com/2022/03/kafka-on-paasta-part-two.html)
-34. [Migrating Kafka's Zookeeper with No Downtime at Yelp](https://engineeringblog.yelp.com/2019/01/migrating-kafkas-zookeeper-with-no-downtime.html)
-35. [Reprocessing and Dead Letter Queues with Kafka at Uber](https://eng.uber.com/reliable-reprocessing/)
-36. [Chaperone: Audit Kafka End-to-End at Uber](https://eng.uber.com/chaperone/)
-37. [Finding Kafka throughput limit in infrastructure at Dropbox](https://blogs.dropbox.com/tech/2019/01/finding-kafkas-throughput-limit-in-dropbox-infrastructure/)
-38. [Cost Orchestration at Walmart](https://medium.com/walmartlabs/cost-orchestration-at-walmart-f34918af67c4)
-39. [InfluxDB and Kafka to Scale to Over 1 Million Metrics a Second at Hulu](https://medium.com/hulu-tech-blog/how-hulu-uses-influxdb-and-kafka-to-scale-to-over-1-million-metrics-a-second-1721476aaff5)
-40. ~~[When to use a Publish-Subscribe System Like Kafka?](https://www.youtube.com/watch?v=posIZrz-m7s&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=7) (video)~~
+3. [Kafka: The Definitive Guide: Real-Time Data and Stream Processing at Scale](https://www.amazon.pl/Kafka-Definitive-Real-Time-Stream-Processing/dp/1492043087/259-1075280-4270945?pd_rd_w=tVgHa&content-id=amzn1.sym.bc6ff8d8-0c51-4024-8c1a-7a317047da47&pf_rd_p=bc6ff8d8-0c51-4024-8c1a-7a317047da47&pf_rd_r=XBK3HQEY7T10MRPSDJMH&pd_rd_wg=L2G0A&pd_rd_r=67fc1a10-87a2-4b1e-ba0f-63d60c13ebed&pd_rd_i=1492043087&psc=1) (book)
+4. ~~[Kafka in a Nutshell](https://sookocheff.com/post/kafka/kafka-in-a-nutshell/)~~
+5. ~~[Простым языком об Apache Kafka, как, зачем и почему](https://teletype.in/@abstractart/kafka-for-novices)~~
+6. ~~[Kafka за 20 минут. Ментальная модель и как с ней работать](https://habr.com/ru/companies/sbermarket/articles/738634/)~~
+7. ~~[What is Kafka and How does it work?](https://www.youtube.com/watch?v=LN_HcJVbySw&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=6) (video)~~
+8. [Kafka Exception Handling and Retry Mechanism](https://medium.com/@cobch7/kafka-exception-handling-and-retry-mechanism-a911541321fe)
+9. [A Deep Dive into Apache Kafka: Unraveling the Magic Behind the Scenes](https://medium.com/cloud-native-daily/a-deep-dive-into-apache-kafka-unraveling-the-magic-behind-the-scenes-4233e1f00f6c)
+10. ~~[Apache Kafka Crash Course](https://www.youtube.com/watch?v=R873BlNVUB4&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=2) (video)~~
+11. [Top 8 Kafka Use Cases — Distributed Systems](https://levelup.gitconnected.com/top-8-kafka-use-cases-distributed-systems-d47fc733c7c1)
+12. [Important Kafka Interview Questions](https://naveenpn.medium.com/important-kafka-interview-questions-e836e3de41bf)
+13. ~~[Kafka Consumer Group is a Brilliant Design Choice and We should Discuss it](https://www.youtube.com/watch?v=e5uAhoT1hhU&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=12) (video)
+14. ~~[When to use a Publish-Subscribe System Like Kafka?](https://www.youtube.com/watch?v=posIZrz-m7s&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=7) (video)~~
+15. [Hello Kafka World! The complete guide to Kafka with Docker and Python](https://medium.com/big-data-engineering/hello-kafka-world-the-complete-guide-to-kafka-with-docker-and-python-f788e2588cfc)
+16. [Паттерны проектирования приложений на Apache Kafka](https://highload.ru/moscow/2019/abstracts/6072) (video)
+17. [The Event-Carried State Transfer pattern](https://itnext.io/the-event-carried-state-transfer-pattern-aae49715bb7f)
+18. [Apache Kafka как основа для велосипедостроения](https://www.youtube.com/watch?v=cAzblxYZstU&list=PLH-XmS0lSi_wMtn1TsBc2_vv7tBDAf7Qg&index=7) (video)
+19. [Kafka, Python и золотая рыбка / Хабр](https://habr.com/ru/post/587592/)
+20. [Python микросервисы с Kafka без боли](https://habr.com/ru/post/578916/)
+21. [Кафка. "Описание одной борьбы"](https://www.youtube.com/watch?v=m5CDfrQLzrs&list=PLH-XmS0lSi_zTZrols83QSxI3Q96dSbBm&index=10) (video)
+22. [How We Process One Billion Events Per Day With Kafka](https://www.metarouter.io/blog-posts/how-we-process-one-billion-events-per-day-with-kafka)
+23. [API-First Approach to Kafka Topic Creation](https://doordash.engineering/2023/12/05/api-first-approach-to-kafka-topic-creation/?ref=architecturenotes.co)
+24. [KSQLDB for Kafka](https://docs.ksqldb.io/en/latest/operate-and-deploy/how-it-works/)
+25. [Kafka и Chronicle Queue](https://habr.com/ru/companies/ruvds/articles/677454/)
+26. [Kafka at LinkedIn](https://engineering.linkedin.com/kafka/running-kafka-scale)
+27. [Kafka at Pinterest](https://medium.com/pinterest-engineering/how-pinterest-runs-kafka-at-scale-ff9c6f735be)
+28. [Kafka at Trello](https://tech.trello.com/why-we-chose-kafka/)
+29. [Kafka at Salesforce](https://engineering.salesforce.com/how-apache-kafka-inspired-our-platform-events-architecture-2f351fe4cf63)
+30. [Kafka at The New York Times](https://open.nytimes.com/publishing-with-apache-kafka-at-the-new-york-times-7f0e3b7d2077)
+31. [Kafka at Yelp](https://engineeringblog.yelp.com/2016/07/billions-of-messages-a-day-yelps-real-time-data-pipeline.html)
+32. [Kafka at Criteo](https://medium.com/criteo-labs/upgrading-kafka-on-a-large-infra-3ee99f56e970)
+33. [Kafka on Kubernetes at Shopify](https://shopifyengineering.myshopify.com/blogs/engineering/running-apache-kafka-on-kubernetes-at-shopify)
+34. [Kafka on PaaSTA: Running Kafka on Kubernetes at Yelp (2 parts)](https://engineeringblog.yelp.com/2022/03/kafka-on-paasta-part-two.html)
+35. [Migrating Kafka's Zookeeper with No Downtime at Yelp](https://engineeringblog.yelp.com/2019/01/migrating-kafkas-zookeeper-with-no-downtime.html)
+36. [Reprocessing and Dead Letter Queues with Kafka at Uber](https://eng.uber.com/reliable-reprocessing/)
+37. [Chaperone: Audit Kafka End-to-End at Uber](https://eng.uber.com/chaperone/)
+38. [Finding Kafka throughput limit in infrastructure at Dropbox](https://blogs.dropbox.com/tech/2019/01/finding-kafkas-throughput-limit-in-dropbox-infrastructure/)
+39. [Cost Orchestration at Walmart](https://medium.com/walmartlabs/cost-orchestration-at-walmart-f34918af67c4)
+40. [InfluxDB and Kafka to Scale to Over 1 Million Metrics a Second at Hulu](https://medium.com/hulu-tech-blog/how-hulu-uses-influxdb-and-kafka-to-scale-to-over-1-million-metrics-a-second-1721476aaff5)
+41. ~~[When to use a Publish-Subscribe System Like Kafka?](https://www.youtube.com/watch?v=posIZrz-m7s&list=PLQnljOFTspQVcumYRWE2w9kVxxIXy_AMo&index=7) (video)~~
