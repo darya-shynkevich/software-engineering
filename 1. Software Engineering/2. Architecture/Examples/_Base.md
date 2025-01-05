@@ -93,3 +93,4 @@ _****[Top 10 Facebook system design interview questions](https://grokkingtechint
 89. [Tesla System Architecture](https://medium.com/tech-x-humanity/tesla-system-architecture-b8f9ea2b03ca)
 90. [Automated-Guided Vehicle System Architecture](https://jinlow.medium.com/automated-guided-vehicle-system-architecture-05be37432082)
 91. [Проектируем масштабируемую и отказоустойчивую систему поддержки клиентов, работающую через чат.](https://youtu.be/FGgIRo7_Yj0)
+92. [A Systems-Minded Approach to Creating a Music Player Application by Andrew Kelley](https://youtu.be/SCLrNqc9jdE?si=-n_FWXtMYSRp-HhG)
