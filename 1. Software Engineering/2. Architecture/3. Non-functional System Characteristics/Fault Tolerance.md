@@ -12,4 +12,5 @@
 1. [Fault Tolerance (Timeouts and Retries, Thread Separation, Semaphores, Circuit Breakers) at Neflix](https://medium.com/netflix-techblog/fault-tolerance-in-a-high-volume-distributed-system-91ab4faae74a)
 2. [**Timeouts**](https://www.javaworld.com/article/2824163/application-performance/stability-patterns-applied-in-a-restful-architecture.html)
 3. [Enforce Timeout: A Reliability Methodology at DoorDash](https://doordash.engineering/2018/12/21/enforce-timeout-a-doordash-reliability-methodology/)
-4. [Troubleshooting a Connection Timeout Issue with tcp_tw_recycle Enabled at eBay](https://www.ebayinc.com/stories/blogs/tech/a-vip-connection-timeout-issue-caused-by-snat-and-tcp-tw-recycle/)
+4. [Хьюстон, у нас проблема. Дизайн систем на отказ](https://www.youtube.com/watch?v=RxWVxr4uUpI&list=PLH-XmS0lSi_zTZrols83QSxI3Q96dSbBm&index=29) (video)
+5. [Troubleshooting a Connection Timeout Issue with tcp_tw_recycle Enabled at eBay](https://www.ebayinc.com/stories/blogs/tech/a-vip-connection-timeout-issue-caused-by-snat-and-tcp-tw-recycle/)

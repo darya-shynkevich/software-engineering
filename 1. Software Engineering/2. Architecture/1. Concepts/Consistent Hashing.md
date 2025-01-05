@@ -143,7 +143,7 @@ The following are the disadvantages of virtual nodes:
 # What are the consistent hashing examples?
 
 1. The [Discord](../Examples/Discord.md) server (discord space or chat room) is hosted on a set of nodes. The client of the discord chat application identifies the set of nodes that hosts a specific discord server using consistent hashing
-2. The distributed NoSQL data stores such as [Amazon DynamoDB](Amazon%20DynamoDB), Apache [Cassandra](../../../3.%20Database/OTLP/NoSQL/Types/Columnar%20Databases/Cassandra.md), and [Riak](Riak) use consistent hashing to dynamically partition the data set across the set of nodes. The data is partitioned for incremental scalability
+2. The distributed NoSQL data stores such as [Amazon DynamoDB](Amazon%20DynamoDB.md), Apache [Cassandra](../../../3.%20Database/OTLP/NoSQL/Types/Columnar%20Databases/Cassandra.md), and [Riak](Riak) use consistent hashing to dynamically partition the data set across the set of nodes. The data is partitioned for incremental scalability
 3. The video storage and streaming service [Vimeo](Vimeo) uses consistent hashing for load balancing the traffic to stream videos
 4. The video streaming service [Netflix](Netflix) uses consistent hashing to distribute the uploaded video content across the content delivery network (**CDN**)
 

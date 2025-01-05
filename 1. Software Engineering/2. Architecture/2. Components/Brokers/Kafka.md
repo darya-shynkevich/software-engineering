@@ -17,7 +17,7 @@ Kafka enables us the with three capabilities of a streaming platform:
 9. Production tested, used by LinkedIn, Netflix, Airbnb, Walmart…
 
 **Use cases of Kafka:**
-1. Command Query Responsibility Segregation ([CQRS](CQRS))
+1. Command Query Responsibility Segregation ([CQRS](CQRS.md))
 2. Complex Event Processing (CEP)
 3. Staged Event-Driven Architecture (SEDA)
 4. Log Shipping & Aggregation

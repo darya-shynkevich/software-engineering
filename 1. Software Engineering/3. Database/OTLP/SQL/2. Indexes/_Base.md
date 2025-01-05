@@ -58,7 +58,7 @@ WHERE
 ```
 
 *The SQL query filters the `book` table rows using the `idx_properties_gin` GIN Index, and only `6` pages are scanned from the PostgreSQL Shared Buffers.*
-### 2. [GiST indexes](GiST%20indexes) for spatial data in PostgreSQL
+### 2. [GiST indexes](GiST%20indexes.md) for spatial data in PostgreSQL
 
 ### 3. [BRIN indexes](BRIN%20indexes) for very large tables in PostgreSQL
 
