@@ -159,27 +159,28 @@ The following are the disadvantages of virtual nodes:
 3. ~~[Consistent Hashing | The Backend Engineering Show](!https://www.youtube.com/watch?v=p6wwj0ozifw&list=PLQnljOFTspQXjD0HOzN7P2tgzu7scWpl2&index=102)~~
 4. ! [The Fundamental Knowledge of System Design (10) — Consistent Hashing](https://interviewnoodle.com/the-fundamental-knowledge-of-system-design-10-consistent-hashing-18fcefbfd749)
 5. ! [Everything You Need to Know About Consistent Hashing](https://newsletter.systemdesign.one/p/what-is-consistent-hashing?utm_source=substack&publication_id=1511845&post_id=138987915&utm_medium=email&utm_content=share&utm_campaign=email-share&triggerShare=true&isFreemail=true&r=1vxw4z)
-6. Lindsey Kuper, [UC Santa Cruz CSE138 (Distributed Systems) Lecture 15: introduction to sharding; consistent hashing](https://www.youtube.com/watch?v=uNQGP0yupn0&list=PLNPUF5QyWU8PydLG2cIJrCvnn5I_exhYx&index=18) (2021)
-7. David Karger, Eric Lehman, Tom Leighton, Rina Panigrahy, Matthew Levine, Daniel Lewin, [Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web](https://github.com/papers-we-love/papers-we-love/blob/master/distributed_systems/consistent-hashing-and-random-trees.pdf)
-8. Tom White, [Consistent Hashing](http://tom-e-white.com/2007/11/consistent-hashing.html) (2007), tom-e-white.com
-9. Srushtika Neelakantam, [Consistent hashing explained](https://ably.com/blog/implementing-efficient-consistent-hashing) (2018), ably.com
-10. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels, [Dynamo: Amazon’s Highly Available Key-value Store](https://github.com/papers-we-love/papers-we-love/blob/master/datastores/dynamo-amazons-highly-available-key-value-store.pdf) (2007)
-11. Damian Gryski, [Consistent Hashing: Algorithmic Tradeoffs](https://dgryski.medium.com/consistent-hashing-algorithmic-tradeoffs-ef6b8e2fcae8) (2018), medium.com
-12. [MIT 6.854 Spring 2016 Lecture 3: Consistent Hashing and Random Trees](http://people.csail.mit.edu/moitra/854.html) (2016)
-13. [Improving load balancing with a new consistent-hashing algorithm](https://medium.com/vimeo-engineering-blog/improving-load-balancing-with-a-new-consistent-hashing-algorithm-9f1bd75709ed) (2016), Vimeo Engineering Blog
-14. Stanislav Vishnevskiy, [How discord scaled elixir to 5,000,000 concurrent users](https://discord.com/blog/how-discord-scaled-elixir-to-5-000-000-concurrent-users) (2017), discord.com
-15. Mohit Vora, Andrew Berglund, Videsh Sadafal, David Pfitzner, and Ellen Livengood, [Distributing Content to Open Connect](https://netflixtechblog.com/distributing-content-to-open-connect-3e3e391d4dc9) (2017), netflixtechblog.com
-16. [libketama — a consistent hashing algo for Memcache clients](https://www.last.fm/user/RJ/journal/2007/04/10/rz_libketama_-_a_consistent_hashing_algo_for_memcache_clients) (2007)
-17. [What is Consistent Hashing and Where is it used?](https://www.youtube.com/watch?v=zaRkONvyGr8&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=5) (video)
-18. [Start Here: Consistent Hashing](https://levelup.gitconnected.com/start-here-consistent-hashing-ee671b20a452)
-19. [Consistent Hashing: Algorithmic Tradeoffs](https://dgryski.medium.com/consistent-hashing-algorithmic-tradeoffs-ef6b8e2fcae8)
-20. [Amazon System Design Interview Question | Consistent Hashing](https://www.youtube.com/watch?v=5ARwdRPkYmc&list=PLOAph0xkZvSuqy8yq_0D6NEABhmSTRYrN&index=2) (video)
-21. [Simple : Consistent Hashing](https://medium.com/omarelgabrys-blog/consistent-hashing-beyond-the-basics-525304a12ba)
-22. [More On : Consistent Hashing](http://www.tom-e-white.com/2007/11/consistent-hashing.html)
-23. [Distributed Consistent Hashing](https://medium.com/ably-realtime/how-to-implement-consistent-hashing-efficiently-fe038d59fff2)
-24. [Bloom Filter : A Probabilistic Data Structure](https://medium.com/system-design-blog/bloom-filter-a-probabilistic-data-structure-12e4e5cf0638)
-25. [Consistent Hashing](http://www.tom-e-white.com/2007/11/consistent-hashing.html)
-26. [Consistent Hashing](https://medium.com/@meenak1996/why-we-need-of-consistent-hashing-42b87c65596b)
-27. [Consistent Hashing: Algorithmic Tradeoffs](https://medium.com/@dgryski/consistent-hashing-algorithmic-tradeoffs-ef6b8e2fcae8)
-28. [Don’t be tricked by the Hashing Trick](https://booking.ai/dont-be-tricked-by-the-hashing-trick-192a6aae3087)
-29. [Uniform Consistent Hashing at Netflix](https://medium.com/netflix-techblog/distributing-content-to-open-connect-3e3e391d4dc9)
+6. ! [Consistent hashing and rendezvous hashing explained.](https://www.francofernando.com/blog/distributed-systems/2021-12-24-distributed-hashing/)
+7. Lindsey Kuper, [UC Santa Cruz CSE138 (Distributed Systems) Lecture 15: introduction to sharding; consistent hashing](https://www.youtube.com/watch?v=uNQGP0yupn0&list=PLNPUF5QyWU8PydLG2cIJrCvnn5I_exhYx&index=18) (2021)
+8. David Karger, Eric Lehman, Tom Leighton, Rina Panigrahy, Matthew Levine, Daniel Lewin, [Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web](https://github.com/papers-we-love/papers-we-love/blob/master/distributed_systems/consistent-hashing-and-random-trees.pdf)
+9. Tom White, [Consistent Hashing](http://tom-e-white.com/2007/11/consistent-hashing.html) (2007), tom-e-white.com
+10. Srushtika Neelakantam, [Consistent hashing explained](https://ably.com/blog/implementing-efficient-consistent-hashing) (2018), ably.com
+11. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels, [Dynamo: Amazon’s Highly Available Key-value Store](https://github.com/papers-we-love/papers-we-love/blob/master/datastores/dynamo-amazons-highly-available-key-value-store.pdf) (2007)
+12. Damian Gryski, [Consistent Hashing: Algorithmic Tradeoffs](https://dgryski.medium.com/consistent-hashing-algorithmic-tradeoffs-ef6b8e2fcae8) (2018), medium.com
+13. [MIT 6.854 Spring 2016 Lecture 3: Consistent Hashing and Random Trees](http://people.csail.mit.edu/moitra/854.html) (2016)
+14. [Improving load balancing with a new consistent-hashing algorithm](https://medium.com/vimeo-engineering-blog/improving-load-balancing-with-a-new-consistent-hashing-algorithm-9f1bd75709ed) (2016), Vimeo Engineering Blog
+15. Stanislav Vishnevskiy, [How discord scaled elixir to 5,000,000 concurrent users](https://discord.com/blog/how-discord-scaled-elixir-to-5-000-000-concurrent-users) (2017), discord.com
+16. Mohit Vora, Andrew Berglund, Videsh Sadafal, David Pfitzner, and Ellen Livengood, [Distributing Content to Open Connect](https://netflixtechblog.com/distributing-content-to-open-connect-3e3e391d4dc9) (2017), netflixtechblog.com
+17. [libketama — a consistent hashing algo for Memcache clients](https://www.last.fm/user/RJ/journal/2007/04/10/rz_libketama_-_a_consistent_hashing_algo_for_memcache_clients) (2007)
+18. [What is Consistent Hashing and Where is it used?](https://www.youtube.com/watch?v=zaRkONvyGr8&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=5) (video)
+19. [Start Here: Consistent Hashing](https://levelup.gitconnected.com/start-here-consistent-hashing-ee671b20a452)
+20. [Consistent Hashing: Algorithmic Tradeoffs](https://dgryski.medium.com/consistent-hashing-algorithmic-tradeoffs-ef6b8e2fcae8)
+21. [Amazon System Design Interview Question | Consistent Hashing](https://www.youtube.com/watch?v=5ARwdRPkYmc&list=PLOAph0xkZvSuqy8yq_0D6NEABhmSTRYrN&index=2) (video)
+22. [Simple : Consistent Hashing](https://medium.com/omarelgabrys-blog/consistent-hashing-beyond-the-basics-525304a12ba)
+23. [More On : Consistent Hashing](http://www.tom-e-white.com/2007/11/consistent-hashing.html)
+24. [Distributed Consistent Hashing](https://medium.com/ably-realtime/how-to-implement-consistent-hashing-efficiently-fe038d59fff2)
+25. [Bloom Filter : A Probabilistic Data Structure](https://medium.com/system-design-blog/bloom-filter-a-probabilistic-data-structure-12e4e5cf0638)
+26. [Consistent Hashing](http://www.tom-e-white.com/2007/11/consistent-hashing.html)
+27. [Consistent Hashing](https://medium.com/@meenak1996/why-we-need-of-consistent-hashing-42b87c65596b)
+28. [Consistent Hashing: Algorithmic Tradeoffs](https://medium.com/@dgryski/consistent-hashing-algorithmic-tradeoffs-ef6b8e2fcae8)
+29. [Don’t be tricked by the Hashing Trick](https://booking.ai/dont-be-tricked-by-the-hashing-trick-192a6aae3087)
+30. [Uniform Consistent Hashing at Netflix](https://medium.com/netflix-techblog/distributing-content-to-open-connect-3e3e391d4dc9)

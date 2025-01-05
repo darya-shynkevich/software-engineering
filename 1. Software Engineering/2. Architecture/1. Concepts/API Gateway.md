@@ -16,4 +16,5 @@ Examples of API Gateway solutions include those provided by Microsoft Azure API 
 # References:
 
 1. ! [System Design Basics: What is an API Gateway?](https://medium.com/geekculture/system-design-basics-what-is-an-api-gateway-b858e9491608)
-2. [API Gateways: Why, What and How](https://blog.vvsevolodovich.dev/api-gateways-why-what-and-how/)
+2. ! [API Gateway Scaling: 7 Techniques for High Availability](https://eyer.ai/blog/api-gateway-scaling-7-techniques-for-high-availability/)
+3. [API Gateways: Why, What and How](https://blog.vvsevolodovich.dev/api-gateways-why-what-and-how/)
