@@ -1,5 +1,4 @@
 
-[Distributed Computing](../14.%20Distributed%20computing/_Base.md)
 
 # References:
 
