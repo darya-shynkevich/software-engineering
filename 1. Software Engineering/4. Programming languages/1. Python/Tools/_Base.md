@@ -16,6 +16,7 @@
 2. [Why I use attrs instead of pydantic](https://threeofwands.com/why-i-use-attrs-instead-of-pydantic/)
 3. [Tinche/cattrs: Complex custom class converters for attrs.](https://github.com/Tinche/cattrs)
 4. [Dataclasses и attrs: когда и почему](https://webdevblog.ru/dataclasses-i-attrs-kogda-i-pochemu/)
+5. [The Inner Workings of Python Dataclasses Explained](https://jacobpadilla.com/articles/python-dataclass-internals)
 
 # Typing:
 

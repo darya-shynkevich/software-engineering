@@ -1,5 +1,7 @@
  [Become An Expert: Backend Projects That Define Senior Developers](https://blog.devgenius.io/become-an-expert-backend-projects-that-define-senior-developers-61ac76e17d98)
 
+**!!! [Getting Started Contributing to Django](https://www.better-simple.com/django/2024/12/25/getting-started-contributing-django/)**
+
 # Useful
 
 1. [Тред фронтенд-инструментов для пет-проектов](https://twitter.com/nat_davydova/status/1737429176519418084) Куча полезной инфы по постороению UI
